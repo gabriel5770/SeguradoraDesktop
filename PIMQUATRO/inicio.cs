@@ -11,5 +11,17 @@ namespace PIMQUATRO
         {
 
         }
+
+        private void BtnEntrar_Click(object sender, EventArgs e)
+        {  
+           this.Hide();
+           new PageLogin().ShowDialog();                     
+
+        }
+
+        private void inicio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

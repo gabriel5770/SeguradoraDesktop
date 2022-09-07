@@ -10,14 +10,30 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class login : Form
+    public partial class PageLogin : Form
     {
-        public login()
+        public PageLogin()
         {
             InitializeComponent();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+         
+        private void Voltar_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            new inicio().ShowDialog();
+        }
+
+        private void PageLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
