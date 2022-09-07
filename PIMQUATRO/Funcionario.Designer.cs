@@ -1,6 +1,6 @@
 ﻿namespace PIMQUATRO
 {
-    partial class ajuda
+    partial class Funcionario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,46 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ajuda));
             this.Voltar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Voltar
             // 
             this.Voltar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Voltar.ForeColor = System.Drawing.Color.Snow;
-            this.Voltar.Location = new System.Drawing.Point(854, 16);
+            this.Voltar.Location = new System.Drawing.Point(702, 13);
             this.Voltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Voltar.Name = "Voltar";
             this.Voltar.Size = new System.Drawing.Size(86, 31);
-            this.Voltar.TabIndex = 8;
+            this.Voltar.TabIndex = 9;
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = false;
             this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
-            // pictureBox2
+            // button1
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(14, 16);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(106, 127);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+            this.button1.Location = new System.Drawing.Point(702, 384);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 31);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ajuda
+            // Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 615);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Voltar);
-            this.Controls.Add(this.pictureBox2);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ajuda";
-            this.Text = "ajuda";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Name = "Funcionario";
+            this.Text = "Funcionario";
             this.ResumeLayout(false);
 
         }
@@ -75,6 +74,6 @@
         #endregion
 
         private Button Voltar;
-        private PictureBox pictureBox2;
+        private Button button1;
     }
 }

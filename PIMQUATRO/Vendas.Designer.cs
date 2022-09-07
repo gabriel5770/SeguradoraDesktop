@@ -39,9 +39,10 @@
             // 
             this.Ajuda.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Ajuda.ForeColor = System.Drawing.Color.Snow;
-            this.Ajuda.Location = new System.Drawing.Point(747, 426);
+            this.Ajuda.Location = new System.Drawing.Point(854, 568);
+            this.Ajuda.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Ajuda.Name = "Ajuda";
-            this.Ajuda.Size = new System.Drawing.Size(75, 23);
+            this.Ajuda.Size = new System.Drawing.Size(86, 31);
             this.Ajuda.TabIndex = 9;
             this.Ajuda.Text = "Ajuda";
             this.Ajuda.UseVisualStyleBackColor = false;
@@ -50,30 +51,34 @@
             // 
             this.Voltar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Voltar.ForeColor = System.Drawing.Color.Snow;
-            this.Voltar.Location = new System.Drawing.Point(747, 12);
+            this.Voltar.Location = new System.Drawing.Point(854, 16);
+            this.Voltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(75, 23);
+            this.Voltar.Size = new System.Drawing.Size(86, 31);
             this.Voltar.TabIndex = 8;
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = false;
+            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 16);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 95);
+            this.pictureBox2.Size = new System.Drawing.Size(106, 127);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
             // Vendas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 461);
+            this.ClientSize = new System.Drawing.Size(953, 615);
             this.Controls.Add(this.Ajuda);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.pictureBox2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Vendas";
             this.Text = "Vendas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

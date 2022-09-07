@@ -10,9 +10,13 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class Vendas : Form
+    public partial class Funcionario : Form
     {
-        public Vendas()
+        private void Funcionario_Load(object sender, EventArgs e)
+        {
+
+        }
+        public Funcionario()
         {
             InitializeComponent();
         }
@@ -21,6 +25,13 @@ namespace PIMQUATRO
         {
             this.Hide();
             new menu().ShowDialog();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CadastroFuncionarios().ShowDialog();
         }
     }
 }

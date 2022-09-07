@@ -16,5 +16,36 @@ namespace PIMQUATRO
         {
             InitializeComponent();
         }
+
+
+        private void Clientes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new clientes().ShowDialog();
+        }
+
+        private void Funcionarios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Funcionario().ShowDialog();
+        }
+
+        private void Seguradoras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Seguradoras().ShowDialog();
+        }
+
+        private void Vendas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Vendas().ShowDialog();
+        }
+
+        private void Duvidas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Duvidas().ShowDialog();
+        }
     }
 }

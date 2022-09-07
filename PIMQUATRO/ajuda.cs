@@ -16,5 +16,10 @@ namespace PIMQUATRO
         {
             InitializeComponent();
         }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
