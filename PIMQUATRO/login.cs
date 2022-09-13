@@ -78,7 +78,12 @@ namespace PIMQUATRO
                         {
                         this.Hide();
                         new menu().ShowDialog();
-                        }                       
+                        }
+                        else
+                        {
+                            lblDadosIncorretos.Visible = true;
+                            lblDadosIncorretos.Text = "Dados incorretos";
+                        }
                     }
                 }
                 catch (SqlException ex)

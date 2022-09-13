@@ -37,6 +37,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.lblDadosIncorretos = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -126,11 +127,22 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // lblDadosIncorretos
+            // 
+            this.lblDadosIncorretos.AutoSize = true;
+            this.lblDadosIncorretos.Location = new System.Drawing.Point(390, 265);
+            this.lblDadosIncorretos.Name = "lblDadosIncorretos";
+            this.lblDadosIncorretos.Size = new System.Drawing.Size(7, 15);
+            this.lblDadosIncorretos.TabIndex = 11;
+            this.lblDadosIncorretos.Text = "\r\n";
+            this.lblDadosIncorretos.Visible = false;
+            // 
             // PageLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.lblDadosIncorretos);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
@@ -160,5 +172,6 @@
         private TextBox txtEmail;
         private TextBox txtSenha;
         private Button button4;
+        private Label lblDadosIncorretos;
     }
 }
