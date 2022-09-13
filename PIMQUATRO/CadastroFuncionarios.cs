@@ -67,10 +67,13 @@ namespace PIMQUATRO
 
                         connection.Open();
                         command.ExecuteNonQuery();
+
+                        MessageBox.Show("Funcionário cadastrado com sucesso");
                     }
                     catch (SqlException ex)
                     {
-                        MessageBox.Show("erro: " + ex);
+                        MessageBox.Show("Erro ao cadastrar usuário");
+                        MessageBox.Show("Erro encontrado: " + ex);
                     }
                 }
             }
