@@ -36,10 +36,9 @@
             // 
             this.Voltar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Voltar.ForeColor = System.Drawing.Color.Snow;
-            this.Voltar.Location = new System.Drawing.Point(702, 13);
-            this.Voltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Voltar.Location = new System.Drawing.Point(614, 10);
             this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(86, 31);
+            this.Voltar.Size = new System.Drawing.Size(75, 23);
             this.Voltar.TabIndex = 9;
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = false;
@@ -49,10 +48,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(702, 384);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(614, 288);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 31);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = false;
@@ -60,11 +58,12 @@
             // 
             // Funcionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(700, 338);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Voltar);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Funcionario";
             this.Text = "Funcionario";
             this.ResumeLayout(false);

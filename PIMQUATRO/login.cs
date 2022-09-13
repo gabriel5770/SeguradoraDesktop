@@ -92,8 +92,6 @@ namespace PIMQUATRO
                 }
             }
         }
-
-
         //Coisas para pesquisar para o entendimento:
         //string de conexão , consulta sql via c#, try catch , objeto SqlCommand;
     }
