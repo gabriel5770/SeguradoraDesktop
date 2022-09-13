@@ -57,8 +57,8 @@ namespace PIMQUATRO
             string Telefone = lblTelefoneFunc.Text;
 
 
-
-            if (new Cadastro().EfetuaCadastro(Email,Senha,Nome,EstadoCivil,DataNascimento,Rg,Cpf,Sexo,Endereco,NumResidencia,Estado,Municipio,Bairro,Cep,Telefone))
+      
+            if (Cadastro.CadastroFuncionario(Email,Senha,Nome,EstadoCivil,DataNascimento,Rg,Cpf,Sexo,Endereco,NumResidencia,Estado,Municipio,Bairro,Cep,Telefone))
             {
                 this.Hide();
                 new menu().ShowDialog();
