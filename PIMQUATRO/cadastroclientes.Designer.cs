@@ -64,6 +64,10 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox18 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -416,6 +420,7 @@
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(166, 20);
             this.textBox15.TabIndex = 45;
+            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
             // 
             // label16
             // 
@@ -438,11 +443,57 @@
             this.textBox16.Size = new System.Drawing.Size(166, 20);
             this.textBox16.TabIndex = 47;
             // 
+            // textBox17
+            // 
+            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox17.Location = new System.Drawing.Point(126, 473);
+            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(166, 20);
+            this.textBox17.TabIndex = 49;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label17.ForeColor = System.Drawing.Color.Snow;
+            this.label17.Location = new System.Drawing.Point(126, 449);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 20);
+            this.label17.TabIndex = 50;
+            this.label17.Text = "Logradouro";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label18.ForeColor = System.Drawing.Color.Snow;
+            this.label18.Location = new System.Drawing.Point(315, 449);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(104, 20);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "Complemento";
+            // 
+            // textBox18
+            // 
+            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textBox18.Location = new System.Drawing.Point(315, 473);
+            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(166, 20);
+            this.textBox18.TabIndex = 51;
+            // 
             // cadastroclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 615);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.textBox17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.label15);
@@ -524,5 +575,9 @@
         private TextBox textBox15;
         private Label label16;
         private TextBox textBox16;
+        private TextBox textBox17;
+        private Label label17;
+        private Label label18;
+        private TextBox textBox18;
     }
 }

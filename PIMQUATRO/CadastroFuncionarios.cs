@@ -65,6 +65,11 @@ namespace PIMQUATRO
                 MessageBox.Show("Funcionário cadastrado com sucesso");
             }
         }
+
+        private void lblEmailFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

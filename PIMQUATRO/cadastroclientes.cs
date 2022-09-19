@@ -22,5 +22,10 @@ namespace PIMQUATRO
             this.Hide();
             new clientes().ShowDialog();
         }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
