@@ -66,9 +66,11 @@
             this.lblSenhaFunc = new System.Windows.Forms.TextBox();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.LblComplementoFunc = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.LblLogradouroFunc = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.LblCargoFunc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -467,15 +469,16 @@
             this.label18.TabIndex = 81;
             this.label18.Text = "Complemento";
             // 
-            // textBox18
+            // LblComplementoFunc
             // 
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox18.Location = new System.Drawing.Point(296, 518);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(166, 20);
-            this.textBox18.TabIndex = 80;
+            this.LblComplementoFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblComplementoFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblComplementoFunc.Location = new System.Drawing.Point(296, 518);
+            this.LblComplementoFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblComplementoFunc.Name = "LblComplementoFunc";
+            this.LblComplementoFunc.Size = new System.Drawing.Size(166, 20);
+            this.LblComplementoFunc.TabIndex = 80;
+            this.LblComplementoFunc.TextChanged += new System.EventHandler(this.LblComplementoFunc_TextChanged);
             // 
             // label17
             // 
@@ -488,25 +491,49 @@
             this.label17.TabIndex = 79;
             this.label17.Text = "Logradouro";
             // 
-            // textBox17
+            // LblLogradouroFunc
             // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox17.Location = new System.Drawing.Point(107, 518);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(166, 20);
-            this.textBox17.TabIndex = 78;
+            this.LblLogradouroFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblLogradouroFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblLogradouroFunc.Location = new System.Drawing.Point(107, 518);
+            this.LblLogradouroFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblLogradouroFunc.Name = "LblLogradouroFunc";
+            this.LblLogradouroFunc.Size = new System.Drawing.Size(166, 20);
+            this.LblLogradouroFunc.TabIndex = 78;
+            this.LblLogradouroFunc.TextChanged += new System.EventHandler(this.LblLogradouroFunc_TextChanged);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label19.ForeColor = System.Drawing.Color.Snow;
+            this.label19.Location = new System.Drawing.Point(510, 494);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(49, 20);
+            this.label19.TabIndex = 83;
+            this.label19.Text = "Cargo";
+            // 
+            // LblCargoFunc
+            // 
+            this.LblCargoFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblCargoFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblCargoFunc.Location = new System.Drawing.Point(510, 518);
+            this.LblCargoFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblCargoFunc.Name = "LblCargoFunc";
+            this.LblCargoFunc.Size = new System.Drawing.Size(166, 20);
+            this.LblCargoFunc.TabIndex = 82;
             // 
             // CadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 615);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.LblCargoFunc);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.LblComplementoFunc);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.LblLogradouroFunc);
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.lblSenhaFunc);
@@ -592,8 +619,10 @@
         private TextBox lblSenhaFunc;
         private Button btnCadastrarFuncionario;
         private Label label18;
-        private TextBox textBox18;
+        private TextBox LblComplementoFunc;
         private Label label17;
-        private TextBox textBox17;
+        private TextBox LblLogradouroFunc;
+        private Label label19;
+        private TextBox LblCargoFunc;
     }
 }

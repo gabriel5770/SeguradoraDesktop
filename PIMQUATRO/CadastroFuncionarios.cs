@@ -55,10 +55,14 @@ namespace PIMQUATRO
             string Bairro = lblBairroFunc.Text;
             string Cep = lblCepFunc.Text;
             string Telefone = lblTelefoneFunc.Text;
+            string Logradouro = LblLogradouroFunc.Text;
+            string Complemento = LblComplementoFunc.Text;
+            string Cargo = LblCargoFunc.Text;
 
 
-      
-            if (Cadastro.CadastroFuncionario(Email,Senha,Nome,EstadoCivil,DataNascimento,Rg,Cpf,Sexo,Endereco,NumResidencia,Estado,Municipio,Bairro,Cep,Telefone))
+
+            if (Cadastro.CadastroFuncionario(Email,Senha,Nome,EstadoCivil,DataNascimento,Rg,Cpf,Sexo,Endereco,NumResidencia,Estado,
+                Municipio,Bairro,Cep,Telefone,Logradouro,Complemento,Cargo))
             {
                 this.Hide();
                 new menu().ShowDialog();
@@ -67,6 +71,16 @@ namespace PIMQUATRO
         }
 
         private void lblEmailFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblComplementoFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblLogradouroFunc_TextChanged(object sender, EventArgs e)
         {
 
         }

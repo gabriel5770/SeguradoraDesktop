@@ -32,12 +32,12 @@
             this.Ajuda = new System.Windows.Forms.Button();
             this.Voltar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.LblCpfCliente = new System.Windows.Forms.TextBox();
+            this.LblNomeCliente = new System.Windows.Forms.TextBox();
+            this.LblSexoCliente = new System.Windows.Forms.TextBox();
+            this.LblRgCliente = new System.Windows.Forms.TextBox();
+            this.LblEnderecoCliente = new System.Windows.Forms.TextBox();
+            this.LblDataDeNascimentoCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,29 +45,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.LblEstadoCivilCliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.LblNumeroCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.LblMunicipioCliente = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.LblBairroCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.LblCepCliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.LblTelefoneCliente = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.LblEmail = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.LblEstadoCliente = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.LblSenhaCliente = new System.Windows.Forms.TextBox();
+            this.LblLogradouroCliente = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.LblComplementoCliente = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,65 +105,67 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox2
+            // LblCpfCliente
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox2.Location = new System.Drawing.Point(414, 220);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 20);
-            this.textBox2.TabIndex = 18;
+            this.LblCpfCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblCpfCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblCpfCliente.Location = new System.Drawing.Point(414, 220);
+            this.LblCpfCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblCpfCliente.Name = "LblCpfCliente";
+            this.LblCpfCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblCpfCliente.TabIndex = 18;
+            this.LblCpfCliente.TextChanged += new System.EventHandler(this.LblCpfCliente_TextChanged);
             // 
-            // textBox1
+            // LblNomeCliente
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(224, 147);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 17;
+            this.LblNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblNomeCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblNomeCliente.Location = new System.Drawing.Point(224, 147);
+            this.LblNomeCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblNomeCliente.Name = "LblNomeCliente";
+            this.LblNomeCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblNomeCliente.TabIndex = 17;
             // 
-            // textBox3
+            // LblSexoCliente
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox3.Location = new System.Drawing.Point(607, 220);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 20);
-            this.textBox3.TabIndex = 20;
+            this.LblSexoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblSexoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblSexoCliente.Location = new System.Drawing.Point(607, 220);
+            this.LblSexoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblSexoCliente.Name = "LblSexoCliente";
+            this.LblSexoCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblSexoCliente.TabIndex = 20;
+            this.LblSexoCliente.TextChanged += new System.EventHandler(this.LblSexoCliente_TextChanged);
             // 
-            // textBox4
+            // LblRgCliente
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox4.Location = new System.Drawing.Point(224, 220);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 20);
-            this.textBox4.TabIndex = 19;
+            this.LblRgCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblRgCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblRgCliente.Location = new System.Drawing.Point(224, 220);
+            this.LblRgCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblRgCliente.Name = "LblRgCliente";
+            this.LblRgCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblRgCliente.TabIndex = 19;
             // 
-            // textBox5
+            // LblEnderecoCliente
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox5.Location = new System.Drawing.Point(126, 329);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(166, 20);
-            this.textBox5.TabIndex = 22;
+            this.LblEnderecoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblEnderecoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblEnderecoCliente.Location = new System.Drawing.Point(126, 329);
+            this.LblEnderecoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblEnderecoCliente.Name = "LblEnderecoCliente";
+            this.LblEnderecoCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblEnderecoCliente.TabIndex = 22;
             // 
-            // textBox6
+            // LblDataDeNascimentoCliente
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox6.Location = new System.Drawing.Point(607, 147);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(166, 20);
-            this.textBox6.TabIndex = 21;
+            this.LblDataDeNascimentoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblDataDeNascimentoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblDataDeNascimentoCliente.Location = new System.Drawing.Point(607, 147);
+            this.LblDataDeNascimentoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblDataDeNascimentoCliente.Name = "LblDataDeNascimentoCliente";
+            this.LblDataDeNascimentoCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblDataDeNascimentoCliente.TabIndex = 21;
             // 
             // label1
             // 
@@ -243,15 +244,15 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "Estado civil:";
             // 
-            // textBox7
+            // LblEstadoCivilCliente
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox7.Location = new System.Drawing.Point(414, 147);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(166, 20);
-            this.textBox7.TabIndex = 29;
+            this.LblEstadoCivilCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblEstadoCivilCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblEstadoCivilCliente.Location = new System.Drawing.Point(414, 147);
+            this.LblEstadoCivilCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblEstadoCivilCliente.Name = "LblEstadoCivilCliente";
+            this.LblEstadoCivilCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblEstadoCivilCliente.TabIndex = 29;
             // 
             // label8
             // 
@@ -264,15 +265,15 @@
             this.label8.TabIndex = 32;
             this.label8.Text = "Número:";
             // 
-            // textBox8
+            // LblNumeroCliente
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox8.Location = new System.Drawing.Point(315, 329);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(166, 20);
-            this.textBox8.TabIndex = 31;
+            this.LblNumeroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblNumeroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblNumeroCliente.Location = new System.Drawing.Point(315, 329);
+            this.LblNumeroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblNumeroCliente.Name = "LblNumeroCliente";
+            this.LblNumeroCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblNumeroCliente.TabIndex = 31;
             // 
             // label9
             // 
@@ -285,15 +286,15 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Município:";
             // 
-            // textBox9
+            // LblMunicipioCliente
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox9.Location = new System.Drawing.Point(698, 329);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(166, 20);
-            this.textBox9.TabIndex = 33;
+            this.LblMunicipioCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblMunicipioCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblMunicipioCliente.Location = new System.Drawing.Point(698, 329);
+            this.LblMunicipioCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblMunicipioCliente.Name = "LblMunicipioCliente";
+            this.LblMunicipioCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblMunicipioCliente.TabIndex = 33;
             // 
             // label10
             // 
@@ -306,15 +307,15 @@
             this.label10.TabIndex = 36;
             this.label10.Text = "Bairro:";
             // 
-            // textBox10
+            // LblBairroCliente
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox10.Location = new System.Drawing.Point(126, 401);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(166, 20);
-            this.textBox10.TabIndex = 35;
+            this.LblBairroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblBairroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblBairroCliente.Location = new System.Drawing.Point(126, 401);
+            this.LblBairroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblBairroCliente.Name = "LblBairroCliente";
+            this.LblBairroCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblBairroCliente.TabIndex = 35;
             // 
             // label11
             // 
@@ -327,15 +328,15 @@
             this.label11.TabIndex = 38;
             this.label11.Text = "Cep:";
             // 
-            // textBox11
+            // LblCepCliente
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox11.Location = new System.Drawing.Point(315, 401);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(166, 20);
-            this.textBox11.TabIndex = 37;
+            this.LblCepCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblCepCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblCepCliente.Location = new System.Drawing.Point(315, 401);
+            this.LblCepCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblCepCliente.Name = "LblCepCliente";
+            this.LblCepCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblCepCliente.TabIndex = 37;
             // 
             // label12
             // 
@@ -348,36 +349,37 @@
             this.label12.TabIndex = 40;
             this.label12.Text = "Telefone:";
             // 
-            // textBox12
+            // LblTelefoneCliente
             // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox12.Location = new System.Drawing.Point(505, 401);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(166, 20);
-            this.textBox12.TabIndex = 39;
+            this.LblTelefoneCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblTelefoneCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblTelefoneCliente.Location = new System.Drawing.Point(505, 401);
+            this.LblTelefoneCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblTelefoneCliente.Name = "LblTelefoneCliente";
+            this.LblTelefoneCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblTelefoneCliente.TabIndex = 39;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label13.ForeColor = System.Drawing.Color.Snow;
-            this.label13.Location = new System.Drawing.Point(698, 377);
+            this.label13.Location = new System.Drawing.Point(215, 51);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 20);
             this.label13.TabIndex = 42;
             this.label13.Text = "Email:";
             // 
-            // textBox13
+            // LblEmail
             // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox13.Location = new System.Drawing.Point(698, 401);
-            this.textBox13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(166, 20);
-            this.textBox13.TabIndex = 41;
+            this.LblEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblEmail.Location = new System.Drawing.Point(215, 75);
+            this.LblEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblEmail.Name = "LblEmail";
+            this.LblEmail.Size = new System.Drawing.Size(166, 20);
+            this.LblEmail.TabIndex = 41;
+            this.LblEmail.TextChanged += new System.EventHandler(this.LblEmail_TextChanged);
             // 
             // label14
             // 
@@ -390,37 +392,15 @@
             this.label14.TabIndex = 44;
             this.label14.Text = "Estado:";
             // 
-            // textBox14
+            // LblEstadoCliente
             // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox14.Location = new System.Drawing.Point(505, 329);
-            this.textBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(166, 20);
-            this.textBox14.TabIndex = 43;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label15.ForeColor = System.Drawing.Color.Snow;
-            this.label15.Location = new System.Drawing.Point(224, 51);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 20);
-            this.label15.TabIndex = 46;
-            this.label15.Text = "Email";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox15.Location = new System.Drawing.Point(224, 75);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(166, 20);
-            this.textBox15.TabIndex = 45;
-            this.textBox15.TextChanged += new System.EventHandler(this.textBox15_TextChanged);
+            this.LblEstadoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblEstadoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblEstadoCliente.Location = new System.Drawing.Point(505, 329);
+            this.LblEstadoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblEstadoCliente.Name = "LblEstadoCliente";
+            this.LblEstadoCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblEstadoCliente.TabIndex = 43;
             // 
             // label16
             // 
@@ -433,25 +413,26 @@
             this.label16.TabIndex = 48;
             this.label16.Text = "Senha";
             // 
-            // textBox16
+            // LblSenhaCliente
             // 
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox16.Location = new System.Drawing.Point(568, 75);
-            this.textBox16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(166, 20);
-            this.textBox16.TabIndex = 47;
+            this.LblSenhaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblSenhaCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblSenhaCliente.Location = new System.Drawing.Point(568, 75);
+            this.LblSenhaCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblSenhaCliente.Name = "LblSenhaCliente";
+            this.LblSenhaCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblSenhaCliente.TabIndex = 47;
             // 
-            // textBox17
+            // LblLogradouroCliente
             // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox17.Location = new System.Drawing.Point(126, 473);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(166, 20);
-            this.textBox17.TabIndex = 49;
+            this.LblLogradouroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblLogradouroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblLogradouroCliente.Location = new System.Drawing.Point(126, 473);
+            this.LblLogradouroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblLogradouroCliente.Name = "LblLogradouroCliente";
+            this.LblLogradouroCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblLogradouroCliente.TabIndex = 49;
+            this.LblLogradouroCliente.TextChanged += new System.EventHandler(this.LblLogradouroClin_TextChanged);
             // 
             // label17
             // 
@@ -475,63 +456,74 @@
             this.label18.TabIndex = 52;
             this.label18.Text = "Complemento";
             // 
-            // textBox18
+            // LblComplementoCliente
             // 
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox18.Location = new System.Drawing.Point(315, 473);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(166, 20);
-            this.textBox18.TabIndex = 51;
+            this.LblComplementoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LblComplementoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LblComplementoCliente.Location = new System.Drawing.Point(315, 473);
+            this.LblComplementoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LblComplementoCliente.Name = "LblComplementoCliente";
+            this.LblComplementoCliente.Size = new System.Drawing.Size(166, 20);
+            this.LblComplementoCliente.TabIndex = 51;
+            this.LblComplementoCliente.TextChanged += new System.EventHandler(this.textBox18_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(731, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 53;
+            this.button1.Text = "Cadastrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cadastroclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 615);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox18);
+            this.Controls.Add(this.LblComplementoCliente);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.LblLogradouroCliente);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.LblSenhaCliente);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.LblEstadoCliente);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.LblEmail);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.LblTelefoneCliente);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.LblCepCliente);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.LblBairroCliente);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.LblMunicipioCliente);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.LblNumeroCliente);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.LblEstadoCivilCliente);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LblEnderecoCliente);
+            this.Controls.Add(this.LblDataDeNascimentoCliente);
+            this.Controls.Add(this.LblSexoCliente);
+            this.Controls.Add(this.LblRgCliente);
+            this.Controls.Add(this.LblCpfCliente);
+            this.Controls.Add(this.LblNomeCliente);
             this.Controls.Add(this.Ajuda);
             this.Controls.Add(this.Voltar);
             this.Controls.Add(this.pictureBox2);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "cadastroclientes";
             this.Text = "cadastroclientes";
+            this.Load += new System.EventHandler(this.cadastroclientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -543,12 +535,12 @@
         private Button Ajuda;
         private Button Voltar;
         private PictureBox pictureBox2;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox LblCpfCliente;
+        private TextBox LblNomeCliente;
+        private TextBox LblSexoCliente;
+        private TextBox LblRgCliente;
+        private TextBox LblEnderecoCliente;
+        private TextBox LblDataDeNascimentoCliente;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -556,28 +548,27 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private TextBox textBox7;
+        private TextBox LblEstadoCivilCliente;
         private Label label8;
-        private TextBox textBox8;
+        private TextBox LblNumeroCliente;
         private Label label9;
-        private TextBox textBox9;
+        private TextBox LblMunicipioCliente;
         private Label label10;
-        private TextBox textBox10;
+        private TextBox LblBairroCliente;
         private Label label11;
-        private TextBox textBox11;
+        private TextBox LblCepCliente;
         private Label label12;
-        private TextBox textBox12;
+        private TextBox LblTelefoneCliente;
         private Label label13;
-        private TextBox textBox13;
+        private TextBox LblEmail;
         private Label label14;
-        private TextBox textBox14;
-        private Label label15;
-        private TextBox textBox15;
+        private TextBox LblEstadoCliente;
         private Label label16;
-        private TextBox textBox16;
-        private TextBox textBox17;
+        private TextBox LblSenhaCliente;
+        private TextBox LblLogradouroCliente;
         private Label label17;
         private Label label18;
-        private TextBox textBox18;
+        private TextBox LblComplementoCliente;
+        private Button button1;
     }
 }

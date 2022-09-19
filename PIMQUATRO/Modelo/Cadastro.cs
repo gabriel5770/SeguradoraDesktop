@@ -20,7 +20,7 @@ namespace PIMQUATRO.Modelo
        
         public static bool CadastroFuncionario(string email, string senha, string nome, string estadoCivil, string dataNascimento,
                         string rg, string cpf, string sexo, string endereco, string numResidencia, string estado,
-                        string municipio, string bairro, string cep, string telefone, string complemento, string logradouro)
+                        string municipio, string bairro, string cep, string telefone, string complemento, string logradouro, string cargo)
         {
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
@@ -50,6 +50,8 @@ namespace PIMQUATRO.Modelo
                         command.Parameters.AddWithValue("@Logradouro", logradouro);
                         command.Parameters.AddWithValue("@Complemento", complemento);
                         command.Parameters.AddWithValue("@Telefone", telefone);
+                        command.Parameters.AddWithValue("@Cargo", cargo);
+
 
                         connection.Open();
                         command.ExecuteNonQuery();
