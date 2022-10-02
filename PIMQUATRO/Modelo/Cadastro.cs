@@ -37,7 +37,7 @@ namespace PIMQUATRO.Modelo
                         command.Parameters.AddWithValue("@Senha", senha);
                         command.Parameters.AddWithValue("@Nome", nome);
                         command.Parameters.AddWithValue("@EstadoCivil", estadoCivil);
-                        command.Parameters.AddWithValue("@DataNascimento", dataNascimento);
+                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(dataNascimento));
                         command.Parameters.AddWithValue("@Rg",rg);
                         command.Parameters.AddWithValue("@Cpf", cpf);
                         command.Parameters.AddWithValue("@Sexo", sexo);
@@ -48,6 +48,7 @@ namespace PIMQUATRO.Modelo
                         command.Parameters.AddWithValue("@Bairro", bairro);
                         command.Parameters.AddWithValue("@Cep", cep);
                         command.Parameters.AddWithValue("@Telefone", telefone);
+ 
 
                         connection.Open();
                         command.ExecuteNonQuery();

@@ -55,6 +55,7 @@ namespace PIMQUATRO
             string Bairro = lblBairroFunc.Text;
             string Cep = lblCepFunc.Text;
             string Telefone = lblTelefoneFunc.Text;
+             
 
 
       
