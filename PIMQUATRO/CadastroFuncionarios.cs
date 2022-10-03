@@ -36,15 +36,13 @@ namespace PIMQUATRO
 
         }
 
-        public int MyProperty { get; set; }
-
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             string Email = lblEmailFunc.Text;
             string Senha = lblSenhaFunc.Text;
             string Nome = lblNomeFunc.Text;
             string EstadoCivil = lblEstadoCivilfunc.Text;
-            string DataNascimento = lblDataNascimentofunc.Text;
+            DateTime DataNascimento = Convert.ToDateTime(lblDataNascimentofunc.Text);
             string Rg = lblRGfunc.Text;
             string Cpf = lblCpfFunc.Text;
             string Sexo = lblSexoFunc.Text;
@@ -55,12 +53,13 @@ namespace PIMQUATRO
             string Bairro = lblBairroFunc.Text;
             string Cep = lblCepFunc.Text;
             string Telefone = lblTelefoneFunc.Text;
-             
 
 
-      
-            if (Cadastro.CadastroFuncionario(Email,Senha,Nome,EstadoCivil,DataNascimento,Rg,Cpf,Sexo,Endereco,NumResidencia,Estado,Municipio,Bairro,Cep,Telefone))
-            {
+
+            Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado);
+
+            if(func.Cadastrar())
+             {
                 this.Hide();
                 new menu().ShowDialog();
                 MessageBox.Show("Funcionário cadastrado com sucesso");

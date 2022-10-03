@@ -34,8 +34,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lblEstadoFunc = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.lblTelefoneFunc = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -119,26 +117,6 @@
             this.lblEstadoFunc.Name = "lblEstadoFunc";
             this.lblEstadoFunc.Size = new System.Drawing.Size(145, 16);
             this.lblEstadoFunc.TabIndex = 71;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label13.ForeColor = System.Drawing.Color.Snow;
-            this.label13.Location = new System.Drawing.Point(595, 309);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(39, 15);
-            this.label13.TabIndex = 70;
-            this.label13.Text = "Email:";
-            // 
-            // textBox13
-            // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox13.Location = new System.Drawing.Point(595, 327);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(145, 16);
-            this.textBox13.TabIndex = 69;
             // 
             // label12
             // 
@@ -443,8 +421,6 @@
             this.Controls.Add(this.lblEmailFunc);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.lblEstadoFunc);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblTelefoneFunc);
             this.Controls.Add(this.label11);

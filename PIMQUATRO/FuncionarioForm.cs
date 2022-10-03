@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class Funcionario : Form
+    public partial class FuncionarioForm : Form
     {
         private void Funcionario_Load(object sender, EventArgs e)
         {
 
         }
-        public Funcionario()
+        public FuncionarioForm()
         {
             InitializeComponent();
         }

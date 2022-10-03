@@ -1,6 +1,6 @@
 ﻿namespace PIMQUATRO
 {
-    partial class Funcionario
+    partial class FuncionarioForm
     {
         /// <summary>
         /// Required designer variable.

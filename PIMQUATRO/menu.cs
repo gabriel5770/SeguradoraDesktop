@@ -27,7 +27,7 @@ namespace PIMQUATRO
         private void Funcionarios_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Funcionario().ShowDialog();
+            new FuncionarioForm().ShowDialog();
         }
 
         private void Seguradoras_Click(object sender, EventArgs e)
@@ -47,5 +47,7 @@ namespace PIMQUATRO
             this.Hide();
             new Duvidas().ShowDialog();
         }
+
+      
     }
 }
