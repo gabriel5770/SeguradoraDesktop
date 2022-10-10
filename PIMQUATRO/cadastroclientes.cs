@@ -88,5 +88,11 @@ namespace PIMQUATRO
                 new menu().ShowDialog();
             }
         }
+
+        private void btnBeneficiario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Beneficiário().ShowDialog();
+        }
     }
 }

@@ -40,6 +40,7 @@ namespace PIMQUATRO
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
+            
             string Email = lblEmailFunc.Text;
             string Senha = lblSenhaFunc.Text;
             string Nome = lblNomeFunc.Text;

@@ -67,6 +67,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.LblComplementoCliente = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnBeneficiario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -477,11 +478,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnBeneficiario
+            // 
+            this.btnBeneficiario.Location = new System.Drawing.Point(621, 568);
+            this.btnBeneficiario.Name = "btnBeneficiario";
+            this.btnBeneficiario.Size = new System.Drawing.Size(113, 29);
+            this.btnBeneficiario.TabIndex = 54;
+            this.btnBeneficiario.Text = "Beneficiário";
+            this.btnBeneficiario.UseVisualStyleBackColor = true;
+            this.btnBeneficiario.Click += new System.EventHandler(this.btnBeneficiario_Click);
+            // 
             // cadastroclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 615);
+            this.Controls.Add(this.btnBeneficiario);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.LblComplementoCliente);
@@ -570,5 +582,6 @@
         private Label label18;
         private TextBox LblComplementoCliente;
         private Button button1;
+        private Button btnBeneficiario;
     }
 }
