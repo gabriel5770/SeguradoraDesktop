@@ -63,6 +63,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.lblSenhaFunc = new System.Windows.Forms.TextBox();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -409,11 +410,19 @@
             this.btnCadastrarFuncionario.UseVisualStyleBackColor = true;
             this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
             // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(605, 324);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(100, 23);
+            this.txtCidade.TabIndex = 78;
+            // 
             // CadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.lblSenhaFunc);
@@ -495,5 +504,6 @@
         private Label label16;
         private TextBox lblSenhaFunc;
         private Button btnCadastrarFuncionario;
+        private TextBox txtCidade;
     }
 }

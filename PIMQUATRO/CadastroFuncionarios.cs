@@ -51,15 +51,16 @@ namespace PIMQUATRO
             string Estado = lblEstadoFunc.Text;
             string Municipio = lblMunicipioFunc.Text;
             string Bairro = lblBairroFunc.Text;
+            string Cidade = txtCidade.Text;
             string Cep = lblCepFunc.Text;
             string Telefone = lblTelefoneFunc.Text;
 
 
 
-            Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado);
+            Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade);
 
-            if(func.Cadastrar())
-             {
+            if (func.Cadastrar())
+            {
                 this.Hide();
                 new menu().ShowDialog();
                 MessageBox.Show("Funcionário cadastrado com sucesso");

@@ -25,8 +25,10 @@ namespace PIMQUATRO.Modelo
         public string Estado { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Cpf { get; set; }
+        public string Beneficios { get; set; }
+        public string Cidade { get; set; }
 
-        public Cliente(string email, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf)
+        public Cliente(string email, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade)
         {
             Email = email;
             Nome = nome;
@@ -42,9 +44,15 @@ namespace PIMQUATRO.Modelo
             Estado = estado;
             DataNascimento = dataNascimento;
             Cpf = cpf;
+            Beneficios = beneficios;
+            Cidade = cidade;
         }
 
-        public bool Cadastrar()
+        public  Cliente()
+        {
+
+        }
+        public bool Cadastrar() 
         {
             {
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
@@ -55,13 +63,13 @@ namespace PIMQUATRO.Modelo
                         CommandType = CommandType.StoredProcedure
                     })
                     {
-                        command.CommandText = "Ins_WindowsForms_Cadastro_Funcionario";
+                        command.CommandText = "Ins_WindowsForms_Cadastro_Cliente";
                         try
                         {
                             command.Parameters.AddWithValue("@Email", Email);
                             command.Parameters.AddWithValue("@Nome", Nome);
                             command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
-                            command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
+                            command.Parameters.AddWithValue("@DataNascimento", DataNascimento);
                             command.Parameters.AddWithValue("@Rg", Rg);
                             command.Parameters.AddWithValue("@Cpf", Cpf);
                             command.Parameters.AddWithValue("@Sexo", Sexo);
@@ -72,11 +80,15 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Bairro", Bairro);
                             command.Parameters.AddWithValue("@Cep", Cep);
                             command.Parameters.AddWithValue("@Telefone", Telefone);
+                            command.Parameters.AddWithValue("@Beneficios", Beneficios);
+                            command.Parameters.AddWithValue("@Cidade", Cidade);
+
 
                             connection.Open();
                             command.ExecuteNonQuery();
-
+                            
                             return true;
+
                         }
                         catch (SqlException ex)
                         {
@@ -88,6 +100,5 @@ namespace PIMQUATRO.Modelo
                 }
             }
         }
-
     }
 }

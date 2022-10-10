@@ -27,8 +27,9 @@ namespace PIMQUATRO.Modelo
         public string Cep { get; set; }
         public string Telefone { get; set; }
         public string Estado { get; set; }
+        public string Cidade { get; set; }
 
-        public Funcionario(string nome, string cpf, string rg, DateTime dataNascimento, string endereco, string email, string senha, string estadoCivil, string sexo, string numeroResidencia, string municipio, string bairro, string cep, String telefone, string estado)
+        public Funcionario(string nome, string cpf, string rg, DateTime dataNascimento, string endereco, string email, string senha, string estadoCivil, string sexo, string numeroResidencia, string municipio, string bairro, string cep, String telefone, string estado,string cidade)
         {
             Nome = nome;
             Cpf = cpf;
@@ -45,6 +46,7 @@ namespace PIMQUATRO.Modelo
             Cep = cep;
             Telefone = telefone;
             Estado = estado;
+            Cidade = cidade; 
         }
 
         public bool Cadastrar()
@@ -76,6 +78,8 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Bairro", Bairro);
                             command.Parameters.AddWithValue("@Cep", Cep);
                             command.Parameters.AddWithValue("@Telefone", Telefone);
+                            command.Parameters.AddWithValue("@Cidade", Cidade);
+
 
 
                             connection.Open();

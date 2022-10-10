@@ -24,7 +24,17 @@ namespace PIMQUATRO
             new clientes().ShowDialog();
         }
 
-        private void btnCadastrarCliente_Click(object sender, EventArgs e)
+
+
+        private void cadastroclientes_Load(object sender, EventArgs e)
+        {
+            cmbBeneficiosCliente.Items.Add("Morte");
+            cmbBeneficiosCliente.Items.Add("Invalidez");
+            cmbBeneficiosCliente.Items.Add("Doenças Graves");
+ 
+        }
+
+        private void btnCadastrarCliente_Click_1(object sender, EventArgs e)
         {
             string Email = txtEmaiCliente.Text;
             string Nome = txtNomeCliente.Text;
@@ -36,22 +46,28 @@ namespace PIMQUATRO
             string Sexo = txtSexoCliente.Text;
             string Endereco = txtEnderecoCliente.Text;
             string Numero = txtNumeroResidenciaCliente.Text;
+            string Cidade = txtCidade.Text;
             string Estado = txtEstadoCivilCliente.Text;
             string Municipio = txtMunicipioCliente.Text;
             string Bairro = txtBairroCliente.Text;
             string Cep = txtCepCliente.Text;
             string Telefone = txtTelefoneCliente.Text;
+            string beneficios = cmbBeneficiosCliente.Text;
 
-            Cliente cliente = new Cliente(Email, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf);
 
-        }
-
-        private void cadastroclientes_Load(object sender, EventArgs e)
-        {
-
+            Cliente cliente = new Cliente(Email, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade);
+            if (cliente.Cadastrar())
+            {
+                MessageBox.Show("Cliente cadastrado com sucesso");
+                this.Hide();
+                new cadastroclientes().ShowDialog();
+            }
+            MessageBox.Show("Não foi possível cadastrar o Cliente");
         }
     }
 }
+
+
 
 
 

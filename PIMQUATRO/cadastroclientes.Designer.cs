@@ -60,6 +60,9 @@
             this.txtEstadoCliente = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtEmaiCliente = new System.Windows.Forms.TextBox();
+            this.cmbBeneficiosCliente = new System.Windows.Forms.ComboBox();
+            this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,11 +378,39 @@
             this.txtEmaiCliente.Size = new System.Drawing.Size(145, 16);
             this.txtEmaiCliente.TabIndex = 45;
             // 
+            // cmbBeneficiosCliente
+            // 
+            this.cmbBeneficiosCliente.FormattingEnabled = true;
+            this.cmbBeneficiosCliente.Location = new System.Drawing.Point(634, 305);
+            this.cmbBeneficiosCliente.Name = "cmbBeneficiosCliente";
+            this.cmbBeneficiosCliente.Size = new System.Drawing.Size(121, 23);
+            this.cmbBeneficiosCliente.TabIndex = 47;
+            // 
+            // btnCadastrarCliente
+            // 
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(487, 372);
+            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(138, 23);
+            this.btnCadastrarCliente.TabIndex = 48;
+            this.btnCadastrarCliente.Text = "Cadastrar";
+            this.btnCadastrarCliente.UseVisualStyleBackColor = true;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click_1);
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Location = new System.Drawing.Point(110, 363);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(100, 23);
+            this.txtCidade.TabIndex = 49;
+            // 
             // cadastroclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.btnCadastrarCliente);
+            this.Controls.Add(this.cmbBeneficiosCliente);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtEmaiCliente);
             this.Controls.Add(this.label14);
@@ -453,5 +484,8 @@
         private TextBox txtEstadoCliente;
         private Label label15;
         private TextBox txtEmaiCliente;
+        private ComboBox cmbBeneficiosCliente;
+        private Button btnCadastrarCliente;
+        private TextBox txtCidade;
     }
 }
