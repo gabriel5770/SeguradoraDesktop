@@ -52,7 +52,27 @@ namespace PIMQUATRO.Modelo
         {
 
         }
-        public bool Cadastrar() 
+
+        public Cliente(string email, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string cidade)
+        {
+            Email = email;
+            Nome = nome;
+            EstadoCivil = estadoCivil;
+            Rg = rg;
+            Sexo = sexo;
+            Endereco = endereco;
+            NumeroResidencia = numeroResidencia;
+            Municipio = municipio;
+            Bairro = bairro;
+            Cep = cep;
+            Telefone = telefone;
+            Estado = estado;
+            DataNascimento = dataNascimento;
+            Cpf = cpf;
+            Cidade = cidade;
+        }
+
+        public virtual bool Cadastrar() 
         {
             {
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))

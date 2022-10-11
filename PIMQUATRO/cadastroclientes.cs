@@ -62,7 +62,14 @@ namespace PIMQUATRO
                 this.Hide();
                 new cadastroclientes().ShowDialog();
             }
+            
             MessageBox.Show("Não foi possível cadastrar o Cliente");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CadastroBeneficiario().ShowDialog();
         }
     }
 }
