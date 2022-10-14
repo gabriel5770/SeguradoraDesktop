@@ -47,19 +47,15 @@ namespace PIMQUATRO
             string Telefone = txtTelefoneBeneficiario.Text;
 
 
-            Beneficiario beneficiario = new Beneficiario(Email, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, 
-                Cep,Telefone, Estado, DataNascimento, Cpf, Cidade);
-
-            if (beneficiario.Cadastro() != -1)
+            Beneficiario beneficiario = new Beneficiario(Email, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, Cidade);
+            if (beneficiario.Cadastrar())
             {
-                MessageBox.Show("cadastrado com sucesso");
+                MessageBox.Show("Beneficiario cadastrado com sucesso");
                 this.Hide();
                 new cadastroclientes().ShowDialog();
             }
             else
-            {
-                MessageBox.Show("Não foi possível cadastrar");
-            }           
+            MessageBox.Show("Não foi possível cadastrar o Beneficiario");
 
         }
 
