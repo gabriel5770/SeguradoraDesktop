@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PIMQUATRO.Modelo
 {
-    internal class Beneficiario : Cliente
+    internal class Beneficiario : Cadastrar
     {
         public Beneficiario(string email, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro,
             string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string cidade) : base
@@ -23,7 +23,7 @@ namespace PIMQUATRO.Modelo
 
         }
 
-        public override bool Cadastrar()
+        public override int Cadastro()
         {
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
@@ -52,22 +52,27 @@ namespace PIMQUATRO.Modelo
                         command.Parameters.AddWithValue("@Telefone", Telefone);
                         command.Parameters.AddWithValue("@Cidade", Cidade);
 
+                        SqlParameter parametroRetorno = command.Parameters.Add("@idBeneficiario", SqlDbType.Int);
+                        parametroRetorno.Direction = ParameterDirection.ReturnValue;
+
 
                         connection.Open();
                         command.ExecuteNonQuery();
 
-                        return true;
+
+                        return Convert.ToInt32(parametroRetorno);
 
                     }
                     catch (SqlException ex)
                     {
-                        MessageBox.Show("Erro ao cadastrar Beneficiario");
+
+                        MessageBox.Show("Erro ao cadastrar Cliente");
                         MessageBox.Show("Erro encontrado: " + ex);
-                        return false;
+                        return -1; // corrigir
                     }
+
                 }
             }
-
 
         }
     }

@@ -61,7 +61,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtEmaiCliente = new System.Windows.Forms.TextBox();
             this.cmbBeneficiosCliente = new System.Windows.Forms.ComboBox();
-            this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -405,17 +404,6 @@
             this.cmbBeneficiosCliente.Size = new System.Drawing.Size(138, 28);
             this.cmbBeneficiosCliente.TabIndex = 47;
             // 
-            // btnCadastrarCliente
-            // 
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(557, 496);
-            this.btnCadastrarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(158, 31);
-            this.btnCadastrarCliente.TabIndex = 48;
-            this.btnCadastrarCliente.Text = "Cadastrar";
-            this.btnCadastrarCliente.UseVisualStyleBackColor = true;
-            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click_1);
-            // 
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(126, 484);
@@ -431,7 +419,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 31);
             this.button1.TabIndex = 50;
-            this.button1.Text = "Beneficiario";
+            this.button1.Text = "Proximo";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -442,7 +430,6 @@
             this.ClientSize = new System.Drawing.Size(953, 615);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.cmbBeneficiosCliente);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtEmaiCliente);
@@ -519,7 +506,6 @@
         private Label label15;
         private TextBox txtEmaiCliente;
         private ComboBox cmbBeneficiosCliente;
-        private Button btnCadastrarCliente;
         private TextBox txtCidade;
         private Button button1;
     }
