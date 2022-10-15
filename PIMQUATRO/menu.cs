@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIMQUATRO.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,7 @@ namespace PIMQUATRO
         private void Seguradoras_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Seguradoras().ShowDialog();
+            new FormularioSeguradora().ShowDialog();
         }
 
         private void Vendas_Click(object sender, EventArgs e)
@@ -48,6 +49,10 @@ namespace PIMQUATRO
             new Duvidas().ShowDialog();
         }
 
-      
+        private void btnCadastrarBeneficiario_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new CadastroBeneficiario().ShowDialog();
+        }
     }
 }

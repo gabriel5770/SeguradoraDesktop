@@ -37,6 +37,7 @@
             this.Vendas = new System.Windows.Forms.Button();
             this.Duvidas = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCadastrarBeneficiario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             this.Seguradoras.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Seguradoras.ForeColor = System.Drawing.Color.Snow;
-            this.Seguradoras.Location = new System.Drawing.Point(372, 269);
+            this.Seguradoras.Location = new System.Drawing.Point(372, 298);
             this.Seguradoras.Name = "Seguradoras";
             this.Seguradoras.Size = new System.Drawing.Size(93, 23);
             this.Seguradoras.TabIndex = 8;
@@ -101,7 +102,7 @@
             // 
             this.Vendas.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Vendas.ForeColor = System.Drawing.Color.Snow;
-            this.Vendas.Location = new System.Drawing.Point(372, 298);
+            this.Vendas.Location = new System.Drawing.Point(372, 327);
             this.Vendas.Name = "Vendas";
             this.Vendas.Size = new System.Drawing.Size(93, 23);
             this.Vendas.TabIndex = 9;
@@ -113,7 +114,7 @@
             // 
             this.Duvidas.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Duvidas.ForeColor = System.Drawing.Color.Snow;
-            this.Duvidas.Location = new System.Drawing.Point(372, 327);
+            this.Duvidas.Location = new System.Drawing.Point(372, 356);
             this.Duvidas.Name = "Duvidas";
             this.Duvidas.Size = new System.Drawing.Size(93, 23);
             this.Duvidas.TabIndex = 10;
@@ -130,11 +131,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 11;
             // 
+            // btnCadastrarBeneficiario
+            // 
+            this.btnCadastrarBeneficiario.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCadastrarBeneficiario.ForeColor = System.Drawing.Color.Snow;
+            this.btnCadastrarBeneficiario.Location = new System.Drawing.Point(372, 269);
+            this.btnCadastrarBeneficiario.Name = "btnCadastrarBeneficiario";
+            this.btnCadastrarBeneficiario.Size = new System.Drawing.Size(93, 23);
+            this.btnCadastrarBeneficiario.TabIndex = 12;
+            this.btnCadastrarBeneficiario.Text = "Beneficiários";
+            this.btnCadastrarBeneficiario.UseVisualStyleBackColor = false;
+            this.btnCadastrarBeneficiario.Click += new System.EventHandler(this.btnCadastrarBeneficiario_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.btnCadastrarBeneficiario);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Duvidas);
             this.Controls.Add(this.Vendas);
@@ -161,5 +175,6 @@
         private Button Vendas;
         private Button Duvidas;
         private DataGridView dataGridView1;
+        private Button btnCadastrarBeneficiario;
     }
 }

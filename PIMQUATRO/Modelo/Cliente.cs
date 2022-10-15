@@ -72,7 +72,7 @@ namespace PIMQUATRO.Modelo
             Cidade = cidade;
         }
 
-        public virtual bool Cadastrar() 
+        public  bool Cadastrar() 
         {
             {
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))

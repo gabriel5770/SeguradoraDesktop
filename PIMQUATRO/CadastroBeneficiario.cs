@@ -32,22 +32,24 @@ namespace PIMQUATRO
         {
             string Email = txtEmailBeneficiario.Text;
             string Nome = txtNomeBeneficiario.Text;
-            string EstadoCivil = txtEstadoCivilBeneficiario.Text;
+            string EstadoCivil = cmbEstadoCivil.Text;
             DateTime DataNascimento = Convert.ToDateTime(txtDataNascimentoBeneficiario.Text);
             string NumeroResidencia = txtNumeroResidenciaBeneficiario.Text;
             string Rg = txtRgBeneficiario.Text;
             string Cpf = txtCepBeneficiario.Text;
-            string Sexo = txtSexoBeneficiario.Text;
+            string Sexo = cmbSexo.Text;
             string Endereco = txtEnderecoBeneficiario.Text;
             string Cidade = txtCidadeBeneficiario.Text;
-            string Estado = txtEstadoCivilBeneficiario.Text;
+            string Estado = cmbEstado.Text;
             string Municipio = txtMunicipioBeneficiario.Text;
             string Bairro = txtBairroBeneficiario.Text;
             string Cep = txtCepBeneficiario.Text;
             string Telefone = txtTelefoneBeneficiario.Text;
+            string CpfCliente = txtCpfCliente.Text;
 
 
-            Beneficiario beneficiario = new Beneficiario(Email, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, Cidade);
+
+            Beneficiario beneficiario = new Beneficiario(Email,Nome,EstadoCivil,DataNascimento,NumeroResidencia,Rg,Cpf,Sexo,Endereco,Cidade,Estado,Municipio,Bairro,Cep,Telefone,CpfCliente);
             if (beneficiario.Cadastrar())
             {
                 MessageBox.Show("Beneficiario cadastrado com sucesso");
@@ -72,6 +74,21 @@ namespace PIMQUATRO
 
         private void txtNomeBeneficiario_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void CadastroBeneficiario_Load(object sender, EventArgs e)
+        {
+            cmbEstadoCivil.Items.Add("Solteiro");
+            cmbEstadoCivil.Items.Add("Casado");
+            cmbEstadoCivil.Items.Add("Viúvo");
+
+            cmbSexo.Items.Add("Masculino");
+            cmbSexo.Items.Add("Feminino");
+
+            cmbEstado.Items.Add("SP");
+            cmbEstado.Items.Add("RJ");
+            cmbEstado.Items.Add("MG");
 
         }
     }

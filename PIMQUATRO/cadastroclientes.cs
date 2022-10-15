@@ -31,23 +31,35 @@ namespace PIMQUATRO
             cmbBeneficiosCliente.Items.Add("Morte");
             cmbBeneficiosCliente.Items.Add("Invalidez");
             cmbBeneficiosCliente.Items.Add("Doenças Graves");
- 
+
+            cmbEstadoCivil.Items.Add("Solteiro");
+            cmbEstadoCivil.Items.Add("Casado");
+            cmbEstadoCivil.Items.Add("Viúvo");
+
+            cmbSexo.Items.Add("Masculino");
+            cmbSexo.Items.Add("Feminino");
+
+            cmbEstado.Items.Add("SP");
+            cmbEstado.Items.Add("RJ");
+            cmbEstado.Items.Add("MG");
+
+
         }
 
         private void btnCadastrarCliente_Click_1(object sender, EventArgs e)
         {
             string Email = txtEmaiCliente.Text;
             string Nome = txtNomeCliente.Text;
-            string EstadoCivil = txtEstadoCivilCliente.Text;
+            string EstadoCivil = cmbEstadoCivil.Text;
             DateTime DataNascimento = Convert.ToDateTime(txtDataNascimentoCliente.Text);
             string NumeroResidencia = txtNumeroResidenciaCliente.Text;
             string Rg = txtRgCliente.Text;
             string Cpf = txtCepCliente.Text;
-            string Sexo = txtSexoCliente.Text;
+            string Sexo = cmbSexo.Text;
             string Endereco = txtEnderecoCliente.Text;
             string Numero = txtNumeroResidenciaCliente.Text;
             string Cidade = txtCidade.Text;
-            string Estado = txtEstadoCivilCliente.Text;
+            string Estado = cmbEstado.Text;
             string Municipio = txtMunicipioCliente.Text;
             string Bairro = txtBairroCliente.Text;
             string Cep = txtCepCliente.Text;
