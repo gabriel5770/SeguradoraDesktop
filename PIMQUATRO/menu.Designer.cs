@@ -36,10 +36,8 @@
             this.Seguradoras = new System.Windows.Forms.Button();
             this.Vendas = new System.Windows.Forms.Button();
             this.Duvidas = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnCadastrarBeneficiario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox2
@@ -122,15 +120,6 @@
             this.Duvidas.UseVisualStyleBackColor = false;
             this.Duvidas.Click += new System.EventHandler(this.Duvidas_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 11;
-            // 
             // btnCadastrarBeneficiario
             // 
             this.btnCadastrarBeneficiario.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -149,7 +138,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 461);
             this.Controls.Add(this.btnCadastrarBeneficiario);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Duvidas);
             this.Controls.Add(this.Vendas);
             this.Controls.Add(this.Seguradoras);
@@ -160,7 +148,6 @@
             this.Name = "menu";
             this.Text = "menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -174,7 +161,6 @@
         private Button Seguradoras;
         private Button Vendas;
         private Button Duvidas;
-        private DataGridView dataGridView1;
         private Button btnCadastrarBeneficiario;
     }
 }
