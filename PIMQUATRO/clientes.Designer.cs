@@ -77,7 +77,7 @@
             this.Controls.Add(this.Voltar);
             this.Name = "clientes";
             this.Text = "clientes";
-             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,5 +86,6 @@
         private Button Voltar;
         private Button BtnCadastrarCliente;
         private DataGridView dataGridViewCliente;
+        private DataGridViewTextBoxColumn Nome;
     }
 }
