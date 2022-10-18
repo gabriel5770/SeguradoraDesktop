@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class cadastroclientes : Form
+    public partial class FormularioCadastroClienters : Form
     {
-        public cadastroclientes()
+        public FormularioCadastroClienters()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace PIMQUATRO
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new clientes().ShowDialog();
+            new FormularioClientes().ShowDialog();
         }
 
 
@@ -72,7 +72,7 @@ namespace PIMQUATRO
             {
                 MessageBox.Show("Cliente cadastrado com sucesso");
                 this.Hide();
-                new cadastroclientes().ShowDialog();
+                new FormularioCadastroClienters().ShowDialog();
             }
             
             MessageBox.Show("Não foi possível cadastrar o Cliente");
@@ -81,7 +81,7 @@ namespace PIMQUATRO
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new CadastroBeneficiario().ShowDialog();
+            new FormularioCadastroBeneficiario().ShowDialog();
         }
     }
 }

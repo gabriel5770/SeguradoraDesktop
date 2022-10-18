@@ -27,7 +27,7 @@ namespace PIMQUATRO
         private void Voltar_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            new inicio().ShowDialog();
+            new FormularioInicio().ShowDialog();
         }
 
         private void PageLogin_Load(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace PIMQUATRO
                         if (reader.HasRows)
                         {
                         this.Hide();
-                        new menu().ShowDialog();
+                        new FormularioMenu().ShowDialog();
                         }
                         else
                         {

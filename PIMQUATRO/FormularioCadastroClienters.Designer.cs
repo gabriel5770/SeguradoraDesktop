@@ -1,6 +1,6 @@
 ﻿namespace PIMQUATRO
 {
-    partial class cadastroclientes
+    partial class FormularioCadastroClienters
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cadastroclientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioCadastroClienters));
             this.Ajuda = new System.Windows.Forms.Button();
             this.Voltar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();

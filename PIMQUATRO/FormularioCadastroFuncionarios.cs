@@ -15,13 +15,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace PIMQUATRO
 {
-    public partial class CadastroFuncionarios : Form
+    public partial class FormularioCadastroFuncionarios : Form
     {
         private void CadastroFuncionarios_Load(object sender, EventArgs e)
         {
 
         }
-        public CadastroFuncionarios()
+        public FormularioCadastroFuncionarios()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace PIMQUATRO
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new menu().ShowDialog();
+            new FormularioMenu().ShowDialog();
         }
         private void label15_Click(object sender, EventArgs e)
         {
@@ -62,7 +62,7 @@ namespace PIMQUATRO
             if (func.Cadastrar())
             {
                 this.Hide();
-                new menu().ShowDialog();
+                new FormularioMenu().ShowDialog();
                 MessageBox.Show("Funcionário cadastrado com sucesso");
             }
         }

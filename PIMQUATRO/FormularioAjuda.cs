@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class Vendas : Form
+    public partial class FormularioAjuda : Form
     {
-        public Vendas()
+        public FormularioAjuda()
         {
             InitializeComponent();
         }
 
         private void Voltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new menu().ShowDialog();
+
         }
     }
 }

@@ -12,42 +12,39 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class FuncionarioForm : Form
+    public partial class FormularioClientes : Form
     {
-        private void Funcionario_Load(object sender, EventArgs e)
-        {
-
-        }
-        public FuncionarioForm()
+        public FormularioClientes()
         {
             InitializeComponent();
-            RetornaDataGridFuncionario();
+            RetornaDataGridCliente();
+
         }
 
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new menu().ShowDialog();
-
+            new FormularioMenu().ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnCadastrarCliente_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new CadastroFuncionarios().ShowDialog();
+            new FormularioCadastroClienters().ShowDialog();
         }
-        public void RetornaDataGridFuncionario()
+
+        public void RetornaDataGridCliente()
         {
 
             DataTable dt = new DataTable();
             SqlConnection Conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString());
             Conn.Open();
-            SqlCommand cmd = new SqlCommand("Qry_WindowsForms_Cadastro_Funcionario_RetornaFuncionarios", Conn);
+            SqlCommand cmd = new SqlCommand("Qry_WindowsForms_Cadastro_Cliente_RetornaCliente", Conn);
             cmd.CommandType = CommandType.StoredProcedure;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
-            dataGridViewFuncionario.DataSource = dt;
-        }
-
+            dataGridViewCliente.DataSource = dt;
+        }  
     }
 }
+

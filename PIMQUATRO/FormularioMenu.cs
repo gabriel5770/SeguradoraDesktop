@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class menu : Form
+    public partial class FormularioMenu : Form
     {
-        public menu()
+        public FormularioMenu()
         {
             InitializeComponent();
         }
@@ -22,13 +22,13 @@ namespace PIMQUATRO
         private void Clientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new clientes().ShowDialog();
+            new FormularioClientes().ShowDialog();
         }
 
         private void Funcionarios_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new FuncionarioForm().ShowDialog();
+            new FormularioFuncionario().ShowDialog();
         }
 
         private void Seguradoras_Click(object sender, EventArgs e)
@@ -46,13 +46,13 @@ namespace PIMQUATRO
         private void Duvidas_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Duvidas().ShowDialog();
+            new FormularioDuvidas().ShowDialog();
         }
 
         private void btnCadastrarBeneficiario_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new CadastroBeneficiario().ShowDialog();
+            new FormularioBeneficiario().ShowDialog();
         }
     }
 }

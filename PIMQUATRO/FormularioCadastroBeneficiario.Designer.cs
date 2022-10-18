@@ -1,6 +1,6 @@
 ﻿namespace PIMQUATRO
 {
-    partial class CadastroBeneficiario
+    partial class FormularioCadastroBeneficiario
     {
         /// <summary>
         /// Required designer variable.

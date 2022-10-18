@@ -1,6 +1,6 @@
 ﻿namespace PIMQUATRO
 {
-    partial class clientes
+    partial class FormularioClientes
     {
         /// <summary>
         /// Required designer variable.

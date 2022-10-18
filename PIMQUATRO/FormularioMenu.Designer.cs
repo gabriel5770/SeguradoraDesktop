@@ -1,6 +1,6 @@
 ﻿namespace PIMQUATRO
 {
-    partial class menu
+    partial class FormularioMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioMenu));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Ajuda = new System.Windows.Forms.Button();
             this.Clientes = new System.Windows.Forms.Button();

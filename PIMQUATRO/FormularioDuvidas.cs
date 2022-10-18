@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class Duvidas : Form
+    public partial class FormularioDuvidas : Form
     {
-        public Duvidas()
+        public FormularioDuvidas()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace PIMQUATRO
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new menu().ShowDialog();
+            new FormularioMenu().ShowDialog();
         }
     }
 }

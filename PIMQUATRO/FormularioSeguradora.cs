@@ -21,7 +21,7 @@ namespace PIMQUATRO
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new menu().ShowDialog();
+            new FormularioMenu().ShowDialog();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace PIMQUATRO
             {
                 MessageBox.Show("Seguradora cadastrado com sucesso");
                 this.Hide();
-                new cadastroclientes().ShowDialog();
+                new FormularioCadastroClienters().ShowDialog();
             }
 
             MessageBox.Show("Não foi possível cadastrar o Cliente");

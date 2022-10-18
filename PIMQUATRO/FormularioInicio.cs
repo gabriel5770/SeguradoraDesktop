@@ -1,8 +1,8 @@
 namespace PIMQUATRO
 {
-    public partial class inicio : Form
+    public partial class FormularioInicio : Form
     {
-        public inicio()
+        public FormularioInicio()
         {
             InitializeComponent();
         }

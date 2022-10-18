@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class criarlogin : Form
+    public partial class Vendas : Form
     {
-        public criarlogin()
+        public Vendas()
         {
             InitializeComponent();
+        }
+
+        private void Voltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormularioMenu().ShowDialog();
         }
     }
 }

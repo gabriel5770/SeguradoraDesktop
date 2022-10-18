@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class CadastroBeneficiario : Form
+    public partial class FormularioCadastroBeneficiario : Form
     {
-        public CadastroBeneficiario()
+        public FormularioCadastroBeneficiario()
         {
             InitializeComponent();
         }
@@ -54,7 +54,7 @@ namespace PIMQUATRO
             {
                 MessageBox.Show("Beneficiario cadastrado com sucesso");
                 this.Hide();
-                new cadastroclientes().ShowDialog();
+                new FormularioCadastroClienters().ShowDialog();
             }
             else
             MessageBox.Show("Não foi possível cadastrar o Beneficiario");
@@ -69,7 +69,7 @@ namespace PIMQUATRO
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new cadastroclientes().ShowDialog();
+            new FormularioCadastroClienters().ShowDialog();
         }
 
         private void txtNomeBeneficiario_TextChanged(object sender, EventArgs e)
