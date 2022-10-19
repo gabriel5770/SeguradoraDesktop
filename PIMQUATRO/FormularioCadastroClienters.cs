@@ -36,8 +36,8 @@ namespace PIMQUATRO
             cmbEstadoCivil.Items.Add("Casado");
             cmbEstadoCivil.Items.Add("Viúvo");
 
-            cmbSexo.Items.Add("Masculino");
-            cmbSexo.Items.Add("Feminino");
+            cmbSexoCliente.Items.Add("Masculino");
+            cmbSexoCliente.Items.Add("Feminino");
 
             cmbEstado.Items.Add("SP");
             cmbEstado.Items.Add("RJ");
@@ -51,18 +51,18 @@ namespace PIMQUATRO
             string Email = txtEmaiCliente.Text;
             string Nome = txtNomeCliente.Text;
             string EstadoCivil = cmbEstadoCivil.Text;
-            DateTime DataNascimento = Convert.ToDateTime(txtDataNascimentoCliente.Text);
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerCliente.Text);
             string NumeroResidencia = txtNumeroResidenciaCliente.Text;
-            string Rg = txtRgCliente.Text;
-            string Cpf = txtCepCliente.Text;
-            string Sexo = cmbSexo.Text;
+            string Rg = maskedTextRgCliente.Text;
+            string Cpf = maskedTextClienteCpf.Text;
+            string Sexo = cmbSexoCliente.Text;
             string Endereco = txtEnderecoCliente.Text;
             string Numero = txtNumeroResidenciaCliente.Text;
-            string Cidade = txtCidade.Text;
+            string Cidade = TxtCidade.Text;
             string Estado = cmbEstado.Text;
             string Municipio = txtMunicipioCliente.Text;
             string Bairro = txtBairroCliente.Text;
-            string Cep = txtCepCliente.Text;
+            string Cep = maskedTextCepCliente.Text;
             string Telefone = txtTelefoneCliente.Text;
             string beneficios = cmbBeneficiosCliente.Text;
 
@@ -82,6 +82,26 @@ namespace PIMQUATRO
         {
             this.Hide();
             new FormularioCadastroBeneficiario().ShowDialog();
+        }
+
+        private void txtCpfCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBairroCliente_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
