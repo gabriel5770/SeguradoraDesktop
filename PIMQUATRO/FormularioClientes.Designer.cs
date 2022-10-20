@@ -38,9 +38,10 @@
             // 
             this.Voltar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Voltar.ForeColor = System.Drawing.Color.Snow;
-            this.Voltar.Location = new System.Drawing.Point(583, 14);
+            this.Voltar.Location = new System.Drawing.Point(625, 24);
+            this.Voltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(75, 35);
+            this.Voltar.Size = new System.Drawing.Size(86, 47);
             this.Voltar.TabIndex = 5;
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = false;
@@ -50,9 +51,10 @@
             // 
             this.BtnCadastrarCliente.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnCadastrarCliente.ForeColor = System.Drawing.Color.Snow;
-            this.BtnCadastrarCliente.Location = new System.Drawing.Point(583, 43);
+            this.BtnCadastrarCliente.Location = new System.Drawing.Point(625, 91);
+            this.BtnCadastrarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCadastrarCliente.Name = "BtnCadastrarCliente";
-            this.BtnCadastrarCliente.Size = new System.Drawing.Size(75, 35);
+            this.BtnCadastrarCliente.Size = new System.Drawing.Size(86, 47);
             this.BtnCadastrarCliente.TabIndex = 12;
             this.BtnCadastrarCliente.Text = "Cadastrar";
             this.BtnCadastrarCliente.UseVisualStyleBackColor = false;
@@ -61,21 +63,25 @@
             // dataGridViewCliente
             // 
             this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCliente.Location = new System.Drawing.Point(-7, 1);
+            this.dataGridViewCliente.Location = new System.Drawing.Point(1, 1);
+            this.dataGridViewCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewCliente.Name = "dataGridViewCliente";
+            this.dataGridViewCliente.RowHeadersWidth = 51;
             this.dataGridViewCliente.RowTemplate.Height = 25;
-            this.dataGridViewCliente.Size = new System.Drawing.Size(552, 523);
+            this.dataGridViewCliente.Size = new System.Drawing.Size(618, 614);
             this.dataGridViewCliente.TabIndex = 13;
             // 
-            // clientes
+            // FormularioClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 525);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1198, 662);
             this.Controls.Add(this.dataGridViewCliente);
             this.Controls.Add(this.BtnCadastrarCliente);
             this.Controls.Add(this.Voltar);
-            this.Name = "clientes";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormularioClientes";
             this.Text = "clientes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
             this.ResumeLayout(false);

@@ -14,6 +14,16 @@ namespace PIMQUATRO
 {
     public partial class FormularioClientes : Form
     {
+        private Form frmAtivo;
+        private void FormShow(Form frm)
+        {
+            ActiveForm.Close();
+            frmAtivo = frm;
+            frm.TopLevel = false;
+            frm.BringToFront();
+            frm.Show();
+
+        }
         public FormularioClientes()
         {
             InitializeComponent();
@@ -25,6 +35,7 @@ namespace PIMQUATRO
         {
             this.Hide();
             new FormularioMenu().ShowDialog();
+            
         }
 
         private void BtnCadastrarCliente_Click(object sender, EventArgs e)

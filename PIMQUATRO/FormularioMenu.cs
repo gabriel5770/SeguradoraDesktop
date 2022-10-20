@@ -13,46 +13,79 @@ namespace PIMQUATRO
 {
     public partial class FormularioMenu : Form
     {
+        private Form frmAtivo;
         public FormularioMenu()
         {
             InitializeComponent();
         }
 
-
-        private void Clientes_Click(object sender, EventArgs e)
+        private void FormShow(Form frm)
         {
-            this.Hide();
-            new FormularioClientes().ShowDialog();
+            ActiveFormClose();
+            frmAtivo = frm;
+            frm.TopLevel = false;
+            panelForms.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show(); 
+
         }
 
-        private void Funcionarios_Click(object sender, EventArgs e)
+        private void ActiveFormClose()
         {
-            this.Hide();
-            new FormularioFuncionario().ShowDialog();
+            if (frmAtivo != null)
+                frmAtivo.Close();
+
         }
 
-        private void Seguradoras_Click(object sender, EventArgs e)
+        private void ActiveButton(Button frmAtivo)
         {
-            this.Hide();
-            new FormularioSeguradora().ShowDialog();
+            foreach (Control crtl in panelPrincipal.Controls)
+                crtl.ForeColor = Color.White;
+
+            frmAtivo.ForeColor = Color.Red;
         }
 
-        private void Vendas_Click(object sender, EventArgs e)
+        private void btnClientes_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Vendas().ShowDialog();
+            
+            ActiveButton(btnClientes);
+            FormShow(new FormularioClientes());
+            
         }
 
-        private void Duvidas_Click(object sender, EventArgs e)
+        private void btnFuncionarios_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new FormularioDuvidas().ShowDialog();
+            ActiveButton(btnFuncionarios);
+            FormShow(new FormularioFuncionario());
+        }
+
+        private void btnSeguradoras_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnSeguradoras);
+            FormShow(new FormularioSeguradora());
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnVendas);
+            FormShow(new FormularioVendas());
+        }
+
+        private void btnDuvidas_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnDuvidas);
+            FormShow(new FormularioDuvidas());
         }
 
         private void btnCadastrarBeneficiario_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new FormularioBeneficiario().ShowDialog();
+            ActiveButton(btnDuvidas);
+            FormShow(new FormularioBeneficiario());
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
