@@ -49,5 +49,10 @@ namespace PIMQUATRO
             dataGridViewFuncionario.DataSource = dt;
         }
 
+        private void FormularioFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

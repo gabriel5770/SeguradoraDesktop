@@ -28,130 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioSeguradora));
-            this.Ajuda = new System.Windows.Forms.Button();
-            this.Voltar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.dataGridViewSeguradora = new System.Windows.Forms.DataGridView();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnCadastrarSeguradora = new System.Windows.Forms.Button();
+            this.seguradoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSeguradora)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguradoraBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // Ajuda
+            // dataGridViewSeguradora
             // 
-            this.Ajuda.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Ajuda.ForeColor = System.Drawing.Color.Snow;
-            this.Ajuda.Location = new System.Drawing.Point(747, 426);
-            this.Ajuda.Name = "Ajuda";
-            this.Ajuda.Size = new System.Drawing.Size(75, 23);
-            this.Ajuda.TabIndex = 9;
-            this.Ajuda.Text = "Ajuda";
-            this.Ajuda.UseVisualStyleBackColor = false;
+            this.dataGridViewSeguradora.AutoGenerateColumns = false;
+            this.dataGridViewSeguradora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSeguradora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nomeDataGridViewTextBoxColumn,
+            this.cnpjDataGridViewTextBoxColumn});
+            this.dataGridViewSeguradora.DataSource = this.seguradoraBindingSource;
+            this.dataGridViewSeguradora.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewSeguradora.Name = "dataGridViewSeguradora";
+            this.dataGridViewSeguradora.RowTemplate.Height = 25;
+            this.dataGridViewSeguradora.Size = new System.Drawing.Size(638, 426);
+            this.dataGridViewSeguradora.TabIndex = 0;
             // 
-            // Voltar
+            // btnVoltar
             // 
-            this.Voltar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.Voltar.ForeColor = System.Drawing.Color.Snow;
-            this.Voltar.Location = new System.Drawing.Point(747, 12);
-            this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(75, 23);
-            this.Voltar.TabIndex = 8;
-            this.Voltar.Text = "Voltar";
-            this.Voltar.UseVisualStyleBackColor = false;
-            this.Voltar.Click += new System.EventHandler(this.Voltar_Click);
+            this.btnVoltar.Location = new System.Drawing.Point(699, 68);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnVoltar.TabIndex = 1;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // pictureBox2
+            // btnCadastrarSeguradora
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(93, 95);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.btnCadastrarSeguradora.Location = new System.Drawing.Point(699, 109);
+            this.btnCadastrarSeguradora.Name = "btnCadastrarSeguradora";
+            this.btnCadastrarSeguradora.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastrarSeguradora.TabIndex = 2;
+            this.btnCadastrarSeguradora.Text = "Cadastrar";
+            this.btnCadastrarSeguradora.UseVisualStyleBackColor = true;
+            this.btnCadastrarSeguradora.Click += new System.EventHandler(this.btnCadastrarSeguradora_Click);
             // 
-            // label2
+            // seguradoraBindingSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(391, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 52;
-            this.label2.Text = "CNPJ:";
+            this.seguradoraBindingSource.DataSource = typeof(PIMQUATRO.Modelo.Seguradora);
             // 
-            // label1
+            // nomeDataGridViewTextBoxColumn
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(385, 151);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Nome:";
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
             // 
-            // txtCnpj
+            // cnpjDataGridViewTextBoxColumn
             // 
-            this.txtCnpj.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCnpj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtCnpj.Location = new System.Drawing.Point(346, 221);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(145, 16);
-            this.txtCnpj.TabIndex = 46;
-            // 
-            // txtNome
-            // 
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNome.Location = new System.Drawing.Point(346, 169);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(145, 16);
-            this.txtNome.TabIndex = 45;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Location = new System.Drawing.Point(604, 350);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(103, 23);
-            this.btnCadastrar.TabIndex = 53;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.HeaderText = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
+            this.cnpjDataGridViewTextBoxColumn.Width = 150;
             // 
             // FormularioSeguradora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 461);
-            this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCnpj);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.Ajuda);
-            this.Controls.Add(this.Voltar);
-            this.Controls.Add(this.pictureBox2);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCadastrarSeguradora);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.dataGridViewSeguradora);
             this.Name = "FormularioSeguradora";
-            this.Text = "Seguradoras";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Text = "FormularioSeguradora";
+            this.Load += new System.EventHandler(this.FormularioSeguradora_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSeguradora)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguradoraBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Button Ajuda;
-        private Button Voltar;
-        private PictureBox pictureBox2;
-        private Label label2;
-        private Label label1;
-        private TextBox txtCnpj;
-        private TextBox txtNome;
-        private Button btnCadastrar;
+        private DataGridView dataGridViewSeguradora;
+        private Button btnVoltar;
+        private Button btnCadastrarSeguradora;
+        private DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn cnpjDataGridViewTextBoxColumn;
+        private BindingSource seguradoraBindingSource;
     }
 }

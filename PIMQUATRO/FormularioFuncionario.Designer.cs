@@ -38,10 +38,9 @@
             // 
             this.Voltar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Voltar.ForeColor = System.Drawing.Color.Snow;
-            this.Voltar.Location = new System.Drawing.Point(702, 13);
-            this.Voltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Voltar.Location = new System.Drawing.Point(614, 10);
             this.Voltar.Name = "Voltar";
-            this.Voltar.Size = new System.Drawing.Size(86, 31);
+            this.Voltar.Size = new System.Drawing.Size(75, 23);
             this.Voltar.TabIndex = 9;
             this.Voltar.Text = "Voltar";
             this.Voltar.UseVisualStyleBackColor = false;
@@ -51,10 +50,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Location = new System.Drawing.Point(702, 52);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(614, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 31);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = false;
@@ -63,24 +61,25 @@
             // dataGridViewFuncionario
             // 
             this.dataGridViewFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFuncionario.Location = new System.Drawing.Point(14, 13);
-            this.dataGridViewFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewFuncionario.Location = new System.Drawing.Point(12, 10);
             this.dataGridViewFuncionario.Name = "dataGridViewFuncionario";
             this.dataGridViewFuncionario.RowHeadersWidth = 51;
             this.dataGridViewFuncionario.RowTemplate.Height = 25;
-            this.dataGridViewFuncionario.Size = new System.Drawing.Size(655, 660);
+            this.dataGridViewFuncionario.Size = new System.Drawing.Size(573, 495);
             this.dataGridViewFuncionario.TabIndex = 11;
             // 
             // FormularioFuncionario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 615);
+            this.ClientSize = new System.Drawing.Size(1032, 461);
             this.Controls.Add(this.dataGridViewFuncionario);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Voltar);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormularioFuncionario";
             this.Text = "Funcionario";
+            this.Load += new System.EventHandler(this.FormularioFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFuncionario)).EndInit();
             this.ResumeLayout(false);
 
