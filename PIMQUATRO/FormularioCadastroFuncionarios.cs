@@ -24,7 +24,9 @@ namespace PIMQUATRO
         public FormularioCadastroFuncionarios()
         {
             InitializeComponent();
+
         }
+    
 
         private void Voltar_Click(object sender, EventArgs e)
         {
@@ -98,6 +100,21 @@ namespace PIMQUATRO
         }
 
         private void textBairroFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdEstadoCivilFunc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textSenhaFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCargoFunc_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

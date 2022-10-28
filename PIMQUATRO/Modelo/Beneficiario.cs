@@ -87,7 +87,7 @@ namespace PIMQUATRO.Modelo
 
                         connection.Open();
                         command.ExecuteNonQuery();
-                        connection.Close();
+                        
 
                         return true;
 

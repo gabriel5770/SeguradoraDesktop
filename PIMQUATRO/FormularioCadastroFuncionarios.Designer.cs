@@ -44,7 +44,7 @@
             this.cmdEstadoCivilFunc = new System.Windows.Forms.ComboBox();
             this.cmbEstadoFunc = new System.Windows.Forms.ComboBox();
             this.cmdSexoFunc = new System.Windows.Forms.ComboBox();
-            this.cmbBeneficiosFunc = new System.Windows.Forms.ComboBox();
+            this.cmbCargoFunc = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textEmailFunc = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -187,6 +187,7 @@
             this.textSenhaFunc.Name = "textSenhaFunc";
             this.textSenhaFunc.Size = new System.Drawing.Size(166, 20);
             this.textSenhaFunc.TabIndex = 104;
+            this.textSenhaFunc.TextChanged += new System.EventHandler(this.textSenhaFunc_TextChanged);
             // 
             // label16
             // 
@@ -201,15 +202,48 @@
             // cmdEstadoCivilFunc
             // 
             this.cmdEstadoCivilFunc.FormattingEnabled = true;
+            this.cmdEstadoCivilFunc.Items.AddRange(new object[] {
+            "Solteiro",
+            "Casado",
+            "Viuvo"});
             this.cmdEstadoCivilFunc.Location = new System.Drawing.Point(737, 193);
             this.cmdEstadoCivilFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdEstadoCivilFunc.Name = "cmdEstadoCivilFunc";
             this.cmdEstadoCivilFunc.Size = new System.Drawing.Size(138, 28);
             this.cmdEstadoCivilFunc.TabIndex = 102;
+            this.cmdEstadoCivilFunc.SelectedIndexChanged += new System.EventHandler(this.cmdEstadoCivilFunc_SelectedIndexChanged);
             // 
             // cmbEstadoFunc
             // 
             this.cmbEstadoFunc.FormattingEnabled = true;
+            this.cmbEstadoFunc.Items.AddRange(new object[] {
+            "",
+            "AP ",
+            "AM ",
+            "PA ",
+            "AC ",
+            "RO ",
+            "TO ",
+            "MA ",
+            "PI ",
+            "CE ",
+            "RN ",
+            "PB ",
+            "PE ",
+            "AL ",
+            "SE ",
+            "BA ",
+            "MT ",
+            "DF ",
+            "GO ",
+            "MS ",
+            "MG ",
+            "ES ",
+            "RJ ",
+            "SP ",
+            "PR ",
+            "SC ",
+            "RS "});
             this.cmbEstadoFunc.Location = new System.Drawing.Point(746, 476);
             this.cmbEstadoFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbEstadoFunc.Name = "cmbEstadoFunc";
@@ -220,6 +254,9 @@
             // cmdSexoFunc
             // 
             this.cmdSexoFunc.FormattingEnabled = true;
+            this.cmdSexoFunc.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
             this.cmdSexoFunc.Location = new System.Drawing.Point(520, 196);
             this.cmdSexoFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmdSexoFunc.Name = "cmdSexoFunc";
@@ -227,14 +264,20 @@
             this.cmdSexoFunc.TabIndex = 100;
             this.cmdSexoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbSexoFunc_SelectedIndexChanged);
             // 
-            // cmbBeneficiosFunc
+            // cmbCargoFunc
             // 
-            this.cmbBeneficiosFunc.FormattingEnabled = true;
-            this.cmbBeneficiosFunc.Location = new System.Drawing.Point(281, 196);
-            this.cmbBeneficiosFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cmbBeneficiosFunc.Name = "cmbBeneficiosFunc";
-            this.cmbBeneficiosFunc.Size = new System.Drawing.Size(138, 28);
-            this.cmbBeneficiosFunc.TabIndex = 99;
+            this.cmbCargoFunc.FormattingEnabled = true;
+            this.cmbCargoFunc.Items.AddRange(new object[] {
+            "Gerente",
+            "Analista",
+            "Vendas",
+            "Suporte"});
+            this.cmbCargoFunc.Location = new System.Drawing.Point(281, 196);
+            this.cmbCargoFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbCargoFunc.Name = "cmbCargoFunc";
+            this.cmbCargoFunc.Size = new System.Drawing.Size(138, 28);
+            this.cmbCargoFunc.TabIndex = 99;
+            this.cmbCargoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbCargoFunc_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -513,7 +556,7 @@
             this.Controls.Add(this.cmdEstadoCivilFunc);
             this.Controls.Add(this.cmbEstadoFunc);
             this.Controls.Add(this.cmdSexoFunc);
-            this.Controls.Add(this.cmbBeneficiosFunc);
+            this.Controls.Add(this.cmbCargoFunc);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.textEmailFunc);
             this.Controls.Add(this.label14);
@@ -564,7 +607,7 @@
         private ComboBox cmdEstadoCivilFunc;
         private ComboBox cmbEstadoFunc;
         private ComboBox cmdSexoFunc;
-        private ComboBox cmbBeneficiosFunc;
+        private ComboBox cmbCargoFunc;
         private Label label15;
         private TextBox textEmailFunc;
         private Label label14;

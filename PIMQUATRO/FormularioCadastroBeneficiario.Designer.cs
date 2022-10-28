@@ -327,6 +327,9 @@
             // cmbSexoBeneficiario
             // 
             this.cmbSexoBeneficiario.FormattingEnabled = true;
+            this.cmbSexoBeneficiario.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
             this.cmbSexoBeneficiario.Location = new System.Drawing.Point(289, 191);
             this.cmbSexoBeneficiario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSexoBeneficiario.Name = "cmbSexoBeneficiario";
@@ -344,6 +347,34 @@
             // cmbEstadoBeneficiario
             // 
             this.cmbEstadoBeneficiario.FormattingEnabled = true;
+            this.cmbEstadoBeneficiario.Items.AddRange(new object[] {
+            "",
+            "AP ",
+            "AM ",
+            "PA ",
+            "AC ",
+            "RO ",
+            "TO ",
+            "MA ",
+            "PI ",
+            "CE ",
+            "RN ",
+            "PB ",
+            "PE ",
+            "AL ",
+            "SE ",
+            "BA ",
+            "MT ",
+            "DF ",
+            "GO ",
+            "MS ",
+            "MG ",
+            "ES ",
+            "RJ ",
+            "SP ",
+            "PR ",
+            "SC ",
+            "RS "});
             this.cmbEstadoBeneficiario.Location = new System.Drawing.Point(745, 641);
             this.cmbEstadoBeneficiario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbEstadoBeneficiario.Name = "cmbEstadoBeneficiario";
@@ -353,6 +384,10 @@
             // cmbEstadoCivilBeneficiario
             // 
             this.cmbEstadoCivilBeneficiario.FormattingEnabled = true;
+            this.cmbEstadoCivilBeneficiario.Items.AddRange(new object[] {
+            "Solteiro",
+            "Casado",
+            "Viuvo"});
             this.cmbEstadoCivilBeneficiario.Location = new System.Drawing.Point(530, 191);
             this.cmbEstadoCivilBeneficiario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbEstadoCivilBeneficiario.Name = "cmbEstadoCivilBeneficiario";

@@ -348,6 +348,34 @@
             // cmbEstado
             // 
             this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "",
+            "AP ",
+            "AM ",
+            "PA ",
+            "AC ",
+            "RO ",
+            "TO ",
+            "MA ",
+            "PI ",
+            "CE ",
+            "RN ",
+            "PB ",
+            "PE ",
+            "AL ",
+            "SE ",
+            "BA ",
+            "MT ",
+            "DF ",
+            "GO ",
+            "MS ",
+            "MG ",
+            "ES ",
+            "RJ ",
+            "SP ",
+            "PR ",
+            "SC ",
+            "RS "});
             this.cmbEstado.Location = new System.Drawing.Point(738, 638);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbEstado.Name = "cmbEstado";
