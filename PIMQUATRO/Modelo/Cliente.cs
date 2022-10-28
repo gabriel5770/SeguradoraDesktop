@@ -12,6 +12,7 @@ namespace PIMQUATRO.Modelo
     public class Cliente
     {
         public string Email { get; set; }
+        public string Senha { get; set; }
         public string Nome { get; set; }
         public string EstadoCivil { get; set; }
         public string Rg { get; set; }
@@ -28,9 +29,10 @@ namespace PIMQUATRO.Modelo
         public string Beneficios { get; set; }
         public string Cidade { get; set; }
 
-        public Cliente(string email, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade)
+        public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade)
         {
             Email = email;
+            Senha = senha;
             Nome = nome;
             EstadoCivil = estadoCivil;
             Rg = rg;
@@ -53,25 +55,7 @@ namespace PIMQUATRO.Modelo
 
         }
 
-        public Cliente(string email, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string cidade)
-        {
-            Email = email;
-            Nome = nome;
-            EstadoCivil = estadoCivil;
-            Rg = rg;
-            Sexo = sexo;
-            Endereco = endereco;
-            NumeroResidencia = numeroResidencia;
-            Municipio = municipio;
-            Bairro = bairro;
-            Cep = cep;
-            Telefone = telefone;
-            Estado = estado;
-            DataNascimento = dataNascimento;
-            Cpf = cpf;
-            Cidade = cidade;
-        }
-
+      
         public  bool Cadastrar() 
         {
             {
@@ -87,6 +71,7 @@ namespace PIMQUATRO.Modelo
                         try
                         {
                             command.Parameters.AddWithValue("@Email", Email);
+                            command.Parameters.AddWithValue("@Senha", Senha);
                             command.Parameters.AddWithValue("@Nome", Nome);
                             command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
                             command.Parameters.AddWithValue("@DataNascimento", DataNascimento);
@@ -106,7 +91,9 @@ namespace PIMQUATRO.Modelo
 
                             connection.Open();
                             command.ExecuteNonQuery();
-                            
+                            connection.Close();
+
+
                             return true;
 
                         }

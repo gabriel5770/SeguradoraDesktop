@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class FormularioCadastroClienters : Form
+    public partial class FormularioCadastroClientes : Form
     {
-        public FormularioCadastroClienters()
+        public FormularioCadastroClientes()
         {
             InitializeComponent();
         }
@@ -49,6 +49,7 @@ namespace PIMQUATRO
         private void btnCadastrarCliente_Click_1(object sender, EventArgs e)
         {
             string Email = txtEmaiCliente.Text;
+            string Senha = textSenhaCliente.Text;
             string Nome = txtNomeCliente.Text;
             string EstadoCivil = cmbEstadoCivil.Text;
             DateTime DataNascimento = Convert.ToDateTime(dateTimePickerCliente.Text);
@@ -67,12 +68,12 @@ namespace PIMQUATRO
             string beneficios = cmbBeneficiosCliente.Text;
 
 
-            Cliente cliente = new Cliente(Email, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade);
+            Cliente cliente = new Cliente(Email,Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade);
             if (cliente.Cadastrar())
             {
                 MessageBox.Show("Cliente cadastrado com sucesso");
                 this.Hide();
-                new FormularioCadastroClienters().ShowDialog();
+                new FormularioCadastroClientes().ShowDialog();
             }
             
             MessageBox.Show("Não foi possível cadastrar o Cliente");
@@ -94,12 +95,42 @@ namespace PIMQUATRO
 
         }
 
-        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbEstadoBeneficiario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtBairroCliente_TextChanged(object sender, EventArgs e)
+        private void txtBairroBeneficiario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbSexoBeneficiario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbEstadoCivil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbBeneficiosBeneficiario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerBeneficiario_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmaiBeneficiario_TextChanged(object sender, EventArgs e)
         {
 
         }

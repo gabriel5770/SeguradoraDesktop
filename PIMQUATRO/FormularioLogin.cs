@@ -63,6 +63,10 @@ namespace PIMQUATRO
 
                 //Abre conexão com o banco de dados
                 connection.Open();
+                command.ExecuteNonQuery();
+                
+
+
 
                 try
                 {
@@ -84,11 +88,15 @@ namespace PIMQUATRO
                             lblDadosIncorretos.Visible = true;
                             lblDadosIncorretos.Text = "Dados incorretos";
                         }
+
+                      
                     }
+                    connection.Close();
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show("erro: " + ex);
+                    
                 }
             }
         }

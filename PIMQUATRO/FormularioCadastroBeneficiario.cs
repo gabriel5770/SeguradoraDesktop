@@ -32,18 +32,18 @@ namespace PIMQUATRO
         {
             string Email = txtEmailBeneficiario.Text;
             string Nome = txtNomeBeneficiario.Text;
-            string EstadoCivil = cmbEstadoCivil.Text;
-            DateTime DataNascimento = Convert.ToDateTime(txtDataNascimentoBeneficiario.Text);
+            string EstadoCivil = cmbEstadoCivilBeneficiario.Text;
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerBeneficiario.Text);
             string NumeroResidencia = txtNumeroResidenciaBeneficiario.Text;
-            string Rg = txtRgBeneficiario.Text;
-            string Cpf = txtCepBeneficiario.Text;
-            string Sexo = cmbSexo.Text;
+            string Rg = maskedTextRgBeneficiario.Text;
+            string Cpf = maskedTextCpfBeneficiario.Text;
+            string Sexo = cmbSexoBeneficiario.Text;
             string Endereco = txtEnderecoBeneficiario.Text;
             string Cidade = txtCidadeBeneficiario.Text;
-            string Estado = cmbEstado.Text;
+            string Estado = cmbEstadoBeneficiario.Text;
             string Municipio = txtMunicipioBeneficiario.Text;
             string Bairro = txtBairroBeneficiario.Text;
-            string Cep = txtCepBeneficiario.Text;
+            string Cep = maskedTextCepBeneficiario.Text;
             string Telefone = txtTelefoneBeneficiario.Text;
             string CpfCliente = txtCpfCliente.Text;
 
@@ -54,7 +54,7 @@ namespace PIMQUATRO
             {
                 MessageBox.Show("Beneficiario cadastrado com sucesso");
                 this.Hide();
-                new FormularioCadastroClienters().ShowDialog();
+                new FormularioCadastroClientes().ShowDialog();
             }
             else
             MessageBox.Show("Não foi possível cadastrar o Beneficiario");
@@ -69,7 +69,7 @@ namespace PIMQUATRO
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new FormularioCadastroClienters().ShowDialog();
+            new FormularioCadastroClientes().ShowDialog();
         }
 
         private void txtNomeBeneficiario_TextChanged(object sender, EventArgs e)
@@ -79,16 +79,26 @@ namespace PIMQUATRO
 
         private void CadastroBeneficiario_Load(object sender, EventArgs e)
         {
-            cmbEstadoCivil.Items.Add("Solteiro");
-            cmbEstadoCivil.Items.Add("Casado");
-            cmbEstadoCivil.Items.Add("Viúvo");
+            cmbEstadoCivilBeneficiario.Items.Add("Solteiro");
+            cmbEstadoCivilBeneficiario.Items.Add("Casado");
+            cmbEstadoCivilBeneficiario.Items.Add("Viúvo");
 
-            cmbSexo.Items.Add("Masculino");
-            cmbSexo.Items.Add("Feminino");
+            cmbSexoBeneficiario.Items.Add("Masculino");
+            cmbSexoBeneficiario.Items.Add("Feminino");
 
-            cmbEstado.Items.Add("SP");
-            cmbEstado.Items.Add("RJ");
-            cmbEstado.Items.Add("MG");
+            cmbEstadoBeneficiario.Items.Add("SP");
+            cmbEstadoBeneficiario.Items.Add("RJ");
+            cmbEstadoBeneficiario.Items.Add("MG");
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmailBeneficiario_TextChanged_1(object sender, EventArgs e)
+        {
 
         }
     }

@@ -77,15 +77,40 @@ namespace PIMQUATRO
             FormShow(new FormularioDuvidas());
         }
 
-        private void btnCadastrarBeneficiario_Click(object sender, EventArgs e)
+        private void btnBeneficiario_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnDuvidas);
+            ActiveButton(btnCadastrarBeneficiario);
             FormShow(new FormularioBeneficiario());
         }
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCadastroCliente_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnCadastroCliente);
+            FormShow(new FormularioCadastroClientes());
+        }
+
+        private void btnCadastroFuncionario_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnCadastroFuncionario);
+            FormShow(new FormularioCadastroFuncionarios());
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnFechar);
+            ActiveFormClose();
+            Application.Exit();
+        }
+
+        private void btnCadastrarBeneficiario_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnCadastrarBeneficiario);
+            FormShow(new FormularioCadastroBeneficiario());
         }
     }
 }

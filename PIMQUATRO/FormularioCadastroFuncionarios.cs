@@ -38,22 +38,22 @@ namespace PIMQUATRO
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-            string Email = lblEmailFunc.Text;
-            string Senha = lblSenhaFunc.Text;
-            string Nome = lblNomeFunc.Text;
-            string EstadoCivil = lblEstadoCivilfunc.Text;
-            DateTime DataNascimento = Convert.ToDateTime(lblDataNascimentofunc.Text);
-            string Rg = lblRGfunc.Text;
-            string Cpf = lblCpfFunc.Text;
-            string Sexo = lblSexoFunc.Text;
-            string Endereco = lblEnderecoFunc.Text;
-            string NumResidencia = lblNumeroFunc.Text;
-            string Estado = lblEstadoFunc.Text;
-            string Municipio = lblMunicipioFunc.Text;
-            string Bairro = lblBairroFunc.Text;
-            string Cidade = txtCidade.Text;
-            string Cep = lblCepFunc.Text;
-            string Telefone = lblTelefoneFunc.Text;
+            string Email = textEmailFunc.Text;
+            string Senha = textSenhaFunc.Text;
+            string Nome = textNomeFunc.Text;
+            string EstadoCivil = cmdEstadoCivilFunc.Text;
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerFunc.Text);
+            string Rg = maskedTextRgFunc.Text;
+            string Cpf = maskedTextFuncCpf.Text;
+            string Sexo = cmdSexoFunc.Text;
+            string Endereco = textEnderecoFunc.Text;
+            string NumResidencia = textNumeroResidenciaFunc.Text;
+            string Estado = cmbEstadoFunc.Text;
+            string Municipio = textMunicipioFunc.Text;
+            string Bairro = textBairroFunc.Text;
+            string Cidade = textCidadeFunc.Text;
+            string Cep = maskedTextCepFunc.Text;
+            string Telefone = textTelefoneFunc.Text;
 
 
 
@@ -65,6 +65,41 @@ namespace PIMQUATRO
                 new FormularioMenu().ShowDialog();
                 MessageBox.Show("Funcionário cadastrado com sucesso");
             }
+        }
+
+        private void cmbSexoFunc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNomeFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextFuncCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void cmbEstadoFunc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textNumeroResidenciaFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textMunicipioFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBairroFunc_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

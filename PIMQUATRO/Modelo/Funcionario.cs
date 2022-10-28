@@ -13,8 +13,8 @@ namespace PIMQUATRO.Modelo
     internal class Funcionario
     {
         public string Nome { get; set; }
-        public String Cpf { get; set; }
-        public String Rg { get; set; }
+        public string Cpf { get; set; }
+        public string Rg { get; set; }
         public DateTime DataNascimento { get; set; }
         public string Endereco { get; set; }
         public String Email { get; set; }
@@ -84,6 +84,7 @@ namespace PIMQUATRO.Modelo
 
                             connection.Open();
                             command.ExecuteNonQuery();
+                            connection.Close();
 
                             return true;
                         }
