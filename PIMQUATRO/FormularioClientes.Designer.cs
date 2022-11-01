@@ -28,39 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridViewCliente = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridViewCliente
-            // 
-            this.dataGridViewCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCliente.Location = new System.Drawing.Point(1, 1);
-            this.dataGridViewCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridViewCliente.Name = "dataGridViewCliente";
-            this.dataGridViewCliente.RowHeadersWidth = 51;
-            this.dataGridViewCliente.RowTemplate.Height = 25;
-            this.dataGridViewCliente.Size = new System.Drawing.Size(618, 661);
-            this.dataGridViewCliente.TabIndex = 13;
             // 
             // FormularioClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(973, 875);
-            this.Controls.Add(this.dataGridViewCliente);
+            this.ClientSize = new System.Drawing.Size(778, 700);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormularioClientes";
             this.Text = "clientes";
             this.Load += new System.EventHandler(this.FormularioClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DataGridView dataGridViewCliente;
         private DataGridViewTextBoxColumn Nome;
     }
 }

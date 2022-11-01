@@ -40,8 +40,7 @@ namespace PIMQUATRO
         public FormularioClientes()
         {
             InitializeComponent();
-            RetornaDataGridCliente();
-
+ 
         }
 
         private void Voltar_Click(object sender, EventArgs e)
@@ -65,19 +64,6 @@ namespace PIMQUATRO
         {
             this.Hide();
             new FormularioCadastroClientes().ShowDialog();
-        }
-
-        public void RetornaDataGridCliente()
-        {
-
-            DataTable dt = new DataTable();
-            SqlConnection Conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString());
-            Conn.Open();
-            SqlCommand cmd = new SqlCommand("Qry_WindowsForms_Cadastro_Cliente_RetornaCliente", Conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridViewCliente.DataSource = dt;
         }
 
         private void FormularioClientes_Load(object sender, EventArgs e)

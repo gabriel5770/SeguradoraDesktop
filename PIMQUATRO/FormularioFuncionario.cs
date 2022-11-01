@@ -21,8 +21,7 @@ namespace PIMQUATRO
         public FormularioFuncionario()
         {
             InitializeComponent();
-            RetornaDataGridFuncionario();
-        }
+         }
 
         private void Voltar_Click(object sender, EventArgs e)
         {
@@ -36,19 +35,7 @@ namespace PIMQUATRO
             this.Hide();
             new FormularioCadastroFuncionarios().ShowDialog();
         }
-        public void RetornaDataGridFuncionario()
-        {
-
-            DataTable dt = new DataTable();
-            SqlConnection Conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString());
-            Conn.Open();
-            SqlCommand cmd = new SqlCommand("Qry_WindowsForms_Cadastro_Funcionario_RetornaFuncionarios", Conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridViewFuncionario.DataSource = dt;
-        }
-
+ 
         private void FormularioFuncionario_Load(object sender, EventArgs e)
         {
 

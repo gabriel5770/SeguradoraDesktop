@@ -17,8 +17,7 @@ namespace PIMQUATRO
         public FormularioSeguradora()
         {
             InitializeComponent();
-            RetornaDataGridSeguradoras();
-        }
+         }
 
         private void FormularioSeguradora_Load(object sender, EventArgs e)
         {
@@ -38,17 +37,6 @@ namespace PIMQUATRO
             new FormularioCadastroSeguradora().ShowDialog();
         }
 
-        public void RetornaDataGridSeguradoras()
-        {
-
-            DataTable dt = new DataTable();
-            SqlConnection Conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString());
-            Conn.Open();
-            SqlCommand cmd = new SqlCommand("Qry_WindowsForms_Cadastro_Seguradora_RetornaSeguradoras", Conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridViewSeguradora.DataSource = dt;
-        }
+ 
     }
 }
