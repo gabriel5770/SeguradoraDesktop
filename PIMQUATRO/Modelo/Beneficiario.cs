@@ -85,12 +85,25 @@ namespace PIMQUATRO.Modelo
 
 
 
+                        var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
+                        returnParameter.Direction = ParameterDirection.ReturnValue;
+
                         connection.Open();
                         command.ExecuteNonQuery();
-                        
+                        var result = (int)returnParameter.Value;
 
-                        return true;
 
+                        if (result == 1)
+                        {
+                            MessageBox.Show("Há um cadastro com este CPF!");
+                            return false;
+
+                        }
+                        else
+
+                        {
+                            return true;
+                        }
                     }
                     catch (SqlException ex)
                     {

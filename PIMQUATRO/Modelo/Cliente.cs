@@ -96,6 +96,7 @@ namespace PIMQUATRO.Modelo
 
                             connection.Open();
                             command.ExecuteNonQuery();
+                            
                             var result = (int)returnParameter.Value;
 
 
