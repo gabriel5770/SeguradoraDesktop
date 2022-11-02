@@ -26,19 +26,20 @@ namespace PIMQUATRO
             InitializeComponent();
 
         }
-    
+
 
         private void Voltar_Click(object sender, EventArgs e)
         {
             this.Hide();
             new FormularioMenu().ShowDialog();
         }
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        {
+            ObtemDadosFuncionarios();
+        }
+
+        private void ObtemDadosFuncionarios()
         {
             string Email = textEmailFunc.Text;
             string Senha = textSenhaFunc.Text;
@@ -57,22 +58,36 @@ namespace PIMQUATRO
             string Cep = maskedTextCepFunc.Text;
             string Telefone = textTelefoneFunc.Text;
             string Cargo = cmbCargoFunc.Text;
-            
-
 
 
             Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
-
-            if (func.Cadastrar())
+            if (VerificaCampo())
             {
-                this.Hide();
-                new FormularioMenu().ShowDialog();
-                MessageBox.Show("Funcionário cadastrado com sucesso");
+
+                if (func.Cadastrar())
+                {
+                    this.Hide();
+                    new FormularioMenu().ShowDialog();
+                    MessageBox.Show("Funcionário cadastrado com sucesso");
+                }
             }
         }
 
-        
+        private bool VerificaCampo()
+        {
+            if (textEmailFunc.Text == "" || textSenhaFunc.Text == "" || textNomeFunc.Text == "" || cmdEstadoCivilFunc.Text == "" ||
+                maskedTextRgFunc.Text == "" || maskedTextFuncCpf.Text == "" || cmdSexoFunc.Text == "" || textEnderecoFunc.Text == "" ||
+                textNumeroResidenciaFunc.Text == "" || cmbEstadoFunc.Text == "" || textMunicipioFunc.Text == "" || textBairroFunc.Text == "" ||
+                textCidadeFunc.Text == "" || maskedTextCepFunc.Text == "" || textTelefoneFunc.Text == "" || cmbCargoFunc.Text == "")
+            {
+                MessageBox.Show("Há campos que não foram preenchidos , revise");
+                return false;
+            }
+            return true;
+
+        }
     }
 }
+
 
 
