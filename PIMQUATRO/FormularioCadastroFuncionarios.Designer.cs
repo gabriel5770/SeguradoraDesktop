@@ -155,8 +155,7 @@
             this.maskedTextFuncCpf.Size = new System.Drawing.Size(96, 25);
             this.maskedTextFuncCpf.TabIndex = 107;
             this.maskedTextFuncCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.maskedTextFuncCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextFuncCpf_MaskInputRejected);
-            // 
+             // 
             // maskedTextRgFunc
             // 
             this.maskedTextRgFunc.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -187,8 +186,7 @@
             this.textSenhaFunc.Name = "textSenhaFunc";
             this.textSenhaFunc.Size = new System.Drawing.Size(166, 20);
             this.textSenhaFunc.TabIndex = 104;
-            this.textSenhaFunc.TextChanged += new System.EventHandler(this.textSenhaFunc_TextChanged);
-            // 
+             // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -211,8 +209,7 @@
             this.cmdEstadoCivilFunc.Name = "cmdEstadoCivilFunc";
             this.cmdEstadoCivilFunc.Size = new System.Drawing.Size(138, 28);
             this.cmdEstadoCivilFunc.TabIndex = 102;
-            this.cmdEstadoCivilFunc.SelectedIndexChanged += new System.EventHandler(this.cmdEstadoCivilFunc_SelectedIndexChanged);
-            // 
+             // 
             // cmbEstadoFunc
             // 
             this.cmbEstadoFunc.FormattingEnabled = true;
@@ -249,8 +246,7 @@
             this.cmbEstadoFunc.Name = "cmbEstadoFunc";
             this.cmbEstadoFunc.Size = new System.Drawing.Size(132, 28);
             this.cmbEstadoFunc.TabIndex = 101;
-            this.cmbEstadoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoFunc_SelectedIndexChanged);
-            // 
+             // 
             // cmdSexoFunc
             // 
             this.cmdSexoFunc.FormattingEnabled = true;
@@ -262,8 +258,7 @@
             this.cmdSexoFunc.Name = "cmdSexoFunc";
             this.cmdSexoFunc.Size = new System.Drawing.Size(146, 28);
             this.cmdSexoFunc.TabIndex = 100;
-            this.cmdSexoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbSexoFunc_SelectedIndexChanged);
-            // 
+             // 
             // cmbCargoFunc
             // 
             this.cmbCargoFunc.FormattingEnabled = true;
@@ -277,8 +272,7 @@
             this.cmbCargoFunc.Name = "cmbCargoFunc";
             this.cmbCargoFunc.Size = new System.Drawing.Size(138, 28);
             this.cmbCargoFunc.TabIndex = 99;
-            this.cmbCargoFunc.SelectedIndexChanged += new System.EventHandler(this.cmbCargoFunc_SelectedIndexChanged);
-            // 
+             // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -369,8 +363,7 @@
             this.textBairroFunc.Name = "textBairroFunc";
             this.textBairroFunc.Size = new System.Drawing.Size(448, 20);
             this.textBairroFunc.TabIndex = 90;
-            this.textBairroFunc.TextChanged += new System.EventHandler(this.textBairroFunc_TextChanged);
-            // 
+             // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -392,8 +385,7 @@
             this.textMunicipioFunc.Name = "textMunicipioFunc";
             this.textMunicipioFunc.Size = new System.Drawing.Size(232, 20);
             this.textMunicipioFunc.TabIndex = 88;
-            this.textMunicipioFunc.TextChanged += new System.EventHandler(this.textMunicipioFunc_TextChanged);
-            // 
+             // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -415,8 +407,7 @@
             this.textNumeroResidenciaFunc.Name = "textNumeroResidenciaFunc";
             this.textNumeroResidenciaFunc.Size = new System.Drawing.Size(82, 20);
             this.textNumeroResidenciaFunc.TabIndex = 86;
-            this.textNumeroResidenciaFunc.TextChanged += new System.EventHandler(this.textNumeroResidenciaFunc_TextChanged);
-            // 
+             // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -521,8 +512,7 @@
             this.textNomeFunc.Name = "textNomeFunc";
             this.textNomeFunc.Size = new System.Drawing.Size(434, 20);
             this.textNomeFunc.TabIndex = 78;
-            this.textNomeFunc.TextChanged += new System.EventHandler(this.txtNomeFunc_TextChanged);
-            // 
+             // 
             // label13
             // 
             this.label13.AutoSize = true;

@@ -28,8 +28,9 @@ namespace PIMQUATRO.Modelo
         public string Telefone { get; set; }
         public string Estado { get; set; }
         public string Cidade { get; set; }
+        public string Cargo { get; set; }
 
-        public Funcionario(string nome, string cpf, string rg, DateTime dataNascimento, string endereco, string email, string senha, string estadoCivil, string sexo, string numeroResidencia, string municipio, string bairro, string cep, String telefone, string estado,string cidade)
+        public Funcionario(string nome, string cpf, string rg, DateTime dataNascimento, string endereco, string email, string senha, string estadoCivil, string sexo, string numeroResidencia, string municipio, string bairro, string cep, String telefone, string estado,string cidade, string cargo)
         {
             Nome = nome;
             Cpf = cpf;
@@ -46,7 +47,8 @@ namespace PIMQUATRO.Modelo
             Cep = cep;
             Telefone = telefone;
             Estado = estado;
-            Cidade = cidade; 
+            Cidade = cidade;
+            Cargo = cargo;
         }
 
         public bool Cadastrar()
@@ -78,15 +80,30 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Bairro", Bairro);
                             command.Parameters.AddWithValue("@Cep", Cep);
                             command.Parameters.AddWithValue("@Telefone", Telefone);
+                            command.Parameters.AddWithValue("@Cargo", Cargo);
                             command.Parameters.AddWithValue("@Cidade", Cidade);
 
 
 
+                            var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
+                            returnParameter.Direction = ParameterDirection.ReturnValue;
+
                             connection.Open();
                             command.ExecuteNonQuery();
-                            
+                            var result = (int)returnParameter.Value;
 
-                            return true;
+
+                            if (result == 1)
+                            {
+                                MessageBox.Show("Há um cadastro com este CPF!");
+                                return false;
+
+                            }
+                            else
+
+                            {
+                                return true;
+                            }
                         }
                         catch (SqlException ex)
                         {

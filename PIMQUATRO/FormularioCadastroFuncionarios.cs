@@ -56,10 +56,12 @@ namespace PIMQUATRO
             string Cidade = textCidadeFunc.Text;
             string Cep = maskedTextCepFunc.Text;
             string Telefone = textTelefoneFunc.Text;
+            string Cargo = cmbCargoFunc.Text;
+            
 
 
 
-            Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade);
+            Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
 
             if (func.Cadastrar())
             {
@@ -69,55 +71,7 @@ namespace PIMQUATRO
             }
         }
 
-        private void cmbSexoFunc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNomeFunc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextFuncCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void cmbEstadoFunc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textNumeroResidenciaFunc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textMunicipioFunc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBairroFunc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmdEstadoCivilFunc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textSenhaFunc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbCargoFunc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
 

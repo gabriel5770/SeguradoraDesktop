@@ -101,7 +101,7 @@ namespace PIMQUATRO.Modelo
 
                             if (result == 1)
                             {
-                                MessageBox.Show("Há uma conta com este CPF!");
+                                MessageBox.Show("Há um cadastro com este CPF!");
                                 return false;
 
                             }
