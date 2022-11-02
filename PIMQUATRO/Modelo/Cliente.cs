@@ -25,9 +25,9 @@ namespace PIMQUATRO.Modelo
         public string Telefone { get; set; }
         public string Estado { get; set; }
         public DateTime DataNascimento { get; set; }
-        public string Cpf { get; set; }
         public string Beneficios { get; set; }
         public string Cidade { get; set; }
+        public string Cpf { get; set; }
 
         public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade)
         {
