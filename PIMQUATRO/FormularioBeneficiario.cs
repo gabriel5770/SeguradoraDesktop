@@ -17,8 +17,7 @@ namespace PIMQUATRO
         public FormularioBeneficiario()
         {
             InitializeComponent();
-            RetornaDataGridBeneficiario();
-        }
+         }
 
         private void FormularioBeneficiario_Load(object sender, EventArgs e)
         {
@@ -36,18 +35,6 @@ namespace PIMQUATRO
         {
             this.Hide();
             new FormularioCadastroBeneficiario().ShowDialog();
-        }
-
-        public void RetornaDataGridBeneficiario()
-        {
-            DataTable dt = new DataTable();
-            SqlConnection Conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString());
-            Conn.Open();
-            SqlCommand cmd = new SqlCommand("Qry_WindowsForms_Cadastro_Cliente_RetornaBeneficiario", Conn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            dataGridViewBeneficiario.DataSource = dt;
-        }
+        }       
     }
 }
