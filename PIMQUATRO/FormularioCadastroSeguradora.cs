@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,17 +30,30 @@ namespace PIMQUATRO
             string Nome = txtNome.Text;
             string Cnpj = txtCnpj.Text;
 
-            Seguradora seguradora = new Seguradora(Nome, Cnpj);
-            if (seguradora.Cadastrar())
+            if (ValidaCampos())
             {
-                MessageBox.Show("Seguradora cadastrado com sucesso");
-                this.Hide();
-                new FormularioCadastroSeguradora().ShowDialog();
-            }
+                Seguradora seguradora = new Seguradora(Nome, Cnpj);
+                if (seguradora.Cadastrar())
+                {
+                    MessageBox.Show("Seguradora cadastrado com sucesso");
+                    this.Hide();
+                    new FormularioCadastroSeguradora().ShowDialog();
+                }
 
-            MessageBox.Show("Não foi possível cadastrar o Cliente");
+                MessageBox.Show("Não foi possível cadastrar o Cliente");
+            }
         }
 
+        private bool ValidaCampos()
+        {
+            if (txtNome.Text == "" || txtCnpj.Text == "")
+            {
+                MessageBox.Show("Há campos que não foram preenchidos , revise");
+                return false;
+            }
+
+            return true;
+        }
     }
 }
 
