@@ -239,8 +239,7 @@
             this.txtBairroCliente.Name = "txtBairroCliente";
             this.txtBairroCliente.Size = new System.Drawing.Size(448, 20);
             this.txtBairroCliente.TabIndex = 35;
-            this.txtBairroCliente.TextChanged += new System.EventHandler(this.txtBairroBeneficiario_TextChanged);
-            // 
+             // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -309,8 +308,7 @@
             this.txtEmaiCliente.Name = "txtEmaiCliente";
             this.txtEmaiCliente.Size = new System.Drawing.Size(392, 20);
             this.txtEmaiCliente.TabIndex = 45;
-            this.txtEmaiCliente.TextChanged += new System.EventHandler(this.txtEmaiBeneficiario_TextChanged);
-            // 
+             // 
             // cmbBeneficiosCliente
             // 
             this.cmbBeneficiosCliente.FormattingEnabled = true;
@@ -319,8 +317,7 @@
             this.cmbBeneficiosCliente.Name = "cmbBeneficiosCliente";
             this.cmbBeneficiosCliente.Size = new System.Drawing.Size(138, 28);
             this.cmbBeneficiosCliente.TabIndex = 47;
-            this.cmbBeneficiosCliente.SelectedIndexChanged += new System.EventHandler(this.cmbBeneficiosBeneficiario_SelectedIndexChanged);
-            // 
+             // 
             // btnCadastrarCliente
             // 
             this.btnCadastrarCliente.BackColor = System.Drawing.Color.DarkBlue;
@@ -343,8 +340,7 @@
             this.cmbSexoCliente.Name = "cmbSexoCliente";
             this.cmbSexoCliente.Size = new System.Drawing.Size(146, 28);
             this.cmbSexoCliente.TabIndex = 51;
-            this.cmbSexoCliente.SelectedIndexChanged += new System.EventHandler(this.cmbSexoBeneficiario_SelectedIndexChanged);
-            // 
+             // 
             // cmbEstado
             // 
             this.cmbEstado.FormattingEnabled = true;
@@ -381,8 +377,7 @@
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(132, 28);
             this.cmbEstado.TabIndex = 52;
-            this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoBeneficiario_SelectedIndexChanged);
-            // 
+             // 
             // cmbEstadoCivil
             // 
             this.cmbEstadoCivil.FormattingEnabled = true;
@@ -391,8 +386,7 @@
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
             this.cmbEstadoCivil.Size = new System.Drawing.Size(138, 28);
             this.cmbEstadoCivil.TabIndex = 53;
-            this.cmbEstadoCivil.SelectedIndexChanged += new System.EventHandler(this.cmbEstadoCivil_SelectedIndexChanged);
-            // 
+             // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -434,8 +428,7 @@
             this.textSenhaCliente.Name = "textSenhaCliente";
             this.textSenhaCliente.Size = new System.Drawing.Size(166, 20);
             this.textSenhaCliente.TabIndex = 56;
-            this.textSenhaCliente.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
+             // 
             // maskedTextRgCliente
             // 
             this.maskedTextRgCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -462,8 +455,7 @@
             this.dateTimePickerCliente.Name = "dateTimePickerCliente";
             this.dateTimePickerCliente.Size = new System.Drawing.Size(158, 27);
             this.dateTimePickerCliente.TabIndex = 60;
-            this.dateTimePickerCliente.ValueChanged += new System.EventHandler(this.dateTimePickerBeneficiario_ValueChanged);
-            // 
+             // 
             // label18
             // 
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -481,8 +473,7 @@
             this.label19.Size = new System.Drawing.Size(158, 28);
             this.label19.TabIndex = 62;
             this.label19.Text = "Dados Pessoais";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
+             // 
             // label20
             // 
             this.label20.AutoSize = true;

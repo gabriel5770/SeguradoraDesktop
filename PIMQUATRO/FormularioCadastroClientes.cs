@@ -68,71 +68,19 @@ namespace PIMQUATRO
             string beneficios = cmbBeneficiosCliente.Text;
 
 
-            Cliente cliente = new Cliente(Email,Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade);
+            Cliente cliente = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade);
             if (cliente.Cadastrar())
             {
                 MessageBox.Show("Cliente cadastrado com sucesso");
                 this.Hide();
                 new FormularioCadastroClientes().ShowDialog();
             }
-            
-            MessageBox.Show("Não foi possível cadastrar o Cliente");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             new FormularioCadastroBeneficiario().ShowDialog();
-        }
-
-        private void txtCpfCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbEstadoBeneficiario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtBairroBeneficiario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbSexoBeneficiario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbEstadoCivil_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbBeneficiosBeneficiario_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerBeneficiario_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmaiBeneficiario_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -50,13 +50,13 @@ namespace PIMQUATRO.Modelo
             Cidade = cidade;
         }
 
-        public  Cliente()
+        public Cliente()
         {
 
         }
 
-      
-        public  bool Cadastrar() 
+
+        public bool Cadastrar()
         {
             {
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
@@ -89,12 +89,27 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Cidade", Cidade);
 
 
+                            SqlParameter param = new SqlParameter();
+
+                            var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
+                            returnParameter.Direction = ParameterDirection.ReturnValue;
+
                             connection.Open();
                             command.ExecuteNonQuery();
-                           
+                            var result = (int)returnParameter.Value;
 
 
-                            return true;
+                            if (result == 1)
+                            {
+                                MessageBox.Show("Há uma conta com este CPF!");
+                                return false;
+
+                            }
+                            else
+
+                            {
+                                return true;
+                            }
 
                         }
                         catch (SqlException ex)
