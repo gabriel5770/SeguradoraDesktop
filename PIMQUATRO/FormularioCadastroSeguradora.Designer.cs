@@ -92,7 +92,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastrar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
             this.btnCadastrar.Location = new System.Drawing.Point(843, 548);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

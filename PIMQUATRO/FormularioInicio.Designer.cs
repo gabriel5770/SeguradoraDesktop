@@ -60,7 +60,7 @@
             // 
             // BtnEntrar
             // 
-            this.BtnEntrar.BackColor = System.Drawing.Color.DarkBlue;
+            this.BtnEntrar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BtnEntrar.ForeColor = System.Drawing.Color.Snow;
             this.BtnEntrar.Location = new System.Drawing.Point(288, 392);
             this.BtnEntrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

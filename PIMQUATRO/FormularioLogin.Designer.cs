@@ -45,16 +45,16 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(203, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(176, 3);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(98, 106);
+            this.pictureBox2.Size = new System.Drawing.Size(198, 179);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // Voltar
             // 
-            this.Voltar.BackColor = System.Drawing.Color.DarkBlue;
+            this.Voltar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.Voltar.ForeColor = System.Drawing.Color.Snow;
             this.Voltar.Location = new System.Drawing.Point(405, 13);
             this.Voltar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -68,20 +68,20 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(139, 164);
+            this.pictureBox1.Location = new System.Drawing.Point(136, 248);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(34, 29);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(139, 219);
+            this.pictureBox3.Location = new System.Drawing.Point(135, 197);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 39);
+            this.pictureBox3.Size = new System.Drawing.Size(35, 27);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
@@ -90,7 +90,7 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtEmail.Location = new System.Drawing.Point(181, 183);
+            this.txtEmail.Location = new System.Drawing.Point(176, 204);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(166, 20);
@@ -102,7 +102,7 @@
             this.txtSenha.AccessibleName = "txtEmail";
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtSenha.Location = new System.Drawing.Point(181, 236);
+            this.txtSenha.Location = new System.Drawing.Point(176, 257);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(166, 20);
@@ -111,9 +111,9 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.DarkBlue;
+            this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button4.ForeColor = System.Drawing.Color.Snow;
-            this.button4.Location = new System.Drawing.Point(215, 300);
+            this.button4.Location = new System.Drawing.Point(203, 305);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(86, 31);
@@ -125,7 +125,7 @@
             // lblDadosIncorretos
             // 
             this.lblDadosIncorretos.AutoSize = true;
-            this.lblDadosIncorretos.Location = new System.Drawing.Point(253, 276);
+            this.lblDadosIncorretos.Location = new System.Drawing.Point(248, 281);
             this.lblDadosIncorretos.Name = "lblDadosIncorretos";
             this.lblDadosIncorretos.Size = new System.Drawing.Size(9, 20);
             this.lblDadosIncorretos.TabIndex = 11;

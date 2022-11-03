@@ -67,16 +67,19 @@
             this.textEnderecoFunc = new System.Windows.Forms.TextBox();
             this.textNomeFunc = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnExcluirFuncionario = new System.Windows.Forms.Button();
+            this.btnEditarFuncionario = new System.Windows.Forms.Button();
+            this.btnExibirFuncionario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrarFuncionario
             // 
-            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastrarFuncionario.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(838, 539);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(830, 539);
             this.btnCadastrarFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
-            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(111, 38);
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(97, 41);
             this.btnCadastrarFuncionario.TabIndex = 77;
             this.btnCadastrarFuncionario.Text = "Cadastrar";
             this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
@@ -104,7 +107,7 @@
             // 
             this.maskedTextCepFunc.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.maskedTextCepFunc.Location = new System.Drawing.Point(810, 319);
-            this.maskedTextCepFunc.Mask = "00000-00";
+            this.maskedTextCepFunc.Mask = "00000-000";
             this.maskedTextCepFunc.Name = "maskedTextCepFunc";
             this.maskedTextCepFunc.Size = new System.Drawing.Size(71, 25);
             this.maskedTextCepFunc.TabIndex = 112;
@@ -527,12 +530,54 @@
             this.label13.TabIndex = 115;
             this.label13.Text = "Cargo:";
             // 
+            // btnExcluirFuncionario
+            // 
+            this.btnExcluirFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnExcluirFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExcluirFuncionario.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirFuncionario.Location = new System.Drawing.Point(435, 539);
+            this.btnExcluirFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
+            this.btnExcluirFuncionario.Size = new System.Drawing.Size(108, 41);
+            this.btnExcluirFuncionario.TabIndex = 118;
+            this.btnExcluirFuncionario.Text = "Excluir";
+            this.btnExcluirFuncionario.UseVisualStyleBackColor = false;
+            // 
+            // btnEditarFuncionario
+            // 
+            this.btnEditarFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEditarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditarFuncionario.ForeColor = System.Drawing.Color.White;
+            this.btnEditarFuncionario.Location = new System.Drawing.Point(564, 539);
+            this.btnEditarFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEditarFuncionario.Name = "btnEditarFuncionario";
+            this.btnEditarFuncionario.Size = new System.Drawing.Size(108, 41);
+            this.btnEditarFuncionario.TabIndex = 117;
+            this.btnEditarFuncionario.Text = "Editar";
+            this.btnEditarFuncionario.UseVisualStyleBackColor = false;
+            // 
+            // btnExibirFuncionario
+            // 
+            this.btnExibirFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnExibirFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExibirFuncionario.ForeColor = System.Drawing.Color.White;
+            this.btnExibirFuncionario.Location = new System.Drawing.Point(690, 539);
+            this.btnExibirFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExibirFuncionario.Name = "btnExibirFuncionario";
+            this.btnExibirFuncionario.Size = new System.Drawing.Size(108, 41);
+            this.btnExibirFuncionario.TabIndex = 116;
+            this.btnExibirFuncionario.Text = "Exibir";
+            this.btnExibirFuncionario.UseVisualStyleBackColor = false;
+            // 
             // FormularioCadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(973, 616);
+            this.Controls.Add(this.btnExcluirFuncionario);
+            this.Controls.Add(this.btnEditarFuncionario);
+            this.Controls.Add(this.btnExibirFuncionario);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.textCidadeFunc);
@@ -623,5 +668,8 @@
         private TextBox textEnderecoFunc;
         private TextBox textNomeFunc;
         private Label label13;
+        private Button btnExcluirFuncionario;
+        private Button btnEditarFuncionario;
+        private Button btnExibirFuncionario;
     }
 }

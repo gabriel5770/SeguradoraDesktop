@@ -43,7 +43,7 @@
             // 
             // btnSeguradoras
             // 
-            this.btnSeguradoras.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnSeguradoras.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSeguradoras.FlatAppearance.BorderSize = 0;
             this.btnSeguradoras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeguradoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -61,7 +61,7 @@
             // 
             // btnVendas
             // 
-            this.btnVendas.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnVendas.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnVendas.FlatAppearance.BorderSize = 0;
             this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -79,7 +79,7 @@
             // 
             // btnDuvidas
             // 
-            this.btnDuvidas.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnDuvidas.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnDuvidas.FlatAppearance.BorderSize = 0;
             this.btnDuvidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDuvidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -98,8 +98,8 @@
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.Cyan;
-            this.panelPrincipal.Controls.Add(this.btnCadastroFuncionario);
             this.panelPrincipal.Controls.Add(this.btnCadastroCliente);
+            this.panelPrincipal.Controls.Add(this.btnCadastroFuncionario);
             this.panelPrincipal.Controls.Add(this.btnVendas);
             this.panelPrincipal.Controls.Add(this.btnFechar);
             this.panelPrincipal.Controls.Add(this.btnCadastrarBeneficiario);
@@ -113,17 +113,17 @@
             // 
             // btnCadastroFuncionario
             // 
-            this.btnCadastroFuncionario.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastroFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastroFuncionario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCadastroFuncionario.FlatAppearance.BorderSize = 0;
             this.btnCadastroFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastroFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastroFuncionario.ForeColor = System.Drawing.Color.White;
             this.btnCadastroFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroFuncionario.Image")));
-            this.btnCadastroFuncionario.Location = new System.Drawing.Point(1, 92);
+            this.btnCadastroFuncionario.Location = new System.Drawing.Point(-1, 92);
             this.btnCadastroFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastroFuncionario.Name = "btnCadastroFuncionario";
-            this.btnCadastroFuncionario.Size = new System.Drawing.Size(247, 87);
+            this.btnCadastroFuncionario.Size = new System.Drawing.Size(249, 87);
             this.btnCadastroFuncionario.TabIndex = 16;
             this.btnCadastroFuncionario.Text = "Cadastro de Funcionários";
             this.btnCadastroFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +133,7 @@
             // 
             // btnCadastroCliente
             // 
-            this.btnCadastroCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastroCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastroCliente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCadastroCliente.FlatAppearance.BorderSize = 0;
             this.btnCadastroCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -142,7 +142,7 @@
             this.btnCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastroCliente.ForeColor = System.Drawing.Color.White;
             this.btnCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroCliente.Image")));
-            this.btnCadastroCliente.Location = new System.Drawing.Point(0, 0);
+            this.btnCadastroCliente.Location = new System.Drawing.Point(-1, 0);
             this.btnCadastroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastroCliente.Name = "btnCadastroCliente";
             this.btnCadastroCliente.Size = new System.Drawing.Size(249, 94);
@@ -155,7 +155,7 @@
             // 
             // btnFechar
             // 
-            this.btnFechar.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnFechar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -173,7 +173,7 @@
             // 
             // btnCadastrarBeneficiario
             // 
-            this.btnCadastrarBeneficiario.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastrarBeneficiario.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastrarBeneficiario.FlatAppearance.BorderSize = 0;
             this.btnCadastrarBeneficiario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarBeneficiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);

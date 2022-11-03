@@ -323,7 +323,7 @@
             // 
             // btnCadastrarCliente
             // 
-            this.btnCadastrarCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastrarCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarCliente.Location = new System.Drawing.Point(833, 513);
@@ -491,7 +491,7 @@
             // 
             this.maskedTextCepCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.maskedTextCepCliente.Location = new System.Drawing.Point(807, 307);
-            this.maskedTextCepCliente.Mask = "00000-00";
+            this.maskedTextCepCliente.Mask = "00000-000";
             this.maskedTextCepCliente.Name = "maskedTextCepCliente";
             this.maskedTextCepCliente.Size = new System.Drawing.Size(71, 25);
             this.maskedTextCepCliente.TabIndex = 64;
@@ -517,7 +517,7 @@
             // 
             // btnExibirCliente
             // 
-            this.btnExibirCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExibirCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExibirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExibirCliente.ForeColor = System.Drawing.Color.White;
             this.btnExibirCliente.Location = new System.Drawing.Point(688, 513);
@@ -530,7 +530,7 @@
             // 
             // btnEditarCliente
             // 
-            this.btnEditarCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnEditarCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEditarCliente.ForeColor = System.Drawing.Color.White;
             this.btnEditarCliente.Location = new System.Drawing.Point(562, 513);
@@ -543,7 +543,7 @@
             // 
             // btnExcluirCliente
             // 
-            this.btnExcluirCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExcluirCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluirCliente.ForeColor = System.Drawing.Color.White;
             this.btnExcluirCliente.Location = new System.Drawing.Point(433, 513);
