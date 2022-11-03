@@ -86,6 +86,16 @@ namespace PIMQUATRO
             return true;
 
         }
+
+        private void maskedTextCepFunc_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

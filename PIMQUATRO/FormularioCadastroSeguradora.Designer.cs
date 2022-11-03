@@ -94,7 +94,7 @@
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.DarkBlue;
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(843, 689);
+            this.btnCadastrar.Location = new System.Drawing.Point(843, 548);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(118, 39);
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(973, 875);
+            this.ClientSize = new System.Drawing.Size(973, 616);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

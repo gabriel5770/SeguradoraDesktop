@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCadastrarBeneficiario = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCpfCliente = new System.Windows.Forms.TextBox();
             this.txtNomeBeneficiario = new System.Windows.Forms.TextBox();
@@ -67,21 +66,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnCadastrarBeneficiario = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnCadastrarBeneficiario
-            // 
-            this.btnCadastrarBeneficiario.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnCadastrarBeneficiario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCadastrarBeneficiario.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCadastrarBeneficiario.Location = new System.Drawing.Point(659, 587);
-            this.btnCadastrarBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnCadastrarBeneficiario.Name = "btnCadastrarBeneficiario";
-            this.btnCadastrarBeneficiario.Size = new System.Drawing.Size(108, 34);
-            this.btnCadastrarBeneficiario.TabIndex = 78;
-            this.btnCadastrarBeneficiario.Text = "Cadastrar";
-            this.btnCadastrarBeneficiario.UseVisualStyleBackColor = false;
-            this.btnCadastrarBeneficiario.Click += new System.EventHandler(this.btnCadastrarBeneficiario_Click);
             // 
             // label6
             // 
@@ -89,10 +75,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(578, 136);
+            this.label6.Location = new System.Drawing.Point(725, 124);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 15);
+            this.label6.Size = new System.Drawing.Size(121, 20);
             this.label6.TabIndex = 85;
             this.label6.Text = "CPF DO CLIENTE";
             // 
@@ -101,10 +87,10 @@
             this.txtCpfCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCpfCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCpfCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtCpfCliente.Location = new System.Drawing.Point(578, 159);
-            this.txtCpfCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCpfCliente.Location = new System.Drawing.Point(725, 153);
+            this.txtCpfCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtCpfCliente.Name = "txtCpfCliente";
-            this.txtCpfCliente.Size = new System.Drawing.Size(133, 16);
+            this.txtCpfCliente.Size = new System.Drawing.Size(166, 20);
             this.txtCpfCliente.TabIndex = 86;
             // 
             // txtNomeBeneficiario
@@ -112,20 +98,20 @@
             this.txtNomeBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeBeneficiario.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNomeBeneficiario.Location = new System.Drawing.Point(26, 95);
-            this.txtNomeBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNomeBeneficiario.Location = new System.Drawing.Point(32, 81);
+            this.txtNomeBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtNomeBeneficiario.Name = "txtNomeBeneficiario";
-            this.txtNomeBeneficiario.Size = new System.Drawing.Size(347, 16);
+            this.txtNomeBeneficiario.Size = new System.Drawing.Size(434, 20);
             this.txtNomeBeneficiario.TabIndex = 87;
             // 
             // txtEnderecoBeneficiario
             // 
             this.txtEnderecoBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEnderecoBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtEnderecoBeneficiario.Location = new System.Drawing.Point(26, 384);
-            this.txtEnderecoBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEnderecoBeneficiario.Location = new System.Drawing.Point(29, 328);
+            this.txtEnderecoBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtEnderecoBeneficiario.Name = "txtEnderecoBeneficiario";
-            this.txtEnderecoBeneficiario.Size = new System.Drawing.Size(358, 16);
+            this.txtEnderecoBeneficiario.Size = new System.Drawing.Size(448, 20);
             this.txtEnderecoBeneficiario.TabIndex = 103;
             // 
             // label10
@@ -134,10 +120,10 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(26, 76);
+            this.label10.Location = new System.Drawing.Point(32, 57);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 15);
+            this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 88;
             this.label10.Text = "Nome:";
             // 
@@ -147,10 +133,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(458, 78);
+            this.label2.Location = new System.Drawing.Point(572, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 15);
+            this.label2.Size = new System.Drawing.Size(39, 20);
             this.label2.TabIndex = 89;
             this.label2.Text = "CPF:";
             // 
@@ -160,10 +146,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(622, 77);
+            this.label3.Location = new System.Drawing.Point(778, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 15);
+            this.label3.Size = new System.Drawing.Size(32, 20);
             this.label3.TabIndex = 90;
             this.label3.Text = "RG:";
             // 
@@ -173,10 +159,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(231, 136);
+            this.label4.Location = new System.Drawing.Point(292, 124);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 15);
+            this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 91;
             this.label4.Text = "Sexo:";
             // 
@@ -186,10 +172,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(26, 134);
+            this.label5.Location = new System.Drawing.Point(35, 122);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 15);
+            this.label5.Size = new System.Drawing.Size(151, 20);
             this.label5.TabIndex = 92;
             this.label5.Text = "Data de Nascimento:";
             // 
@@ -199,10 +185,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(26, 365);
+            this.label1.Location = new System.Drawing.Point(29, 304);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 15);
+            this.label1.Size = new System.Drawing.Size(90, 20);
             this.label1.TabIndex = 93;
             this.label1.Text = "Logradouro";
             // 
@@ -212,10 +198,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(424, 134);
+            this.label7.Location = new System.Drawing.Point(533, 122);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 15);
+            this.label7.Size = new System.Drawing.Size(89, 20);
             this.label7.TabIndex = 94;
             this.label7.Text = "Estado civil:";
             // 
@@ -223,10 +209,10 @@
             // 
             this.txtNumeroResidenciaBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumeroResidenciaBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNumeroResidenciaBeneficiario.Location = new System.Drawing.Point(481, 382);
-            this.txtNumeroResidenciaBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNumeroResidenciaBeneficiario.Location = new System.Drawing.Point(598, 326);
+            this.txtNumeroResidenciaBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtNumeroResidenciaBeneficiario.Name = "txtNumeroResidenciaBeneficiario";
-            this.txtNumeroResidenciaBeneficiario.Size = new System.Drawing.Size(66, 16);
+            this.txtNumeroResidenciaBeneficiario.Size = new System.Drawing.Size(82, 20);
             this.txtNumeroResidenciaBeneficiario.TabIndex = 95;
             // 
             // label8
@@ -235,10 +221,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(481, 362);
+            this.label8.Location = new System.Drawing.Point(598, 300);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 15);
+            this.label8.Size = new System.Drawing.Size(70, 20);
             this.label8.TabIndex = 96;
             this.label8.Text = "Número:";
             // 
@@ -246,10 +232,10 @@
             // 
             this.txtMunicipioBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMunicipioBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtMunicipioBeneficiario.Location = new System.Drawing.Point(338, 515);
-            this.txtMunicipioBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtMunicipioBeneficiario.Location = new System.Drawing.Point(417, 444);
+            this.txtMunicipioBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtMunicipioBeneficiario.Name = "txtMunicipioBeneficiario";
-            this.txtMunicipioBeneficiario.Size = new System.Drawing.Size(186, 16);
+            this.txtMunicipioBeneficiario.Size = new System.Drawing.Size(232, 20);
             this.txtMunicipioBeneficiario.TabIndex = 97;
             // 
             // label9
@@ -258,10 +244,10 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(338, 496);
+            this.label9.Location = new System.Drawing.Point(417, 420);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(64, 15);
+            this.label9.Size = new System.Drawing.Size(82, 20);
             this.label9.TabIndex = 98;
             this.label9.Text = "Município:";
             // 
@@ -269,10 +255,10 @@
             // 
             this.txtBairroBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBairroBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtBairroBeneficiario.Location = new System.Drawing.Point(26, 437);
-            this.txtBairroBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBairroBeneficiario.Location = new System.Drawing.Point(29, 379);
+            this.txtBairroBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtBairroBeneficiario.Name = "txtBairroBeneficiario";
-            this.txtBairroBeneficiario.Size = new System.Drawing.Size(358, 16);
+            this.txtBairroBeneficiario.Size = new System.Drawing.Size(448, 20);
             this.txtBairroBeneficiario.TabIndex = 99;
             // 
             // label11
@@ -281,10 +267,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(640, 363);
+            this.label11.Location = new System.Drawing.Point(797, 302);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 15);
+            this.label11.Size = new System.Drawing.Size(39, 20);
             this.label11.TabIndex = 100;
             this.label11.Text = "Cep:";
             // 
@@ -292,10 +278,10 @@
             // 
             this.txtTelefoneBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefoneBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTelefoneBeneficiario.Location = new System.Drawing.Point(514, 437);
-            this.txtTelefoneBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtTelefoneBeneficiario.Location = new System.Drawing.Point(639, 379);
+            this.txtTelefoneBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtTelefoneBeneficiario.Name = "txtTelefoneBeneficiario";
-            this.txtTelefoneBeneficiario.Size = new System.Drawing.Size(133, 16);
+            this.txtTelefoneBeneficiario.Size = new System.Drawing.Size(166, 20);
             this.txtTelefoneBeneficiario.TabIndex = 101;
             // 
             // label12
@@ -304,10 +290,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(514, 416);
+            this.label12.Location = new System.Drawing.Point(639, 353);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(55, 15);
+            this.label12.Size = new System.Drawing.Size(71, 20);
             this.label12.TabIndex = 102;
             this.label12.Text = "Telefone:";
             // 
@@ -317,10 +303,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(596, 494);
+            this.label14.Location = new System.Drawing.Point(740, 418);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 15);
+            this.label14.Size = new System.Drawing.Size(58, 20);
             this.label14.TabIndex = 104;
             this.label14.Text = "Estado:";
             // 
@@ -329,10 +315,10 @@
             this.txtEmailBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmailBeneficiario.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEmailBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtEmailBeneficiario.Location = new System.Drawing.Point(26, 226);
-            this.txtEmailBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmailBeneficiario.Location = new System.Drawing.Point(35, 204);
+            this.txtEmailBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtEmailBeneficiario.Name = "txtEmailBeneficiario";
-            this.txtEmailBeneficiario.Size = new System.Drawing.Size(314, 16);
+            this.txtEmailBeneficiario.Size = new System.Drawing.Size(392, 20);
             this.txtEmailBeneficiario.TabIndex = 105;
             // 
             // cmbSexoBeneficiario
@@ -341,19 +327,19 @@
             this.cmbSexoBeneficiario.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cmbSexoBeneficiario.Location = new System.Drawing.Point(231, 153);
-            this.cmbSexoBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cmbSexoBeneficiario.Location = new System.Drawing.Point(292, 145);
+            this.cmbSexoBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmbSexoBeneficiario.Name = "cmbSexoBeneficiario";
-            this.cmbSexoBeneficiario.Size = new System.Drawing.Size(118, 23);
+            this.cmbSexoBeneficiario.Size = new System.Drawing.Size(146, 28);
             this.cmbSexoBeneficiario.TabIndex = 107;
             // 
             // label21
             // 
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label21.Location = new System.Drawing.Point(21, 572);
+            this.label21.Location = new System.Drawing.Point(21, 515);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(738, 1);
+            this.label21.Size = new System.Drawing.Size(922, 1);
             this.label21.TabIndex = 121;
             // 
             // cmbEstadoBeneficiario
@@ -387,10 +373,10 @@
             "PR ",
             "SC ",
             "RS "});
-            this.cmbEstadoBeneficiario.Location = new System.Drawing.Point(596, 513);
-            this.cmbEstadoBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cmbEstadoBeneficiario.Location = new System.Drawing.Point(740, 441);
+            this.cmbEstadoBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmbEstadoBeneficiario.Name = "cmbEstadoBeneficiario";
-            this.cmbEstadoBeneficiario.Size = new System.Drawing.Size(106, 23);
+            this.cmbEstadoBeneficiario.Size = new System.Drawing.Size(132, 28);
             this.cmbEstadoBeneficiario.TabIndex = 108;
             // 
             // cmbEstadoCivilBeneficiario
@@ -400,20 +386,20 @@
             "Solteiro",
             "Casado",
             "Viuvo"});
-            this.cmbEstadoCivilBeneficiario.Location = new System.Drawing.Point(424, 153);
-            this.cmbEstadoCivilBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cmbEstadoCivilBeneficiario.Location = new System.Drawing.Point(533, 145);
+            this.cmbEstadoCivilBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmbEstadoCivilBeneficiario.Name = "cmbEstadoCivilBeneficiario";
-            this.cmbEstadoCivilBeneficiario.Size = new System.Drawing.Size(111, 23);
+            this.cmbEstadoCivilBeneficiario.Size = new System.Drawing.Size(138, 28);
             this.cmbEstadoCivilBeneficiario.TabIndex = 109;
             // 
             // textSenhaBeneficiario
             // 
             this.textSenhaBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSenhaBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textSenhaBeneficiario.Location = new System.Drawing.Point(569, 226);
-            this.textSenhaBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.textSenhaBeneficiario.Location = new System.Drawing.Point(714, 204);
+            this.textSenhaBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.textSenhaBeneficiario.Name = "textSenhaBeneficiario";
-            this.textSenhaBeneficiario.Size = new System.Drawing.Size(133, 16);
+            this.textSenhaBeneficiario.Size = new System.Drawing.Size(166, 20);
             this.textSenhaBeneficiario.TabIndex = 111;
             // 
             // label17
@@ -422,60 +408,60 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(569, 207);
+            this.label17.Location = new System.Drawing.Point(714, 181);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 15);
+            this.label17.Size = new System.Drawing.Size(51, 20);
             this.label17.TabIndex = 112;
             this.label17.Text = "Senha";
             // 
             // maskedTextRgBeneficiario
             // 
             this.maskedTextRgBeneficiario.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextRgBeneficiario.Location = new System.Drawing.Point(622, 95);
-            this.maskedTextRgBeneficiario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextRgBeneficiario.Location = new System.Drawing.Point(778, 81);
+            this.maskedTextRgBeneficiario.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextRgBeneficiario.Mask = "00.000.000-0";
             this.maskedTextRgBeneficiario.Name = "maskedTextRgBeneficiario";
-            this.maskedTextRgBeneficiario.Size = new System.Drawing.Size(76, 21);
+            this.maskedTextRgBeneficiario.Size = new System.Drawing.Size(94, 25);
             this.maskedTextRgBeneficiario.TabIndex = 113;
             // 
             // maskedTextCpfBeneficiario
             // 
             this.maskedTextCpfBeneficiario.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextCpfBeneficiario.Location = new System.Drawing.Point(458, 95);
-            this.maskedTextCpfBeneficiario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextCpfBeneficiario.Location = new System.Drawing.Point(572, 81);
+            this.maskedTextCpfBeneficiario.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextCpfBeneficiario.Mask = "000.000.000-00";
             this.maskedTextCpfBeneficiario.Name = "maskedTextCpfBeneficiario";
-            this.maskedTextCpfBeneficiario.Size = new System.Drawing.Size(78, 21);
+            this.maskedTextCpfBeneficiario.Size = new System.Drawing.Size(96, 25);
             this.maskedTextCpfBeneficiario.TabIndex = 114;
             this.maskedTextCpfBeneficiario.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // dateTimePickerBeneficiario
             // 
             this.dateTimePickerBeneficiario.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerBeneficiario.Location = new System.Drawing.Point(26, 154);
-            this.dateTimePickerBeneficiario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerBeneficiario.Location = new System.Drawing.Point(35, 146);
+            this.dateTimePickerBeneficiario.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerBeneficiario.Name = "dateTimePickerBeneficiario";
-            this.dateTimePickerBeneficiario.Size = new System.Drawing.Size(127, 23);
+            this.dateTimePickerBeneficiario.Size = new System.Drawing.Size(158, 27);
             this.dateTimePickerBeneficiario.TabIndex = 115;
             // 
             // label18
             // 
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label18.Location = new System.Drawing.Point(21, 276);
+            this.label18.Location = new System.Drawing.Point(29, 267);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(738, 1);
+            this.label18.Size = new System.Drawing.Size(922, 1);
             this.label18.TabIndex = 116;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(346, 16);
+            this.label19.Location = new System.Drawing.Point(432, 20);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(122, 21);
+            this.label19.Size = new System.Drawing.Size(158, 28);
             this.label19.TabIndex = 117;
             this.label19.Text = "Dados Pessoais";
             // 
@@ -483,21 +469,21 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(359, 310);
+            this.label20.Location = new System.Drawing.Point(459, 277);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(75, 21);
+            this.label20.Size = new System.Drawing.Size(96, 28);
             this.label20.TabIndex = 118;
             this.label20.Text = "Endereço";
             // 
             // maskedTextCepBeneficiario
             // 
             this.maskedTextCepBeneficiario.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextCepBeneficiario.Location = new System.Drawing.Point(645, 382);
-            this.maskedTextCepBeneficiario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextCepBeneficiario.Location = new System.Drawing.Point(803, 326);
+            this.maskedTextCepBeneficiario.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextCepBeneficiario.Mask = "00000-00";
             this.maskedTextCepBeneficiario.Name = "maskedTextCepBeneficiario";
-            this.maskedTextCepBeneficiario.Size = new System.Drawing.Size(58, 21);
+            this.maskedTextCepBeneficiario.Size = new System.Drawing.Size(72, 25);
             this.maskedTextCepBeneficiario.TabIndex = 119;
             this.maskedTextCepBeneficiario.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -505,10 +491,10 @@
             // 
             this.txtCidadeBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCidadeBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtCidadeBeneficiario.Location = new System.Drawing.Point(26, 515);
-            this.txtCidadeBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCidadeBeneficiario.Location = new System.Drawing.Point(27, 444);
+            this.txtCidadeBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtCidadeBeneficiario.Name = "txtCidadeBeneficiario";
-            this.txtCidadeBeneficiario.Size = new System.Drawing.Size(230, 16);
+            this.txtCidadeBeneficiario.Size = new System.Drawing.Size(288, 20);
             this.txtCidadeBeneficiario.TabIndex = 120;
             // 
             // label15
@@ -517,10 +503,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(26, 206);
+            this.label15.Location = new System.Drawing.Point(35, 180);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(36, 15);
+            this.label15.Size = new System.Drawing.Size(46, 20);
             this.label15.TabIndex = 122;
             this.label15.Text = "Email";
             // 
@@ -530,10 +516,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(26, 416);
+            this.label13.Location = new System.Drawing.Point(29, 353);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 15);
+            this.label13.Size = new System.Drawing.Size(55, 20);
             this.label13.TabIndex = 123;
             this.label13.Text = "Bairro:";
             // 
@@ -541,18 +527,33 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(26, 494);
+            this.label16.Location = new System.Drawing.Point(27, 418);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 15);
+            this.label16.Size = new System.Drawing.Size(56, 20);
             this.label16.TabIndex = 124;
             this.label16.Text = "Cidade";
             // 
+            // btnCadastrarBeneficiario
+            // 
+            this.btnCadastrarBeneficiario.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCadastrarBeneficiario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCadastrarBeneficiario.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCadastrarBeneficiario.Location = new System.Drawing.Point(808, 552);
+            this.btnCadastrarBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnCadastrarBeneficiario.Name = "btnCadastrarBeneficiario";
+            this.btnCadastrarBeneficiario.Size = new System.Drawing.Size(135, 42);
+            this.btnCadastrarBeneficiario.TabIndex = 78;
+            this.btnCadastrarBeneficiario.Text = "Cadastrar";
+            this.btnCadastrarBeneficiario.UseVisualStyleBackColor = false;
+            this.btnCadastrarBeneficiario.Click += new System.EventHandler(this.btnCadastrarBeneficiario_Click);
+            // 
             // FormularioCadastroBeneficiario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(778, 700);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(973, 616);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label15);
@@ -593,7 +594,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnCadastrarBeneficiario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormularioCadastroBeneficiario";
             this.Text = "CadastroBeneficiario";
             this.Load += new System.EventHandler(this.CadastroBeneficiario_Load);
@@ -603,7 +604,6 @@
         }
 
         #endregion
-        private Button btnCadastrarBeneficiario;
         private Label label6;
         private TextBox txtCpfCliente;
         private TextBox txtNomeBeneficiario;
@@ -642,5 +642,6 @@
         private Label label15;
         private Label label13;
         private Label label16;
+        private Button btnCadastrarBeneficiario;
     }
 }

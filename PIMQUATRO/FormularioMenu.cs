@@ -45,19 +45,7 @@ namespace PIMQUATRO
             frmAtivo.ForeColor = Color.Red;
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            
-            ActiveButton(btnClientes);
-            FormShow(new FormularioClientes());
-            
-        }
-
-        private void btnFuncionarios_Click(object sender, EventArgs e)
-        {
-            ActiveButton(btnFuncionarios);
-            FormShow(new FormularioFuncionario());
-        }
+   
 
         private void btnSeguradoras_Click(object sender, EventArgs e)
         {
@@ -80,7 +68,7 @@ namespace PIMQUATRO
         private void btnBeneficiario_Click(object sender, EventArgs e)
         {
             ActiveButton(btnCadastrarBeneficiario);
-            FormShow(new FormularioBeneficiario());
+            FormShow(new FormularioCadastroBeneficiario());
         }
 
         private void panelLogo_Paint(object sender, PaintEventArgs e)

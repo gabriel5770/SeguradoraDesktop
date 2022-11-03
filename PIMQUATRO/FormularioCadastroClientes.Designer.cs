@@ -67,6 +67,9 @@
             this.maskedTextCepCliente = new System.Windows.Forms.MaskedTextBox();
             this.TxtCidade = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.btnExibirCliente = new System.Windows.Forms.Button();
+            this.btnEditarCliente = new System.Windows.Forms.Button();
+            this.btnExcluirCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -84,7 +87,7 @@
             // 
             this.txtEnderecoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEnderecoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtEnderecoCliente.Location = new System.Drawing.Point(26, 477);
+            this.txtEnderecoCliente.Location = new System.Drawing.Point(20, 310);
             this.txtEnderecoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEnderecoCliente.Name = "txtEnderecoCliente";
             this.txtEnderecoCliente.Size = new System.Drawing.Size(448, 20);
@@ -120,7 +123,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(770, 54);
+            this.label3.Location = new System.Drawing.Point(784, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 20);
             this.label3.TabIndex = 25;
@@ -132,7 +135,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(282, 128);
+            this.label4.Location = new System.Drawing.Point(276, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 26;
@@ -144,7 +147,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(26, 125);
+            this.label5.Location = new System.Drawing.Point(20, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 20);
             this.label5.TabIndex = 27;
@@ -156,7 +159,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(26, 453);
+            this.label6.Location = new System.Drawing.Point(20, 286);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 20);
             this.label6.TabIndex = 28;
@@ -168,7 +171,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(523, 125);
+            this.label7.Location = new System.Drawing.Point(517, 111);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 20);
             this.label7.TabIndex = 30;
@@ -180,7 +183,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(594, 450);
+            this.label8.Location = new System.Drawing.Point(588, 283);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 20);
             this.label8.TabIndex = 32;
@@ -190,7 +193,7 @@
             // 
             this.txtNumeroResidenciaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumeroResidenciaCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNumeroResidenciaCliente.Location = new System.Drawing.Point(594, 474);
+            this.txtNumeroResidenciaCliente.Location = new System.Drawing.Point(588, 307);
             this.txtNumeroResidenciaCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumeroResidenciaCliente.Name = "txtNumeroResidenciaCliente";
             this.txtNumeroResidenciaCliente.Size = new System.Drawing.Size(82, 20);
@@ -202,7 +205,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(415, 617);
+            this.label9.Location = new System.Drawing.Point(423, 392);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 20);
             this.label9.TabIndex = 34;
@@ -212,7 +215,7 @@
             // 
             this.txtMunicipioCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMunicipioCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtMunicipioCliente.Location = new System.Drawing.Point(415, 641);
+            this.txtMunicipioCliente.Location = new System.Drawing.Point(423, 416);
             this.txtMunicipioCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMunicipioCliente.Name = "txtMunicipioCliente";
             this.txtMunicipioCliente.Size = new System.Drawing.Size(232, 20);
@@ -224,7 +227,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(22, 522);
+            this.label10.Location = new System.Drawing.Point(16, 340);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 20);
             this.label10.TabIndex = 36;
@@ -234,19 +237,19 @@
             // 
             this.txtBairroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBairroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtBairroCliente.Location = new System.Drawing.Point(26, 543);
+            this.txtBairroCliente.Location = new System.Drawing.Point(20, 361);
             this.txtBairroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBairroCliente.Name = "txtBairroCliente";
             this.txtBairroCliente.Size = new System.Drawing.Size(448, 20);
             this.txtBairroCliente.TabIndex = 35;
-             // 
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(793, 451);
+            this.label11.Location = new System.Drawing.Point(801, 284);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 20);
             this.label11.TabIndex = 38;
@@ -258,7 +261,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(636, 517);
+            this.label12.Location = new System.Drawing.Point(630, 335);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 20);
             this.label12.TabIndex = 40;
@@ -268,7 +271,7 @@
             // 
             this.txtTelefoneCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTelefoneCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTelefoneCliente.Location = new System.Drawing.Point(636, 543);
+            this.txtTelefoneCliente.Location = new System.Drawing.Point(630, 361);
             this.txtTelefoneCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTelefoneCliente.Name = "txtTelefoneCliente";
             this.txtTelefoneCliente.Size = new System.Drawing.Size(166, 20);
@@ -280,7 +283,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(738, 614);
+            this.label14.Location = new System.Drawing.Point(733, 388);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(58, 20);
             this.label14.TabIndex = 44;
@@ -292,7 +295,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(31, 231);
+            this.label15.Location = new System.Drawing.Point(20, 171);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(46, 20);
             this.label15.TabIndex = 46;
@@ -303,27 +306,27 @@
             this.txtEmaiCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmaiCliente.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEmaiCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtEmaiCliente.Location = new System.Drawing.Point(30, 255);
+            this.txtEmaiCliente.Location = new System.Drawing.Point(20, 195);
             this.txtEmaiCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmaiCliente.Name = "txtEmaiCliente";
             this.txtEmaiCliente.Size = new System.Drawing.Size(392, 20);
             this.txtEmaiCliente.TabIndex = 45;
-             // 
+            // 
             // cmbBeneficiosCliente
             // 
             this.cmbBeneficiosCliente.FormattingEnabled = true;
-            this.cmbBeneficiosCliente.Location = new System.Drawing.Point(732, 152);
+            this.cmbBeneficiosCliente.Location = new System.Drawing.Point(740, 138);
             this.cmbBeneficiosCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbBeneficiosCliente.Name = "cmbBeneficiosCliente";
             this.cmbBeneficiosCliente.Size = new System.Drawing.Size(138, 28);
             this.cmbBeneficiosCliente.TabIndex = 47;
-             // 
+            // 
             // btnCadastrarCliente
             // 
             this.btnCadastrarCliente.BackColor = System.Drawing.Color.DarkBlue;
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(860, 801);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(833, 513);
             this.btnCadastrarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
             this.btnCadastrarCliente.Size = new System.Drawing.Size(108, 41);
@@ -335,12 +338,12 @@
             // cmbSexoCliente
             // 
             this.cmbSexoCliente.FormattingEnabled = true;
-            this.cmbSexoCliente.Location = new System.Drawing.Point(282, 149);
+            this.cmbSexoCliente.Location = new System.Drawing.Point(276, 135);
             this.cmbSexoCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSexoCliente.Name = "cmbSexoCliente";
             this.cmbSexoCliente.Size = new System.Drawing.Size(146, 28);
             this.cmbSexoCliente.TabIndex = 51;
-             // 
+            // 
             // cmbEstado
             // 
             this.cmbEstado.FormattingEnabled = true;
@@ -372,26 +375,26 @@
             "PR ",
             "SC ",
             "RS "});
-            this.cmbEstado.Location = new System.Drawing.Point(738, 638);
+            this.cmbEstado.Location = new System.Drawing.Point(746, 413);
             this.cmbEstado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(132, 28);
             this.cmbEstado.TabIndex = 52;
-             // 
+            // 
             // cmbEstadoCivil
             // 
             this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(523, 149);
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(517, 135);
             this.cmbEstadoCivil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
             this.cmbEstadoCivil.Size = new System.Drawing.Size(138, 28);
             this.cmbEstadoCivil.TabIndex = 53;
-             // 
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(732, 128);
+            this.label13.Location = new System.Drawing.Point(740, 114);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(114, 20);
             this.label13.TabIndex = 54;
@@ -401,7 +404,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(22, 617);
+            this.label16.Location = new System.Drawing.Point(20, 397);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(56, 20);
             this.label16.TabIndex = 55;
@@ -413,7 +416,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(708, 231);
+            this.label17.Location = new System.Drawing.Point(712, 171);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(51, 20);
             this.label17.TabIndex = 57;
@@ -423,16 +426,16 @@
             // 
             this.textSenhaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSenhaCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textSenhaCliente.Location = new System.Drawing.Point(708, 256);
+            this.textSenhaCliente.Location = new System.Drawing.Point(712, 196);
             this.textSenhaCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textSenhaCliente.Name = "textSenhaCliente";
             this.textSenhaCliente.Size = new System.Drawing.Size(166, 20);
             this.textSenhaCliente.TabIndex = 56;
-             // 
+            // 
             // maskedTextRgCliente
             // 
             this.maskedTextRgCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextRgCliente.Location = new System.Drawing.Point(770, 77);
+            this.maskedTextRgCliente.Location = new System.Drawing.Point(784, 77);
             this.maskedTextRgCliente.Mask = "00.000.000-0";
             this.maskedTextRgCliente.Name = "maskedTextRgCliente";
             this.maskedTextRgCliente.Size = new System.Drawing.Size(94, 25);
@@ -451,15 +454,15 @@
             // dateTimePickerCliente
             // 
             this.dateTimePickerCliente.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerCliente.Location = new System.Drawing.Point(26, 150);
+            this.dateTimePickerCliente.Location = new System.Drawing.Point(20, 136);
             this.dateTimePickerCliente.Name = "dateTimePickerCliente";
             this.dateTimePickerCliente.Size = new System.Drawing.Size(158, 27);
             this.dateTimePickerCliente.TabIndex = 60;
-             // 
+            // 
             // label18
             // 
             this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label18.Location = new System.Drawing.Point(23, 318);
+            this.label18.Location = new System.Drawing.Point(16, 237);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(922, 1);
             this.label18.TabIndex = 61;
@@ -473,12 +476,12 @@
             this.label19.Size = new System.Drawing.Size(158, 28);
             this.label19.TabIndex = 62;
             this.label19.Text = "Dados Pessoais";
-             // 
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(442, 384);
+            this.label20.Location = new System.Drawing.Point(433, 257);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(96, 28);
             this.label20.TabIndex = 63;
@@ -487,7 +490,7 @@
             // maskedTextCepCliente
             // 
             this.maskedTextCepCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextCepCliente.Location = new System.Drawing.Point(799, 474);
+            this.maskedTextCepCliente.Location = new System.Drawing.Point(807, 307);
             this.maskedTextCepCliente.Mask = "00000-00";
             this.maskedTextCepCliente.Name = "maskedTextCepCliente";
             this.maskedTextCepCliente.Size = new System.Drawing.Size(71, 25);
@@ -498,7 +501,7 @@
             // 
             this.TxtCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TxtCidade.Location = new System.Drawing.Point(26, 641);
+            this.TxtCidade.Location = new System.Drawing.Point(20, 421);
             this.TxtCidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TxtCidade.Name = "TxtCidade";
             this.TxtCidade.Size = new System.Drawing.Size(288, 20);
@@ -507,17 +510,59 @@
             // label21
             // 
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label21.Location = new System.Drawing.Point(19, 712);
+            this.label21.Location = new System.Drawing.Point(19, 466);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(922, 1);
             this.label21.TabIndex = 66;
+            // 
+            // btnExibirCliente
+            // 
+            this.btnExibirCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExibirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExibirCliente.ForeColor = System.Drawing.Color.White;
+            this.btnExibirCliente.Location = new System.Drawing.Point(688, 513);
+            this.btnExibirCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExibirCliente.Name = "btnExibirCliente";
+            this.btnExibirCliente.Size = new System.Drawing.Size(108, 41);
+            this.btnExibirCliente.TabIndex = 67;
+            this.btnExibirCliente.Text = "Exibir";
+            this.btnExibirCliente.UseVisualStyleBackColor = false;
+            // 
+            // btnEditarCliente
+            // 
+            this.btnEditarCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEditarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnEditarCliente.Location = new System.Drawing.Point(562, 513);
+            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEditarCliente.Name = "btnEditarCliente";
+            this.btnEditarCliente.Size = new System.Drawing.Size(108, 41);
+            this.btnEditarCliente.TabIndex = 68;
+            this.btnEditarCliente.Text = "Editar";
+            this.btnEditarCliente.UseVisualStyleBackColor = false;
+            // 
+            // btnExcluirCliente
+            // 
+            this.btnExcluirCliente.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExcluirCliente.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirCliente.Location = new System.Drawing.Point(433, 513);
+            this.btnExcluirCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExcluirCliente.Name = "btnExcluirCliente";
+            this.btnExcluirCliente.Size = new System.Drawing.Size(108, 41);
+            this.btnExcluirCliente.TabIndex = 69;
+            this.btnExcluirCliente.Text = "Excluir";
+            this.btnExcluirCliente.UseVisualStyleBackColor = false;
             // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(973, 875);
+            this.ClientSize = new System.Drawing.Size(973, 616);
+            this.Controls.Add(this.btnExcluirCliente);
+            this.Controls.Add(this.btnEditarCliente);
+            this.Controls.Add(this.btnExibirCliente);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.TxtCidade);
             this.Controls.Add(this.maskedTextCepCliente);
@@ -609,5 +654,8 @@
         private MaskedTextBox maskedTextCepCliente;
         private TextBox TxtCidade;
         private Label label21;
+        private Button btnExibirCliente;
+        private Button btnEditarCliente;
+        private Button btnExcluirCliente;
     }
 }
