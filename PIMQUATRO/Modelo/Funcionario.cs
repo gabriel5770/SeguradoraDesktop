@@ -30,7 +30,7 @@ namespace PIMQUATRO.Modelo
         public string Cidade { get; set; }
         public string Cargo { get; set; }
 
-        public Funcionario(string nome, string cpf, string rg, DateTime dataNascimento, string endereco, string email, string senha, string estadoCivil, string sexo, string numeroResidencia, string municipio, string bairro, string cep, String telefone, string estado,string cidade, string cargo)
+        public Funcionario(string nome, string cpf, string rg, DateTime dataNascimento, string endereco, string email, string senha, string estadoCivil, string sexo, string numeroResidencia, string municipio, string bairro, string cep, String telefone, string estado, string cidade, string cargo)
         {
             Nome = nome;
             Cpf = cpf;
@@ -53,68 +53,68 @@ namespace PIMQUATRO.Modelo
 
         public bool Cadastrar()
         {
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
-                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+                using (var command = new SqlCommand
                 {
-                    using (var command = new SqlCommand
+                    Connection = connection,
+                    CommandType = CommandType.StoredProcedure
+                })
+                {
+                    command.CommandText = "Ins_WindowsForms_Cadastro_Funcionario";
+                    try
                     {
-                        Connection = connection,
-                        CommandType = CommandType.StoredProcedure
-                    })
-                    {
-                        command.CommandText = "Ins_WindowsForms_Cadastro_Funcionario";
-                        try
+                        command.Parameters.AddWithValue("@Email", Email);
+                        command.Parameters.AddWithValue("@Senha", Senha);
+                        command.Parameters.AddWithValue("@Nome", Nome);
+                        command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
+                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
+                        command.Parameters.AddWithValue("@Rg", Rg);
+                        command.Parameters.AddWithValue("@Cpf", Cpf);
+                        command.Parameters.AddWithValue("@Sexo", Sexo);
+                        command.Parameters.AddWithValue("@Endereco", Endereco);
+                        command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
+                        command.Parameters.AddWithValue("@Estado", Estado);
+                        command.Parameters.AddWithValue("@Municipio", Municipio);
+                        command.Parameters.AddWithValue("@Bairro", Bairro);
+                        command.Parameters.AddWithValue("@Cep", Cep);
+                        command.Parameters.AddWithValue("@Telefone", Telefone);
+                        command.Parameters.AddWithValue("@Cargo", Cargo);
+                        command.Parameters.AddWithValue("@Cidade", Cidade);
+
+
+
+                        var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
+                        returnParameter.Direction = ParameterDirection.ReturnValue;
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        var result = (int)returnParameter.Value;
+
+
+                        if (result == 1)
                         {
-                            command.Parameters.AddWithValue("@Email", Email);
-                            command.Parameters.AddWithValue("@Senha", Senha);
-                            command.Parameters.AddWithValue("@Nome", Nome);
-                            command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
-                            command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
-                            command.Parameters.AddWithValue("@Rg", Rg);
-                            command.Parameters.AddWithValue("@Cpf", Cpf);
-                            command.Parameters.AddWithValue("@Sexo", Sexo);
-                            command.Parameters.AddWithValue("@Endereco", Endereco);
-                            command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
-                            command.Parameters.AddWithValue("@Estado",Estado);
-                            command.Parameters.AddWithValue("@Municipio", Municipio);
-                            command.Parameters.AddWithValue("@Bairro", Bairro);
-                            command.Parameters.AddWithValue("@Cep", Cep);
-                            command.Parameters.AddWithValue("@Telefone", Telefone);
-                            command.Parameters.AddWithValue("@Cargo", Cargo);
-                            command.Parameters.AddWithValue("@Cidade", Cidade);
-
-
-
-                            var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
-                            returnParameter.Direction = ParameterDirection.ReturnValue;
-
-                            connection.Open();
-                            command.ExecuteNonQuery();
-                            var result = (int)returnParameter.Value;
-
-
-                            if (result == 1)
-                            {
-                                MessageBox.Show("Há um cadastro com este CPF!");
-                                return false;
-
-                            }
-                            else
-
-                            {
-                                return true;
-                            }
-                        }
-                        catch (SqlException ex)
-                        {
-                            MessageBox.Show("Erro ao cadastrar usuário");
-                            MessageBox.Show("Erro encontrado: " + ex);
+                            MessageBox.Show("Há um cadastro com este CPF!");
                             return false;
+
                         }
+                        else
+
+                        {
+                            return true;
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao cadastrar usuário");
+                        MessageBox.Show("Erro encontrado: " + ex);
+                        return false;
                     }
                 }
             }
         }
     }
 }
+
 

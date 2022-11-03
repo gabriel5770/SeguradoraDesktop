@@ -12,15 +12,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PIMQUATRO
 {
     public partial class FormularioCadastroFuncionarios : Form
     {
-        private void CadastroFuncionarios_Load(object sender, EventArgs e)
-        {
 
-        }
         public FormularioCadastroFuncionarios()
         {
             InitializeComponent();
@@ -38,6 +36,12 @@ namespace PIMQUATRO
         {
             ObtemDadosFuncionarios();
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            RetornaPesquisaCpf();
+        }
+
 
         private void ObtemDadosFuncionarios()
         {
@@ -87,17 +91,54 @@ namespace PIMQUATRO
 
         }
 
-        private void maskedTextCepFunc_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void RetornaPesquisaCpf()
         {
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            {
+                using (var command = new SqlCommand("Qry_WindowsForms_Cadastro_RetornaFuncionarioCadastrado", connection))
 
-        }
+                    try
+                    {
 
-        private void label11_Click(object sender, EventArgs e)
-        {
+                        //nome,cpf,data,rg,sexo,cargo,idlogin,estadocivil,cidade,endereco,numresidenm,bairro,municipio,estado,cep
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            textNomeFunc.Text = reader.GetString(1);
+                            maskedTextFuncCpf.Text = reader.GetString(2);
+                            dateTimePickerFunc.Text = reader.GetDateTime(3).ToString();
+                            maskedTextRgFunc.Text = reader.GetString(4);
+                            cmdSexoFunc.Text = reader.GetString(5);
+                            cmbCargoFunc.Text = reader.GetString(6);
+                            cmdEstadoCivilFunc.Text = reader.GetString(8);
+                            textCidadeFunc.Text = reader.GetString(9);
+                            textEnderecoFunc.Text = reader.GetString(10);
+                            textNumeroResidenciaFunc.Text = reader.GetString(11);
+                            textBairroFunc.Text = reader.GetString(12);
+                            textMunicipioFunc.Text = reader.GetString(13);
+                            cmbEstadoFunc.Text = reader.GetString(14);
+                            maskedTextCepFunc.Text = reader.GetString(15);
+                            textEmailFunc.Text = reader.GetString(16);
+                            maskedTelefoneFuncionario.Text = reader.GetString(17);
+                            textSenhaFunc.Text = reader.GetString(18);
 
+
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao cadastrar usuário");
+                        MessageBox.Show("Erro encontrado: " + ex);
+                    }
+            }
         }
     }
 }
+
+
+
+
 
 
 
