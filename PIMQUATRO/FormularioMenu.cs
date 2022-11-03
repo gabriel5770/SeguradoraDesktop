@@ -42,7 +42,7 @@ namespace PIMQUATRO
             foreach (Control crtl in panelPrincipal.Controls)
                 crtl.ForeColor = Color.White;
 
-            frmAtivo.ForeColor = Color.Red;
+            frmAtivo.ForeColor = Color.DarkBlue;
         }
 
    
@@ -50,7 +50,7 @@ namespace PIMQUATRO
         private void btnSeguradoras_Click(object sender, EventArgs e)
         {
             ActiveButton(btnSeguradoras);
-            FormShow(new FormularioSeguradora());
+            FormShow(new FormularioCadastroSeguradora());
         }
 
         private void btnVendas_Click(object sender, EventArgs e)

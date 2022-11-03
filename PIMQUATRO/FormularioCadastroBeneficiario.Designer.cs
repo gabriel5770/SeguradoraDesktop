@@ -45,16 +45,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtBairroBeneficiario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtTelefoneBeneficiario = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtEmailBeneficiario = new System.Windows.Forms.TextBox();
             this.cmbSexoBeneficiario = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.cmbEstadoBeneficiario = new System.Windows.Forms.ComboBox();
             this.cmbEstadoCivilBeneficiario = new System.Windows.Forms.ComboBox();
-            this.textSenhaBeneficiario = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.maskedTextRgBeneficiario = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextCpfBeneficiario = new System.Windows.Forms.MaskedTextBox();
             this.dateTimePickerBeneficiario = new System.Windows.Forms.DateTimePicker();
@@ -70,6 +66,8 @@
             this.btnExcluirBeneficiario = new System.Windows.Forms.Button();
             this.btnEditarBeneficiario = new System.Windows.Forms.Button();
             this.btnExibirBeneficiario = new System.Windows.Forms.Button();
+            this.maskedTelefoneBeneficiario = new System.Windows.Forms.MaskedTextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -277,29 +275,6 @@
             this.label11.TabIndex = 100;
             this.label11.Text = "Cep:";
             // 
-            // txtTelefoneBeneficiario
-            // 
-            this.txtTelefoneBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefoneBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTelefoneBeneficiario.Location = new System.Drawing.Point(639, 379);
-            this.txtTelefoneBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.txtTelefoneBeneficiario.Name = "txtTelefoneBeneficiario";
-            this.txtTelefoneBeneficiario.Size = new System.Drawing.Size(166, 20);
-            this.txtTelefoneBeneficiario.TabIndex = 101;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(639, 353);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 20);
-            this.label12.TabIndex = 102;
-            this.label12.Text = "Telefone:";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -394,29 +369,6 @@
             this.cmbEstadoCivilBeneficiario.Name = "cmbEstadoCivilBeneficiario";
             this.cmbEstadoCivilBeneficiario.Size = new System.Drawing.Size(138, 28);
             this.cmbEstadoCivilBeneficiario.TabIndex = 109;
-            // 
-            // textSenhaBeneficiario
-            // 
-            this.textSenhaBeneficiario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSenhaBeneficiario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textSenhaBeneficiario.Location = new System.Drawing.Point(714, 204);
-            this.textSenhaBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.textSenhaBeneficiario.Name = "textSenhaBeneficiario";
-            this.textSenhaBeneficiario.Size = new System.Drawing.Size(166, 20);
-            this.textSenhaBeneficiario.TabIndex = 111;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(714, 181);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 20);
-            this.label17.TabIndex = 112;
-            this.label17.Text = "Senha";
             // 
             // maskedTextRgBeneficiario
             // 
@@ -590,12 +542,34 @@
             this.btnExibirBeneficiario.Text = "Exibir";
             this.btnExibirBeneficiario.UseVisualStyleBackColor = false;
             // 
+            // maskedTelefoneBeneficiario
+            // 
+            this.maskedTelefoneBeneficiario.Location = new System.Drawing.Point(636, 204);
+            this.maskedTelefoneBeneficiario.Mask = "(00)00000-0000";
+            this.maskedTelefoneBeneficiario.Name = "maskedTelefoneBeneficiario";
+            this.maskedTelefoneBeneficiario.Size = new System.Drawing.Size(125, 27);
+            this.maskedTelefoneBeneficiario.TabIndex = 129;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(636, 181);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 20);
+            this.label12.TabIndex = 128;
+            this.label12.Text = "Telefone:";
+            // 
             // FormularioCadastroBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(973, 616);
+            this.Controls.Add(this.maskedTelefoneBeneficiario);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnExcluirBeneficiario);
             this.Controls.Add(this.btnEditarBeneficiario);
             this.Controls.Add(this.btnExibirBeneficiario);
@@ -611,15 +585,11 @@
             this.Controls.Add(this.dateTimePickerBeneficiario);
             this.Controls.Add(this.maskedTextCpfBeneficiario);
             this.Controls.Add(this.maskedTextRgBeneficiario);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.textSenhaBeneficiario);
             this.Controls.Add(this.cmbEstadoCivilBeneficiario);
             this.Controls.Add(this.cmbEstadoBeneficiario);
             this.Controls.Add(this.cmbSexoBeneficiario);
             this.Controls.Add(this.txtEmailBeneficiario);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtTelefoneBeneficiario);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtBairroBeneficiario);
             this.Controls.Add(this.label9);
@@ -666,16 +636,12 @@
         private Label label9;
         private TextBox txtBairroBeneficiario;
         private Label label11;
-        private TextBox txtTelefoneBeneficiario;
-        private Label label12;
         private Label label14;
         private TextBox txtEmailBeneficiario;
         private ComboBox cmbSexoBeneficiario;
         private Label label21;
         private ComboBox cmbEstadoBeneficiario;
         private ComboBox cmbEstadoCivilBeneficiario;
-        private TextBox textSenhaBeneficiario;
-        private Label label17;
         private MaskedTextBox maskedTextRgBeneficiario;
         private MaskedTextBox maskedTextCpfBeneficiario;
         private DateTimePicker dateTimePickerBeneficiario;
@@ -691,5 +657,7 @@
         private Button btnExcluirBeneficiario;
         private Button btnEditarBeneficiario;
         private Button btnExibirBeneficiario;
+        private MaskedTextBox maskedTelefoneBeneficiario;
+        private Label label12;
     }
 }

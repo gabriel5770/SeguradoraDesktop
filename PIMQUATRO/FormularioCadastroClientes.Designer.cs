@@ -44,8 +44,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtBairroCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtTelefoneCliente = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtEmaiCliente = new System.Windows.Forms.TextBox();
@@ -70,6 +68,8 @@
             this.btnExibirCliente = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnExcluirCliente = new System.Windows.Forms.Button();
+            this.maskedTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -254,28 +254,6 @@
             this.label11.Size = new System.Drawing.Size(39, 20);
             this.label11.TabIndex = 38;
             this.label11.Text = "Cep:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(630, 335);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 20);
-            this.label12.TabIndex = 40;
-            this.label12.Text = "Telefone:";
-            // 
-            // txtTelefoneCliente
-            // 
-            this.txtTelefoneCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTelefoneCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtTelefoneCliente.Location = new System.Drawing.Point(630, 361);
-            this.txtTelefoneCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTelefoneCliente.Name = "txtTelefoneCliente";
-            this.txtTelefoneCliente.Size = new System.Drawing.Size(166, 20);
-            this.txtTelefoneCliente.TabIndex = 39;
             // 
             // label14
             // 
@@ -554,12 +532,34 @@
             this.btnExcluirCliente.Text = "Excluir";
             this.btnExcluirCliente.UseVisualStyleBackColor = false;
             // 
+            // maskedTelefoneCliente
+            // 
+            this.maskedTelefoneCliente.Location = new System.Drawing.Point(503, 193);
+            this.maskedTelefoneCliente.Mask = "(00)00000-0000";
+            this.maskedTelefoneCliente.Name = "maskedTelefoneCliente";
+            this.maskedTelefoneCliente.Size = new System.Drawing.Size(125, 27);
+            this.maskedTelefoneCliente.TabIndex = 100;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(503, 170);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 20);
+            this.label12.TabIndex = 99;
+            this.label12.Text = "Telefone:";
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(973, 616);
+            this.Controls.Add(this.maskedTelefoneCliente);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnExcluirCliente);
             this.Controls.Add(this.btnEditarCliente);
             this.Controls.Add(this.btnExibirCliente);
@@ -584,8 +584,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtEmaiCliente);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtTelefoneCliente);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtBairroCliente);
@@ -631,8 +629,6 @@
         private Label label10;
         private TextBox txtBairroCliente;
         private Label label11;
-        private Label label12;
-        private TextBox txtTelefoneCliente;
         private Label label14;
         private Label label15;
         private TextBox txtEmaiCliente;
@@ -657,5 +653,7 @@
         private Button btnExibirCliente;
         private Button btnEditarCliente;
         private Button btnExcluirCliente;
+        private MaskedTextBox maskedTelefoneCliente;
+        private Label label12;
     }
 }

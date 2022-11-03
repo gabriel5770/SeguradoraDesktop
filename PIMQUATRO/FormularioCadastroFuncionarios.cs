@@ -56,7 +56,7 @@ namespace PIMQUATRO
             string Bairro = textBairroFunc.Text;
             string Cidade = textCidadeFunc.Text;
             string Cep = maskedTextCepFunc.Text;
-            string Telefone = textTelefoneFunc.Text;
+            string Telefone = maskedTelefoneFuncionario.Text;
             string Cargo = cmbCargoFunc.Text;
 
 
@@ -78,7 +78,7 @@ namespace PIMQUATRO
             if (textEmailFunc.Text == "" || textSenhaFunc.Text == "" || textNomeFunc.Text == "" || cmdEstadoCivilFunc.Text == "" ||
                 maskedTextRgFunc.Text == "" || maskedTextFuncCpf.Text == "" || cmdSexoFunc.Text == "" || textEnderecoFunc.Text == "" ||
                 textNumeroResidenciaFunc.Text == "" || cmbEstadoFunc.Text == "" || textMunicipioFunc.Text == "" || textBairroFunc.Text == "" ||
-                textCidadeFunc.Text == "" || maskedTextCepFunc.Text == "" || textTelefoneFunc.Text == "" || cmbCargoFunc.Text == "")
+                textCidadeFunc.Text == "" || maskedTextCepFunc.Text == "" || maskedTelefoneFuncionario.Text == "" || cmbCargoFunc.Text == "")
             {
                 MessageBox.Show("Há campos que não foram preenchidos , revise");
                 return false;

@@ -41,7 +41,7 @@ namespace PIMQUATRO
             if (txtEmailBeneficiario.Text == " " || txtNomeBeneficiario.Text == "" || cmbEstadoCivilBeneficiario.Text == "" ||
                 txtNumeroResidenciaBeneficiario.Text == "" || maskedTextRgBeneficiario.Text == "" || maskedTextCpfBeneficiario.Text == "" ||
                 cmbSexoBeneficiario.Text == "" || txtEnderecoBeneficiario.Text == "" || txtCidadeBeneficiario.Text == "" || cmbEstadoBeneficiario.Text == "" ||
-                txtMunicipioBeneficiario.Text == "" || txtBairroBeneficiario.Text == "" || maskedTextCepBeneficiario.Text == "" || txtTelefoneBeneficiario.Text == ""
+                txtMunicipioBeneficiario.Text == "" || txtBairroBeneficiario.Text == "" || maskedTextCepBeneficiario.Text == "" || maskedTelefoneBeneficiario.Text == ""
                 || txtCpfCliente.Text == "")
             {
                 MessageBox.Show("Há campos que não foram preenchidos , revise");
@@ -80,7 +80,7 @@ namespace PIMQUATRO
             string Municipio = txtMunicipioBeneficiario.Text;
             string Bairro = txtBairroBeneficiario.Text;
             string Cep = maskedTextCepBeneficiario.Text;
-            string Telefone = txtTelefoneBeneficiario.Text;
+            string Telefone = maskedTelefoneBeneficiario.Text;
             string CpfCliente = txtCpfCliente.Text;
 
 

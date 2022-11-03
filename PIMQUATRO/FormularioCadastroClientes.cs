@@ -56,7 +56,7 @@ namespace PIMQUATRO
             if (txtEmaiCliente.Text == "" || textSenhaCliente.Text == "" || txtNomeCliente.Text == ""
                 || cmbEstadoCivil.Text == "" || txtNumeroResidenciaCliente.Text == "" || TxtCidade.Text == ""
                 || cmbEstado.Text == "" || txtMunicipioCliente.Text == "" || txtBairroCliente.Text == ""
-                || maskedTextCepCliente.Text == "" || txtTelefoneCliente.Text == "" || cmbBeneficiosCliente.Text == "")
+                || maskedTextCepCliente.Text == "" || maskedTelefoneCliente.Text == "" || cmbBeneficiosCliente.Text == "")
             {
                 MessageBox.Show("Há campos não preenchidos , revise");
                 return false;
@@ -82,7 +82,7 @@ namespace PIMQUATRO
             string Municipio = txtMunicipioCliente.Text;
             string Bairro = txtBairroCliente.Text;
             string Cep = maskedTextCepCliente.Text;
-            string Telefone = txtTelefoneCliente.Text;
+            string Telefone = maskedTelefoneCliente.Text;
             string beneficios = cmbBeneficiosCliente.Text;
 
             if (ValidaCampos())

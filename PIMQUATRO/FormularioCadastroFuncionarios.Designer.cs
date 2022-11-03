@@ -47,9 +47,6 @@
             this.cmbCargoFunc = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textEmailFunc = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textTelefoneFunc = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBairroFunc = new System.Windows.Forms.TextBox();
@@ -70,6 +67,8 @@
             this.btnExcluirFuncionario = new System.Windows.Forms.Button();
             this.btnEditarFuncionario = new System.Windows.Forms.Button();
             this.btnExibirFuncionario = new System.Windows.Forms.Button();
+            this.maskedTelefoneFuncionario = new System.Windows.Forms.MaskedTextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCadastrarFuncionario
@@ -299,40 +298,6 @@
             this.textEmailFunc.Name = "textEmailFunc";
             this.textEmailFunc.Size = new System.Drawing.Size(392, 20);
             this.textEmailFunc.TabIndex = 97;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(749, 419);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 20);
-            this.label14.TabIndex = 96;
-            this.label14.Text = "Estado:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(628, 360);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 20);
-            this.label12.TabIndex = 94;
-            this.label12.Text = "Telefone:";
-            // 
-            // textTelefoneFunc
-            // 
-            this.textTelefoneFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textTelefoneFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textTelefoneFunc.Location = new System.Drawing.Point(628, 386);
-            this.textTelefoneFunc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textTelefoneFunc.Name = "textTelefoneFunc";
-            this.textTelefoneFunc.Size = new System.Drawing.Size(166, 20);
-            this.textTelefoneFunc.TabIndex = 93;
             // 
             // label11
             // 
@@ -569,12 +534,34 @@
             this.btnExibirFuncionario.Text = "Exibir";
             this.btnExibirFuncionario.UseVisualStyleBackColor = false;
             // 
+            // maskedTelefoneFuncionario
+            // 
+            this.maskedTelefoneFuncionario.Location = new System.Drawing.Point(490, 198);
+            this.maskedTelefoneFuncionario.Mask = "(00)00000-0000";
+            this.maskedTelefoneFuncionario.Name = "maskedTelefoneFuncionario";
+            this.maskedTelefoneFuncionario.Size = new System.Drawing.Size(125, 27);
+            this.maskedTelefoneFuncionario.TabIndex = 120;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(490, 175);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 20);
+            this.label12.TabIndex = 119;
+            this.label12.Text = "Telefone:";
+            // 
             // FormularioCadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(973, 616);
+            this.Controls.Add(this.maskedTelefoneFuncionario);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.btnExcluirFuncionario);
             this.Controls.Add(this.btnEditarFuncionario);
             this.Controls.Add(this.btnExibirFuncionario);
@@ -597,9 +584,6 @@
             this.Controls.Add(this.cmbCargoFunc);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.textEmailFunc);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textTelefoneFunc);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBairroFunc);
@@ -648,9 +632,6 @@
         private ComboBox cmbCargoFunc;
         private Label label15;
         private TextBox textEmailFunc;
-        private Label label14;
-        private Label label12;
-        private TextBox textTelefoneFunc;
         private Label label11;
         private Label label10;
         private TextBox textBairroFunc;
@@ -671,5 +652,7 @@
         private Button btnExcluirFuncionario;
         private Button btnEditarFuncionario;
         private Button btnExibirFuncionario;
+        private MaskedTextBox maskedTelefoneFuncionario;
+        private Label label12;
     }
 }
