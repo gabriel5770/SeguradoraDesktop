@@ -19,12 +19,6 @@ namespace PIMQUATRO
             InitializeComponent();
         }
 
-        private void Voltar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new FormularioClientes().ShowDialog();
-        }
-
         private void cadastroclientes_Load(object sender, EventArgs e)
         {
             PreencheComboCadastroCliente();
