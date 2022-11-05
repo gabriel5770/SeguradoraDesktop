@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,9 +66,8 @@ namespace PIMQUATRO
 
 
             Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
-            if (VerificaCampo())
+            if (func.VerificaCampo())
             {
-
                 if (func.Cadastrar())
                 {
                     this.Hide();
@@ -77,31 +77,18 @@ namespace PIMQUATRO
             }
         }
 
-        private bool VerificaCampo()
-        {
-            if (textEmailFunc.Text == "" || textSenhaFunc.Text == "" || textNomeFunc.Text == "" || cmdEstadoCivilFunc.Text == "" ||
-                maskedTextRgFunc.Text == "" || maskedTextFuncCpf.Text == "" || cmdSexoFunc.Text == "" || textEnderecoFunc.Text == "" ||
-                textNumeroResidenciaFunc.Text == "" || cmbEstadoFunc.Text == "" || textMunicipioFunc.Text == "" || textBairroFunc.Text == "" ||
-                textCidadeFunc.Text == "" || maskedTextCepFunc.Text == "" || maskedTelefoneFuncionario.Text == "" || cmbCargoFunc.Text == "")
-            {
-                MessageBox.Show("Há campos que não foram preenchidos , revise");
-                return false;
-            }
-            return true;
 
-        }
 
         private void RetornaPesquisaCpf()
         {
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
-                using (var command = new SqlCommand("Qry_WindowsForms_Cadastro_RetornaFuncionarioCadastrado", connection))
+                connection.Open();
+
+                using (var command = new SqlCommand($"Select * from tbFuncionarios where cpf = '{maskedTextFuncCpf.Text}'", connection))
 
                     try
                     {
-
-                        //nome,cpf,data,rg,sexo,cargo,idlogin,estadocivil,cidade,endereco,numresidenm,bairro,municipio,estado,cep
-                        connection.Open();
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {

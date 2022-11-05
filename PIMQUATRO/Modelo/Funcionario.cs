@@ -114,6 +114,19 @@ namespace PIMQUATRO.Modelo
                 }
             }
         }
+
+        public bool VerificaCampo()
+        {
+            if (Email == "" || Senha == "" || Nome == "" || EstadoCivil == "" || Rg == "" || 
+                Cpf == "" || Sexo == "" || Endereco == "" ||  NumeroResidencia == "" || Estado == "" || Municipio == "" || Bairro == "" ||
+                Cidade == "" || Cep == "" || Telefone == "" || Cargo == "")
+            {
+                MessageBox.Show("Há campos que não foram preenchidos , revise");
+                return false;
+            }
+            return true;
+
+        }
     }
 }
 
