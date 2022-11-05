@@ -50,6 +50,7 @@ namespace PIMQUATRO.Modelo
             Cidade = cidade;
             Cargo = cargo;
         }
+        
 
         public bool Cadastrar()
         {
@@ -84,7 +85,6 @@ namespace PIMQUATRO.Modelo
                         command.Parameters.AddWithValue("@Cidade", Cidade);
 
 
-
                         var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
                         returnParameter.Direction = ParameterDirection.ReturnValue;
 
@@ -115,7 +115,38 @@ namespace PIMQUATRO.Modelo
             }
         }
 
-        public bool VerificaCampo()
+        public static bool ExcluiCadastro(string cpf)
+        {
+            bool rtnValido = false;
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            {
+                using (var command = new SqlCommand
+                {
+                    Connection = connection,
+                    CommandType = CommandType.StoredProcedure
+                })
+                {
+                    command.CommandText = "Ins_WindowsForms_Cadastro_ExcluiCadastroFuncionario";
+                    try
+                    {
+                        command.Parameters.AddWithValue("@Cpf", cpf);
+                 
+                        connection.Open();
+                        command.ExecuteNonQuery();
+
+                        rtnValido = true;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao excluir cadastro");
+                        MessageBox.Show("Erro encontrado: " + ex);
+                     }
+                }
+            }
+            return rtnValido;
+        }
+
+        public  bool VerificaCampo()
         {
             if (Email == "" || Senha == "" || Nome == "" || EstadoCivil == "" || Rg == "" || 
                 Cpf == "" || Sexo == "" || Endereco == "" ||  NumeroResidencia == "" || Estado == "" || Municipio == "" || Bairro == "" ||

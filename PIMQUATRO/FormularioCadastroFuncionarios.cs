@@ -36,11 +36,19 @@ namespace PIMQUATRO
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             ObtemDadosFuncionarios();
+
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            RetornaPesquisaCpf();
+            if (RetornaPesquisaCpf())
+            {
+                MessageBox.Show("Cadastro encontrado!");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
+            }
         }
 
 
@@ -77,10 +85,9 @@ namespace PIMQUATRO
             }
         }
 
-
-
-        private void RetornaPesquisaCpf()
+        private bool RetornaPesquisaCpf()
         {
+            bool rtnValido = false;
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
                 connection.Open();
@@ -110,15 +117,43 @@ namespace PIMQUATRO
                             maskedTelefoneFuncionario.Text = reader.GetString(17);
                             textSenhaFunc.Text = reader.GetString(18);
 
-
+                            rtnValido = true;
+                            return rtnValido;
                         }
+
                     }
                     catch (SqlException ex)
                     {
-                        MessageBox.Show("Erro ao cadastrar usuário");
+                        MessageBox.Show("Erro ao buscar funcionário");
                         MessageBox.Show("Erro encontrado: " + ex);
+
                     }
+                return rtnValido;
             }
+        }
+
+        private void btnExcluirFuncionario_Click(object sender, EventArgs e)
+        {
+             DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if (DialogResult == DialogResult.Yes)
+            {
+                if (Funcionario.ExcluiCadastro(maskedTextFuncCpf.Text))
+                {
+                    MessageBox.Show("Cadastro excluido com sucesso");
+                    this.Hide();
+                    new FormularioCadastroFuncionarios().ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível excluir o cadastro");
+                }
+            }
+
+
+
+
+
         }
     }
 }

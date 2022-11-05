@@ -65,8 +65,6 @@
             this.textNomeFunc = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.btnExcluirFuncionario = new System.Windows.Forms.Button();
-            this.btnEditarFuncionario = new System.Windows.Forms.Button();
-            this.btnExibirFuncionario = new System.Windows.Forms.Button();
             this.maskedTelefoneFuncionario = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -521,39 +519,14 @@
             this.btnExcluirFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExcluirFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluirFuncionario.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirFuncionario.Location = new System.Drawing.Point(348, 431);
+            this.btnExcluirFuncionario.Location = new System.Drawing.Point(564, 431);
             this.btnExcluirFuncionario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnExcluirFuncionario.Name = "btnExcluirFuncionario";
             this.btnExcluirFuncionario.Size = new System.Drawing.Size(86, 33);
             this.btnExcluirFuncionario.TabIndex = 118;
             this.btnExcluirFuncionario.Text = "Excluir";
             this.btnExcluirFuncionario.UseVisualStyleBackColor = false;
-            // 
-            // btnEditarFuncionario
-            // 
-            this.btnEditarFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEditarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditarFuncionario.ForeColor = System.Drawing.Color.White;
-            this.btnEditarFuncionario.Location = new System.Drawing.Point(451, 431);
-            this.btnEditarFuncionario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnEditarFuncionario.Name = "btnEditarFuncionario";
-            this.btnEditarFuncionario.Size = new System.Drawing.Size(86, 33);
-            this.btnEditarFuncionario.TabIndex = 117;
-            this.btnEditarFuncionario.Text = "Editar";
-            this.btnEditarFuncionario.UseVisualStyleBackColor = false;
-            // 
-            // btnExibirFuncionario
-            // 
-            this.btnExibirFuncionario.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnExibirFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExibirFuncionario.ForeColor = System.Drawing.Color.White;
-            this.btnExibirFuncionario.Location = new System.Drawing.Point(552, 431);
-            this.btnExibirFuncionario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnExibirFuncionario.Name = "btnExibirFuncionario";
-            this.btnExibirFuncionario.Size = new System.Drawing.Size(86, 33);
-            this.btnExibirFuncionario.TabIndex = 116;
-            this.btnExibirFuncionario.Text = "Exibir";
-            this.btnExibirFuncionario.UseVisualStyleBackColor = false;
+            this.btnExcluirFuncionario.Click += new System.EventHandler(this.btnExcluirFuncionario_Click);
             // 
             // maskedTelefoneFuncionario
             // 
@@ -597,8 +570,6 @@
             this.Controls.Add(this.maskedTelefoneFuncionario);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnExcluirFuncionario);
-            this.Controls.Add(this.btnEditarFuncionario);
-            this.Controls.Add(this.btnExibirFuncionario);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.textCidadeFunc);
@@ -683,8 +654,6 @@
         private TextBox textNomeFunc;
         private Label label13;
         private Button btnExcluirFuncionario;
-        private Button btnEditarFuncionario;
-        private Button btnExibirFuncionario;
         private MaskedTextBox maskedTelefoneFuncionario;
         private Label label12;
         private Button btnPesquisar;
