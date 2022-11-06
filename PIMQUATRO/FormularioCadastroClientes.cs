@@ -118,7 +118,10 @@ namespace PIMQUATRO
             {
                 connection.Open();
 
-                using (var command = new SqlCommand($"Select * from tbClientes where cpf = '{maskedTextClienteCpf.Text}'", connection))
+                using (var command = new SqlCommand(
+                                    $"select nome,rg,cpf,sexo,DataNascimento,EstadoCivil,Cidade,Endereco,NumereoResidencia,Bairro," +
+                                    $"Municipio,Estado,cep,email,telefone,senha,tbBeneficios.Descricao from tbClientes inner join " +
+                                    $"tbBeneficios on tbClientes.idBeneficio = tbBeneficios.Id where cpf = {maskedTextClienteCpf.Text} ", connection))
 
                     try
                     {
@@ -126,24 +129,25 @@ namespace PIMQUATRO
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
-                            txtNomeCliente.Text = reader.GetString(1);
-                            maskedTextRgCliente.Text = reader.GetString(2);
-                            maskedTextClienteCpf.Text = reader.GetString(3);
-                            cmbSexoCliente.Text = reader.GetString(4);
-                            dateTimePickerCliente.Text = reader.GetDateTime(5).ToString();
-                            cmbEstadoCivil.Text = reader.GetString(6);
-                            TxtCidade.Text = reader.GetString(7);
-                            txtEnderecoCliente.Text = reader.GetString(10);
-                            txtNumeroResidenciaCliente.Text = reader.GetString(11);
-                            txtBairroCliente.Text = reader.GetString(12);
-                            txtMunicipioCliente.Text = reader.GetString(13);
-                            cmbEstado.Text = reader.GetString(14);
-                            maskedTextCepCliente.Text = reader.GetString(15);
-                            txtEmaiCliente.Text = reader.GetString(16);
-                            maskedTelefoneCliente.Text = reader.GetString(17);
-                            textSenhaCliente.Text = reader.GetString(18);
-
-                            rtnValido = true;
+                            txtNomeCliente.Text = reader.GetString(0);
+                            maskedTextRgCliente.Text = reader.GetString(1);
+                            maskedTextClienteCpf.Text = reader.GetString(2);
+                            cmbSexoCliente.Text = reader.GetString(3);
+                            dateTimePickerCliente.Text = reader.GetDateTime(4).ToString();
+                            cmbEstadoCivil.Text = reader.GetString(5);
+                            TxtCidade.Text = reader.GetString(6);
+                            txtEnderecoCliente.Text = reader.GetString(7);
+                            txtNumeroResidenciaCliente.Text = reader.GetString(8);
+                            txtBairroCliente.Text = reader.GetString(9);
+                            txtMunicipioCliente.Text = reader.GetString(10);
+                            cmbEstado.Text = reader.GetString(11);
+                            maskedTextCepCliente.Text = reader.GetString(12);
+                            txtEmaiCliente.Text = reader.GetString(13);
+                            maskedTelefoneCliente.Text = reader.GetString(14);
+                            textSenhaCliente.Text = reader.GetString(15);
+                            cmbBeneficiosCliente.Text = reader.GetString(16);
+                 
+                                rtnValido = true; 
                             return rtnValido;
                         }
 
