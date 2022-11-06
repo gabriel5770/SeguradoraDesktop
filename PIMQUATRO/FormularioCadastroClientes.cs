@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
@@ -96,6 +98,63 @@ namespace PIMQUATRO
                 }
             }            
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (RetornaPesquisaCpf())
+            {
+                MessageBox.Show("Cadastro encontrado!");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
+            }
+        }
+
+        private bool RetornaPesquisaCpf()
+        {
+            bool rtnValido = false;
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand($"Select * from tbClientes where cpf = '{maskedTextClienteCpf.Text}'", connection))
+
+                    try
+                    {
+                        SqlDataReader reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            txtNomeCliente.Text = reader.GetString(1);
+                            maskedTextRgCliente.Text = reader.GetString(2);
+                            maskedTextClienteCpf.Text = reader.GetDateTime(3).ToString();
+                            cmbSexoCliente.Text = reader.GetString(4);
+                            dateTimePickerCliente.Text = reader.GetString(5);
+                            cmbEstadoCivil.Text = reader.GetString(6);
+                            TxtCidade.Text = reader.GetString(8);
+                            txtEnderecoCliente.Text = reader.GetString(9);
+                            txtNumeroResidenciaCliente.Text = reader.GetString(10);
+                            txtBairroCliente.Text = reader.GetString(11);
+                            txtMunicipioCliente.Text = reader.GetString(12);
+                            cmbEstado.Text = reader.GetString(13);
+                            maskedTextCepCliente.Text = reader.GetString(14);
+                         
+                            rtnValido = true;
+                            return rtnValido;
+                        }
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao buscar funcionário");
+                        MessageBox.Show("Erro encontrado: " + ex);
+
+                    }
+                return rtnValido;
+            }
+        }
+
+    
     }
 }
 

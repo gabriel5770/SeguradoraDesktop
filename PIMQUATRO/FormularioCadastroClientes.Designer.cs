@@ -70,6 +70,7 @@
             this.btnExcluirCliente = new System.Windows.Forms.Button();
             this.maskedTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -430,7 +431,7 @@
             // 
             this.maskedTextRgCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.maskedTextRgCliente.Location = new System.Drawing.Point(627, 62);
-            this.maskedTextRgCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextRgCliente.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextRgCliente.Mask = "00.000.000-0";
             this.maskedTextRgCliente.Name = "maskedTextRgCliente";
             this.maskedTextRgCliente.Size = new System.Drawing.Size(76, 21);
@@ -440,7 +441,7 @@
             // 
             this.maskedTextClienteCpf.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.maskedTextClienteCpf.Location = new System.Drawing.Point(452, 62);
-            this.maskedTextClienteCpf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextClienteCpf.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextClienteCpf.Mask = "000.000.000-00";
             this.maskedTextClienteCpf.Name = "maskedTextClienteCpf";
             this.maskedTextClienteCpf.Size = new System.Drawing.Size(78, 21);
@@ -451,7 +452,7 @@
             // 
             this.dateTimePickerCliente.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerCliente.Location = new System.Drawing.Point(16, 109);
-            this.dateTimePickerCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerCliente.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerCliente.Name = "dateTimePickerCliente";
             this.dateTimePickerCliente.Size = new System.Drawing.Size(127, 23);
             this.dateTimePickerCliente.TabIndex = 60;
@@ -491,7 +492,7 @@
             // 
             this.maskedTextCepCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.maskedTextCepCliente.Location = new System.Drawing.Point(646, 246);
-            this.maskedTextCepCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextCepCliente.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextCepCliente.Mask = "00000-000";
             this.maskedTextCepCliente.Name = "maskedTextCepCliente";
             this.maskedTextCepCliente.Size = new System.Drawing.Size(58, 21);
@@ -559,7 +560,7 @@
             // maskedTelefoneCliente
             // 
             this.maskedTelefoneCliente.Location = new System.Drawing.Point(402, 154);
-            this.maskedTelefoneCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTelefoneCliente.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTelefoneCliente.Mask = "(00)00000-0000";
             this.maskedTelefoneCliente.Name = "maskedTelefoneCliente";
             this.maskedTelefoneCliente.Size = new System.Drawing.Size(101, 23);
@@ -578,12 +579,23 @@
             this.label12.TabIndex = 99;
             this.label12.Text = "Telefone:";
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(535, 62);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 101;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(778, 493);
+            this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.maskedTelefoneCliente);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnExcluirCliente);
@@ -681,5 +693,6 @@
         private Button btnExcluirCliente;
         private MaskedTextBox maskedTelefoneCliente;
         private Label label12;
+        private Button btnPesquisar;
     }
 }
