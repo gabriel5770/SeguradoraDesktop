@@ -19,10 +19,10 @@ namespace PIMQUATRO
 {
     public partial class FormularioCadastroFuncionarios : Form
     {
-         public FormularioCadastroFuncionarios()
+        public FormularioCadastroFuncionarios()
         {
             InitializeComponent();
- 
+
         }
 
 
@@ -40,7 +40,11 @@ namespace PIMQUATRO
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            if (RetornaPesquisaCpf())
+            if (maskedTextFuncCpf.Text == "")
+            {
+                MessageBox.Show("Por favor , insira um valor no campo CPF");
+            }
+            else if (RetornaPesquisaCpf())
             {
                 MessageBox.Show("Cadastro encontrado!");
             }
@@ -135,7 +139,7 @@ namespace PIMQUATRO
 
         private void btnExcluirFuncionario_Click(object sender, EventArgs e)
         {
-             DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
             if (DialogResult == DialogResult.Yes)
             {
                 if (Funcionario.ExcluiCadastro(maskedTextFuncCpf.Text))
@@ -173,7 +177,7 @@ namespace PIMQUATRO
             string Cargo = cmbCargoFunc.Text;
 
             DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if(DialogResult == DialogResult.Yes)
+            if (DialogResult == DialogResult.Yes)
             {
                 Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
                 if (func.AtualizaCadastro(Cpf))

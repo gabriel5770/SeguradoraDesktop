@@ -104,7 +104,12 @@ namespace PIMQUATRO
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            if (RetornaPesquisaCpf())
+            if(maskedTextClienteCpf.Text == "")
+            {
+                MessageBox.Show("Por favor , insira um valor no campo CPF");
+            }
+            else if (RetornaPesquisaCpf())
+
             {
                 MessageBox.Show("Cadastro encontrado!");
             }
