@@ -89,6 +89,7 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Cidade", Cidade);
 
 
+
                             SqlParameter param = new SqlParameter();
 
                             var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
@@ -122,6 +123,37 @@ namespace PIMQUATRO.Modelo
                     }
                 }
             }
+        }
+
+        public static bool ExcluiCadastro(string cpf)
+        {
+            bool rtnValido = false;
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            {
+                using (var command = new SqlCommand
+                {
+                    Connection = connection,
+                    CommandType = CommandType.StoredProcedure
+                })
+                {
+                    command.CommandText = "Upd_WindowsForms_Cadastro_ExcluiCadastroCliente";
+                    try
+                    {
+                        command.Parameters.AddWithValue("@Cpf", cpf);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+
+                        rtnValido = true;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao excluir cadastro");
+                        MessageBox.Show("Erro encontrado: " + ex);
+                    }
+                }
+            }
+            return rtnValido;
         }
     }
 }

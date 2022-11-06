@@ -556,6 +556,7 @@
             this.btnExcluirCliente.TabIndex = 69;
             this.btnExcluirCliente.Text = "Excluir";
             this.btnExcluirCliente.UseVisualStyleBackColor = false;
+            this.btnExcluirCliente.Click += new System.EventHandler(this.btnExcluirCliente_Click);
             // 
             // maskedTelefoneCliente
             // 
