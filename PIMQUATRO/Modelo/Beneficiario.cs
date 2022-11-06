@@ -53,8 +53,9 @@ namespace PIMQUATRO.Modelo
 
         }
 
-        public  bool Cadastrar()
+        public bool Cadastrar()
         {
+            bool rtnValido = false;
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
                 using (var command = new SqlCommand
@@ -83,38 +84,39 @@ namespace PIMQUATRO.Modelo
                         command.Parameters.AddWithValue("@Cidade", Cidade);
                         command.Parameters.AddWithValue("@CpfCliente", CpfCliente);
 
-
-
                         var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
                         returnParameter.Direction = ParameterDirection.ReturnValue;
 
+
                         connection.Open();
                         command.ExecuteNonQuery();
+
                         var result = (int)returnParameter.Value;
 
 
                         if (result == 1)
                         {
-                            MessageBox.Show("Há um cadastro com este CPF!");
-                            return false;
+                            MessageBox.Show("Há um beneficiário cadastrado com este CPF");
+
+                        }
+                        else if (result == 2)
+                        {
+                            MessageBox.Show("Não há Cliente cadastrado com este CPF");
 
                         }
                         else
-
-                        {
-                            return true;
+                            rtnValido = true;
+                            
                         }
-                    }
                     catch (SqlException ex)
                     {
                         MessageBox.Show("Erro ao cadastrar Beneficiario");
                         MessageBox.Show("Erro encontrado: " + ex);
-                        return false;
+                        rtnValido = false;
                     }
+                    return rtnValido;
                 }
             }
-
-
         }
     }
 }

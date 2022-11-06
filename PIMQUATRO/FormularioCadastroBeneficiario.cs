@@ -93,9 +93,6 @@ namespace PIMQUATRO
                     this.Hide();
                     new FormularioCadastroClientes().ShowDialog();
                 }
-                else
-                    MessageBox.Show("Não foi possível cadastrar o Beneficiario");
-
             }
         }
     }
