@@ -19,8 +19,7 @@ namespace PIMQUATRO
 {
     public partial class FormularioCadastroFuncionarios : Form
     {
-        List<Funcionario> listFunc = new List<Funcionario>();
-        public FormularioCadastroFuncionarios()
+         public FormularioCadastroFuncionarios()
         {
             InitializeComponent();
  

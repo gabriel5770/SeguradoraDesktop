@@ -8,9 +8,12 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PIMQUATRO
 {
@@ -214,6 +217,42 @@ namespace PIMQUATRO
                 else
                 {
                     MessageBox.Show("Não foi possível excluir o cadastro");
+                }
+            }
+        }
+
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+            string Email = txtEmaiCliente.Text;
+            string Senha = textSenhaCliente.Text;
+            string Nome = txtNomeCliente.Text;
+            string EstadoCivil = cmbEstadoCivil.Text;
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerCliente.Text);
+            string NumeroResidencia = txtNumeroResidenciaCliente.Text;
+            string Rg = maskedTextRgCliente.Text;
+            string Cpf = maskedTextClienteCpf.Text;
+            string Sexo = cmbSexoCliente.Text;
+            string Endereco = txtEnderecoCliente.Text;
+            string Numero = txtNumeroResidenciaCliente.Text;
+            string Cidade = TxtCidade.Text;
+            string Estado = cmbEstado.Text;
+            string Municipio = txtMunicipioCliente.Text;
+            string Bairro = txtBairroCliente.Text;
+            string Cep = maskedTextCepCliente.Text;
+            string Telefone = maskedTelefoneCliente.Text;
+            string Beneficios = cmbBeneficiosCliente.Text;
+
+            DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if (DialogResult == DialogResult.Yes)
+            {
+                Cliente func = new Cliente(Email, Senha,Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, Beneficios, Cidade);
+                if (func.AtualizaCadastro())
+                {
+                    MessageBox.Show("Cadastro atualizado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possíevl atualizar o cadastro");
                 }
             }
         }

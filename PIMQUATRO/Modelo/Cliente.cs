@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PIMQUATRO.Modelo
 {
@@ -97,7 +98,7 @@ namespace PIMQUATRO.Modelo
 
                             connection.Open();
                             command.ExecuteNonQuery();
-                            
+
                             var result = (int)returnParameter.Value;
 
 
@@ -149,6 +150,53 @@ namespace PIMQUATRO.Modelo
                     catch (SqlException ex)
                     {
                         MessageBox.Show("Erro ao excluir cadastro");
+                        MessageBox.Show("Erro encontrado: " + ex);
+                    }
+                }
+            }
+            return rtnValido;
+        }
+
+        public bool AtualizaCadastro()
+        {
+            bool rtnValido = false;
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            {
+                using (var command = new SqlCommand
+                {
+                    Connection = connection,
+                    CommandType = CommandType.StoredProcedure
+                })
+                {
+                    command.CommandText = "Upd_WindowsForms_Cadastro_AtualizaCadastroCliente";
+                    try
+                    {
+                        command.Parameters.AddWithValue("@Cpf", Cpf);
+                        command.Parameters.AddWithValue("@Email", Email);
+                        command.Parameters.AddWithValue("@Senha", Senha);
+                        command.Parameters.AddWithValue("@Nome", Nome);
+                        command.Parameters.AddWithValue("@Beneficios", Beneficios);
+                        command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
+                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
+                        command.Parameters.AddWithValue("@Rg", Rg);
+                        command.Parameters.AddWithValue("@Sexo", Sexo);
+                        command.Parameters.AddWithValue("@Endereco", Endereco);
+                        command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
+                        command.Parameters.AddWithValue("@Estado", Estado);
+                        command.Parameters.AddWithValue("@Municipio", Municipio);
+                        command.Parameters.AddWithValue("@Bairro", Bairro);
+                        command.Parameters.AddWithValue("@Cep", Cep);
+                        command.Parameters.AddWithValue("@Telefone", Telefone);
+                         command.Parameters.AddWithValue("@Cidade", Cidade);
+
+                        connection.Open();
+                        command.ExecuteNonQuery();
+
+                        rtnValido = true;
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao atualizar cadastro");
                         MessageBox.Show("Erro encontrado: " + ex);
                     }
                 }

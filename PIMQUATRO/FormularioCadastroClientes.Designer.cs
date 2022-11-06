@@ -65,12 +65,11 @@
             this.maskedTextCepCliente = new System.Windows.Forms.MaskedTextBox();
             this.TxtCidade = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.btnExibirCliente = new System.Windows.Forms.Button();
-            this.btnEditarCliente = new System.Windows.Forms.Button();
             this.btnExcluirCliente = new System.Windows.Forms.Button();
             this.maskedTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -318,7 +317,7 @@
             this.btnCadastrarCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(666, 410);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(627, 410);
             this.btnCadastrarCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
             this.btnCadastrarCliente.Size = new System.Drawing.Size(86, 33);
@@ -518,38 +517,12 @@
             this.label21.Size = new System.Drawing.Size(738, 1);
             this.label21.TabIndex = 66;
             // 
-            // btnExibirCliente
-            // 
-            this.btnExibirCliente.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnExibirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExibirCliente.ForeColor = System.Drawing.Color.White;
-            this.btnExibirCliente.Location = new System.Drawing.Point(550, 410);
-            this.btnExibirCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnExibirCliente.Name = "btnExibirCliente";
-            this.btnExibirCliente.Size = new System.Drawing.Size(86, 33);
-            this.btnExibirCliente.TabIndex = 67;
-            this.btnExibirCliente.Text = "Exibir";
-            this.btnExibirCliente.UseVisualStyleBackColor = false;
-            // 
-            // btnEditarCliente
-            // 
-            this.btnEditarCliente.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnEditarCliente.Location = new System.Drawing.Point(450, 410);
-            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(86, 33);
-            this.btnEditarCliente.TabIndex = 68;
-            this.btnEditarCliente.Text = "Editar";
-            this.btnEditarCliente.UseVisualStyleBackColor = false;
-            // 
             // btnExcluirCliente
             // 
             this.btnExcluirCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluirCliente.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirCliente.Location = new System.Drawing.Point(346, 410);
+            this.btnExcluirCliente.Location = new System.Drawing.Point(402, 410);
             this.btnExcluirCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnExcluirCliente.Name = "btnExcluirCliente";
             this.btnExcluirCliente.Size = new System.Drawing.Size(86, 33);
@@ -590,18 +563,31 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizar.Location = new System.Drawing.Point(506, 410);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(86, 33);
+            this.btnAtualizar.TabIndex = 102;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click_1);
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(778, 493);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.maskedTelefoneCliente);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnExcluirCliente);
-            this.Controls.Add(this.btnEditarCliente);
-            this.Controls.Add(this.btnExibirCliente);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.TxtCidade);
             this.Controls.Add(this.maskedTextCepCliente);
@@ -689,11 +675,10 @@
         private MaskedTextBox maskedTextCepCliente;
         private TextBox TxtCidade;
         private Label label21;
-        private Button btnExibirCliente;
-        private Button btnEditarCliente;
         private Button btnExcluirCliente;
         private MaskedTextBox maskedTelefoneCliente;
         private Label label12;
         private Button btnPesquisar;
+        private Button btnAtualizar;
     }
 }
