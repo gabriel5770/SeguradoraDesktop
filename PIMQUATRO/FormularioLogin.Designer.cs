@@ -95,7 +95,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(166, 20);
             this.txtEmail.TabIndex = 7;
-            this.txtEmail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtSenha
             // 
@@ -107,7 +106,6 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(166, 20);
             this.txtSenha.TabIndex = 8;
-            this.txtSenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button4
             // 
@@ -150,7 +148,6 @@
             this.Name = "PageLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
-            this.Load += new System.EventHandler(this.PageLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
