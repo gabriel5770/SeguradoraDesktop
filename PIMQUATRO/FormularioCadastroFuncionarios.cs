@@ -19,11 +19,11 @@ namespace PIMQUATRO
 {
     public partial class FormularioCadastroFuncionarios : Form
     {
-
+        List<Funcionario> listFunc = new List<Funcionario>();
         public FormularioCadastroFuncionarios()
         {
             InitializeComponent();
-
+ 
         }
 
 
@@ -54,6 +54,7 @@ namespace PIMQUATRO
 
         private void ObtemDadosFuncionarios()
         {
+
             string Email = textEmailFunc.Text;
             string Senha = textSenhaFunc.Text;
             string Nome = textNomeFunc.Text;
@@ -74,6 +75,7 @@ namespace PIMQUATRO
 
 
             Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
+
             if (func.VerificaCampo())
             {
                 if (func.Cadastrar())
@@ -149,11 +151,41 @@ namespace PIMQUATRO
                     MessageBox.Show("Não foi possível excluir o cadastro");
                 }
             }
+        }
 
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            string Email = textEmailFunc.Text;
+            string Senha = textSenhaFunc.Text;
+            string Nome = textNomeFunc.Text;
+            string EstadoCivil = cmdEstadoCivilFunc.Text;
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerFunc.Text);
+            string Rg = maskedTextRgFunc.Text;
+            string Cpf = maskedTextFuncCpf.Text;
+            string Sexo = cmdSexoFunc.Text;
+            string Endereco = textEnderecoFunc.Text;
+            string NumResidencia = textNumeroResidenciaFunc.Text;
+            string Estado = cmbEstadoFunc.Text;
+            string Municipio = textMunicipioFunc.Text;
+            string Bairro = textBairroFunc.Text;
+            string Cidade = textCidadeFunc.Text;
+            string Cep = maskedTextCepFunc.Text;
+            string Telefone = maskedTelefoneFuncionario.Text;
+            string Cargo = cmbCargoFunc.Text;
 
-
-
-
+            DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if(DialogResult == DialogResult.Yes)
+            {
+                Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
+                if (func.AtualizaCadastro(Cpf))
+                {
+                    MessageBox.Show("Cadastro atualizado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possíevl atualizar o cadastro");
+                }
+            }
         }
     }
 }

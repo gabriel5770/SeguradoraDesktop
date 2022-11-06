@@ -50,7 +50,7 @@ namespace PIMQUATRO.Modelo
             Cidade = cidade;
             Cargo = cargo;
         }
-        
+
 
         public bool Cadastrar()
         {
@@ -126,26 +126,11 @@ namespace PIMQUATRO.Modelo
                     CommandType = CommandType.StoredProcedure
                 })
                 {
-                    command.CommandText = "Qry_WindowsForms_Cadastro_AtualizaCadastroFuncionario";
+                    command.CommandText = "Ins_WindowsForms_Cadastro_ExcluiCadastroFuncionario";
                     try
                     {
-                        command.Parameters.AddWithValue("@Email", Email);
-                        command.Parameters.AddWithValue("@Senha", Senha);
-                        command.Parameters.AddWithValue("@Nome", Nome);
-                        command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
-                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
-                        command.Parameters.AddWithValue("@Rg", Rg);
-                        command.Parameters.AddWithValue("@Cpf", Cpf);
-                        command.Parameters.AddWithValue("@Sexo", Sexo);
-                        command.Parameters.AddWithValue("@Endereco", Endereco);
-                        command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
-                        command.Parameters.AddWithValue("@Estado", Estado);
-                        command.Parameters.AddWithValue("@Municipio", Municipio);
-                        command.Parameters.AddWithValue("@Bairro", Bairro);
-                        command.Parameters.AddWithValue("@Cep", Cep);
-                        command.Parameters.AddWithValue("@Telefone", Telefone);
-                        command.Parameters.AddWithValue("@Cargo", Cargo);
-                        command.Parameters.AddWithValue("@Cidade", Cidade);
+                        command.Parameters.AddWithValue("@Cpf", cpf);
+
                         connection.Open();
                         command.ExecuteNonQuery();
 
@@ -155,13 +140,12 @@ namespace PIMQUATRO.Modelo
                     {
                         MessageBox.Show("Erro ao excluir cadastro");
                         MessageBox.Show("Erro encontrado: " + ex);
-                     }
+                    }
                 }
             }
             return rtnValido;
         }
-
-        public static bool AtualizaCadastro(string cpf)
+        public bool AtualizaCadastro(string cpf)
         {
             bool rtnValido = false;
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
@@ -175,13 +159,13 @@ namespace PIMQUATRO.Modelo
                     command.CommandText = "Qry_WindowsForms_Cadastro_AtualizaCadastroFuncionario";
                     try
                     {
+                        command.Parameters.AddWithValue("@Cpf", cpf);
                         command.Parameters.AddWithValue("@Email", Email);
                         command.Parameters.AddWithValue("@Senha", Senha);
                         command.Parameters.AddWithValue("@Nome", Nome);
                         command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
                         command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
                         command.Parameters.AddWithValue("@Rg", Rg);
-                        command.Parameters.AddWithValue("@Cpf", Cpf);
                         command.Parameters.AddWithValue("@Sexo", Sexo);
                         command.Parameters.AddWithValue("@Endereco", Endereco);
                         command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
@@ -208,10 +192,10 @@ namespace PIMQUATRO.Modelo
             return rtnValido;
         }
 
-        public  bool VerificaCampo()
+        public bool VerificaCampo()
         {
-            if (Email == "" || Senha == "" || Nome == "" || EstadoCivil == "" || Rg == "" || 
-                Cpf == "" || Sexo == "" || Endereco == "" ||  NumeroResidencia == "" || Estado == "" || Municipio == "" || Bairro == "" ||
+            if (Email == "" || Senha == "" || Nome == "" || EstadoCivil == "" || Rg == "" ||
+                Cpf == "" || Sexo == "" || Endereco == "" || NumeroResidencia == "" || Estado == "" || Municipio == "" || Bairro == "" ||
                 Cidade == "" || Cep == "" || Telefone == "" || Cargo == "")
             {
                 MessageBox.Show("Há campos que não foram preenchidos , revise");

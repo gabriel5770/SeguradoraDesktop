@@ -68,6 +68,7 @@
             this.maskedTelefoneFuncionario = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCadastrarFuncionario
@@ -560,12 +561,27 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizar.Location = new System.Drawing.Point(461, 430);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(86, 33);
+            this.btnAtualizar.TabIndex = 122;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // FormularioCadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(778, 493);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.maskedTelefoneFuncionario);
             this.Controls.Add(this.label12);
@@ -657,5 +673,6 @@
         private MaskedTextBox maskedTelefoneFuncionario;
         private Label label12;
         private Button btnPesquisar;
+        private Button btnAtualizar;
     }
 }
