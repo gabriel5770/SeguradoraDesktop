@@ -164,5 +164,29 @@ namespace PIMQUATRO
                 return rtnValido;
             }
         }
+
+        private void btnExcluirBeneficiario_Click(object sender, EventArgs e)
+        {
+            DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if (DialogResult == DialogResult.Yes)
+            {
+                if (Beneficiario.ExcluiCadastro(maskedTextCpfBeneficiario.Text))
+                {
+                    MessageBox.Show("Cadastro excluido com sucesso");
+                    this.Hide();
+                    new FormularioCadastroBeneficiario().ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível excluir o cadastro");
+                }
+            }
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

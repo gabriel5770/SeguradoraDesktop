@@ -64,11 +64,10 @@
             this.label16 = new System.Windows.Forms.Label();
             this.btnCadastrarBeneficiario = new System.Windows.Forms.Button();
             this.btnExcluirBeneficiario = new System.Windows.Forms.Button();
-            this.btnEditarBeneficiario = new System.Windows.Forms.Button();
-            this.btnExibirBeneficiario = new System.Windows.Forms.Button();
             this.maskedTelefoneBeneficiario = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label6
@@ -509,44 +508,19 @@
             this.btnExcluirBeneficiario.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExcluirBeneficiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluirBeneficiario.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirBeneficiario.Location = new System.Drawing.Point(345, 442);
+            this.btnExcluirBeneficiario.Location = new System.Drawing.Point(426, 441);
             this.btnExcluirBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnExcluirBeneficiario.Name = "btnExcluirBeneficiario";
             this.btnExcluirBeneficiario.Size = new System.Drawing.Size(86, 33);
             this.btnExcluirBeneficiario.TabIndex = 127;
             this.btnExcluirBeneficiario.Text = "Excluir";
             this.btnExcluirBeneficiario.UseVisualStyleBackColor = false;
-            // 
-            // btnEditarBeneficiario
-            // 
-            this.btnEditarBeneficiario.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnEditarBeneficiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEditarBeneficiario.ForeColor = System.Drawing.Color.White;
-            this.btnEditarBeneficiario.Location = new System.Drawing.Point(448, 442);
-            this.btnEditarBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnEditarBeneficiario.Name = "btnEditarBeneficiario";
-            this.btnEditarBeneficiario.Size = new System.Drawing.Size(86, 33);
-            this.btnEditarBeneficiario.TabIndex = 126;
-            this.btnEditarBeneficiario.Text = "Editar";
-            this.btnEditarBeneficiario.UseVisualStyleBackColor = false;
-            // 
-            // btnExibirBeneficiario
-            // 
-            this.btnExibirBeneficiario.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnExibirBeneficiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExibirBeneficiario.ForeColor = System.Drawing.Color.White;
-            this.btnExibirBeneficiario.Location = new System.Drawing.Point(549, 442);
-            this.btnExibirBeneficiario.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnExibirBeneficiario.Name = "btnExibirBeneficiario";
-            this.btnExibirBeneficiario.Size = new System.Drawing.Size(86, 33);
-            this.btnExibirBeneficiario.TabIndex = 125;
-            this.btnExibirBeneficiario.Text = "Exibir";
-            this.btnExibirBeneficiario.UseVisualStyleBackColor = false;
+            this.btnExcluirBeneficiario.Click += new System.EventHandler(this.btnExcluirBeneficiario_Click);
             // 
             // maskedTelefoneBeneficiario
             // 
             this.maskedTelefoneBeneficiario.Location = new System.Drawing.Point(509, 163);
-            this.maskedTelefoneBeneficiario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTelefoneBeneficiario.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTelefoneBeneficiario.Mask = "(00)00000-0000";
             this.maskedTelefoneBeneficiario.Name = "maskedTelefoneBeneficiario";
             this.maskedTelefoneBeneficiario.Size = new System.Drawing.Size(101, 23);
@@ -575,18 +549,31 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizar.Location = new System.Drawing.Point(531, 441);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(86, 33);
+            this.btnAtualizar.TabIndex = 131;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
             // FormularioCadastroBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(778, 493);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.maskedTelefoneBeneficiario);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnExcluirBeneficiario);
-            this.Controls.Add(this.btnEditarBeneficiario);
-            this.Controls.Add(this.btnExibirBeneficiario);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label15);
@@ -669,10 +656,9 @@
         private Label label16;
         private Button btnCadastrarBeneficiario;
         private Button btnExcluirBeneficiario;
-        private Button btnEditarBeneficiario;
-        private Button btnExibirBeneficiario;
         private MaskedTextBox maskedTelefoneBeneficiario;
         private Label label12;
         private Button btnPesquisar;
+        private Button btnAtualizar;
     }
 }
