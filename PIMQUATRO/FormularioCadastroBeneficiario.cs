@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -93,6 +95,73 @@ namespace PIMQUATRO
                     this.Hide();
                     new FormularioCadastroClientes().ShowDialog();
                 }
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (maskedTextCpfBeneficiario.Text == "")
+            {
+                MessageBox.Show("Por favor , insira um valor no campo CPF");
+            }
+            else if (RetornaPesquisaCpf())
+
+            {
+                MessageBox.Show("Cadastro encontrado!");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
+            }
+        }
+
+        private bool RetornaPesquisaCpf()
+        {
+            bool rtnValido = false;
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand(
+                                    $"select * from tbBeneficiario inner join tbclientes on tbclientes.idbeneficiario " +
+                                    $"= tbbeneficiario.id where tbbeneficiario.cpf = '{maskedTextCpfBeneficiario.Text}'", connection))
+
+                    try
+                    {
+                         SqlDataReader reader = command.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            txtNomeBeneficiario.Text = reader.GetString(1);
+                            maskedTextCpfBeneficiario.Text = reader.GetString(2);
+                            maskedTextRgBeneficiario.Text = reader.GetString(3);
+                            dateTimePickerBeneficiario.Text = reader.GetDateTime(4).ToString();
+                            cmbSexoBeneficiario.Text = reader.GetString(5);
+                            cmbEstadoCivilBeneficiario.Text = reader.GetString(6);
+                            txtEmailBeneficiario.Text = reader.GetString(7);
+                            txtEnderecoBeneficiario.Text = reader.GetString(8);
+                            txtNumeroResidenciaBeneficiario.Text = reader.GetString(9);
+                            cmbEstadoBeneficiario.Text = reader.GetString(10);
+                            txtMunicipioBeneficiario.Text = reader.GetString(11);
+                            txtBairroBeneficiario.Text = reader.GetString(12);
+                            txtCidadeBeneficiario.Text = reader.GetString(13);
+                            maskedTextCepBeneficiario.Text = reader.GetString(14);
+                            maskedTelefoneBeneficiario.Text = reader.GetString(15);
+                            txtCpfCliente.Text = reader.GetString(19);
+
+
+
+                            rtnValido = true;
+                            return rtnValido;
+                        }
+
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show("Erro ao buscar beneficiário");
+                        MessageBox.Show("Erro encontrado: " + ex);
+
+                    }
+                return rtnValido;
             }
         }
     }
