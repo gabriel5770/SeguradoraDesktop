@@ -7,9 +7,12 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace PIMQUATRO
 {
@@ -186,7 +189,39 @@ namespace PIMQUATRO
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+            string Email = txtEmailBeneficiario.Text;
+            string Nome = txtNomeBeneficiario.Text;
+            string EstadoCivil = cmbEstadoCivilBeneficiario.Text;
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerBeneficiario.Text);
+            string NumeroResidencia = txtNumeroResidenciaBeneficiario.Text;
+            string Rg = maskedTextRgBeneficiario.Text;
+            string Cpf = maskedTextCpfBeneficiario.Text;
+            string Sexo = cmbSexoBeneficiario.Text;
+            string Endereco = txtEnderecoBeneficiario.Text;
+            string Cidade = txtCidadeBeneficiario.Text;
+            string Estado = cmbEstadoBeneficiario.Text;
+            string Municipio = txtMunicipioBeneficiario.Text;
+            string Bairro = txtBairroBeneficiario.Text;
+            string Cep = maskedTextCepBeneficiario.Text;
+            string Telefone = maskedTelefoneBeneficiario.Text;
+            string CpfCliente = txtCpfCliente.Text;
 
+
+
+
+            DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if (DialogResult == DialogResult.Yes)
+            {
+                Beneficiario beneficiaro = new Beneficiario(Email,Nome, EstadoCivil, DataNascimento, NumeroResidencia, Rg, Cpf, Sexo, Endereco, Cidade, Estado, Municipio, Bairro, Cep, Telefone, CpfCliente);
+                 if (beneficiaro.AtualizaCadastroBeneficiario(Cpf))
+                {
+                    MessageBox.Show("Cadastro atualizado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possíevl atualizar o cadastro");
+                }
+            }
         }
     }
 }
