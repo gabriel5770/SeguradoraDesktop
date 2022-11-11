@@ -24,6 +24,13 @@
     <Compile Remove="CadastroFuncionario.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="RelatorioClientes.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RelatorioClientes.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.17" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
   <ItemGroup>

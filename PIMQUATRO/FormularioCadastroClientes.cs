@@ -261,6 +261,12 @@ namespace PIMQUATRO
                 }
             }
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FormularioRelatorioClientes())
+                frm.ShowDialog();
+        }
     }
 }
 
