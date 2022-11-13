@@ -29,8 +29,23 @@ namespace PIMQUATRO
 
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
-
+            ObtemDadosSeguradora();
         }
+
+        protected void ObtemDadosSeguradora()
+        {
+            string NomeSeguradora = txtNomeSeguradora.Text;
+            string CnpjSeguradora = txtCnpjSeguradora.Text;
+
+
+            Seguradora seg = new Seguradora(NomeSeguradora, CnpjSeguradora);
+
+            if (seg.Cadastrar())
+            {
+                MessageBox.Show("Seguradora Cadastrada com sucessso");
+                this.Hide();
+            }
+        } 
     }
 }
 
