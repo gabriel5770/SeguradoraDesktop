@@ -178,7 +178,7 @@
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(217, 68);
             this.btnRelatorio.TabIndex = 10;
-            this.btnRelatorio.Text = "Apólice";
+            this.btnRelatorio.Text = "Apólice e Relatório";
             this.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRelatorio.UseVisualStyleBackColor = false;
             this.btnRelatorio.Click += new System.EventHandler(this.btnApolice_Click);
