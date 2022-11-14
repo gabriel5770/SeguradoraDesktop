@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class FormularioDuvidas : Form
+    public partial class FormularioApolice : Form
     {
-        public FormularioDuvidas()
+        public FormularioApolice()
         {
             InitializeComponent();
-        }
-
-        private void Voltar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new FormularioMenu().ShowDialog();
         }
     }
 }

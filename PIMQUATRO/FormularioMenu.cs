@@ -59,10 +59,10 @@ namespace PIMQUATRO
             FormShow(new FormularioVendas());
         }
 
-        private void btnDuvidas_Click(object sender, EventArgs e)
+        private void btnApolice_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnDuvidas);
-            FormShow(new FormularioDuvidas());
+            ActiveButton(btnApolice);
+            FormShow(new FormularioApolice());
         }
 
         private void btnBeneficiario_Click(object sender, EventArgs e)
