@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PIMQUATRO
 {
-    public partial class FormularioApolice : Form
+    public partial class FormularioRelatorio : Form
     {
-        public FormularioApolice()
+        public FormularioRelatorio()
         {
             InitializeComponent();
         }

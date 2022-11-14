@@ -61,8 +61,8 @@ namespace PIMQUATRO
 
         private void btnApolice_Click(object sender, EventArgs e)
         {
-            ActiveButton(btnApolice);
-            FormShow(new FormularioApolice());
+            ActiveButton(btnRelatorio);
+            FormShow(new FormularioRelatorio());
         }
 
         private void btnBeneficiario_Click(object sender, EventArgs e)

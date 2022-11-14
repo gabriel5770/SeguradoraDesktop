@@ -36,7 +36,7 @@
             this.btnCadastroFuncionario = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnCadastrarBeneficiario = new System.Windows.Forms.Button();
-            this.btnApolice = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
             this.panelPrincipal.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +83,7 @@
             this.panelPrincipal.Controls.Add(this.btnVendas);
             this.panelPrincipal.Controls.Add(this.btnFechar);
             this.panelPrincipal.Controls.Add(this.btnCadastrarBeneficiario);
-            this.panelPrincipal.Controls.Add(this.btnApolice);
+            this.panelPrincipal.Controls.Add(this.btnRelatorio);
             this.panelPrincipal.Controls.Add(this.btnSeguradoras);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
@@ -166,22 +166,22 @@
             this.btnCadastrarBeneficiario.UseVisualStyleBackColor = false;
             this.btnCadastrarBeneficiario.Click += new System.EventHandler(this.btnBeneficiario_Click);
             // 
-            // btnApolice
+            // btnRelatorio
             // 
-            this.btnApolice.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnApolice.FlatAppearance.BorderSize = 0;
-            this.btnApolice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnApolice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnApolice.ForeColor = System.Drawing.Color.Snow;
-            this.btnApolice.Image = ((System.Drawing.Image)(resources.GetObject("btnApolice.Image")));
-            this.btnApolice.Location = new System.Drawing.Point(0, 334);
-            this.btnApolice.Name = "btnApolice";
-            this.btnApolice.Size = new System.Drawing.Size(217, 68);
-            this.btnApolice.TabIndex = 10;
-            this.btnApolice.Text = "Apólice";
-            this.btnApolice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnApolice.UseVisualStyleBackColor = false;
-            this.btnApolice.Click += new System.EventHandler(this.btnApolice_Click);
+            this.btnRelatorio.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnRelatorio.FlatAppearance.BorderSize = 0;
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRelatorio.ForeColor = System.Drawing.Color.Snow;
+            this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 334);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(217, 68);
+            this.btnRelatorio.TabIndex = 10;
+            this.btnRelatorio.Text = "Apólice";
+            this.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRelatorio.UseVisualStyleBackColor = false;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnApolice_Click);
             // 
             // panelForms
             // 
@@ -216,6 +216,6 @@
         private Button btnCadastroFuncionario;
         private Panel panelForms;
         private Button btnCadastrarBeneficiario;
-        private Button btnApolice;
+        private Button btnRelatorio;
     }
 }
