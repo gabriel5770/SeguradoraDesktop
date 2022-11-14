@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PIMQUATRO.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -21,10 +22,13 @@ namespace PIMQUATRO
 
         private void btnGerarApolice_Click(object sender, EventArgs e)
         {
-            if (RetornaPdfApolice())
-            {
-                MessageBox.Show("Apólice criado com sucesso");
-            };
+            //if (RetornaPdfApolice())
+            //{
+            //    MessageBox.Show("Apólice criado com sucesso");
+            //};
+
+            Apolice ap = new Apolice();
+            ap.GerarPdf();
         }
 
            
@@ -69,6 +73,11 @@ namespace PIMQUATRO
                     }
                 return rtnValido;
             }
+        }
+
+        private void GerarPdf()
+        {
+
         }
 
     }
