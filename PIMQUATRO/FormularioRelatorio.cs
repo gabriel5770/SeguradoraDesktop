@@ -16,5 +16,13 @@ namespace PIMQUATRO
         {
             InitializeComponent();
         }
+
+        private void btnGerarApolice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }
