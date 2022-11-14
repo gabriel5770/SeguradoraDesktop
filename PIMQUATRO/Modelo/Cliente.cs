@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -29,8 +31,10 @@ namespace PIMQUATRO.Modelo
         public string Beneficios { get; set; }
         public string Cidade { get; set; }
         public string Cpf { get; set; }
+        public DateTime DataVigenciaInicial { get; set; }
+        public DateTime DataVigenciaFinal { get; set; }
 
-        public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade)
+        public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade, DateTime dataVigenciaInicial, DateTime dataVigenciaFinal)
         {
             Email = email;
             Senha = senha;
@@ -49,6 +53,8 @@ namespace PIMQUATRO.Modelo
             Cpf = cpf;
             Beneficios = beneficios;
             Cidade = cidade;
+            DataVigenciaFinal = dataVigenciaFinal;
+            DataVigenciaInicial = dataVigenciaInicial;
         }
 
         public Cliente()
@@ -88,6 +94,11 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Telefone", Telefone);
                             command.Parameters.AddWithValue("@Beneficios", Beneficios);
                             command.Parameters.AddWithValue("@Cidade", Cidade);
+                            command.Parameters.AddWithValue("@DataVigenciaInicial", DataVigenciaInicial);
+                            command.Parameters.AddWithValue("@DataVigenciaFinal", DataVigenciaFinal);
+                            command.Parameters.AddWithValue("@NumeroContrato", 2);
+
+
 
 
 

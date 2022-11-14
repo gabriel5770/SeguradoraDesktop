@@ -89,10 +89,13 @@ namespace PIMQUATRO
             string Cep = maskedTextCepCliente.Text;
             string Telefone = maskedTelefoneCliente.Text;
             string beneficios = cmbBeneficiosCliente.Text;
+            DateTime DataVigenciaInicial = Convert.ToDateTime(txtDataVigenciaInicial.Text);
+            DateTime DataVigenciaFinal = Convert.ToDateTime(txtDataVigenciaFinal.Text);
+
 
             if (ValidaCampos())
             {
-                Cliente cliente = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade);
+                Cliente cliente = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade,DataVigenciaInicial, DataVigenciaFinal);
                 if (cliente.Cadastrar())
                 {
                     MessageBox.Show("Cliente cadastrado com sucesso");
@@ -247,19 +250,19 @@ namespace PIMQUATRO
             string Telefone = maskedTelefoneCliente.Text;
             string Beneficios = cmbBeneficiosCliente.Text;
 
-            DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
-            {
-                Cliente func = new Cliente(Email, Senha,Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, Beneficios, Cidade);
-                if (func.AtualizaCadastro())
-                {
-                    MessageBox.Show("Cadastro atualizado com sucesso");
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possíevl atualizar o cadastro");
-                }
-            }
+            //DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            //if (DialogResult == DialogResult.Yes)
+            //{
+            //    Cliente func = new Cliente(Email, Senha,Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, Beneficios, Cidade);
+            //    if (func.AtualizaCadastro())
+            //    {
+            //        MessageBox.Show("Cadastro atualizado com sucesso");
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Não foi possíevl atualizar o cadastro");
+            //    }
+            //}
         }
 
         private void btnRelatorio_Click(object sender, EventArgs e)
