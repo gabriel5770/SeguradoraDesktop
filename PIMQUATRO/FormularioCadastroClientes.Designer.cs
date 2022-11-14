@@ -594,8 +594,7 @@
             this.btnRelatorio.TabIndex = 103;
             this.btnRelatorio.Text = "Relatorio";
             this.btnRelatorio.UseVisualStyleBackColor = false;
-            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
-            // 
+             // 
             // txtDataVigenciaFinal
             // 
             this.txtDataVigenciaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;

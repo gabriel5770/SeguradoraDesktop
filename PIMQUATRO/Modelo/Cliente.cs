@@ -198,7 +198,7 @@ namespace PIMQUATRO.Modelo
                         command.Parameters.AddWithValue("@Bairro", Bairro);
                         command.Parameters.AddWithValue("@Cep", Cep);
                         command.Parameters.AddWithValue("@Telefone", Telefone);
-                         command.Parameters.AddWithValue("@Cidade", Cidade);
+                        command.Parameters.AddWithValue("@Cidade", Cidade);
 
                         connection.Open();
                         command.ExecuteNonQuery();
