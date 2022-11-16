@@ -12,8 +12,10 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Document = iText.Layout.Document;
 using Image = iText.Layout.Element.Image;
 
@@ -27,6 +29,8 @@ namespace PIMQUATRO.Modelo
         public string _DataVigenciaInicial { get; set; }
         private string _DataVigenciaFinal { get; set; }
         private string _numeroContrato { get; set; }
+        private string _NomeSeguradora { get; set; }
+        private string _CnpjSeguradora { get; set; }
 
         public Apolice(string cpf)
         {
@@ -47,8 +51,7 @@ namespace PIMQUATRO.Modelo
                 connection.Open();
 
                 using (var command = new SqlCommand(
-                                    $"SELECT tbclientes.nome, tbclientes.cpf, tbapolice.dataVigenciaInicial, tbapolice.dataVigenciaFinal, tbapolice.NumeroContrato " +
-                                    $" FROM tbapolice inner join tbclientes ON tbapolice.id = tbclientes.idApolice where tbclientes.cpf = {_cpf}", connection))
+                                    $"SELECT top(1) tbclientes.nome, tbclientes.cpf,tbapolice.dataVigenciaInicial, tbapolice.dataVigenciaFinal,tbapolice.NumeroContrato, tbSeguradoras.Nome, tbSeguradoras.Cnpj FROM tbapolice inner join tbclientes ON tbapolice.id = tbclientes.idApolice  inner join tbseguradoras ON tbclientes.idSeguradora = tbseguradoras.id where tbclientes.cpf = {_cpf}", connection))
 
                     try
                     {
@@ -60,7 +63,8 @@ namespace PIMQUATRO.Modelo
                             _DataVigenciaInicial = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                             _DataVigenciaFinal = reader.GetDateTime(3).ToString("dd/MM/yyyy");
                             _numeroContrato = reader.GetInt64(4).ToString();
-
+                            _NomeSeguradora = reader.GetString(5);
+                            _CnpjSeguradora = reader.GetString(6);
                         }
 
                     }
@@ -97,7 +101,10 @@ namespace PIMQUATRO.Modelo
                 document.Add(new Paragraph($"Nome:{_nome}\n"));
                 document.Add(new Paragraph($"Cpf:{_cpf}\n"));
                 document.Add(new Paragraph($"Vigência das 24H do dia {_DataVigenciaInicial} até às 24H do dia {_DataVigenciaFinal}"));
-                document.Add(new Paragraph($"Número de contrato:{_numeroContrato}\n"));
+                document.Add(new Paragraph($"Número de contrato: {_numeroContrato}\n\n"));
+                document.Add(new Paragraph($"Seguradora: {_NomeSeguradora}\n"));
+                document.Add(new Paragraph($"Cnpj: {_CnpjSeguradora}\n"));
+
 
                 document.Close();
                 pdfDocument.Close();
