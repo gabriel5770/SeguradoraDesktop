@@ -75,10 +75,9 @@ namespace PIMQUATRO.Modelo
 
         public void GerarPdf()
         {
-            var arquivo = @"c:\dados\Apolice.pdf";
+            var arquivo = @$"c:\dados\ApoliceNContrato[{_numeroContrato}].pdf";
 
-            using (PdfWriter wpdf = new PdfWriter(arquivo, new WriterProperties().SetPdfVersion
-        (PdfVersion.PDF_2_0)))
+            using (PdfWriter wpdf = new PdfWriter(arquivo, new WriterProperties().SetPdfVersion (PdfVersion.PDF_2_0)))
             {
                 var pdfDocument = new PdfDocument(wpdf);
 
@@ -95,18 +94,13 @@ namespace PIMQUATRO.Modelo
                 img.SetFixedPosition(50f, 750f);
                 document.Add(img);
 
-                //var timesNewRoman = PdfFontFactory.CreateFont(StandardFonts.TIMES_BOLD);
-                //var p1 = new Paragraph();
-                //p1.SetFont(timesNewRoman);
-                //p1.SetFontSize(30);
-                //p1.SetTextAlignment(TextAlignment.CENTER);
-                //p1.SetFontColor(ColorConstants.RED);
-                //p1.SetBackgroundColor(ColorConstants.LIGHT_GRAY);
-                //p1.Add("APÓLICE");
-                //document.Add(p1);
+                document.Add(new Paragraph($"Nome:{_nome}\n"));
+                document.Add(new Paragraph($"Cpf:{_cpf}\n"));
+                document.Add(new Paragraph($"Data de vigência Inicial:{_DataVigenciaInicial}\n"));
+                document.Add(new Paragraph($"Data de vigência Final:{_DataVigenciaFinal}\n"));
+                document.Add(new Paragraph($"Número de contrato:{_numeroContrato}\n"));
 
                 document.Close();
-
                 pdfDocument.Close();
 
                 MessageBox.Show("Arquivo PDF gerado em" + arquivo);
