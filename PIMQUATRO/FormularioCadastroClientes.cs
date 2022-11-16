@@ -91,11 +91,12 @@ namespace PIMQUATRO
             string beneficios = cmbBeneficiosCliente.Text;
             DateTime DataVigenciaInicial = Convert.ToDateTime(txtDataVigenciaInicial.Text);
             DateTime DataVigenciaFinal = Convert.ToDateTime(txtDataVigenciaFinal.Text);
+            string NomeSeguradora = txtNomeSeguradora.Text;
 
 
             if (ValidaCampos())
             {
-                Cliente cliente = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade,DataVigenciaInicial, DataVigenciaFinal);
+                Cliente cliente = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade,DataVigenciaInicial, DataVigenciaFinal,NomeSeguradora);
                 if (cliente.Cadastrar())
                 {
                     MessageBox.Show("Cliente cadastrado com sucesso");

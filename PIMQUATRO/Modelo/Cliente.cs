@@ -33,8 +33,9 @@ namespace PIMQUATRO.Modelo
         public string Cpf { get; set; }
         public DateTime DataVigenciaInicial { get; set; }
         public DateTime DataVigenciaFinal { get; set; }
+        public String NomeSeguradora { get; set; }
 
-        public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade, DateTime dataVigenciaInicial, DateTime dataVigenciaFinal)
+        public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade, DateTime dataVigenciaInicial, DateTime dataVigenciaFinal, string nomeSeguradora)
         {
             Email = email;
             Senha = senha;
@@ -55,6 +56,7 @@ namespace PIMQUATRO.Modelo
             Cidade = cidade;
             DataVigenciaFinal = dataVigenciaFinal;
             DataVigenciaInicial = dataVigenciaInicial;
+            NomeSeguradora = nomeSeguradora;
         }
 
         public Cliente()
@@ -97,6 +99,8 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@DataVigenciaInicial", DataVigenciaInicial);
                             command.Parameters.AddWithValue("@DataVigenciaFinal", DataVigenciaFinal);
                             command.Parameters.AddWithValue("@NumeroContrato", 2);
+                            command.Parameters.AddWithValue("@NomeSeguradora", NomeSeguradora);
+
 
 
 

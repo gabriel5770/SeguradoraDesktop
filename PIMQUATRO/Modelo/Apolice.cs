@@ -57,9 +57,9 @@ namespace PIMQUATRO.Modelo
                         {
                             _nome = reader.GetString(0);
                             _cpf = reader.GetString(1);
-                            _DataVigenciaInicial = Convert.ToString(reader.GetDateTime(2));
-                            _DataVigenciaFinal = Convert.ToString(reader.GetDateTime(3));
-                            _numeroContrato = Convert.ToString(reader.GetInt64(4));
+                            _DataVigenciaInicial = reader.GetDateTime(2).ToString("dd/MM/yyyy");
+                            _DataVigenciaFinal = reader.GetDateTime(3).ToString("dd/MM/yyyy");
+                            _numeroContrato = reader.GetInt64(4).ToString();
 
                         }
 
@@ -96,8 +96,7 @@ namespace PIMQUATRO.Modelo
 
                 document.Add(new Paragraph($"Nome:{_nome}\n"));
                 document.Add(new Paragraph($"Cpf:{_cpf}\n"));
-                document.Add(new Paragraph($"Data de vigência Inicial:{_DataVigenciaInicial}\n"));
-                document.Add(new Paragraph($"Data de vigência Final:{_DataVigenciaFinal}\n"));
+                document.Add(new Paragraph($"Vigência das 24H do dia {_DataVigenciaInicial} até às 24H do dia {_DataVigenciaFinal}"));
                 document.Add(new Paragraph($"Número de contrato:{_numeroContrato}\n"));
 
                 document.Close();

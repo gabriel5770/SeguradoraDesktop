@@ -75,6 +75,8 @@
             this.txtDataVigenciaInicial = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.txtNomeSeguradora = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -594,7 +596,7 @@
             this.btnRelatorio.TabIndex = 103;
             this.btnRelatorio.Text = "Relatorio";
             this.btnRelatorio.UseVisualStyleBackColor = false;
-             // 
+            // 
             // txtDataVigenciaFinal
             // 
             this.txtDataVigenciaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -639,12 +641,34 @@
             this.label23.TabIndex = 107;
             this.label23.Text = "Data Vigencia Final";
             // 
+            // txtNomeSeguradora
+            // 
+            this.txtNomeSeguradora.Location = new System.Drawing.Point(188, 389);
+            this.txtNomeSeguradora.Name = "txtNomeSeguradora";
+            this.txtNomeSeguradora.Size = new System.Drawing.Size(100, 23);
+            this.txtNomeSeguradora.TabIndex = 108;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(203, 373);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(107, 15);
+            this.label24.TabIndex = 109;
+            this.label24.Text = "Nome Seguradora:";
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(778, 493);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.txtNomeSeguradora);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtDataVigenciaInicial);
@@ -752,5 +776,7 @@
         private DateTimePicker txtDataVigenciaInicial;
         private Label label22;
         private Label label23;
+        private TextBox txtNomeSeguradora;
+        private Label label24;
     }
 }
