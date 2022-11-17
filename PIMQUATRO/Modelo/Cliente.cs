@@ -70,8 +70,9 @@ namespace PIMQUATRO.Modelo
             {
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
                 {
+                    Random NumeroApolice = new Random();
                     Random NumeroContrato = new Random();
-                   
+ 
                     using (var command = new SqlCommand
                     {
                         Connection = connection,
@@ -100,6 +101,7 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Cidade", Cidade);
                             command.Parameters.AddWithValue("@DataVigenciaInicial", DataVigenciaInicial);
                             command.Parameters.AddWithValue("@DataVigenciaFinal", DataVigenciaFinal);
+                            command.Parameters.AddWithValue("@NumeroApolice", NumeroApolice.Next());
                             command.Parameters.AddWithValue("@NumeroContrato", NumeroContrato.Next());
                             command.Parameters.AddWithValue("@NomeSeguradora", NomeSeguradora);
 
