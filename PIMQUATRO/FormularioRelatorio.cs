@@ -22,10 +22,19 @@ namespace PIMQUATRO
 
         private void btnGerarApolice_Click(object sender, EventArgs e)
         {
-            string cpfCliente = txtCpfCliente.Text;
+            string cpfCliente = txtNumeroDocumento.Text;
             Apolice ap = new Apolice(cpfCliente);
             ap.RetornaDadosPdfApolice();
             ap.GerarPdf();
+        }
+
+        private void btnGerarContrato_Click(object sender, EventArgs e)
+        {
+            int cpfCliente = Convert.ToInt32(txtNumeroDocumento.Text);
+            Contrato cont = new Contrato(cpfCliente);
+            cont.RetornaDadosPdfApolice();
+            cont.GerarPdf();
+
         }
     }
 }

@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCpfCliente = new System.Windows.Forms.TextBox();
+            this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.btnGerarApolice = new System.Windows.Forms.Button();
             this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.btnGerarContrato = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtCpfCliente
+            // txtNumeroDocumento
             // 
-            this.txtCpfCliente.Location = new System.Drawing.Point(221, 90);
-            this.txtCpfCliente.Name = "txtCpfCliente";
-            this.txtCpfCliente.Size = new System.Drawing.Size(200, 23);
-            this.txtCpfCliente.TabIndex = 0;
+            this.txtNumeroDocumento.Location = new System.Drawing.Point(221, 90);
+            this.txtNumeroDocumento.Name = "txtNumeroDocumento";
+            this.txtNumeroDocumento.Size = new System.Drawing.Size(200, 23);
+            this.txtNumeroDocumento.TabIndex = 0;
             // 
             // btnGerarApolice
             // 
@@ -68,6 +68,7 @@
             this.btnGerarContrato.TabIndex = 3;
             this.btnGerarContrato.Text = "Gerar Contrato";
             this.btnGerarContrato.UseVisualStyleBackColor = true;
+            this.btnGerarContrato.Click += new System.EventHandler(this.btnGerarContrato_Click);
             // 
             // FormularioRelatorio
             // 
@@ -77,7 +78,7 @@
             this.Controls.Add(this.btnGerarContrato);
             this.Controls.Add(this.btnGerarRelatorio);
             this.Controls.Add(this.btnGerarApolice);
-            this.Controls.Add(this.txtCpfCliente);
+            this.Controls.Add(this.txtNumeroDocumento);
             this.Name = "FormularioRelatorio";
             this.Text = "FormularioRelatorio";
             this.ResumeLayout(false);
@@ -87,7 +88,7 @@
 
         #endregion
 
-        private TextBox txtCpfCliente;
+        private TextBox txtNumeroDocumento;
         private Button btnGerarApolice;
         private Button btnGerarRelatorio;
         private Button btnGerarContrato;

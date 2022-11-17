@@ -28,7 +28,7 @@ namespace PIMQUATRO.Modelo
         private string _cpf { get; set; }
         public string _DataVigenciaInicial { get; set; }
         private string _DataVigenciaFinal { get; set; }
-        private string _numeroContrato { get; set; }
+        private string _numeroApolice { get; set; }
         private string _NomeSeguradora { get; set; }
         private string _CnpjSeguradora { get; set; }
 
@@ -62,7 +62,7 @@ namespace PIMQUATRO.Modelo
                             _cpf = reader.GetString(1);
                             _DataVigenciaInicial = reader.GetDateTime(2).ToString("dd/MM/yyyy");
                             _DataVigenciaFinal = reader.GetDateTime(3).ToString("dd/MM/yyyy");
-                            _numeroContrato = reader.GetInt64(4).ToString();
+                            _numeroApolice = reader.GetInt64(4).ToString();
                             _NomeSeguradora = reader.GetString(5);
                             _CnpjSeguradora = reader.GetString(6);
                         }
@@ -79,7 +79,7 @@ namespace PIMQUATRO.Modelo
 
         public void GerarPdf()
         {
-            var arquivo = @$"c:\dados\ApoliceNContrato[{_numeroContrato}].pdf";
+            var arquivo = @$"c:\dados\ApoliceNContrato[{_numeroApolice}].pdf";
 
             using (PdfWriter wpdf = new PdfWriter(arquivo, new WriterProperties().SetPdfVersion (PdfVersion.PDF_2_0)))
             {
@@ -101,7 +101,7 @@ namespace PIMQUATRO.Modelo
                 document.Add(new Paragraph($"Nome:{_nome}\n"));
                 document.Add(new Paragraph($"Cpf:{_cpf}\n"));
                 document.Add(new Paragraph($"Vigência das 24H do dia {_DataVigenciaInicial} até às 24H do dia {_DataVigenciaFinal}"));
-                document.Add(new Paragraph($"Número de contrato: {_numeroContrato}\n\n"));
+                document.Add(new Paragraph($"Número de contrato: {_numeroApolice}\n\n"));
                 document.Add(new Paragraph($"Seguradora: {_NomeSeguradora}\n"));
                 document.Add(new Paragraph($"Cnpj: {_CnpjSeguradora}\n"));
 

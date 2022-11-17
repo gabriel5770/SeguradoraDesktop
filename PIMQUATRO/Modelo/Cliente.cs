@@ -106,10 +106,6 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@NomeSeguradora", NomeSeguradora);
 
 
-
-
-
-
                             SqlParameter param = new SqlParameter();
 
                             var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
