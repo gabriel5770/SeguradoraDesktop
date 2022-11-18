@@ -26,7 +26,7 @@ namespace PIMQUATRO.Modelo
     {
         private string _nome { get; set; }
         private string _cpf { get; set; }
-        public string _DataVigenciaInicial { get; set; }
+        private string _DataVigenciaInicial { get; set; }
         private string _DataVigenciaFinal { get; set; }
         private string _numeroApolice { get; set; }
         private string _NomeSeguradora { get; set; }
