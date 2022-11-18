@@ -27,10 +27,10 @@ namespace PIMQUATRO.Modelo
         private string _cep { get; set; }
         private string _telefone { get; set; }
         private string _estado { get; set; }
-        private DateTime _dataNascimento { get; set; }
         private string _beneficios { get; set; }
         private string _cidade { get; set; }
         private string _cpf { get; set; }
+        private DateTime _dataNascimento { get; set; }
         private DateTime _dataVigenciaInicial { get; set; }
         private DateTime _dataVigenciaFinal { get; set; }
         private String _nomeSeguradora { get; set; }

@@ -12,43 +12,44 @@ namespace PIMQUATRO.Modelo
 {
     internal class Funcionario
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public string Rg { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public string Endereco { get; set; }
-        public String Email { get; set; }
-        public String Senha { get; set; }
-        public string EstadoCivil { get; set; }
-        public string Sexo { get; set; }
-        public string NumeroResidencia { get; set; }
-        public string Municipio { get; set; }
-        public string Bairro { get; set; }
-        public string Cep { get; set; }
-        public string Telefone { get; set; }
-        public string Estado { get; set; }
-        public string Cidade { get; set; }
-        public string Cargo { get; set; }
+        private string _email { get; set; }
+        private string _senha { get; set; }
+        private string _nome { get; set; }
+        private string _estadoCivil { get; set; }
+        private string _rg { get; set; }
+        private string _sexo { get; set; }
+        private string _endereco { get; set; }
+        private string _numeroResidencia { get; set; }
+        private string _municipio { get; set; }
+        private string _bairro { get; set; }
+        private string _cep { get; set; }
+        private string _telefone { get; set; }
+        private string _estado { get; set; }
+        private string _beneficios { get; set; }
+        private string _cidade { get; set; }
+        private string _cpf { get; set; }
+        private DateTime _dataNascimento { get; set; }
+        private string _cargo { get; set; }
 
         public Funcionario(string nome, string cpf, string rg, DateTime dataNascimento, string endereco, string email, string senha, string estadoCivil, string sexo, string numeroResidencia, string municipio, string bairro, string cep, String telefone, string estado, string cidade, string cargo)
         {
-            Nome = nome;
-            Cpf = cpf;
-            Rg = rg;
-            DataNascimento = dataNascimento;
-            Endereco = endereco;
-            Email = email;
-            Senha = senha;
-            EstadoCivil = estadoCivil;
-            Sexo = sexo;
-            NumeroResidencia = numeroResidencia;
-            Municipio = municipio;
-            Bairro = bairro;
-            Cep = cep;
-            Telefone = telefone;
-            Estado = estado;
-            Cidade = cidade;
-            Cargo = cargo;
+            _nome = nome;
+            _cpf = cpf;
+            _rg = rg;
+            _dataNascimento = dataNascimento;
+            _endereco = endereco;
+            _email = email;
+            _senha = senha;
+            _estadoCivil = estadoCivil;
+            _sexo = sexo;
+            _numeroResidencia = numeroResidencia;
+            _municipio = municipio;
+            _bairro = bairro;
+            _cep = cep;
+            _telefone = telefone;
+            _estado = estado;
+            _cidade = cidade;
+            _cargo = cargo;
         }
 
 
@@ -66,23 +67,23 @@ namespace PIMQUATRO.Modelo
                     command.CommandText = "Ins_WindowsForms_Cadastro_Funcionario";
                     try
                     {
-                        command.Parameters.AddWithValue("@Email", Email);
-                        command.Parameters.AddWithValue("@Senha", Senha);
-                        command.Parameters.AddWithValue("@Nome", Nome);
-                        command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
-                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
-                        command.Parameters.AddWithValue("@Rg", Rg);
-                        command.Parameters.AddWithValue("@Cpf", Cpf);
-                        command.Parameters.AddWithValue("@Sexo", Sexo);
-                        command.Parameters.AddWithValue("@Endereco", Endereco);
-                        command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
-                        command.Parameters.AddWithValue("@Estado", Estado);
-                        command.Parameters.AddWithValue("@Municipio", Municipio);
-                        command.Parameters.AddWithValue("@Bairro", Bairro);
-                        command.Parameters.AddWithValue("@Cep", Cep);
-                        command.Parameters.AddWithValue("@Telefone", Telefone);
-                        command.Parameters.AddWithValue("@Cargo", Cargo);
-                        command.Parameters.AddWithValue("@Cidade", Cidade);
+                        command.Parameters.AddWithValue("@Email", _email);
+                        command.Parameters.AddWithValue("@Senha", _senha);
+                        command.Parameters.AddWithValue("@Nome", _nome);
+                        command.Parameters.AddWithValue("@EstadoCivil", _estadoCivil);
+                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(_dataNascimento));
+                        command.Parameters.AddWithValue("@Rg", _rg);
+                        command.Parameters.AddWithValue("@Cpf", _cpf);
+                        command.Parameters.AddWithValue("@Sexo", _sexo);
+                        command.Parameters.AddWithValue("@Endereco", _endereco);
+                        command.Parameters.AddWithValue("@NumeroResidencia", _numeroResidencia);
+                        command.Parameters.AddWithValue("@Estado", _estado);
+                        command.Parameters.AddWithValue("@Municipio", _municipio);
+                        command.Parameters.AddWithValue("@Bairro", _bairro);
+                        command.Parameters.AddWithValue("@Cep", _cep);
+                        command.Parameters.AddWithValue("@Telefone", _telefone);
+                        command.Parameters.AddWithValue("@Cargo", _cargo);
+                        command.Parameters.AddWithValue("@Cidade", _cidade);
 
 
                         var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
@@ -160,22 +161,22 @@ namespace PIMQUATRO.Modelo
                     try
                     {
                         command.Parameters.AddWithValue("@Cpf", cpf);
-                        command.Parameters.AddWithValue("@Email", Email);
-                        command.Parameters.AddWithValue("@Senha", Senha);
-                        command.Parameters.AddWithValue("@Nome", Nome);
-                        command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
-                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
-                        command.Parameters.AddWithValue("@Rg", Rg);
-                        command.Parameters.AddWithValue("@Sexo", Sexo);
-                        command.Parameters.AddWithValue("@Endereco", Endereco);
-                        command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
-                        command.Parameters.AddWithValue("@Estado", Estado);
-                        command.Parameters.AddWithValue("@Municipio", Municipio);
-                        command.Parameters.AddWithValue("@Bairro", Bairro);
-                        command.Parameters.AddWithValue("@Cep", Cep);
-                        command.Parameters.AddWithValue("@Telefone", Telefone);
-                        command.Parameters.AddWithValue("@Cargo", Cargo);
-                        command.Parameters.AddWithValue("@Cidade", Cidade);
+                        command.Parameters.AddWithValue("@Email", _email);
+                        command.Parameters.AddWithValue("@Senha", _senha);
+                        command.Parameters.AddWithValue("@Nome", _nome);
+                        command.Parameters.AddWithValue("@EstadoCivil", _estadoCivil);
+                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(_dataNascimento));
+                        command.Parameters.AddWithValue("@Rg", _rg);
+                        command.Parameters.AddWithValue("@Sexo", _sexo);
+                        command.Parameters.AddWithValue("@Endereco", _endereco);
+                        command.Parameters.AddWithValue("@NumeroResidencia", _numeroResidencia);
+                        command.Parameters.AddWithValue("@Estado", _estado);
+                        command.Parameters.AddWithValue("@Municipio", _municipio);
+                        command.Parameters.AddWithValue("@Bairro", _bairro);
+                        command.Parameters.AddWithValue("@Cep", _cep);
+                        command.Parameters.AddWithValue("@Telefone", _telefone);
+                        command.Parameters.AddWithValue("@Cargo", _cargo);
+                        command.Parameters.AddWithValue("@Cidade", _cidade);
 
                         connection.Open();
                         command.ExecuteNonQuery();
@@ -194,9 +195,9 @@ namespace PIMQUATRO.Modelo
 
         public bool VerificaCampo()
         {
-            if (Email == "" || Senha == "" || Nome == "" || EstadoCivil == "" || Rg == "" ||
-                Cpf == "" || Sexo == "" || Endereco == "" || NumeroResidencia == "" || Estado == "" || Municipio == "" || Bairro == "" ||
-                Cidade == "" || Cep == "" || Telefone == "" || Cargo == "")
+            if (_email == "" || _senha == "" || _nome == "" || _estadoCivil == "" || _rg == "" ||
+                _cpf == "" || _sexo == "" || _endereco == "" || _numeroResidencia == "" || _estado == "" || _municipio == "" || _bairro == "" ||
+                _cidade == "" || _cep == "" || _telefone == "" || _cargo == "")
             {
                 MessageBox.Show("Há campos que não foram preenchidos , revise");
                 return false;
