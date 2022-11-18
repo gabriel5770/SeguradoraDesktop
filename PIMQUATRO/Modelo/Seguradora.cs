@@ -13,13 +13,13 @@ namespace PIMQUATRO.Modelo
 {
     public class Seguradora
     {
-        public string Nome { get; set; }
-        public string Cnpj { get; set; }
+        private string _nome { get; set; }
+        private string _cnpj { get; set; }
 
         public Seguradora(string nome, string cnpj)
         {
-            Nome = nome;
-            Cnpj = cnpj;
+            _nome = nome;
+            _cnpj = cnpj;
         }
 
         public Seguradora()
@@ -40,8 +40,8 @@ namespace PIMQUATRO.Modelo
                         command.CommandText = "Ins_WindowsForms_Cadastro_Seguradora";
                         try
                         {
-                            command.Parameters.AddWithValue("@Nome", Nome);
-                            command.Parameters.AddWithValue("@Cnpj", Cnpj);
+                            command.Parameters.AddWithValue("@Nome", _nome);
+                            command.Parameters.AddWithValue("@Cnpj", _cnpj);
 
                             connection.Open();
                             command.ExecuteNonQuery();
