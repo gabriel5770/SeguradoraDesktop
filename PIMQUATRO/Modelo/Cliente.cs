@@ -14,49 +14,49 @@ namespace PIMQUATRO.Modelo
 {
     public class Cliente
     {
-        public string Email { get; set; }
-        public string Senha { get; set; }
-        public string Nome { get; set; }
-        public string EstadoCivil { get; set; }
-        public string Rg { get; set; }
-        public string Sexo { get; set; }
-        public string Endereco { get; set; }
-        public string NumeroResidencia { get; set; }
-        public string Municipio { get; set; }
-        public string Bairro { get; set; }
-        public string Cep { get; set; }
-        public string Telefone { get; set; }
-        public string Estado { get; set; }
-        public DateTime DataNascimento { get; set; }
-        public string Beneficios { get; set; }
-        public string Cidade { get; set; }
-        public string Cpf { get; set; }
-        public DateTime DataVigenciaInicial { get; set; }
-        public DateTime DataVigenciaFinal { get; set; }
-        public String NomeSeguradora { get; set; }
+        private string _email { get; set; }
+        private string _senha { get; set; }
+        private string _nome { get; set; }
+        private string _estadoCivil { get; set; }
+        private string _rg { get; set; }
+        private string _sexo { get; set; }
+        private string _endereco { get; set; }
+        private string _numeroResidencia { get; set; }
+        private string _municipio { get; set; }
+        private string _bairro { get; set; }
+        private string _cep { get; set; }
+        private string _telefone { get; set; }
+        private string _estado { get; set; }
+        private string _beneficios { get; set; }
+        private string _cidade { get; set; }
+        private string _cpf { get; set; }
+        private DateTime _dataNascimento { get; set; }
+        private DateTime _dataVigenciaInicial { get; set; }
+        private DateTime _dataVigenciaFinal { get; set; }
+        private String _nomeSeguradora { get; set; }
 
         public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade, DateTime dataVigenciaInicial, DateTime dataVigenciaFinal, string nomeSeguradora)
         {
-            Email = email;
-            Senha = senha;
-            Nome = nome;
-            EstadoCivil = estadoCivil;
-            Rg = rg;
-            Sexo = sexo;
-            Endereco = endereco;
-            NumeroResidencia = numeroResidencia;
-            Municipio = municipio;
-            Bairro = bairro;
-            Cep = cep;
-            Telefone = telefone;
-            Estado = estado;
-            DataNascimento = dataNascimento;
-            Cpf = cpf;
-            Beneficios = beneficios;
-            Cidade = cidade;
-            DataVigenciaFinal = dataVigenciaFinal;
-            DataVigenciaInicial = dataVigenciaInicial;
-            NomeSeguradora = nomeSeguradora;
+            _email = email;
+            _senha = senha;
+            _nome = nome;
+            _estadoCivil = estadoCivil;
+            _rg = rg;
+            _sexo = sexo;
+            _endereco = endereco;
+            _numeroResidencia = numeroResidencia;
+            _municipio = municipio;
+            _bairro = bairro;
+            _cep = cep;
+            _telefone = telefone;
+            _estado = estado;
+            _dataNascimento = dataNascimento;
+            _cpf = cpf;
+            _beneficios = beneficios;
+            _cidade = cidade;
+            _dataVigenciaFinal = dataVigenciaFinal;
+            _dataVigenciaInicial = dataVigenciaInicial;
+            _nomeSeguradora = nomeSeguradora;
         }
 
         public Cliente()
@@ -82,28 +82,28 @@ namespace PIMQUATRO.Modelo
                         command.CommandText = "Ins_WindowsForms_Cadastro_Cliente";
                         try
                         {
-                            command.Parameters.AddWithValue("@Email", Email);
-                            command.Parameters.AddWithValue("@Senha", Senha);
-                            command.Parameters.AddWithValue("@Nome", Nome);
-                            command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
-                            command.Parameters.AddWithValue("@DataNascimento", DataNascimento);
-                            command.Parameters.AddWithValue("@Rg", Rg);
-                            command.Parameters.AddWithValue("@Cpf", Cpf);
-                            command.Parameters.AddWithValue("@Sexo", Sexo);
-                            command.Parameters.AddWithValue("@Endereco", Endereco);
-                            command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
-                            command.Parameters.AddWithValue("@Estado", Estado);
-                            command.Parameters.AddWithValue("@Municipio", Municipio);
-                            command.Parameters.AddWithValue("@Bairro", Bairro);
-                            command.Parameters.AddWithValue("@Cep", Cep);
-                            command.Parameters.AddWithValue("@Telefone", Telefone);
-                            command.Parameters.AddWithValue("@Beneficios", Beneficios);
-                            command.Parameters.AddWithValue("@Cidade", Cidade);
-                            command.Parameters.AddWithValue("@DataVigenciaInicial", DataVigenciaInicial);
-                            command.Parameters.AddWithValue("@DataVigenciaFinal", DataVigenciaFinal);
+                            command.Parameters.AddWithValue("@Email", _email);
+                            command.Parameters.AddWithValue("@Senha", _senha);
+                            command.Parameters.AddWithValue("@Nome", _nome);
+                            command.Parameters.AddWithValue("@EstadoCivil", _estadoCivil);
+                            command.Parameters.AddWithValue("@DataNascimento", _dataNascimento);
+                            command.Parameters.AddWithValue("@Rg", _rg);
+                            command.Parameters.AddWithValue("@Cpf", _cpf);
+                            command.Parameters.AddWithValue("@Sexo", _sexo);
+                            command.Parameters.AddWithValue("@Endereco", _endereco);
+                            command.Parameters.AddWithValue("@NumeroResidencia", _numeroResidencia);
+                            command.Parameters.AddWithValue("@Estado", _estado);
+                            command.Parameters.AddWithValue("@Municipio", _municipio);
+                            command.Parameters.AddWithValue("@Bairro", _bairro);
+                            command.Parameters.AddWithValue("@Cep", _cep);
+                            command.Parameters.AddWithValue("@Telefone", _telefone);
+                            command.Parameters.AddWithValue("@Beneficios", _beneficios);
+                            command.Parameters.AddWithValue("@Cidade", _cidade);
+                            command.Parameters.AddWithValue("@DataVigenciaInicial", _dataVigenciaInicial);
+                            command.Parameters.AddWithValue("@DataVigenciaFinal", _dataVigenciaFinal);
                             command.Parameters.AddWithValue("@NumeroApolice", NumeroApolice.Next());
                             command.Parameters.AddWithValue("@NumeroContrato", NumeroContrato.Next());
-                            command.Parameters.AddWithValue("@NomeSeguradora", NomeSeguradora);
+                            command.Parameters.AddWithValue("@NomeSeguradora", _nomeSeguradora);
 
 
                             SqlParameter param = new SqlParameter();
@@ -186,23 +186,23 @@ namespace PIMQUATRO.Modelo
                     command.CommandText = "Upd_WindowsForms_Cadastro_AtualizaCadastroCliente";
                     try
                     {
-                        command.Parameters.AddWithValue("@Cpf", Cpf);
-                        command.Parameters.AddWithValue("@Email", Email);
-                        command.Parameters.AddWithValue("@Senha", Senha);
-                        command.Parameters.AddWithValue("@Nome", Nome);
-                        command.Parameters.AddWithValue("@Beneficios", Beneficios);
-                        command.Parameters.AddWithValue("@EstadoCivil", EstadoCivil);
-                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(DataNascimento));
-                        command.Parameters.AddWithValue("@Rg", Rg);
-                        command.Parameters.AddWithValue("@Sexo", Sexo);
-                        command.Parameters.AddWithValue("@Endereco", Endereco);
-                        command.Parameters.AddWithValue("@NumeroResidencia", NumeroResidencia);
-                        command.Parameters.AddWithValue("@Estado", Estado);
-                        command.Parameters.AddWithValue("@Municipio", Municipio);
-                        command.Parameters.AddWithValue("@Bairro", Bairro);
-                        command.Parameters.AddWithValue("@Cep", Cep);
-                        command.Parameters.AddWithValue("@Telefone", Telefone);
-                        command.Parameters.AddWithValue("@Cidade", Cidade);
+                        command.Parameters.AddWithValue("@Cpf", _cpf);
+                        command.Parameters.AddWithValue("@Email", _email);
+                        command.Parameters.AddWithValue("@Senha", _senha);
+                        command.Parameters.AddWithValue("@Nome", _nome);
+                        command.Parameters.AddWithValue("@Beneficios", _beneficios);
+                        command.Parameters.AddWithValue("@EstadoCivil", _estadoCivil);
+                        command.Parameters.AddWithValue("@DataNascimento", Convert.ToDateTime(_dataNascimento));
+                        command.Parameters.AddWithValue("@Rg", _rg);
+                        command.Parameters.AddWithValue("@Sexo", _sexo);
+                        command.Parameters.AddWithValue("@Endereco", _endereco);
+                        command.Parameters.AddWithValue("@NumeroResidencia", _numeroResidencia);
+                        command.Parameters.AddWithValue("@Estado", _estado);
+                        command.Parameters.AddWithValue("@Municipio", _municipio);
+                        command.Parameters.AddWithValue("@Bairro", _bairro);
+                        command.Parameters.AddWithValue("@Cep", _cep);
+                        command.Parameters.AddWithValue("@Telefone", _telefone);
+                        command.Parameters.AddWithValue("@Cidade", _cidade);
 
                         connection.Open();
                         command.ExecuteNonQuery();
