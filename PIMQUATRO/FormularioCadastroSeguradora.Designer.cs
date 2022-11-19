@@ -30,7 +30,6 @@
         {
             this.btnExcluirCliente = new System.Windows.Forms.Button();
             this.btnEditarCliente = new System.Windows.Forms.Button();
-            this.btnExibirCliente = new System.Windows.Forms.Button();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.txtCnpjSeguradora = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,39 +42,28 @@
             this.btnExcluirCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExcluirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluirCliente.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirCliente.Location = new System.Drawing.Point(358, 423);
+            this.btnExcluirCliente.Location = new System.Drawing.Point(468, 423);
             this.btnExcluirCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnExcluirCliente.Name = "btnExcluirCliente";
             this.btnExcluirCliente.Size = new System.Drawing.Size(86, 33);
             this.btnExcluirCliente.TabIndex = 91;
             this.btnExcluirCliente.Text = "Excluir";
             this.btnExcluirCliente.UseVisualStyleBackColor = false;
+            this.btnExcluirCliente.Click += new System.EventHandler(this.btnExcluirCliente_Click);
             // 
             // btnEditarCliente
             // 
             this.btnEditarCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnEditarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEditarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnEditarCliente.Location = new System.Drawing.Point(462, 423);
+            this.btnEditarCliente.Location = new System.Drawing.Point(571, 423);
             this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Size = new System.Drawing.Size(86, 33);
             this.btnEditarCliente.TabIndex = 90;
             this.btnEditarCliente.Text = "Editar";
             this.btnEditarCliente.UseVisualStyleBackColor = false;
-            // 
-            // btnExibirCliente
-            // 
-            this.btnExibirCliente.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnExibirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExibirCliente.ForeColor = System.Drawing.Color.White;
-            this.btnExibirCliente.Location = new System.Drawing.Point(562, 423);
-            this.btnExibirCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnExibirCliente.Name = "btnExibirCliente";
-            this.btnExibirCliente.Size = new System.Drawing.Size(86, 33);
-            this.btnExibirCliente.TabIndex = 89;
-            this.btnExibirCliente.Text = "Exibir";
-            this.btnExibirCliente.UseVisualStyleBackColor = false;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
             // 
             // btnCadastrarCliente
             // 
@@ -150,7 +138,6 @@
             this.Controls.Add(this.txtNomeSeguradora);
             this.Controls.Add(this.btnExcluirCliente);
             this.Controls.Add(this.btnEditarCliente);
-            this.Controls.Add(this.btnExibirCliente);
             this.Controls.Add(this.btnCadastrarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -164,7 +151,6 @@
         #endregion
         private Button btnExcluirCliente;
         private Button btnEditarCliente;
-        private Button btnExibirCliente;
         private Button btnCadastrarCliente;
         private MaskedTextBox txtCnpjSeguradora;
         private Label label2;
