@@ -51,7 +51,7 @@ namespace PIMQUATRO.Modelo
                 connection.Open();
 
                 using (var command = new SqlCommand(
-                                    $"SELECT top(1) tbclientes.nome, tbclientes.cpf,tbapolice.dataVigenciaInicial, tbapolice.dataVigenciaFinal,tbapolice.NumeroContrato, tbSeguradoras.Nome, tbSeguradoras.Cnpj FROM tbapolice inner join tbclientes ON tbapolice.id = tbclientes.idApolice  inner join tbseguradoras ON tbclientes.idSeguradora = tbseguradoras.id where tbclientes.cpf = {_cpf}", connection))
+                      $"SELECT top(1) tbclientes.nome, tbclientes.cpf,tbapolice.dataVigenciaInicial, tbapolice.dataVigenciaFinal,tbapolice.NumeroContrato, tbSeguradoras.Nome, tbSeguradoras.Cnpj FROM tbapolice inner join tbclientes ON tbapolice.id = tbclientes.idApolice  inner join tbseguradoras ON tbclientes.idSeguradora = tbseguradoras.id where tbclientes.cpf = {_cpf}", connection))
 
                     try
                     {
@@ -112,7 +112,7 @@ namespace PIMQUATRO.Modelo
                 MessageBox.Show("Arquivo PDF gerado em" + arquivo);
             }
 
-        }
+        }       
     }
 }
 

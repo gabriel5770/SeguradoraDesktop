@@ -14,7 +14,7 @@ namespace PIMQUATRO.Modelo
     {
 
 
-        private int _numeroContrato { get; set; }
+        private long _numeroContrato { get; set; }
         private string _nomeCliente { get; set; }
         private string _NomeBeneficiario { get; set; }
         private string _tipoPlano { get; set; }
@@ -22,19 +22,19 @@ namespace PIMQUATRO.Modelo
         private string _cpfCliente { get;set; }
         private string _cnpjEmpresa { get; set; }
 
-        public Contrato(int numeroContrato)
+        public Contrato(string cpfCliente)
         {
-            _numeroContrato = numeroContrato;
+            _cpfCliente = cpfCliente;
         }
 
-        public void RetornaDadosPdfApolice()
+        public void RetornaDadosPdfContrato()
         {
 
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
                 connection.Open();
 
-                using (var command = new SqlCommand($"select tbclientes.nome as 'nome cliente',tbclientes.cpf,tbclientes.cidade,tbclientes.estado,tbclientes.endereco,tbclientes.NumereoResidencia,tbclientes.bairro,tbclientes.Municipio,tbclientes.Email,tbbeneficiario.nome as 'nome beneficiario',tbbeneficiario.cpf from tbcontrato inner join tbclientes on tbcontrato.idCli = tbclientes.id inner join tbapolice on tbapolice.id = tbcontrato.idapo inner join tbseguradoras on tbclientes.idseguradora = tbseguradoras.id inner join tbbeneficiario on tbclientes.idbeneficiario = tbbeneficiario.id where tbContrato.NumeroContrato = {_numeroContrato}", connection))
+                using (var command = new SqlCommand($"select tbclientes.nome as 'nome cliente',tbclientes.cpf,tbclientes.cidade,tbclientes.estado,tbclientes.endereco,tbclientes.NumereoResidencia,tbclientes.bairro,tbclientes.Municipio,tbclientes.Email,tbbeneficiario.nome as 'nome beneficiario',tbbeneficiario.cpf, tbapolice.NumeroContrato from tbcontrato inner join tbclientes on tbcontrato.idCli = tbclientes.id inner join tbapolice on tbapolice.id = tbcontrato.idapo inner join tbseguradoras on tbclientes.idseguradora = tbseguradoras.id inner join tbbeneficiario on tbclientes.idbeneficiario = tbbeneficiario.id where tbclientes.cpf = '{_cpfCliente}'", connection))
 
                     try
                     {
@@ -42,6 +42,7 @@ namespace PIMQUATRO.Modelo
                         while (reader.Read())
                         {
                             _nomeCliente = reader.GetString(0);
+                            _numeroContrato = reader.GetInt64(11);
 
                         }
                     }
