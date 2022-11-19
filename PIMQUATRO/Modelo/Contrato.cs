@@ -27,8 +27,9 @@ namespace PIMQUATRO.Modelo
             _cpfCliente = cpfCliente;
         }
 
-        public void RetornaDadosPdfContrato()
+        public bool RetornaDadosPdfContrato()
         {
+            bool rtnValido = false;
 
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
@@ -39,18 +40,28 @@ namespace PIMQUATRO.Modelo
                     try
                     {
                         SqlDataReader reader = command.ExecuteReader();
-                        while (reader.Read())
+                        if(reader.Read())
                         {
-                            _nomeCliente = reader.GetString(0);
-                            _numeroContrato = reader.GetInt64(11);
+                            while (reader.Read())
+                            {
+                                _nomeCliente = reader.GetString(0);
+                                _numeroContrato = reader.GetInt64(11);
 
+                            }
+                            rtnValido = true;
                         }
+                        else
+                        {
+                            MessageBox.Show("Não foi encontrado registro com este CPF");
+                        }    
+                        
                     }
                     catch (SqlException ex)
                     {
                         MessageBox.Show("Erro ao gerar Contrato");
                         MessageBox.Show("Erro encontrado: " + ex);
                     }
+                return rtnValido;
             }
         }
 

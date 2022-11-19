@@ -48,7 +48,7 @@ namespace PIMQUATRO
 
         protected void GerarContrato()
         {
-            string cpfCliente =  txtNumeroDocumento.Text;
+            string cpfCliente = txtNumeroDocumento.Text;
 
             if (cpfCliente == "")
             {
@@ -57,8 +57,11 @@ namespace PIMQUATRO
             else
             {
                 Contrato cont = new Contrato(cpfCliente);
-                cont.RetornaDadosPdfContrato();
-                cont.GerarPdf();
+                if (cont.RetornaDadosPdfContrato())
+                {
+                    cont.GerarPdf();
+
+                }
             }
         }
     }
