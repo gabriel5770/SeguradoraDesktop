@@ -40,22 +40,21 @@ namespace PIMQUATRO
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            if (maskedTextFuncCpf.Text == "")
-            {
-                MessageBox.Show("Por favor , insira um valor no campo CPF");
-            }
-            else if (RetornaPesquisaCpf())
-            {
-                MessageBox.Show("Cadastro encontrado!");
-            }
-            else
-            {
-                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
-            }
+            PesquisaDadosFuncionario();
+        }
+
+        private void btnExcluirFuncionario_Click(object sender, EventArgs e)
+        {
+            ExcluiDadosFuncionario();
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            AtualizaDadosFuncionario();
         }
 
 
-        private void ObtemDadosFuncionarios()
+        protected void ObtemDadosFuncionarios()
         {
 
             string Email = textEmailFunc.Text;
@@ -90,7 +89,7 @@ namespace PIMQUATRO
             }
         }
 
-        private bool RetornaPesquisaCpf()
+        protected bool RetornaPesquisaCpf()
         {
             bool rtnValido = false;
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
@@ -137,7 +136,39 @@ namespace PIMQUATRO
             }
         }
 
-        private void btnExcluirFuncionario_Click(object sender, EventArgs e)
+       
+        protected bool ValidaCampos()
+        {
+            if (textNomeFunc.Text == "" || maskedTextFuncCpf.Text == "" || maskedTextRgFunc.Text == ""
+                || cmbCargoFunc.Text == "" || cmdSexoFunc.Text == "" || cmdEstadoCivilFunc.Text == ""
+                || textEmailFunc.Text == "" || maskedTelefoneFuncionario.Text == "" || textSenhaFunc.Text == ""
+                || textEnderecoFunc.Text == "" || textNumeroResidenciaFunc.Text == "" || maskedTextCepFunc.Text == ""
+                || textBairroFunc.Text == "" || textCidadeFunc.Text == "" || textMunicipioFunc.Text == "" || cmbEstadoFunc.Text == "")
+            {
+                MessageBox.Show("Há campos não preenchidos , revise");
+                return false;
+            }
+            return true;
+        }
+
+
+        protected void PesquisaDadosFuncionario()
+        {
+            if (maskedTextFuncCpf.Text == "")
+            {
+                MessageBox.Show("Por favor , insira um valor no campo CPF");
+            }
+            else if (RetornaPesquisaCpf())
+            {
+                MessageBox.Show("Cadastro encontrado!");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
+            }
+        }
+
+        protected void ExcluiDadosFuncionario()
         {
             if (ValidaCampos())
             {
@@ -156,7 +187,7 @@ namespace PIMQUATRO
                         MessageBox.Show("Não foi possível excluir o cadastro");
                     }
                 }
-                  
+
             }
             else
             {
@@ -164,7 +195,7 @@ namespace PIMQUATRO
             }
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        protected void AtualizaDadosFuncionario()
         {
             string Email = textEmailFunc.Text;
             string Senha = textSenhaFunc.Text;
@@ -184,33 +215,26 @@ namespace PIMQUATRO
             string Telefone = maskedTelefoneFuncionario.Text;
             string Cargo = cmbCargoFunc.Text;
 
-            DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
+            if (ValidaCampos())
             {
-                Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
-                if (func.AtualizaCadastro(Cpf))
+                DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Cadastro atualizado com sucesso");
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possíevl atualizar o cadastro");
+                    Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
+                    if (func.AtualizaCadastro(Cpf))
+                    {
+                        MessageBox.Show("Cadastro atualizado com sucesso");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possíevl atualizar o cadastro");
+                    }
                 }
             }
-        }
-
-        private bool ValidaCampos()
-        {
-            if (textNomeFunc.Text == "" || maskedTextFuncCpf.Text == "" || maskedTextRgFunc.Text == ""
-                || cmbCargoFunc.Text == "" || cmdSexoFunc.Text == "" || cmdEstadoCivilFunc.Text == ""
-                || textEmailFunc.Text == "" || maskedTelefoneFuncionario.Text == "" || textSenhaFunc.Text == ""
-                || textEnderecoFunc.Text == "" || textNumeroResidenciaFunc.Text == "" || maskedTextCepFunc.Text == ""
-                || textBairroFunc.Text == "" || textCidadeFunc.Text == "" || textMunicipioFunc.Text == "" || cmbEstadoFunc.Text == "")
+            else
             {
-                MessageBox.Show("Há campos não preenchidos , revise");
-                return false;
+                MessageBox.Show("Pesquise o CPF a ser Atualizado");
             }
-            return true;
         }
     }
 }
