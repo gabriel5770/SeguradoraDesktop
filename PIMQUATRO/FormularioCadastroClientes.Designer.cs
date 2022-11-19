@@ -70,13 +70,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            this.btnRelatorio = new System.Windows.Forms.Button();
             this.txtDataVigenciaFinal = new System.Windows.Forms.DateTimePicker();
             this.txtDataVigenciaInicial = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtNomeSeguradora = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.cmbSeguradorasDisponiveis = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -584,19 +583,6 @@
             this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click_1);
             // 
-            // btnRelatorio
-            // 
-            this.btnRelatorio.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Location = new System.Drawing.Point(295, 410);
-            this.btnRelatorio.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(86, 33);
-            this.btnRelatorio.TabIndex = 103;
-            this.btnRelatorio.Text = "Relatorio";
-            this.btnRelatorio.UseVisualStyleBackColor = false;
-            // 
             // txtDataVigenciaFinal
             // 
             this.txtDataVigenciaFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -641,13 +627,6 @@
             this.label23.TabIndex = 107;
             this.label23.Text = "Data Vigencia Final";
             // 
-            // txtNomeSeguradora
-            // 
-            this.txtNomeSeguradora.Location = new System.Drawing.Point(188, 389);
-            this.txtNomeSeguradora.Name = "txtNomeSeguradora";
-            this.txtNomeSeguradora.Size = new System.Drawing.Size(100, 23);
-            this.txtNomeSeguradora.TabIndex = 108;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -661,19 +640,26 @@
             this.label24.TabIndex = 109;
             this.label24.Text = "Nome Seguradora:";
             // 
+            // cmbSeguradorasDisponiveis
+            // 
+            this.cmbSeguradorasDisponiveis.FormattingEnabled = true;
+            this.cmbSeguradorasDisponiveis.Location = new System.Drawing.Point(189, 392);
+            this.cmbSeguradorasDisponiveis.Name = "cmbSeguradorasDisponiveis";
+            this.cmbSeguradorasDisponiveis.Size = new System.Drawing.Size(101, 23);
+            this.cmbSeguradorasDisponiveis.TabIndex = 110;
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(778, 493);
+            this.Controls.Add(this.cmbSeguradorasDisponiveis);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.txtNomeSeguradora);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.txtDataVigenciaInicial);
             this.Controls.Add(this.txtDataVigenciaFinal);
-            this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.maskedTelefoneCliente);
@@ -771,12 +757,11 @@
         private Label label12;
         private Button btnPesquisar;
         private Button btnAtualizar;
-        private Button btnRelatorio;
         private DateTimePicker txtDataVigenciaFinal;
         private DateTimePicker txtDataVigenciaInicial;
         private Label label22;
         private Label label23;
-        private TextBox txtNomeSeguradora;
         private Label label24;
+        private ComboBox cmbSeguradorasDisponiveis;
     }
 }

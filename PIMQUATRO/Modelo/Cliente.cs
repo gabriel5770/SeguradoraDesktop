@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualBasic;
+﻿using iText.Kernel.Pdf.Canvas.Wmf;
+using iText.StyledXmlParser.Jsoup.Nodes;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -6,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
@@ -31,11 +34,11 @@ namespace PIMQUATRO.Modelo
         private string _cidade { get; set; }
         private string _cpf { get; set; }
         private DateTime _dataNascimento { get; set; }
-        private DateTime _dataVigenciaInicial { get; set; }
-        private DateTime _dataVigenciaFinal { get; set; }
-        private String _nomeSeguradora { get; set; }
+        private string _dataVigenciaInicial { get; set; }
+        private string _dataVigenciaFinal { get; set; }
+        private string _nomeSeguradora { get; set; }
 
-        public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade, DateTime dataVigenciaInicial, DateTime dataVigenciaFinal, string nomeSeguradora)
+        public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade, string dataVigenciaInicial = "", string dataVigenciaFinal = "", string nomeSeguradora = "")
         {
             _email = email;
             _senha = senha;
@@ -59,20 +62,16 @@ namespace PIMQUATRO.Modelo
             _nomeSeguradora = nomeSeguradora;
         }
 
-        public Cliente()
-        {
-
-        }
-
 
         public bool Cadastrar()
         {
+            bool rtnValido = true;
             {
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
                 {
                     Random NumeroApolice = new Random();
                     Random NumeroContrato = new Random();
- 
+
                     using (var command = new SqlCommand
                     {
                         Connection = connection,
@@ -99,8 +98,8 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Telefone", _telefone);
                             command.Parameters.AddWithValue("@Beneficios", _beneficios);
                             command.Parameters.AddWithValue("@Cidade", _cidade);
-                            command.Parameters.AddWithValue("@DataVigenciaInicial", _dataVigenciaInicial);
-                            command.Parameters.AddWithValue("@DataVigenciaFinal", _dataVigenciaFinal);
+                            command.Parameters.AddWithValue("@DataVigenciaInicial", Convert.ToDateTime(_dataVigenciaInicial));
+                            command.Parameters.AddWithValue("@DataVigenciaFinal", Convert.ToDateTime(_dataVigenciaFinal));
                             command.Parameters.AddWithValue("@NumeroApolice", NumeroApolice.Next());
                             command.Parameters.AddWithValue("@NumeroContrato", NumeroContrato.Next());
                             command.Parameters.AddWithValue("@NomeSeguradora", _nomeSeguradora);
@@ -108,7 +107,7 @@ namespace PIMQUATRO.Modelo
 
                             SqlParameter param = new SqlParameter();
 
-                            var returnParameter = command.Parameters.Add("@CpfValido", SqlDbType.Int);
+                            var returnParameter = command.Parameters.Add("@CadastroValido", SqlDbType.Int);
                             returnParameter.Direction = ParameterDirection.ReturnValue;
 
                             connection.Open();
@@ -120,24 +119,34 @@ namespace PIMQUATRO.Modelo
                             if (result == 1)
                             {
                                 MessageBox.Show("Há um cadastro com este CPF!");
-                                return false;
+                                rtnValido = false;
 
                             }
+                            else if (result == 2)
+                            {
+                                MessageBox.Show("Há um cadastro com este RG");
+                                rtnValido = false;
+                            }
+                            else if (result == 3)
+                            {
+                                MessageBox.Show("Há um cadastro com este EMAIL");
+                                rtnValido = false;
+                            }
                             else
-
                             {
                                 return true;
                             }
-
                         }
                         catch (SqlException ex)
                         {
                             MessageBox.Show("Erro ao cadastrar Cliente");
                             MessageBox.Show("Erro encontrado: " + ex);
-                            return false;
+                            rtnValido = false;
                         }
                     }
                 }
+
+                return rtnValido;
             }
         }
 
