@@ -1,4 +1,7 @@
-﻿using PIMQUATRO.Modelo;
+﻿using iText.Kernel.Pdf.Canvas.Wmf;
+using iText.StyledXmlParser.Jsoup.Nodes;
+using Microsoft.Reporting.Map.WebForms.BingMaps;
+using PIMQUATRO.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,15 +33,36 @@ namespace PIMQUATRO
             PopulaComboSeguradora();
         }
 
+
         private void btnCadastrarCliente_Click_1(object sender, EventArgs e)
         {
             ObtemDadosCliente();
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             new FormularioCadastroBeneficiario().ShowDialog();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            PesquisaCadastroCliente();
+        }
+        private void btnAtualizar_Click_1(object sender, EventArgs e)
+        {
+           AtualizaCadastroCliennte();
+        }
+
+        private void btnExcluirCliente_Click(object sender, EventArgs e)
+        {
+            ExcluiCadastroCliente();
+        }
+
+        private void PopulaComboSeguradora()
+        {
+            cmbSeguradorasDisponiveis.Items.Add("Porto Seguro");
         }
 
         private void PreencheComboCadastroCliente()
@@ -69,12 +93,9 @@ namespace PIMQUATRO
             }
             return true;
         }
-        private void PopulaComboSeguradora()
-        {
-            cmbSeguradorasDisponiveis.Items.Add("Porto Seguro");
-        }
 
-        protected void ObtemDadosCliente()
+
+        private void ObtemDadosCliente()
         {
             string Email = txtEmaiCliente.Text;
             string Senha = textSenhaCliente.Text;
@@ -101,32 +122,20 @@ namespace PIMQUATRO
 
             if (ValidaCampos())
             {
-                Cliente cliente = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade,DataVigenciaInicial, DataVigenciaFinal,NomeSeguradora);
-                if (cliente.Cadastrar())
+                Cliente cliente = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, beneficios, Cidade, DataVigenciaInicial, DataVigenciaFinal, NomeSeguradora);
+                if (ValidaCampos())
                 {
-                    MessageBox.Show("Cliente cadastrado com sucesso");
-                    this.Hide();
-                    new FormularioCadastroClientes().ShowDialog();
+                    if (cliente.Cadastrar())
+                    {
+                        MessageBox.Show("Cliente cadastrado com sucesso");
+                        this.Hide();
+                        new FormularioCadastroClientes().ShowDialog();
+                    }
                 }
             }
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            if(maskedTextClienteCpf.Text == "")
-            {
-                MessageBox.Show("Por favor , insira um valor no campo CPF");
-            }
-            else if (RetornaPesquisaCpf())
 
-            {
-                MessageBox.Show("Cadastro encontrado!");
-            }
-            else
-            {
-                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
-            }
-        }
 
         private bool RetornaPesquisaCpf()
         {
@@ -142,7 +151,6 @@ namespace PIMQUATRO
 
                     try
                     {
-                        //nome(1)-rg(2)-cpf(3)-sexo(4)-dataNascimento(5)-EstadoCivil(6)-Cidade(7)-Endereco(10)-NumResi(11)-Bairro(12)-Municipio(13)-Estado(14)-Cep(15)
                         SqlDataReader reader = command.ExecuteReader();
                         while (reader.Read())
                         {
@@ -163,8 +171,8 @@ namespace PIMQUATRO
                             maskedTelefoneCliente.Text = reader.GetString(14);
                             textSenhaCliente.Text = reader.GetString(15);
                             cmbBeneficiosCliente.Text = reader.GetString(16);
-                 
-                                rtnValido = true; 
+
+                            rtnValido = true;
                             return rtnValido;
                         }
 
@@ -179,64 +187,40 @@ namespace PIMQUATRO
             }
         }
 
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public static bool ExcluiCadastro(string cpf)
+        private bool ExcluiCadastroCliente()
         {
             bool rtnValido = false;
-            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            if (ValidaCampos())
             {
-                using (var command = new SqlCommand
+                DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
                 {
-                    Connection = connection,
-                    CommandType = CommandType.StoredProcedure
-                })
-                {
-                    command.CommandText = "Upd_WindowsForms_Cadastro_ExcluiCadastroCliente";
-                    try
+                    if (Cliente.ExcluiCadastro(maskedTextClienteCpf.Text))
                     {
-                        command.Parameters.AddWithValue("@Cpf", cpf);
-
-                        connection.Open();
-                        command.ExecuteNonQuery();
-
+                        MessageBox.Show("Cadastro excluido com sucesso");
+                        this.Hide();
+                        new FormularioCadastroFuncionarios().ShowDialog();
                         rtnValido = true;
+
                     }
-                    catch (SqlException ex)
+                    else
                     {
-                        MessageBox.Show("Erro ao excluir cadastro");
-                        MessageBox.Show("Erro encontrado: " + ex);
+                        MessageBox.Show("Não foi possível excluir o cadastro");
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Pesquise o CPF a ser excluido");
             }
             return rtnValido;
         }
 
-        private void btnExcluirCliente_Click(object sender, EventArgs e)
+
+
+        private void AtualizaCadastroCliennte()
         {
 
-            DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
-            {
-                if (Cliente.ExcluiCadastro(maskedTextClienteCpf.Text))
-                {
-                    MessageBox.Show("Cadastro excluido com sucesso");
-                    this.Hide();
-                    new FormularioCadastroFuncionarios().ShowDialog();
-
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possível excluir o cadastro");
-                }
-            }
-        }
-
-        private void btnAtualizar_Click_1(object sender, EventArgs e)
-        {
             string Email = txtEmaiCliente.Text;
             string Senha = textSenhaCliente.Text;
             string Nome = txtNomeCliente.Text;
@@ -256,22 +240,49 @@ namespace PIMQUATRO
             string Telefone = maskedTelefoneCliente.Text;
             string Beneficios = cmbBeneficiosCliente.Text;
 
-            DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
+
+            if (ValidaCampos())
             {
-                Cliente func = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, Beneficios, Cidade);
-                if (func.AtualizaCadastro())
+                DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+
+                if (DialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Cadastro atualizado com sucesso");
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possíevl atualizar o cadastro");
-                }
+                    Cliente func = new Cliente(Email, Senha, Nome, EstadoCivil, Rg, Sexo, Endereco, NumeroResidencia, Municipio, Bairro, Cep, Telefone, Estado, DataNascimento, Cpf, Beneficios, Cidade);
+                    if (func.AtualizaCadastro())
+                    {
+                        MessageBox.Show("Cadastro atualizado com sucesso");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possíevl atualizar o cadastro");
+                    }
+                }      
+            }
+            else
+            {
+                MessageBox.Show("Pesquise o CPF a ser Atualizado");
+            }
+        }
+
+        private void PesquisaCadastroCliente()
+        {
+            if (maskedTextClienteCpf.Text == "")
+            {
+                MessageBox.Show("Por favor , insira um valor no campo CPF");
+            }
+            else if (RetornaPesquisaCpf())
+
+            {
+                MessageBox.Show("Cadastro encontrado!");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
             }
         }
     }
 }
+
 
 
 
