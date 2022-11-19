@@ -49,9 +49,10 @@
             this.btnSeguradoras.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSeguradoras.ForeColor = System.Drawing.Color.Snow;
             this.btnSeguradoras.Image = ((System.Drawing.Image)(resources.GetObject("btnSeguradoras.Image")));
-            this.btnSeguradoras.Location = new System.Drawing.Point(0, 197);
+            this.btnSeguradoras.Location = new System.Drawing.Point(0, 263);
+            this.btnSeguradoras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSeguradoras.Name = "btnSeguradoras";
-            this.btnSeguradoras.Size = new System.Drawing.Size(217, 70);
+            this.btnSeguradoras.Size = new System.Drawing.Size(248, 93);
             this.btnSeguradoras.TabIndex = 8;
             this.btnSeguradoras.Text = " Seguradoras";
             this.btnSeguradoras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -66,9 +67,10 @@
             this.btnVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnVendas.ForeColor = System.Drawing.Color.Snow;
             this.btnVendas.Image = ((System.Drawing.Image)(resources.GetObject("btnVendas.Image")));
-            this.btnVendas.Location = new System.Drawing.Point(-1, 266);
+            this.btnVendas.Location = new System.Drawing.Point(-1, 355);
+            this.btnVendas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Size = new System.Drawing.Size(218, 68);
+            this.btnVendas.Size = new System.Drawing.Size(249, 91);
             this.btnVendas.TabIndex = 9;
             this.btnVendas.Text = " Vendas";
             this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -87,9 +89,8 @@
             this.panelPrincipal.Controls.Add(this.btnSeguradoras);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.panelPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(216, 647);
+            this.panelPrincipal.Size = new System.Drawing.Size(247, 615);
             this.panelPrincipal.TabIndex = 13;
             // 
             // btnCadastroCliente
@@ -104,8 +105,9 @@
             this.btnCadastroCliente.ForeColor = System.Drawing.Color.White;
             this.btnCadastroCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroCliente.Image")));
             this.btnCadastroCliente.Location = new System.Drawing.Point(-1, 0);
+            this.btnCadastroCliente.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastroCliente.Name = "btnCadastroCliente";
-            this.btnCadastroCliente.Size = new System.Drawing.Size(218, 70);
+            this.btnCadastroCliente.Size = new System.Drawing.Size(249, 93);
             this.btnCadastroCliente.TabIndex = 14;
             this.btnCadastroCliente.Text = "Cadastro de Clientes";
             this.btnCadastroCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -122,9 +124,10 @@
             this.btnCadastroFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastroFuncionario.ForeColor = System.Drawing.Color.White;
             this.btnCadastroFuncionario.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastroFuncionario.Image")));
-            this.btnCadastroFuncionario.Location = new System.Drawing.Point(-1, 69);
+            this.btnCadastroFuncionario.Location = new System.Drawing.Point(-1, 92);
+            this.btnCadastroFuncionario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastroFuncionario.Name = "btnCadastroFuncionario";
-            this.btnCadastroFuncionario.Size = new System.Drawing.Size(218, 65);
+            this.btnCadastroFuncionario.Size = new System.Drawing.Size(249, 87);
             this.btnCadastroFuncionario.TabIndex = 16;
             this.btnCadastroFuncionario.Text = "Cadastro de Funcionários";
             this.btnCadastroFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -140,9 +143,10 @@
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnFechar.ForeColor = System.Drawing.Color.Snow;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(-1, 399);
+            this.btnFechar.Location = new System.Drawing.Point(-1, 532);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(219, 64);
+            this.btnFechar.Size = new System.Drawing.Size(250, 85);
             this.btnFechar.TabIndex = 13;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -157,9 +161,10 @@
             this.btnCadastrarBeneficiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastrarBeneficiario.ForeColor = System.Drawing.Color.Snow;
             this.btnCadastrarBeneficiario.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarBeneficiario.Image")));
-            this.btnCadastrarBeneficiario.Location = new System.Drawing.Point(-1, 134);
+            this.btnCadastrarBeneficiario.Location = new System.Drawing.Point(-1, 179);
+            this.btnCadastrarBeneficiario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCadastrarBeneficiario.Name = "btnCadastrarBeneficiario";
-            this.btnCadastrarBeneficiario.Size = new System.Drawing.Size(218, 68);
+            this.btnCadastrarBeneficiario.Size = new System.Drawing.Size(249, 91);
             this.btnCadastrarBeneficiario.TabIndex = 12;
             this.btnCadastrarBeneficiario.Text = " Beneficiários";
             this.btnCadastrarBeneficiario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -174,9 +179,10 @@
             this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnRelatorio.ForeColor = System.Drawing.Color.Snow;
             this.btnRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("btnRelatorio.Image")));
-            this.btnRelatorio.Location = new System.Drawing.Point(0, 334);
+            this.btnRelatorio.Location = new System.Drawing.Point(0, 445);
+            this.btnRelatorio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(217, 68);
+            this.btnRelatorio.Size = new System.Drawing.Size(248, 91);
             this.btnRelatorio.TabIndex = 10;
             this.btnRelatorio.Text = "Apólice e Relatório";
             this.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -186,20 +192,20 @@
             // panelForms
             // 
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelForms.Location = new System.Drawing.Point(216, 0);
-            this.panelForms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelForms.Location = new System.Drawing.Point(247, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1140, 462);
+            this.panelForms.Size = new System.Drawing.Size(967, 615);
             this.panelForms.TabIndex = 14;
             // 
             // FormularioMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1356, 647);
+            this.ClientSize = new System.Drawing.Size(1214, 615);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.panelPrincipal);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormularioMenu";
             this.Text = "menu";
             this.panelPrincipal.ResumeLayout(false);

@@ -36,16 +36,18 @@
             // 
             // txtNumeroDocumento
             // 
-            this.txtNumeroDocumento.Location = new System.Drawing.Point(221, 90);
+            this.txtNumeroDocumento.Location = new System.Drawing.Point(253, 120);
+            this.txtNumeroDocumento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
-            this.txtNumeroDocumento.Size = new System.Drawing.Size(200, 23);
+            this.txtNumeroDocumento.Size = new System.Drawing.Size(228, 27);
             this.txtNumeroDocumento.TabIndex = 0;
             // 
             // btnGerarApolice
             // 
-            this.btnGerarApolice.Location = new System.Drawing.Point(70, 70);
+            this.btnGerarApolice.Location = new System.Drawing.Point(80, 93);
+            this.btnGerarApolice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGerarApolice.Name = "btnGerarApolice";
-            this.btnGerarApolice.Size = new System.Drawing.Size(109, 61);
+            this.btnGerarApolice.Size = new System.Drawing.Size(125, 81);
             this.btnGerarApolice.TabIndex = 1;
             this.btnGerarApolice.Text = "Gerar apólice";
             this.btnGerarApolice.UseVisualStyleBackColor = true;
@@ -53,18 +55,21 @@
             // 
             // btnGerarRelatorio
             // 
-            this.btnGerarRelatorio.Location = new System.Drawing.Point(70, 204);
+            this.btnGerarRelatorio.Location = new System.Drawing.Point(80, 272);
+            this.btnGerarRelatorio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGerarRelatorio.Name = "btnGerarRelatorio";
-            this.btnGerarRelatorio.Size = new System.Drawing.Size(109, 65);
+            this.btnGerarRelatorio.Size = new System.Drawing.Size(125, 87);
             this.btnGerarRelatorio.TabIndex = 2;
             this.btnGerarRelatorio.Text = "btnRelatorio";
             this.btnGerarRelatorio.UseVisualStyleBackColor = true;
+            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
             // 
             // btnGerarContrato
             // 
-            this.btnGerarContrato.Location = new System.Drawing.Point(70, 137);
+            this.btnGerarContrato.Location = new System.Drawing.Point(80, 183);
+            this.btnGerarContrato.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGerarContrato.Name = "btnGerarContrato";
-            this.btnGerarContrato.Size = new System.Drawing.Size(109, 61);
+            this.btnGerarContrato.Size = new System.Drawing.Size(125, 81);
             this.btnGerarContrato.TabIndex = 3;
             this.btnGerarContrato.Text = "Gerar Contrato";
             this.btnGerarContrato.UseVisualStyleBackColor = true;
@@ -72,13 +77,15 @@
             // 
             // FormularioRelatorio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(914, 600);
             this.Controls.Add(this.btnGerarContrato);
             this.Controls.Add(this.btnGerarRelatorio);
             this.Controls.Add(this.btnGerarApolice);
             this.Controls.Add(this.txtNumeroDocumento);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormularioRelatorio";
             this.Text = "FormularioRelatorio";
             this.ResumeLayout(false);

@@ -24,8 +24,11 @@
     <Compile Remove="CadastroFuncionario.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="IronPdf" Version="2022.9.9056" />
     <PackageReference Include="itext7" Version="7.2.4" />
+    <PackageReference Include="PdfiumViewer.Native.x86.no_v8-no_xfa" Version="2018.4.8.256" />
     <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.17" />
+    <PackageReference Include="Syncfusion.Pdf.WinForms" Version="20.3.0.57" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
   <ItemGroup>

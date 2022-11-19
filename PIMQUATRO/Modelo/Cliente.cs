@@ -17,26 +17,26 @@ namespace PIMQUATRO.Modelo
 {
     public class Cliente
     {
-        private string _email { get; set; }
-        private string _senha { get; set; }
-        private string _nome { get; set; }
-        private string _estadoCivil { get; set; }
-        private string _rg { get; set; }
-        private string _sexo { get; set; }
-        private string _endereco { get; set; }
-        private string _numeroResidencia { get; set; }
-        private string _municipio { get; set; }
-        private string _bairro { get; set; }
-        private string _cep { get; set; }
-        private string _telefone { get; set; }
-        private string _estado { get; set; }
-        private string _beneficios { get; set; }
-        private string _cidade { get; set; }
-        private string _cpf { get; set; }
-        private DateTime _dataNascimento { get; set; }
-        private string _dataVigenciaInicial { get; set; }
-        private string _dataVigenciaFinal { get; set; }
-        private string _nomeSeguradora { get; set; }
+        public string _email { get; set; }
+        public string _senha { get; set; }
+        public string _nome { get; set; }
+        public string _estadoCivil { get; set; }
+        public string _rg { get; set; }
+        public string _sexo { get; set; }
+        public string _endereco { get; set; }
+        public string _numeroResidencia { get; set; }
+        public string _municipio { get; set; }
+        public string _bairro { get; set; }
+        public string _cep { get; set; }
+        public string _telefone { get; set; }
+        public string _estado { get; set; }
+        public string _beneficios { get; set; }
+        public string _cidade { get; set; }
+        public string _cpf { get; set; }
+        public DateTime _dataNascimento { get; set; }
+        public string _dataVigenciaInicial { get; set; }
+        public string _dataVigenciaFinal { get; set; }
+        public string _nomeSeguradora { get; set; }
 
         public Cliente(string email, string senha, string nome, string estadoCivil, string rg, string sexo, string endereco, string numeroResidencia, string municipio, string bairro, string cep, string telefone, string estado, DateTime dataNascimento, string cpf, string beneficios, string cidade, string dataVigenciaInicial = "", string dataVigenciaFinal = "", string nomeSeguradora = "")
         {
@@ -60,6 +60,11 @@ namespace PIMQUATRO.Modelo
             _dataVigenciaFinal = dataVigenciaFinal;
             _dataVigenciaInicial = dataVigenciaInicial;
             _nomeSeguradora = nomeSeguradora;
+        }
+
+        public Cliente()
+        {
+
         }
 
 
@@ -226,6 +231,41 @@ namespace PIMQUATRO.Modelo
                 }
             }
             return rtnValido;
+        }
+
+        public List<Cliente> GetTodosClientes()
+        {
+            List<Cliente> resultClientes = new List<Cliente>();
+
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandText = "SELECT * FROM tbClientes";
+
+                var reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    var cliente = new Cliente
+                    {
+                        _nome = reader[1]?.ToString(),
+                        _rg = reader[2]?.ToString(),
+                        _cpf = reader[3]?.ToString(),
+                        _sexo = reader[4]?.ToString(),
+                        _dataNascimento = Convert.ToDateTime(reader[5]?.ToString()),
+                        _estadoCivil = reader[6]?.ToString(),
+                        _cidade = reader[7]?.ToString(),
+                        _email = reader[16]?.ToString()
+                    };
+
+                    resultClientes.Add(cliente);
+                }
+                connection.Close();
+            }
+            return resultClientes;
         }
     }
 }
