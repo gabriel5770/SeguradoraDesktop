@@ -102,7 +102,12 @@ namespace PIMQUATRO.Modelo
                         }
                         else if (result == 2)
                         {
-                            MessageBox.Show("Não há Cliente cadastrado com este CPF");
+                            MessageBox.Show("Há Cliente cadastrado com este RG");
+
+                        }
+                        else if (result == 3)
+                        {
+                            MessageBox.Show("Há Cliente cadastrado com este EMAIL");
 
                         }
                         else
@@ -113,7 +118,7 @@ namespace PIMQUATRO.Modelo
                     {
                         MessageBox.Show("Erro ao cadastrar Beneficiario");
                         MessageBox.Show("Erro encontrado: " + ex);
-                        rtnValido = false;
+ 
                     }
                     return rtnValido;
                 }
