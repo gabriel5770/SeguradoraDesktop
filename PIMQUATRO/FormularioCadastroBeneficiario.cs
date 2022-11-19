@@ -40,33 +40,24 @@ namespace PIMQUATRO
             new FormularioCadastroClientes().ShowDialog();
         }
 
-
-        private bool ValidaCampos()
+        private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            if (txtEmailBeneficiario.Text == " " || txtNomeBeneficiario.Text == "" || cmbEstadoCivilBeneficiario.Text == "" ||
-                txtNumeroResidenciaBeneficiario.Text == "" || maskedTextRgBeneficiario.Text == "" || maskedTextCpfBeneficiario.Text == "" ||
-                cmbSexoBeneficiario.Text == "" || txtEnderecoBeneficiario.Text == "" || txtCidadeBeneficiario.Text == "" || cmbEstadoBeneficiario.Text == "" ||
-                txtMunicipioBeneficiario.Text == "" || txtBairroBeneficiario.Text == "" || maskedTextCepBeneficiario.Text == "" || maskedTelefoneBeneficiario.Text == ""
-                || txtCpfCliente.Text == "")
-            {
-                MessageBox.Show("Há campos que não foram preenchidos , revise");
-                return false;
-            }
-            return true;
+            AtualizaCadastroBeneficiario();
+        }
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            PesquisaDadosBeneficiario();
         }
 
+        private void btnExcluirBeneficiario_Click(object sender, EventArgs e)
+        {
+            ExcluiCadastroBeneficiario();
+        }
 
         private void PreencheComboCadastroBeneficiario()
         {
-            cmbEstadoCivilBeneficiario.Items.Add("Solteiro");
-            cmbEstadoCivilBeneficiario.Items.Add("Casado");
-            cmbEstadoCivilBeneficiario.Items.Add("Viúvo");
-            cmbSexoBeneficiario.Items.Add("Masculino");
-            cmbSexoBeneficiario.Items.Add("Feminino");
-            cmbEstadoBeneficiario.Items.Add("SP");
-            cmbEstadoBeneficiario.Items.Add("RJ");
-            cmbEstadoBeneficiario.Items.Add("MG");
 
+            CarregaComboEstadoCivil();
         }
 
         private void ObtemDadosBeneficiario()
@@ -101,22 +92,6 @@ namespace PIMQUATRO
             }
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
-        {
-            if (maskedTextCpfBeneficiario.Text == "")
-            {
-                MessageBox.Show("Por favor , insira um valor no campo CPF");
-            }
-            else if (RetornaPesquisaCpf())
-
-            {
-                MessageBox.Show("Cadastro encontrado!");
-            }
-            else
-            {
-                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
-            }
-        }
 
         private bool RetornaPesquisaCpf()
         {
@@ -168,26 +143,7 @@ namespace PIMQUATRO
             }
         }
 
-        private void btnExcluirBeneficiario_Click(object sender, EventArgs e)
-        {
-            DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
-            {
-                if (Beneficiario.ExcluiCadastro(maskedTextCpfBeneficiario.Text))
-                {
-                    MessageBox.Show("Cadastro excluido com sucesso");
-                    this.Hide();
-                    new FormularioCadastroBeneficiario().ShowDialog();
-
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possível excluir o cadastro");
-                }
-            }
-        }
-
-        private void btnAtualizar_Click(object sender, EventArgs e)
+        private void AtualizaCadastroBeneficiario()
         {
             string Email = txtEmailBeneficiario.Text;
             string Nome = txtNomeBeneficiario.Text;
@@ -206,22 +162,97 @@ namespace PIMQUATRO
             string Telefone = maskedTelefoneBeneficiario.Text;
             string CpfCliente = txtCpfCliente.Text;
 
-
-
-
-            DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
+            if (ValidaCampos())
             {
-                Beneficiario beneficiaro = new Beneficiario(Email,Nome, EstadoCivil, DataNascimento, NumeroResidencia, Rg, Cpf, Sexo, Endereco, Cidade, Estado, Municipio, Bairro, Cep, Telefone, CpfCliente);
-                 if (beneficiaro.AtualizaCadastroBeneficiario(Cpf))
+                DialogResult = MessageBox.Show("Deseja atualizar o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Cadastro atualizado com sucesso");
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possíevl atualizar o cadastro");
+                    Beneficiario beneficiaro = new Beneficiario(Email, Nome, EstadoCivil, DataNascimento, NumeroResidencia, Rg, Cpf, Sexo, Endereco, Cidade, Estado, Municipio, Bairro, Cep, Telefone, CpfCliente);
+                    if (beneficiaro.AtualizaCadastroBeneficiario(Cpf))
+                    {
+                        MessageBox.Show("Cadastro atualizado com sucesso");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possíevl atualizar o cadastro");
+                    }
                 }
             }
+           else
+            {
+                MessageBox.Show("Pesquise o CPF a ser atualizado");
+            }
         }
+
+        private void PesquisaDadosBeneficiario()
+        {
+
+            if (maskedTextCpfBeneficiario.Text == "")
+            {
+                MessageBox.Show("Por favor , insira um valor no campo CPF");
+            }
+            else if (RetornaPesquisaCpf())
+
+            {
+                MessageBox.Show("Cadastro encontrado!");
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
+            }
+        }
+
+        private void ExcluiCadastroBeneficiario()
+        {
+            if (ValidaCampos())
+            {
+                DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    if (Beneficiario.ExcluiCadastro(maskedTextCpfBeneficiario.Text))
+                    {
+                        MessageBox.Show("Cadastro excluido com sucesso");
+                        this.Hide();
+                        new FormularioCadastroBeneficiario().ShowDialog();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível excluir o cadastro");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pesquise o CPF a ser excluido");
+            }
+        }
+
+        private bool ValidaCampos()
+        {
+            if (txtEmailBeneficiario.Text == " " || txtNomeBeneficiario.Text == "" || cmbEstadoCivilBeneficiario.Text == "" ||
+                txtNumeroResidenciaBeneficiario.Text == "" || maskedTextRgBeneficiario.Text == "" || maskedTextCpfBeneficiario.Text == "" ||
+                cmbSexoBeneficiario.Text == "" || txtEnderecoBeneficiario.Text == "" || txtCidadeBeneficiario.Text == "" || cmbEstadoBeneficiario.Text == "" ||
+                txtMunicipioBeneficiario.Text == "" || txtBairroBeneficiario.Text == "" || maskedTextCepBeneficiario.Text == "" || maskedTelefoneBeneficiario.Text == ""
+                || txtCpfCliente.Text == "")
+            {
+                MessageBox.Show("Há campos que não foram preenchidos , revise");
+                return false;
+            }
+            return true;
+        }
+
+        private void CarregaComboEstadoCivil()
+        {
+            cmbEstadoCivilBeneficiario.Items.Add("Solteiro");
+            cmbEstadoCivilBeneficiario.Items.Add("Casado");
+            cmbEstadoCivilBeneficiario.Items.Add("Viúvo");
+            cmbSexoBeneficiario.Items.Add("Masculino");
+            cmbSexoBeneficiario.Items.Add("Feminino");
+            cmbEstadoBeneficiario.Items.Add("SP");
+            cmbEstadoBeneficiario.Items.Add("RJ");
+            cmbEstadoBeneficiario.Items.Add("MG");
+        }
+
     }
 }
