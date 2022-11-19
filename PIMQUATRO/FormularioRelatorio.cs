@@ -41,8 +41,10 @@ namespace PIMQUATRO
             else
             {
                 Apolice ap = new Apolice(cpfCliente);
-                ap.RetornaDadosPdfApolice();
-                ap.GerarPdf();
+                if (ap.RetornaDadosPdfApolice())
+                {
+                    ap.GerarPdf();
+                }
             }
         }
 

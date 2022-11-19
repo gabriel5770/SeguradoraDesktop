@@ -43,30 +43,39 @@ namespace PIMQUATRO.Modelo
 
         }
 
-        public void RetornaDadosPdfApolice()
+        public bool RetornaDadosPdfApolice()
         {
-
+            bool rtnValido = false;
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
                 connection.Open();
 
                 using (var command = new SqlCommand(
-                      $"SELECT top(1) tbclientes.nome, tbclientes.cpf,tbapolice.dataVigenciaInicial, tbapolice.dataVigenciaFinal,tbapolice.NumeroContrato, tbSeguradoras.Nome, tbSeguradoras.Cnpj FROM tbapolice inner join tbclientes ON tbapolice.id = tbclientes.idApolice  inner join tbseguradoras ON tbclientes.idSeguradora = tbseguradoras.id where tbclientes.cpf = {_cpf}", connection))
+                      $"SELECT top(1) tbclientes.nome, tbclientes.cpf,tbapolice.dataVigenciaInicial, tbapolice.dataVigenciaFinal,tbapolice.NumeroContrato, tbSeguradoras.Nome, tbSeguradoras.Cnpj FROM tbapolice inner join tbclientes ON tbapolice.id = tbclientes.idApolice  inner join tbseguradoras ON tbclientes.idSeguradora = tbseguradoras.id where tbclientes.cpf = '{_cpf}'", connection))
 
                     try
                     {
                         SqlDataReader reader = command.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            _nome = reader.GetString(0);
-                            _cpf = reader.GetString(1);
-                            _DataVigenciaInicial = reader.GetDateTime(2).ToString("dd/MM/yyyy");
-                            _DataVigenciaFinal = reader.GetDateTime(3).ToString("dd/MM/yyyy");
-                            _numeroApolice = reader.GetInt64(4).ToString();
-                            _NomeSeguradora = reader.GetString(5);
-                            _CnpjSeguradora = reader.GetString(6);
-                        }
 
+                        if (reader.Read())
+                        {
+                            while (reader.Read())
+                            {
+                                _nome = reader.GetString(0);
+                                _cpf = reader.GetString(1);
+                                _DataVigenciaInicial = reader.GetDateTime(2).ToString("dd/MM/yyyy");
+                                _DataVigenciaFinal = reader.GetDateTime(3).ToString("dd/MM/yyyy");
+                                _numeroApolice = reader.GetInt64(4).ToString();
+                                _NomeSeguradora = reader.GetString(5);
+                                _CnpjSeguradora = reader.GetString(6);
+                            }
+                            rtnValido = true;
+                           
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não foi encontrado registro com este CPF");
+                        }
                     }
                     catch (SqlException ex)
                     {
@@ -74,6 +83,8 @@ namespace PIMQUATRO.Modelo
                         MessageBox.Show("Erro encontrado: " + ex);
 
                     }
+
+                return rtnValido;
             }
         }
 
