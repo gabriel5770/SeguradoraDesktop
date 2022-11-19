@@ -139,20 +139,28 @@ namespace PIMQUATRO
 
         private void btnExcluirFuncionario_Click(object sender, EventArgs e)
         {
-            DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
+            if (ValidaCampos())
             {
-                if (Funcionario.ExcluiCadastro(maskedTextFuncCpf.Text))
+                DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Cadastro excluido com sucesso");
-                    this.Hide();
-                    new FormularioCadastroFuncionarios().ShowDialog();
+                    if (Funcionario.ExcluiCadastro(maskedTextFuncCpf.Text))
+                    {
+                        MessageBox.Show("Cadastro excluido com sucesso");
+                        this.Hide();
+                        new FormularioCadastroFuncionarios().ShowDialog();
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível excluir o cadastro");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Não foi possível excluir o cadastro");
-                }
+                  
+            }
+            else
+            {
+                MessageBox.Show("Pesquise o CPF a ser excluido");
             }
         }
 
@@ -189,6 +197,20 @@ namespace PIMQUATRO
                     MessageBox.Show("Não foi possíevl atualizar o cadastro");
                 }
             }
+        }
+
+        private bool ValidaCampos()
+        {
+            if (textNomeFunc.Text == "" || maskedTextFuncCpf.Text == "" || maskedTextRgFunc.Text == ""
+                || cmbCargoFunc.Text == "" || cmdSexoFunc.Text == "" || cmdEstadoCivilFunc.Text == ""
+                || textEmailFunc.Text == "" || maskedTelefoneFuncionario.Text == "" || textSenhaFunc.Text == ""
+                || textEnderecoFunc.Text == "" || textNumeroResidenciaFunc.Text == "" || maskedTextCepFunc.Text == ""
+                || textBairroFunc.Text == "" || textCidadeFunc.Text == "" || textMunicipioFunc.Text == "" || cmbEstadoFunc.Text == "")
+            {
+                MessageBox.Show("Há campos não preenchidos , revise");
+                return false;
+            }
+            return true;
         }
     }
 }
