@@ -25,37 +25,71 @@ namespace PIMQUATRO
             new FormularioMenu().ShowDialog();
         }
 
-      
+
 
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             ObtemDadosSeguradora();
         }
 
-        protected void ObtemDadosSeguradora()
-        {
-            string NomeSeguradora = txtNomeSeguradora.Text;
-            string CnpjSeguradora = txtCnpjSeguradora.Text;
-
-
-            Seguradora seg = new Seguradora(NomeSeguradora, CnpjSeguradora);
-
-
-            if (seg.Cadastrar())
-            {
-                MessageBox.Show("Seguradora Cadastrada com sucessso");
-                this.Hide();
-            }
-        }
-
         private void btnExcluirCliente_Click(object sender, EventArgs e)
         {
-
+            ExcluiCadastroSeguradora();
         }
 
         private void btnEditarCliente_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private void ExcluiCadastroSeguradora()
+        {
+            string NomeSeguradora = txtNomeSeguradora.Text;
+            string CnpjSeguradora = txtCnpjSeguradora.Text;
+
+            Seguradora seg = new Seguradora(CnpjSeguradora, NomeSeguradora);
+
+            DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if (DialogResult == DialogResult.Yes)
+            {
+                if (ValidaCampos())
+                {
+                    if (seg.ExcluiCadastroSeguradora())
+                    {
+                        MessageBox.Show("Seguradora excluída com sucessso");
+                    }
+                }
+            }
+        }
+
+        private void ObtemDadosSeguradora()
+        {
+            string NomeSeguradora = txtNomeSeguradora.Text;
+            string CnpjSeguradora = txtCnpjSeguradora.Text;
+
+
+            Seguradora seg = new Seguradora(CnpjSeguradora, NomeSeguradora);
+
+            if (ValidaCampos())
+            {
+                if (seg.Cadastrar())
+                {
+                    MessageBox.Show("Seguradora Cadastrada com sucessso");
+                }
+            }
+        }
+
+
+        private bool ValidaCampos()
+        {
+            if (txtNomeSeguradora.Text == "" || txtCnpjSeguradora.Text == "")
+            {
+                MessageBox.Show("Há campos não preenchidos , revise");
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace PIMQUATRO.Modelo
         private string _nome { get; set; }
         private string _cnpj { get; set; }
 
-        public Seguradora(string nome, string cnpj)
+        public Seguradora(string cnpj, string nome = "")
         {
             _nome = nome;
             _cnpj = cnpj;
@@ -43,8 +43,13 @@ namespace PIMQUATRO.Modelo
                             command.Parameters.AddWithValue("@Nome", _nome);
                             command.Parameters.AddWithValue("@Cnpj", _cnpj);
 
+                          var returnParameter = command.Parameters.Add("@CadastroValido", SqlDbType.Int);
+                            returnParameter.Direction = ParameterDirection.ReturnValue;
+
                             connection.Open();
                             command.ExecuteNonQuery();
+
+                            var result = (int)returnParameter.Value;
 
                             return true;
 
@@ -74,8 +79,7 @@ namespace PIMQUATRO.Modelo
                         command.CommandText = "Ins_WindowsForms_Cadastro_ExcluiCadastroSeguradora";
                         try
                         {
-                            command.Parameters.AddWithValue("@Nome", _nome);
-                            command.Parameters.AddWithValue("@Cnpj", _cnpj);
+                             command.Parameters.AddWithValue("@Cnpj", _cnpj);
 
                             connection.Open();
                             command.ExecuteNonQuery();
@@ -85,7 +89,7 @@ namespace PIMQUATRO.Modelo
                         }
                         catch (SqlException ex)
                         {
-                            MessageBox.Show("Erro ao cadastrar seguradora");
+                            MessageBox.Show("Erro ao excluir cadastro da seguradora");
                             MessageBox.Show("Erro encontrado: " + ex);
                             return false;
                         }
