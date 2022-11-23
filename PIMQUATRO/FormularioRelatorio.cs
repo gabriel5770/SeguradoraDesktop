@@ -104,7 +104,7 @@ namespace PIMQUATRO
 
         private string GetHtml()
         {
-            string html = "<h2>Relatorio Clientes</h2><table><thead><tr><th>Nome</th><th>Rg</th><th>Cpf</th><th>Sexo</th><th>Data Nascimento</th><th>Estado Civil</th><th>Cidade</th><th>Email</th></tr><thead><tbody>";
+            string html = "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<style>\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n}\r\nh2 {\r\n    text-align: center;\r\n}\r\n\r\ntr:nth-child(even) {\r\n  background-color: #90cefb;\r\n}\r\n</style>\r\n</head>\r\n<body>\r\n\r\n<h2>Relatorio Cliente</h2>\r\n\r\n<table>\r\n  <tr>\r\n    <th>Nome</th>\r\n    <th>RG</th>\r\n    <th>CPF</th>\r\n    <th>Sexo</th>\r\n    <th>Data Nascimento</th>\r\n    <th>Estado Civil</th>\r\n    <th>Cidade</th>\r\n    <th>e-mail</th>\r\n  </tr>\r\n\r\n  <tr>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n  </tr>\r\n  \r\n</table>\r\n\r\n</body>\r\n</html>\r\n";
             return html;
         }
     }

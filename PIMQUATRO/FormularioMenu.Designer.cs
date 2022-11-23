@@ -184,7 +184,7 @@
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(248, 91);
             this.btnRelatorio.TabIndex = 10;
-            this.btnRelatorio.Text = "Apólice e Relatório";
+            this.btnRelatorio.Text = "Documentos";
             this.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRelatorio.UseVisualStyleBackColor = false;
             this.btnRelatorio.Click += new System.EventHandler(this.btnApolice_Click);
@@ -194,7 +194,7 @@
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelForms.Location = new System.Drawing.Point(247, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(967, 615);
+            this.panelForms.Size = new System.Drawing.Size(967, 616);
             this.panelForms.TabIndex = 14;
             // 
             // FormularioMenu

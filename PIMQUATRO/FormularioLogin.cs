@@ -81,5 +81,10 @@ namespace PIMQUATRO
             }
             return true;
         }
+
+        private void PageLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
