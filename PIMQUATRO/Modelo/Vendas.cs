@@ -37,7 +37,7 @@ namespace PIMQUATRO.Modelo
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
 
-                SqlDataAdapter da = new SqlDataAdapter("Select * from tbVendas", con); // pega os dados da tabala funcionario
+                SqlDataAdapter da = new SqlDataAdapter("Select * from tbVenda", con); // pega os dados da tabala funcionario
 
                 DataSet ds = new DataSet(); // cria dataset
 
