@@ -34,9 +34,9 @@ namespace PIMQUATRO
 
         private bool ValidaCampos()
         {
-            if (txtEmail.Text == "" || txtNome.Text == "" || dateTimePickerVenda.Text == ""
-                || maskedCpf.Text == "" || cmbSexoVendas.Text == "" 
-                || maskedTelefone.Text == "" || cmdSeguro.Text == "") ;
+            if (txtEmail.Text == " " || txtNome.Text ==  " " || dateTimePickerVenda.Text == " "
+                || maskedCpf.Text == " " || cmbSexoVendas.Text == " " 
+                || maskedTelefone.Text == " " || cmdSeguro.Text == " ")
              
             {
                 MessageBox.Show("Há campos não preenchidos , revise");

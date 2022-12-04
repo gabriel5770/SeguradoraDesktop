@@ -86,8 +86,7 @@ namespace PIMQUATRO
                 if (beneficiario.Cadastrar())
                 {
                     MessageBox.Show("Beneficiario cadastrado com sucesso");
-                    this.Hide();
-                    new FormularioCadastroClientes().ShowDialog();
+                   
                 }
             }
         }

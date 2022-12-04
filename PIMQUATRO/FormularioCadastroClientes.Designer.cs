@@ -601,6 +601,7 @@
             this.txtDataVigenciaInicial.Name = "txtDataVigenciaInicial";
             this.txtDataVigenciaInicial.Size = new System.Drawing.Size(158, 27);
             this.txtDataVigenciaInicial.TabIndex = 105;
+            this.txtDataVigenciaInicial.ValueChanged += new System.EventHandler(this.txtDataVigenciaInicial_ValueChanged);
             // 
             // label22
             // 

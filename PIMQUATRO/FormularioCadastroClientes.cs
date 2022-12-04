@@ -128,8 +128,8 @@ namespace PIMQUATRO
                     if (cliente.Cadastrar())
                     {
                         MessageBox.Show("Cliente cadastrado com sucesso");
-                        this.Hide();
-                        new FormularioCadastroClientes().ShowDialog();
+                     
+                       
                     }
                 }
             }
@@ -279,6 +279,11 @@ namespace PIMQUATRO
             {
                 MessageBox.Show("Não foi possível encontrar cadastro com este CPF");
             }
+        }
+
+        private void txtDataVigenciaInicial_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

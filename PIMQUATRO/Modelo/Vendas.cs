@@ -62,7 +62,7 @@ namespace PIMQUATRO.Modelo
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
                 //comando para ser usado no banco
-                string sql = "INSERT INTO [tbVendas] (Nome, Email, DataNascimento, Sexo, Telefone, Sexo, Cpf, Seguro) VALUES (@Nome, @Email, @DataNascimento, @Sexo, @Telefone, @Sexo, @Cpf, @Seguro)";
+                string sql = "INSERT INTO [tbVenda] (Nome, Email,Nascimento, Sexo, Telefone, Cpf, Seguro) VALUES (@Nome, @Email, @Nascimento, @Sexo, @Telefone, @Cpf, @Seguro)";
 
 
 
@@ -73,7 +73,7 @@ namespace PIMQUATRO.Modelo
 
                     comando.Parameters.AddWithValue("@Nome", Nome.Trim());
                     comando.Parameters.AddWithValue("@Email", Email.Trim());
-                    comando.Parameters.AddWithValue("@DataNascimento", Nascimento);
+                    comando.Parameters.AddWithValue("@Nascimento", Nascimento);
                     comando.Parameters.AddWithValue("@Sexo",Sexo.Trim());
                     comando.Parameters.AddWithValue("@Telefone", Telefone.Trim());
                     comando.Parameters.AddWithValue("@Cpf", Cpf.Trim());
@@ -103,42 +103,7 @@ namespace PIMQUATRO.Modelo
 
         }
      
-        public  bool AtualizarVendas()
-        {
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
-            {
-
-                //comando para ser usado no banco
-                string sql = " UPDATE [Vendas] SET Nome = @Nome,Email= @Email,Salario = @Salario, Sexo = @Sexo,TipoContrato = @TipoContrato," +
-                "DataAtualizacao = @DataAtualizacao WHERE iD = @id";
-
-                SqlCommand comando = new SqlCommand(sql, con); // passa o comando ao banco e a string de conexão
-
-                
-                comando.Parameters.AddWithValue("@Nome", Nome);
-                comando.Parameters.AddWithValue("@Email", Email);
-                comando.Parameters.AddWithValue("@DataNascimento", Nascimento);
-                comando.Parameters.AddWithValue("@Sexo", Sexo);
-                comando.Parameters.AddWithValue("@Telefone", Telefone);
-                comando.Parameters.AddWithValue("@Cpf", Cpf);
-                comando.Parameters.AddWithValue("@Seguro", Seguro);
-
-                con.Open(); // abre o banco
-
-                if (comando.ExecuteNonQuery() > 0)// ele retorna um inteiro equivalente ao numero de linhas que foi afetada ,'
-                {
-                    con.Close(); // fecha
-                    return true;
-
-                }
-                else
-                {
-                    con.Close(); // fecha
-                    return false;
-                }
-            }
-
-        }
+   
         public bool ExcluirVendas(int id)
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))

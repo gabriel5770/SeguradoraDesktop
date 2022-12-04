@@ -82,8 +82,7 @@ namespace PIMQUATRO
             {
                 if (func.Cadastrar())
                 {
-                    this.Hide();
-                    new FormularioMenu().ShowDialog();
+                  
                     MessageBox.Show("Funcionário cadastrado com sucesso");
                 }
             }
