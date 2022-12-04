@@ -32,7 +32,6 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.maskedNascimento = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.maskedTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +43,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmdSeguro = new System.Windows.Forms.ComboBox();
             this.btnCadastrarVendas = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.dateTimePickerVenda = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVendas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,15 +79,6 @@
             this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Email";
-            // 
-            // maskedNascimento
-            // 
-            this.maskedNascimento.Location = new System.Drawing.Point(425, 79);
-            this.maskedNascimento.Mask = "00/00/0000";
-            this.maskedNascimento.Name = "maskedNascimento";
-            this.maskedNascimento.Size = new System.Drawing.Size(125, 27);
-            this.maskedNascimento.TabIndex = 4;
-            this.maskedNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // label2
             // 
@@ -135,11 +127,14 @@
             // 
             // dataGridVendas
             // 
+            this.dataGridVendas.AllowUserToAddRows = false;
+            this.dataGridVendas.AllowUserToDeleteRows = false;
             this.dataGridVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridVendas.Location = new System.Drawing.Point(36, 211);
             this.dataGridVendas.Name = "dataGridVendas";
             this.dataGridVendas.RowHeadersWidth = 51;
             this.dataGridVendas.RowTemplate.Height = 29;
+            this.dataGridVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridVendas.Size = new System.Drawing.Size(883, 344);
             this.dataGridVendas.TabIndex = 13;
             // 
@@ -200,11 +195,35 @@
             this.btnCadastrarVendas.UseVisualStyleBackColor = false;
             this.btnCadastrarVendas.Click += new System.EventHandler(this.btnCadastrarVendas_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(664, 562);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(108, 41);
+            this.btnExcluir.TabIndex = 57;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // dateTimePickerVenda
+            // 
+            this.dateTimePickerVenda.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerVenda.Location = new System.Drawing.Point(425, 77);
+            this.dateTimePickerVenda.Name = "dateTimePickerVenda";
+            this.dateTimePickerVenda.Size = new System.Drawing.Size(131, 27);
+            this.dateTimePickerVenda.TabIndex = 58;
+            // 
             // FormularioVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(973, 616);
+            this.Controls.Add(this.dateTimePickerVenda);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCadastrarVendas);
             this.Controls.Add(this.cmdSeguro);
             this.Controls.Add(this.label6);
@@ -216,7 +235,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.maskedTelefone);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.maskedNascimento);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.txtEmail);
@@ -238,7 +256,6 @@
         private TextBox txtEmail;
         private Label lbl1;
         private Label label1;
-        private MaskedTextBox maskedNascimento;
         private Label label2;
         private MaskedTextBox maskedTelefone;
         private Label label3;
@@ -250,5 +267,7 @@
         private Label label6;
         private ComboBox cmdSeguro;
         private Button btnCadastrarVendas;
+        private Button btnExcluir;
+        private DateTimePicker dateTimePickerVenda;
     }
 }

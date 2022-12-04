@@ -1,4 +1,5 @@
-﻿using PIMQUATRO.Modelo;
+﻿using iText.Kernel.Pdf.Canvas.Wmf;
+using PIMQUATRO.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,55 +32,54 @@ namespace PIMQUATRO
             dataGridVendas.DataSource = Vendas.ConsultarVendas(); //passsa a consulta para o datagridview
         }
 
-        private void ObterDadosVendas()
+        private bool ValidaCampos()
         {
-
-            string Email = txtEmail.Text;
-            string Nome = txtNome.Text;
-            DateTime DataNascimento = Convert.ToDateTime(maskedNascimento.Text);
-            string Cpf = maskedCpf.Text;
-            string Sexo = cmbSexoVendas.Text;
-            string Numero = maskedNascimento.Text;
-            string Telefone = maskedTelefone.Text;
-            string Seguro = cmdSeguro.Text;
-
-
-            Vendas vendas = new Vendas(Nome,DataNascimento,Email,Telefone,Cpf,Sexo,Seguro);
-
-            // validação dos dados
-            List<ValidationResult> listErros = new List<ValidationResult>();//lista para capturar erros e armazenar
-            ValidationContext contect = new ValidationContext(vendas); // passa o obj que sera validado
-            bool validator = Validator.TryValidateObject(vendas, contect, listErros, true); // valida todos os erros
-
-            try //validação ok
+            if (txtEmail.Text == "" || txtNome.Text == "" || dateTimePickerVenda.Text == ""
+                || maskedCpf.Text == "" || cmbSexoVendas.Text == "" 
+                || maskedTelefone.Text == "" || cmdSeguro.Text == "") ;
+             
             {
-                vendas.SalvarVendas();
-                MessageBox.Show("Salvo com Sucesso");
-            
-
+                MessageBox.Show("Há campos não preenchidos , revise");
+                return false;
             }
-            catch (Exception ex)
-            {
-                StringBuilder sb = new StringBuilder(); // vai armazenar as mensagens de erro
-
-                foreach (ValidationResult erro in listErros) // percorre a lista de erro e captura os erros
-                {
-                    sb.Append(erro.ErrorMessage + "\n"); // recebe as mensagens de erro
-
-                }
-                MessageBox.Show(sb.ToString());// passas as mensagens de erro para label
-            }
-
-
-
-          
-
-           
+            return true;
         }
 
         private void btnCadastrarVendas_Click(object sender, EventArgs e)
         {
-            ObterDadosVendas();
+            string Email = txtEmail.Text;
+            string Nome = txtNome.Text;
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerVenda.Text);
+            string Cpf = maskedCpf.Text;
+            string Sexo = cmbSexoVendas.Text;
+            string Telefone = maskedTelefone.Text;
+            string Seguro = cmdSeguro.Text;
+
+            if (ValidaCampos())
+            {
+                Vendas vendas = new Vendas(Nome, DataNascimento, Email, Telefone, Cpf, Sexo, Seguro);
+                if (ValidaCampos())
+                {
+                    if (vendas.SalvarVendas())
+                    {
+                        MessageBox.Show("Venda cadastrada com sucesso");
+                        AtualizarTabela();
+                    }
+                }
+            }
+
+
+
+  
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Vendas vendas = new Vendas();
+            int id = (int)dataGridVendas.SelectedRows[0].Cells[0].Value; // pega o id do  dataGridView Selecionado
+            vendas.ExcluirVendas(id);
+            AtualizarTabela(); //atualizada a tabela depois de excluir
         }
     }
 }

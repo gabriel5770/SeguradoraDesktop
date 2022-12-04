@@ -80,14 +80,14 @@ namespace PIMQUATRO
             foreach (var client in resultado)
             {
                 html += abreColuna;
-                html += abreLinha + $"{client._nome}" + fechaLinha;
-                html += abreLinha + $"{client._rg}" + fechaLinha;
-                html += abreLinha + $"{client._cpf}" + fechaLinha;
-                html += abreLinha + $"{client._sexo}" + fechaLinha;
-                html += abreLinha + $"{client._dataNascimento.ToString("dd/MM/yy")}" + fechaLinha;
-                html += abreLinha + $"{client._estadoCivil}" + fechaLinha;
-                html += abreLinha + $"{client._cidade}" + fechaLinha;
-                html += abreLinha + $"{client._email}" + fechaLinha;
+                html += abreLinha + $"{client._nome + " "}" + fechaLinha;
+                html += abreLinha + $"{client._rg + " "}" + fechaLinha;
+                html += abreLinha + $"{client._cpf + " "}" + fechaLinha;
+                html += abreLinha + $"{client._sexo + " "}" + fechaLinha;
+                html += abreLinha + $"{client._dataNascimento.ToString("dd/MM/yy") + " "}" + fechaLinha;
+                html += abreLinha + $"{client._estadoCivil + " "}" + fechaLinha;
+                html += abreLinha + $"{client._cidade + " "}" + fechaLinha;
+                html += abreLinha + $"{client._email + " "}" + fechaLinha;
 
                 html += fechaColuna;
             }
