@@ -5,6 +5,7 @@ using Syncfusion.Pdf;
 using Syncfusion.Pdf.Parsing;
 using System.Drawing;
 using System.Diagnostics;
+using System.Windows.Forms.Design.Behavior;
 
 namespace PIMQUATRO
 {
@@ -74,25 +75,25 @@ namespace PIMQUATRO
             var html = GetHtml();
             string abreColuna = "<tr>";
             string fechaColuna = "</tr>";
-            string abreLinha = "<td style=\"color:blue;\">";
+            string abreLinha = "<td>";
             string fechaLinha = "</td>";
 
             foreach (var client in resultado)
             {
-                html += abreColuna;
-                html += abreLinha + $"{client._nome + " "}" + fechaLinha;
-                html += abreLinha + $"{client._rg + " "}" + fechaLinha;
-                html += abreLinha + $"{client._cpf + " "}" + fechaLinha;
-                html += abreLinha + $"{client._sexo + " "}" + fechaLinha;
-                html += abreLinha + $"{client._dataNascimento.ToString("dd/MM/yy") + " "}" + fechaLinha;
-                html += abreLinha + $"{client._estadoCivil + " "}" + fechaLinha;
-                html += abreLinha + $"{client._cidade + " "}" + fechaLinha;
-                html += abreLinha + $"{client._email + " "}" + fechaLinha;
+                html += abreColuna+ "\r\n";
+                html += abreLinha + $"{client._nome + " "}" + fechaLinha + "\r\n";
+                html += abreLinha + $"{client._rg + " "}" + fechaLinha+ "\r\n";
+                html += abreLinha + $"{client._cpf + " "}" + fechaLinha + "\r\n";
+                html += abreLinha + $"{client._sexo + " "}" + fechaLinha + "\r\n";
+                html += abreLinha + $"{client._dataNascimento.ToString("dd/MM/yy") + " "}" + fechaLinha+ "\r\n";
+                html += abreLinha + $"{client._estadoCivil + " "}" + fechaLinha+ "\r\n";
+                html += abreLinha + $"{client._cidade + " "}" + fechaLinha+ "\r\n";
+                html += abreLinha + $"{client._email + " "}" + fechaLinha + "\r\n";
 
-                html += fechaColuna;
+                html += fechaColuna+ "\r\n";
             }
 
-            html += "</tbody><table/>";
+            html += "<table/>" + "\r\n" + "</body>" + "\r\n" + "</html>";
 
             var pdf = renderPdf.RenderHtmlAsPdf(html);
 
@@ -104,7 +105,7 @@ namespace PIMQUATRO
 
         private string GetHtml()
         {
-            string html = "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<style>\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n}\r\nh2 {\r\n    text-align: center;\r\n}\r\n\r\ntr:nth-child(even) {\r\n  background-color: #90cefb;\r\n}\r\n</style>\r\n</head>\r\n<body>\r\n\r\n<h2>Relatorio Cliente</h2>\r\n\r\n<table>\r\n  <tr>\r\n    <th>Nome</th>\r\n    <th>RG</th>\r\n    <th>CPF</th>\r\n    <th>Sexo</th>\r\n    <th>Data Nascimento</th>\r\n    <th>Estado Civil</th>\r\n    <th>Cidade</th>\r\n    <th>e-mail</th>\r\n  </tr>\r\n\r\n  <tr>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n    <td></td>\r\n  </tr>\r\n  \r\n</table>\r\n\r\n</body>\r\n</html>\r\n";
+            string html = "<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<style>\r\n\r\ntable {\r\n  border-collapse: collapse;\r\n  width: 100%;\r\n}\r\n\r\nth, td {\r\n  text-align: left;\r\n  padding: 8px;\r\n}\r\nh2 {\r\n    text-align: center;\r\n}\r\n\r\ntr:nth-child(even) {\r\n  background-color: #90cefb;\r\n}\r\n</style>\r\n</head>\r\n<body>\r\n\r\n<h2>Relatorio Cliente</h2>\r\n\r\n<table>\r\n  <tr>\r\n    <th>Nome</th>\r\n    <th>RG</th>\r\n    <th>CPF</th>\r\n    <th>Sexo</th>\r\n    <th>Data Nascimento</th>\r\n    <th>Estado Civil</th>\r\n    <th>Cidade</th>\r\n    <th>e-mail</th>\r\n</tr>";
             return html;
         }
     }

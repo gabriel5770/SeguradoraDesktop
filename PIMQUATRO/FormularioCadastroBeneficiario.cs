@@ -62,22 +62,22 @@ namespace PIMQUATRO
 
         private void ObtemDadosBeneficiario()
         {
-            string Email = txtEmailBeneficiario.Text;
-            string Nome = txtNomeBeneficiario.Text;
-            string EstadoCivil = cmbEstadoCivilBeneficiario.Text;
-            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerBeneficiario.Text);
-            string NumeroResidencia = txtNumeroResidenciaBeneficiario.Text;
-            string Rg = maskedTextRgBeneficiario.Text;
-            string Cpf = maskedTextCpfBeneficiario.Text;
-            string Sexo = cmbSexoBeneficiario.Text;
-            string Endereco = txtEnderecoBeneficiario.Text;
-            string Cidade = txtCidadeBeneficiario.Text;
-            string Estado = cmbEstadoBeneficiario.Text;
-            string Municipio = txtMunicipioBeneficiario.Text;
-            string Bairro = txtBairroBeneficiario.Text;
-            string Cep = maskedTextCepBeneficiario.Text;
-            string Telefone = maskedTelefoneBeneficiario.Text;
-            string CpfCliente = txtCpfCliente.Text;
+            string Email = txtEmailBeneficiario.Text.Trim();
+            string Nome = txtNomeBeneficiario.Text.Trim();
+            string EstadoCivil = cmbEstadoCivilBeneficiario.Text.Trim();
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerBeneficiario.Text.Trim());
+            string NumeroResidencia = txtNumeroResidenciaBeneficiario.Text.Trim();
+            string Rg = maskedTextRgBeneficiario.Text.Trim();
+            string Cpf = maskedTextCpfBeneficiario.Text.Trim();
+            string Sexo = cmbSexoBeneficiario.Text.Trim();
+            string Endereco = txtEnderecoBeneficiario.Text.Trim();
+            string Cidade = txtCidadeBeneficiario.Text.Trim();
+            string Estado = cmbEstadoBeneficiario.Text.Trim();
+            string Municipio = txtMunicipioBeneficiario.Text.Trim();
+            string Bairro = txtBairroBeneficiario.Text.Trim();
+            string Cep = maskedTextCepBeneficiario.Text.Trim();
+            string Telefone = maskedTelefoneBeneficiario.Text.Trim();
+            string CpfCliente = txtCpfCliente.Text.Trim();
 
 
             if (ValidaCampos())
@@ -145,22 +145,22 @@ namespace PIMQUATRO
 
         private void AtualizaCadastroBeneficiario()
         {
-            string Email = txtEmailBeneficiario.Text;
-            string Nome = txtNomeBeneficiario.Text;
-            string EstadoCivil = cmbEstadoCivilBeneficiario.Text;
-            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerBeneficiario.Text);
-            string NumeroResidencia = txtNumeroResidenciaBeneficiario.Text;
-            string Rg = maskedTextRgBeneficiario.Text;
-            string Cpf = maskedTextCpfBeneficiario.Text;
-            string Sexo = cmbSexoBeneficiario.Text;
-            string Endereco = txtEnderecoBeneficiario.Text;
-            string Cidade = txtCidadeBeneficiario.Text;
-            string Estado = cmbEstadoBeneficiario.Text;
-            string Municipio = txtMunicipioBeneficiario.Text;
-            string Bairro = txtBairroBeneficiario.Text;
-            string Cep = maskedTextCepBeneficiario.Text;
-            string Telefone = maskedTelefoneBeneficiario.Text;
-            string CpfCliente = txtCpfCliente.Text;
+            string Email = txtEmailBeneficiario.Text.Trim();
+            string Nome = txtNomeBeneficiario.Text.Trim();
+            string EstadoCivil = cmbEstadoCivilBeneficiario.Text.Trim();
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerBeneficiario.Text.Trim());
+            string NumeroResidencia = txtNumeroResidenciaBeneficiario.Text.Trim();
+            string Rg = maskedTextRgBeneficiario.Text.Trim();
+            string Cpf = maskedTextCpfBeneficiario.Text.Trim();
+            string Sexo = cmbSexoBeneficiario.Text.Trim();
+            string Endereco = txtEnderecoBeneficiario.Text.Trim();
+            string Cidade = txtCidadeBeneficiario.Text.Trim();
+            string Estado = cmbEstadoBeneficiario.Text.Trim();
+            string Municipio = txtMunicipioBeneficiario.Text.Trim();
+            string Bairro = txtBairroBeneficiario.Text.Trim();
+            string Cep = maskedTextCepBeneficiario.Text.Trim();
+            string Telefone = maskedTelefoneBeneficiario.Text.Trim();
+            string CpfCliente = txtCpfCliente.Text.Trim();
 
             if (ValidaCampos())
             {

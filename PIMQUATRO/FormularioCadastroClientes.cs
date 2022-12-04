@@ -97,27 +97,27 @@ namespace PIMQUATRO
 
         private void ObtemDadosCliente()
         {
-            string Email = txtEmaiCliente.Text;
-            string Senha = textSenhaCliente.Text;
-            string Nome = txtNomeCliente.Text;
+            string Email = txtEmaiCliente.Text.Trim();
+            string Senha = textSenhaCliente.Text.Trim();
+            string Nome = txtNomeCliente.Text.Trim();
             string EstadoCivil = cmbEstadoCivil.Text;
-            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerCliente.Text);
-            string NumeroResidencia = txtNumeroResidenciaCliente.Text;
-            string Rg = maskedTextRgCliente.Text;
-            string Cpf = maskedTextClienteCpf.Text;
-            string Sexo = cmbSexoCliente.Text;
-            string Endereco = txtEnderecoCliente.Text;
-            string Numero = txtNumeroResidenciaCliente.Text;
-            string Cidade = TxtCidade.Text;
-            string Estado = cmbEstado.Text;
-            string Municipio = txtMunicipioCliente.Text;
-            string Bairro = txtBairroCliente.Text;
-            string Cep = maskedTextCepCliente.Text;
-            string Telefone = maskedTelefoneCliente.Text;
-            string beneficios = cmbBeneficiosCliente.Text;
-            string DataVigenciaInicial = txtDataVigenciaInicial.Text;
-            string DataVigenciaFinal = txtDataVigenciaFinal.Text;
-            string NomeSeguradora = cmbSeguradorasDisponiveis.Text;
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerCliente.Text.Trim());
+            string NumeroResidencia = txtNumeroResidenciaCliente.Text.Trim();
+            string Rg = maskedTextRgCliente.Text.Trim();
+            string Cpf = maskedTextClienteCpf.Text.Trim();
+            string Sexo = cmbSexoCliente.Text.Trim();
+            string Endereco = txtEnderecoCliente.Text.Trim();
+            string Numero = txtNumeroResidenciaCliente.Text.Trim();
+            string Cidade = TxtCidade.Text.Trim();
+            string Estado = cmbEstado.Text.Trim();
+            string Municipio = txtMunicipioCliente.Text.Trim();
+            string Bairro = txtBairroCliente.Text.Trim();
+            string Cep = maskedTextCepCliente.Text.Trim();
+            string Telefone = maskedTelefoneCliente.Text.Trim();
+            string beneficios = cmbBeneficiosCliente.Text.Trim();
+            string DataVigenciaInicial = txtDataVigenciaInicial.Text.Trim();
+            string DataVigenciaFinal = txtDataVigenciaFinal.Text.Trim();
+            string NomeSeguradora = cmbSeguradorasDisponiveis.Text.Trim();
 
 
             if (ValidaCampos())
@@ -221,24 +221,24 @@ namespace PIMQUATRO
         private void AtualizaCadastroCliennte()
         {
 
-            string Email = txtEmaiCliente.Text;
-            string Senha = textSenhaCliente.Text;
-            string Nome = txtNomeCliente.Text;
-            string EstadoCivil = cmbEstadoCivil.Text;
-            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerCliente.Text);
-            string NumeroResidencia = txtNumeroResidenciaCliente.Text;
-            string Rg = maskedTextRgCliente.Text;
-            string Cpf = maskedTextClienteCpf.Text;
-            string Sexo = cmbSexoCliente.Text;
-            string Endereco = txtEnderecoCliente.Text;
-            string Numero = txtNumeroResidenciaCliente.Text;
-            string Cidade = TxtCidade.Text;
-            string Estado = cmbEstado.Text;
-            string Municipio = txtMunicipioCliente.Text;
-            string Bairro = txtBairroCliente.Text;
-            string Cep = maskedTextCepCliente.Text;
-            string Telefone = maskedTelefoneCliente.Text;
-            string Beneficios = cmbBeneficiosCliente.Text;
+            string Email = txtEmaiCliente.Text.Trim();
+            string Senha = textSenhaCliente.Text.Trim();
+            string Nome = txtNomeCliente.Text.Trim();
+            string EstadoCivil = cmbEstadoCivil.Text.Trim();
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerCliente.Text.Trim());
+            string NumeroResidencia = txtNumeroResidenciaCliente.Text.Trim();
+            string Rg = maskedTextRgCliente.Text.Trim();
+            string Cpf = maskedTextClienteCpf.Text.Trim();
+            string Sexo = cmbSexoCliente.Text.Trim();
+            string Endereco = txtEnderecoCliente.Text.Trim();
+            string Numero = txtNumeroResidenciaCliente.Text.Trim();
+            string Cidade = TxtCidade.Text.Trim();
+            string Estado = cmbEstado.Text.Trim();
+            string Municipio = txtMunicipioCliente.Text.Trim();
+            string Bairro = txtBairroCliente.Text.Trim();
+            string Cep = maskedTextCepCliente.Text.Trim();
+            string Telefone = maskedTelefoneCliente.Text.Trim();
+            string Beneficios = cmbBeneficiosCliente.Text.Trim();
 
 
             if (ValidaCampos())

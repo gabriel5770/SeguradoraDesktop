@@ -57,23 +57,23 @@ namespace PIMQUATRO
         protected void ObtemDadosFuncionarios()
         {
 
-            string Email = textEmailFunc.Text;
-            string Senha = textSenhaFunc.Text;
-            string Nome = textNomeFunc.Text;
-            string EstadoCivil = cmdEstadoCivilFunc.Text;
-            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerFunc.Text);
-            string Rg = maskedTextRgFunc.Text;
-            string Cpf = maskedTextFuncCpf.Text;
-            string Sexo = cmdSexoFunc.Text;
-            string Endereco = textEnderecoFunc.Text;
-            string NumResidencia = textNumeroResidenciaFunc.Text;
-            string Estado = cmbEstadoFunc.Text;
-            string Municipio = textMunicipioFunc.Text;
-            string Bairro = textBairroFunc.Text;
-            string Cidade = textCidadeFunc.Text;
-            string Cep = maskedTextCepFunc.Text;
-            string Telefone = maskedTelefoneFuncionario.Text;
-            string Cargo = cmbCargoFunc.Text;
+            string Email = textEmailFunc.Text.Trim();
+            string Senha = textSenhaFunc.Text.Trim();
+            string Nome = textNomeFunc.Text.Trim();
+            string EstadoCivil = cmdEstadoCivilFunc.Text.Trim();
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerFunc.Text.Trim());
+            string Rg = maskedTextRgFunc.Text.Trim();
+            string Cpf = maskedTextFuncCpf.Text.Trim();
+            string Sexo = cmdSexoFunc.Text.Trim();
+            string Endereco = textEnderecoFunc.Text.Trim();
+            string NumResidencia = textNumeroResidenciaFunc.Text.Trim();
+            string Estado = cmbEstadoFunc.Text.Trim();
+            string Municipio = textMunicipioFunc.Text.Trim();
+            string Bairro = textBairroFunc.Text.Trim();
+            string Cidade = textCidadeFunc.Text.Trim();
+            string Cep = maskedTextCepFunc.Text.Trim();
+            string Telefone = maskedTelefoneFuncionario.Text.Trim();
+            string Cargo = cmbCargoFunc.Text.Trim();
 
 
             Funcionario func = new Funcionario(Nome, Cpf, Rg, DataNascimento, Endereco, Email, Senha, EstadoCivil, Sexo, NumResidencia, Municipio, Bairro, Cep, Telefone, Estado, Cidade, Cargo);
@@ -197,23 +197,23 @@ namespace PIMQUATRO
 
         protected void AtualizaDadosFuncionario()
         {
-            string Email = textEmailFunc.Text;
-            string Senha = textSenhaFunc.Text;
-            string Nome = textNomeFunc.Text;
-            string EstadoCivil = cmdEstadoCivilFunc.Text;
-            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerFunc.Text);
-            string Rg = maskedTextRgFunc.Text;
-            string Cpf = maskedTextFuncCpf.Text;
-            string Sexo = cmdSexoFunc.Text;
-            string Endereco = textEnderecoFunc.Text;
-            string NumResidencia = textNumeroResidenciaFunc.Text;
-            string Estado = cmbEstadoFunc.Text;
-            string Municipio = textMunicipioFunc.Text;
-            string Bairro = textBairroFunc.Text;
-            string Cidade = textCidadeFunc.Text;
-            string Cep = maskedTextCepFunc.Text;
-            string Telefone = maskedTelefoneFuncionario.Text;
-            string Cargo = cmbCargoFunc.Text;
+            string Email = textEmailFunc.Text.Trim();
+            string Senha = textSenhaFunc.Text.Trim();
+            string Nome = textNomeFunc.Text.Trim();
+            string EstadoCivil = cmdEstadoCivilFunc.Text.Trim();
+            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerFunc.Text.Trim());
+            string Rg = maskedTextRgFunc.Text.Trim();
+            string Cpf = maskedTextFuncCpf.Text.Trim();
+            string Sexo = cmdSexoFunc.Text.Trim();
+            string Endereco = textEnderecoFunc.Text.Trim();
+            string NumResidencia = textNumeroResidenciaFunc.Text.Trim();
+            string Estado = cmbEstadoFunc.Text.Trim();
+            string Municipio = textMunicipioFunc.Text.Trim();
+            string Bairro = textBairroFunc.Text.Trim();
+            string Cidade = textCidadeFunc.Text.Trim();
+            string Cep = maskedTextCepFunc.Text.Trim();
+            string Telefone = maskedTelefoneFuncionario.Text.Trim();
+            string Cargo = cmbCargoFunc.Text.Trim();
 
             if (ValidaCampos())
             {

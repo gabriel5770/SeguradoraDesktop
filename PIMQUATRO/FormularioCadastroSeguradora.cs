@@ -46,8 +46,8 @@ namespace PIMQUATRO
 
         private void ExcluiCadastroSeguradora()
         {
-            string NomeSeguradora = txtNomeSeguradora.Text;
-            string CnpjSeguradora = txtCnpjSeguradora.Text;
+            string NomeSeguradora = txtNomeSeguradora.Text.Trim();
+            string CnpjSeguradora = txtCnpjSeguradora.Text.Trim();
 
             Seguradora seg = new Seguradora(CnpjSeguradora, NomeSeguradora);
 
@@ -66,8 +66,8 @@ namespace PIMQUATRO
 
         private void ObtemDadosSeguradora()
         {
-            string NomeSeguradora = txtNomeSeguradora.Text;
-            string CnpjSeguradora = txtCnpjSeguradora.Text;
+            string NomeSeguradora = txtNomeSeguradora.Text.Trim();
+            string CnpjSeguradora = txtCnpjSeguradora.Text.Trim();
 
 
             Seguradora seg = new Seguradora(CnpjSeguradora, NomeSeguradora);
