@@ -28,6 +28,7 @@ namespace PIMQUATRO.Modelo
         }
         public bool Cadastrar()
         {
+            
             {
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
                 {
@@ -51,45 +52,18 @@ namespace PIMQUATRO.Modelo
 
                             var result = (int)returnParameter.Value;
 
+                            if (result == 1)
+                            {
+                                MessageBox.Show("Há um cadastro com este CNPJ!");
+                                return false;
+
+                            }
                             return true;
 
                         }
                         catch (SqlException ex)
                         {
                             MessageBox.Show("Erro ao cadastrar seguradora");
-                            MessageBox.Show("Erro encontrado: " + ex);
-                            return false;
-                        }
-                    }
-                }
-            }
-        }
-
-        public bool ExcluiCadastroSeguradora()
-        {
-            {
-                using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
-                {
-                    using (var command = new SqlCommand
-                    {
-                        Connection = connection,
-                        CommandType = CommandType.StoredProcedure
-                    })
-                    {
-                        command.CommandText = "Ins_WindowsForms_Cadastro_ExcluiCadastroSeguradora";
-                        try
-                        {
-                             command.Parameters.AddWithValue("@Cnpj", _cnpj);
-
-                            connection.Open();
-                            command.ExecuteNonQuery();
-
-                            return true;
-
-                        }
-                        catch (SqlException ex)
-                        {
-                            MessageBox.Show("Erro ao excluir cadastro da seguradora");
                             MessageBox.Show("Erro encontrado: " + ex);
                             return false;
                         }

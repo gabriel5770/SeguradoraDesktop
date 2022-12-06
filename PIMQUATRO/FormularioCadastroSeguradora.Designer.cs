@@ -52,8 +52,7 @@
             this.btnExcluirCliente.TabIndex = 91;
             this.btnExcluirCliente.Text = "Excluir";
             this.btnExcluirCliente.UseVisualStyleBackColor = false;
-            this.btnExcluirCliente.Click += new System.EventHandler(this.btnExcluirCliente_Click);
-            // 
+             // 
             // btnEditarCliente
             // 
             this.btnEditarCliente.BackColor = System.Drawing.Color.LightSkyBlue;

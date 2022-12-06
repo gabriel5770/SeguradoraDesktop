@@ -32,37 +32,11 @@ namespace PIMQUATRO
             ObtemDadosSeguradora();
         }
 
-        private void btnExcluirCliente_Click(object sender, EventArgs e)
-        {
-            ExcluiCadastroSeguradora();
-        }
-
         private void btnEditarCliente_Click(object sender, EventArgs e)
         {
 
         }
 
-
-
-        private void ExcluiCadastroSeguradora()
-        {
-            string NomeSeguradora = txtNomeSeguradora.Text.Trim();
-            string CnpjSeguradora = txtCnpjSeguradora.Text.Trim();
-
-            Seguradora seg = new Seguradora(CnpjSeguradora, NomeSeguradora);
-
-            DialogResult = MessageBox.Show("Deseja excluir o cadastro?", "ATENÇÃO", MessageBoxButtons.YesNo);
-            if (DialogResult == DialogResult.Yes)
-            {
-                if (ValidaCampos())
-                {
-                    if (seg.ExcluiCadastroSeguradora())
-                    {
-                        MessageBox.Show("Seguradora excluída com sucessso");
-                    }
-                }
-            }
-        }
 
         private void ObtemDadosSeguradora()
         {
