@@ -1,51 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
-using System.ComponentModel.DataAnnotations;
 
 namespace PIMQUATRO.Modelo
 {
-    public class Vendas
+    internal class Contato
     {
-      
         public string Nome { get; set; }
-       
-        public DateTime Nascimento { get; set; } 
-   
         public string Email { get; set; }
-      
         public string Telefone { get; set; }
-       
-        public string Cpf { get; set; }
-       
-        public string Sexo { get; set; }
-       
-        public string Seguro { get; set; }
+        public string Mensagem{ get; set; }
 
-        public Vendas() { }
-        public Vendas(string nome, DateTime nascimento, string email, string telefone, string cpf, string sexo, string seguro)
+        public Contato() { }
+
+        public Contato(string nome, string email, string telefone, string mensagem)
         {
             Nome = nome;
-            Nascimento = nascimento;
             Email = email;
             Telefone = telefone;
-            Cpf = cpf;
-            Sexo = sexo;
-            Seguro = seguro;
+            Mensagem = mensagem;
         }
 
-      
-        public static DataTable ConsultarVendas()
+        public static DataTable ConsultarContato()
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
 
-                SqlDataAdapter da = new SqlDataAdapter("Select * from tbVenda", con); // pega os dados da tabala funcionario
+                SqlDataAdapter da = new SqlDataAdapter("Select * from tbContato", con); // pega os dados da tabala funcionario
 
                 DataSet ds = new DataSet(); // cria dataset
 
@@ -56,15 +42,15 @@ namespace PIMQUATRO.Modelo
 
         }
 
-     
-   
-        public bool ExcluirVendas(int id)
+
+
+        public bool ExcluirContato(int id)
         {
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
                 try
                 {
-                    string sql = " DELETE  FROM  [tbVenda] where id= @id";
+                    string sql = " DELETE  FROM  [tbContato] where id= @id";
 
                     SqlCommand comando = new SqlCommand(sql, con); // realiza o comando no banco
 
@@ -79,16 +65,17 @@ namespace PIMQUATRO.Modelo
                     con.Close();
                     return true;
                 }
-                catch(Exception ex) 
+                catch (Exception ex)
                 {
                     string msg = ex.Message;
                     return false;
                 }
-             
-              
+
+
 
             }
 
         }
     }
 }
+

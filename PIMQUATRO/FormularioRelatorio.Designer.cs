@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioRelatorio));
             this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.btnGerarApolice = new System.Windows.Forms.Button();
-            this.btnGerarRelatorio = new System.Windows.Forms.Button();
             this.btnGerarContrato = new System.Windows.Forms.Button();
+            this.pdfConfig1 = new Syncfusion.Pdf.PdfConfig();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNumeroDocumento
             // 
-            this.txtNumeroDocumento.Location = new System.Drawing.Point(253, 120);
+            this.txtNumeroDocumento.Location = new System.Drawing.Point(157, 588);
             this.txtNumeroDocumento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumeroDocumento.Name = "txtNumeroDocumento";
             this.txtNumeroDocumento.Size = new System.Drawing.Size(228, 27);
@@ -44,50 +47,50 @@
             // 
             // btnGerarApolice
             // 
-            this.btnGerarApolice.Location = new System.Drawing.Point(80, 93);
+            this.btnGerarApolice.Location = new System.Drawing.Point(12, 574);
             this.btnGerarApolice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGerarApolice.Name = "btnGerarApolice";
-            this.btnGerarApolice.Size = new System.Drawing.Size(125, 81);
+            this.btnGerarApolice.Size = new System.Drawing.Size(125, 54);
             this.btnGerarApolice.TabIndex = 1;
             this.btnGerarApolice.Text = "Gerar apólice";
             this.btnGerarApolice.UseVisualStyleBackColor = true;
             this.btnGerarApolice.Click += new System.EventHandler(this.btnGerarApolice_Click);
             // 
-            // btnGerarRelatorio
-            // 
-            this.btnGerarRelatorio.Location = new System.Drawing.Point(80, 272);
-            this.btnGerarRelatorio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnGerarRelatorio.Name = "btnGerarRelatorio";
-            this.btnGerarRelatorio.Size = new System.Drawing.Size(125, 87);
-            this.btnGerarRelatorio.TabIndex = 2;
-            this.btnGerarRelatorio.Text = "btnRelatorio";
-            this.btnGerarRelatorio.UseVisualStyleBackColor = true;
-            this.btnGerarRelatorio.Click += new System.EventHandler(this.btnGerarRelatorio_Click);
-            // 
             // btnGerarContrato
             // 
-            this.btnGerarContrato.Location = new System.Drawing.Point(80, 183);
+            this.btnGerarContrato.Location = new System.Drawing.Point(12, 636);
             this.btnGerarContrato.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGerarContrato.Name = "btnGerarContrato";
-            this.btnGerarContrato.Size = new System.Drawing.Size(125, 81);
+            this.btnGerarContrato.Size = new System.Drawing.Size(125, 52);
             this.btnGerarContrato.TabIndex = 3;
             this.btnGerarContrato.Text = "Gerar Contrato";
             this.btnGerarContrato.UseVisualStyleBackColor = true;
             this.btnGerarContrato.Click += new System.EventHandler(this.btnGerarContrato_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(5, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(961, 565);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormularioRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.ClientSize = new System.Drawing.Size(967, 697);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGerarContrato);
-            this.Controls.Add(this.btnGerarRelatorio);
             this.Controls.Add(this.btnGerarApolice);
             this.Controls.Add(this.txtNumeroDocumento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormularioRelatorio";
             this.Text = "FormularioRelatorio";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,7 +100,8 @@
 
         private TextBox txtNumeroDocumento;
         private Button btnGerarApolice;
-        private Button btnGerarRelatorio;
         private Button btnGerarContrato;
+        private Syncfusion.Pdf.PdfConfig pdfConfig1;
+        private PictureBox pictureBox1;
     }
 }

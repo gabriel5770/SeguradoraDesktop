@@ -100,5 +100,16 @@ namespace PIMQUATRO
             ActiveButton(btnCadastrarBeneficiario);
             FormShow(new FormularioCadastroBeneficiario());
         }
+
+        private void FormularioMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnContato_Click(object sender, EventArgs e)
+        {
+            ActiveButton(btnContato);
+            FormShow(new FormularioContato());
+        }
     }
 }

@@ -32,47 +32,6 @@ namespace PIMQUATRO
             dataGridVendas.DataSource = Vendas.ConsultarVendas(); //passsa a consulta para o datagridview
         }
 
-        private bool ValidaCampos()
-        {
-            if (txtEmail.Text == " " || txtNome.Text ==  " " || dateTimePickerVenda.Text == " "
-                || maskedCpf.Text == " " || cmbSexoVendas.Text == " " 
-                || maskedTelefone.Text == " " || cmdSeguro.Text == " ")
-             
-            {
-                MessageBox.Show("Há campos não preenchidos , revise");
-                return false;
-            }
-            return true;
-        }
-
-        private void btnCadastrarVendas_Click(object sender, EventArgs e)
-        {
-            string Email = txtEmail.Text;
-            string Nome = txtNome.Text;
-            DateTime DataNascimento = Convert.ToDateTime(dateTimePickerVenda.Text);
-            string Cpf = maskedCpf.Text;
-            string Sexo = cmbSexoVendas.Text;
-            string Telefone = maskedTelefone.Text;
-            string Seguro = cmdSeguro.Text;
-
-            if (ValidaCampos())
-            {
-                Vendas vendas = new Vendas(Nome, DataNascimento, Email, Telefone, Cpf, Sexo, Seguro);
-                if (ValidaCampos())
-                {
-                    if (vendas.SalvarVendas())
-                    {
-                        MessageBox.Show("Venda cadastrada com sucesso");
-                        AtualizarTabela();
-                    }
-                }
-            }
-
-
-
-  
-
-        }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {

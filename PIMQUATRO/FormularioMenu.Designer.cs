@@ -32,6 +32,7 @@
             this.btnSeguradoras = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.btnContato = new System.Windows.Forms.Button();
             this.btnCadastroCliente = new System.Windows.Forms.Button();
             this.btnCadastroFuncionario = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -80,6 +81,7 @@
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.Cyan;
+            this.panelPrincipal.Controls.Add(this.btnContato);
             this.panelPrincipal.Controls.Add(this.btnCadastroCliente);
             this.panelPrincipal.Controls.Add(this.btnCadastroFuncionario);
             this.panelPrincipal.Controls.Add(this.btnVendas);
@@ -90,8 +92,26 @@
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(247, 615);
+            this.panelPrincipal.Size = new System.Drawing.Size(247, 697);
             this.panelPrincipal.TabIndex = 13;
+            // 
+            // btnContato
+            // 
+            this.btnContato.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnContato.FlatAppearance.BorderSize = 0;
+            this.btnContato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContato.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnContato.ForeColor = System.Drawing.Color.Snow;
+            this.btnContato.Image = ((System.Drawing.Image)(resources.GetObject("btnContato.Image")));
+            this.btnContato.Location = new System.Drawing.Point(-1, 525);
+            this.btnContato.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnContato.Name = "btnContato";
+            this.btnContato.Size = new System.Drawing.Size(248, 91);
+            this.btnContato.TabIndex = 11;
+            this.btnContato.Text = "Contatos";
+            this.btnContato.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnContato.UseVisualStyleBackColor = false;
+            this.btnContato.Click += new System.EventHandler(this.btnContato_Click);
             // 
             // btnCadastroCliente
             // 
@@ -143,7 +163,7 @@
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnFechar.ForeColor = System.Drawing.Color.Snow;
             this.btnFechar.Image = ((System.Drawing.Image)(resources.GetObject("btnFechar.Image")));
-            this.btnFechar.Location = new System.Drawing.Point(-1, 532);
+            this.btnFechar.Location = new System.Drawing.Point(-2, 612);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(250, 85);
@@ -194,7 +214,7 @@
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelForms.Location = new System.Drawing.Point(247, 0);
             this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(967, 616);
+            this.panelForms.Size = new System.Drawing.Size(967, 697);
             this.panelForms.TabIndex = 14;
             // 
             // FormularioMenu
@@ -202,12 +222,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1214, 615);
+            this.ClientSize = new System.Drawing.Size(1214, 697);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.panelPrincipal);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormularioMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "menu";
+            this.Load += new System.EventHandler(this.FormularioMenu_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -223,5 +247,6 @@
         private Panel panelForms;
         private Button btnCadastrarBeneficiario;
         private Button btnRelatorio;
+        private Button btnContato;
     }
 }
