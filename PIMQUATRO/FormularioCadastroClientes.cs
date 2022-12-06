@@ -200,8 +200,7 @@ namespace PIMQUATRO
                     if (Cliente.ExcluiCadastro(maskedTextClienteCpf.Text))
                     {
                         MessageBox.Show("Cadastro excluido com sucesso");
-                        this.Hide();
-                        new FormularioCadastroFuncionarios().ShowDialog();
+                   
                         rtnValido = true;
 
                     }

@@ -177,8 +177,7 @@ namespace PIMQUATRO
                     if (Funcionario.ExcluiCadastro(maskedTextFuncCpf.Text))
                     {
                         MessageBox.Show("Cadastro excluido com sucesso");
-                        this.Hide();
-                        new FormularioCadastroFuncionarios().ShowDialog();
+                  
 
                     }
                     else

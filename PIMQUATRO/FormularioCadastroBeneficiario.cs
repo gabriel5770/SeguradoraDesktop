@@ -211,9 +211,7 @@ namespace PIMQUATRO
                     if (Beneficiario.ExcluiCadastro(maskedTextCpfBeneficiario.Text))
                     {
                         MessageBox.Show("Cadastro excluido com sucesso");
-                        this.Hide();
-                        new FormularioCadastroBeneficiario().ShowDialog();
-
+                   
                     }
                     else
                     {
