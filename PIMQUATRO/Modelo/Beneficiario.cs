@@ -102,12 +102,17 @@ namespace PIMQUATRO.Modelo
                         }
                         else if (result == 2)
                         {
-                            MessageBox.Show("Há Cliente cadastrado com este RG");
+                            MessageBox.Show("Há um beneficiário cadastrado com este RG");
 
                         }
                         else if (result == 3)
                         {
-                            MessageBox.Show("Há Cliente cadastrado com este EMAIL");
+                            MessageBox.Show("Há um beneficiário cadastrado com este EMAIL");
+
+                        }
+                        else if (result == 4)
+                        {
+                            MessageBox.Show("Não há cliente cadastrado com este CPF");
 
                         }
                         else
