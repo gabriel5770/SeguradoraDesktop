@@ -130,6 +130,7 @@ namespace PIMQUATRO
                     if (cliente.Cadastrar())
                     {
                         MessageBox.Show("Cliente cadastrado com sucesso");
+                        this.Hide();
                      
                        
                     }
@@ -201,7 +202,6 @@ namespace PIMQUATRO
                     {
                         MessageBox.Show("Cadastro excluido com sucesso");
                         this.Hide();
-                        new FormularioCadastroFuncionarios().ShowDialog();
                         rtnValido = true;
 
                     }

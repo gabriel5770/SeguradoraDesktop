@@ -212,7 +212,7 @@ namespace PIMQUATRO
                     {
                         MessageBox.Show("Cadastro excluido com sucesso");
                         this.Hide();
-                        new FormularioCadastroBeneficiario().ShowDialog();
+                     
 
                     }
                     else

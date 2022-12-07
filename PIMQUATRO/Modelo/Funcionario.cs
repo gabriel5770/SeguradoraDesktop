@@ -55,7 +55,7 @@ namespace PIMQUATRO.Modelo
 
         public bool Cadastrar()
         {
-
+            bool rtnValido = false;
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ToString()))
             {
                 using (var command = new SqlCommand
@@ -100,19 +100,29 @@ namespace PIMQUATRO.Modelo
                             return false;
 
                         }
-                        else
-
+                        else if (result == 2)
                         {
-                            return true;
+                            MessageBox.Show("Há um cadastro com este RG!");
+
                         }
+                        else if (result == 3)
+                        {
+                            MessageBox.Show("Há um cadastro com este EMAIL!");
+                        }
+                        else
+                        {
+                            rtnValido= true;
+                        }
+
                     }
                     catch (SqlException ex)
                     {
                         MessageBox.Show("Erro ao cadastrar usuário");
                         MessageBox.Show("Erro encontrado: " + ex);
-                        return false;
+                        rtnValido= false;
                     }
                 }
+                return rtnValido;
             }
         }
 

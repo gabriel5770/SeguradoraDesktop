@@ -84,6 +84,7 @@ namespace PIMQUATRO
                 {
                   
                     MessageBox.Show("Funcionário cadastrado com sucesso");
+                    this.Hide();
                 }
             }
         }
@@ -178,7 +179,6 @@ namespace PIMQUATRO
                     {
                         MessageBox.Show("Cadastro excluido com sucesso");
                         this.Hide();
-                        new FormularioCadastroFuncionarios().ShowDialog();
 
                     }
                     else
