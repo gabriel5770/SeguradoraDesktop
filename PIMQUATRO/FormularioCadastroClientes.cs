@@ -65,6 +65,11 @@ namespace PIMQUATRO
         private void PopulaComboSeguradora()
         {
             cmbSeguradorasDisponiveis.Items.Add("Porto Seguro");
+            cmbSeguradorasDisponiveis.Items.Add("Bradesco");
+            cmbSeguradorasDisponiveis.Items.Add("Caixa");
+            cmbSeguradorasDisponiveis.Items.Add("SulAmerica");
+
+
         }
 
         private void PreencheComboCadastroCliente()
@@ -77,6 +82,7 @@ namespace PIMQUATRO
             cmbEstadoCivil.Items.Add("Viúvo");
             cmbSexoCliente.Items.Add("Masculino");
             cmbSexoCliente.Items.Add("Feminino");
+            
             cmbEstado.Items.Add("SP");
             cmbEstado.Items.Add("RJ");
             cmbEstado.Items.Add("MG");

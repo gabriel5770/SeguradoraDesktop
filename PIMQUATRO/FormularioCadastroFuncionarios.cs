@@ -229,11 +229,7 @@ namespace PIMQUATRO
                         MessageBox.Show("Não foi possíevl atualizar o cadastro");
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Pesquise o CPF a ser Atualizado");
-            }
+            }            
         }
 
         private void textNomeFunc_TextChanged(object sender, EventArgs e)

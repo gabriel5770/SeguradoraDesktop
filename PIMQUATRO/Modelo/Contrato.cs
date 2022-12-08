@@ -81,7 +81,7 @@ namespace PIMQUATRO.Modelo
 
                         else
                         {
-                            MessageBox.Show("Não foi encontrado registro com este CPF");
+                            MessageBox.Show("Não foi encontrado registro com este CPF ou não foi vinculado o beneficiário");
                         }
 
                     }
@@ -120,10 +120,10 @@ namespace PIMQUATRO.Modelo
                 document.Add(new Paragraph($"Dados do segurado:\n"));
 
                 document.Add(new Paragraph($"Nome:{_nomeCliente}\n"));
-                document.Add(new Paragraph($"CPF:{_nomeCliente}\n"));
-                document.Add(new Paragraph($"Cidade:{_nomeCliente}\n"));
-                document.Add(new Paragraph($"Estado:{_nomeCliente}\n"));
-                document.Add(new Paragraph($"Cep:{_nomeCliente}\n\n"));
+                document.Add(new Paragraph($"CPF:{_cpfCliente}\n"));
+                document.Add(new Paragraph($"Cidade:{_cidadeCliente}\n"));
+                document.Add(new Paragraph($"Estado:{_estadoCliente}\n"));
+                document.Add(new Paragraph($"Cep:{_cepCliente}\n\n"));
 
 
                 document.Add(new Paragraph($"Dados do Beneficiario:\n"));
