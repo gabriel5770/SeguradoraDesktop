@@ -59,8 +59,7 @@ namespace PIMQUATRO.Modelo
 
                         if (reader.Read())
                         {
-                            while (reader.Read())
-                            {
+                           
                                 _nome = reader.GetString(0);
                                 _cpf = reader.GetString(1);
                                 _DataVigenciaInicial = reader.GetDateTime(2).ToString("dd/MM/yyyy");
@@ -68,8 +67,9 @@ namespace PIMQUATRO.Modelo
                                 _numeroApolice = reader.GetInt64(4).ToString();
                                 _NomeSeguradora = reader.GetString(5);
                                 _CnpjSeguradora = reader.GetString(6);
-                            }
-                            rtnValido = true;
+                            
+                                rtnValido = true;
+                            
                            
                         }
                         else
