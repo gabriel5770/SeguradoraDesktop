@@ -43,10 +43,10 @@
             this.btnCadastrarCliente.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(402, 485);
-            this.btnCadastrarCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(260, 611);
+            this.btnCadastrarCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(86, 33);
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(108, 41);
             this.btnCadastrarCliente.TabIndex = 82;
             this.btnCadastrarCliente.Text = "Cadastrar";
             this.btnCadastrarCliente.UseVisualStyleBackColor = false;
@@ -55,11 +55,11 @@
             // txtCnpjSeguradora
             // 
             this.txtCnpjSeguradora.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCnpjSeguradora.Location = new System.Drawing.Point(262, 492);
+            this.txtCnpjSeguradora.Location = new System.Drawing.Point(56, 622);
             this.txtCnpjSeguradora.Margin = new System.Windows.Forms.Padding(2);
             this.txtCnpjSeguradora.Mask = "00.000.000/0000-00";
             this.txtCnpjSeguradora.Name = "txtCnpjSeguradora";
-            this.txtCnpjSeguradora.Size = new System.Drawing.Size(78, 26);
+            this.txtCnpjSeguradora.Size = new System.Drawing.Size(170, 30);
             this.txtCnpjSeguradora.TabIndex = 95;
             this.txtCnpjSeguradora.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -69,10 +69,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(280, 475);
+            this.label2.Location = new System.Drawing.Point(78, 600);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 15);
+            this.label2.Size = new System.Drawing.Size(44, 20);
             this.label2.TabIndex = 94;
             this.label2.Text = "Cnpj:";
             // 
@@ -82,10 +82,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(262, 424);
+            this.label1.Location = new System.Drawing.Point(56, 536);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 93;
             this.label1.Text = "Nome:";
             // 
@@ -94,28 +94,29 @@
             this.txtNomeSeguradora.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeSeguradora.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeSeguradora.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNomeSeguradora.Location = new System.Drawing.Point(262, 443);
-            this.txtNomeSeguradora.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNomeSeguradora.Location = new System.Drawing.Point(56, 560);
+            this.txtNomeSeguradora.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.txtNomeSeguradora.MaxLength = 50;
             this.txtNomeSeguradora.Name = "txtNomeSeguradora";
-            this.txtNomeSeguradora.Size = new System.Drawing.Size(250, 22);
+            this.txtNomeSeguradora.Size = new System.Drawing.Size(312, 27);
             this.txtNomeSeguradora.TabIndex = 92;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 404);
+            this.pictureBox1.Size = new System.Drawing.Size(970, 516);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 96;
             this.pictureBox1.TabStop = false;
             // 
             // FormularioCadastroSeguradora
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(774, 558);
+            this.ClientSize = new System.Drawing.Size(968, 698);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCnpjSeguradora);
             this.Controls.Add(this.label2);
@@ -123,7 +124,7 @@
             this.Controls.Add(this.txtNomeSeguradora);
             this.Controls.Add(this.btnCadastrarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.Name = "FormularioCadastroSeguradora";
             this.Text = "Seguradoras";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -39,12 +39,12 @@
             this.dataGridVendas.AllowUserToDeleteRows = false;
             this.dataGridVendas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridVendas.Location = new System.Drawing.Point(9, 12);
+            this.dataGridVendas.Location = new System.Drawing.Point(9, 3);
             this.dataGridVendas.Name = "dataGridVendas";
             this.dataGridVendas.RowHeadersWidth = 51;
             this.dataGridVendas.RowTemplate.Height = 29;
             this.dataGridVendas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridVendas.Size = new System.Drawing.Size(952, 598);
+            this.dataGridVendas.Size = new System.Drawing.Size(952, 619);
             this.dataGridVendas.TabIndex = 13;
             // 
             // btnExcluir
@@ -52,7 +52,7 @@
             this.btnExcluir.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(834, 632);
+            this.btnExcluir.Location = new System.Drawing.Point(838, 643);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(108, 41);

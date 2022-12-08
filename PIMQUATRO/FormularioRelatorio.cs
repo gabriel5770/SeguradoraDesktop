@@ -29,7 +29,7 @@ namespace PIMQUATRO
 
         protected void GeraApolice()
         {
-            string cpfCliente = txtNumeroDocumento.Text;
+            string cpfCliente = maskedTextDocumentoCpf.Text;
             if (cpfCliente == "")
             {
                 MessageBox.Show("Favor preencher o campo CPF");
@@ -46,7 +46,7 @@ namespace PIMQUATRO
 
         protected void GerarContrato()
         {
-            string cpfCliente = txtNumeroDocumento.Text;
+            string cpfCliente = maskedTextDocumentoCpf.Text;
 
             if (cpfCliente == "")
             {
@@ -67,6 +67,16 @@ namespace PIMQUATRO
   
 
         private void FormularioRelatorio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumeroDocumento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextDocumentoCpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }

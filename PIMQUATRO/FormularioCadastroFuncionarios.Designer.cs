@@ -69,6 +69,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCadastrarFuncionario
@@ -99,6 +100,7 @@
             this.textCidadeFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textCidadeFunc.Location = new System.Drawing.Point(33, 495);
             this.textCidadeFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textCidadeFunc.MaxLength = 50;
             this.textCidadeFunc.Name = "textCidadeFunc";
             this.textCidadeFunc.Size = new System.Drawing.Size(288, 20);
             this.textCidadeFunc.TabIndex = 113;
@@ -106,7 +108,7 @@
             // maskedTextCepFunc
             // 
             this.maskedTextCepFunc.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextCepFunc.Location = new System.Drawing.Point(812, 372);
+            this.maskedTextCepFunc.Location = new System.Drawing.Point(809, 387);
             this.maskedTextCepFunc.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextCepFunc.Mask = "00000-000";
             this.maskedTextCepFunc.Name = "maskedTextCepFunc";
@@ -118,7 +120,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(438, 315);
+            this.label20.Location = new System.Drawing.Point(434, 296);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(96, 28);
@@ -129,7 +131,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(406, 33);
+            this.label19.Location = new System.Drawing.Point(406, 9);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(158, 28);
@@ -148,7 +150,7 @@
             // dateTimePickerFunc
             // 
             this.dateTimePickerFunc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFunc.Location = new System.Drawing.Point(35, 179);
+            this.dateTimePickerFunc.Location = new System.Drawing.Point(35, 173);
             this.dateTimePickerFunc.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFunc.Name = "dateTimePickerFunc";
             this.dateTimePickerFunc.Size = new System.Drawing.Size(158, 27);
@@ -157,7 +159,7 @@
             // maskedTextFuncCpf
             // 
             this.maskedTextFuncCpf.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextFuncCpf.Location = new System.Drawing.Point(579, 124);
+            this.maskedTextFuncCpf.Location = new System.Drawing.Point(713, 110);
             this.maskedTextFuncCpf.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextFuncCpf.Mask = "000.000.000-00";
             this.maskedTextFuncCpf.Name = "maskedTextFuncCpf";
@@ -167,7 +169,7 @@
             // maskedTextRgFunc
             // 
             this.maskedTextRgFunc.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextRgFunc.Location = new System.Drawing.Point(784, 124);
+            this.maskedTextRgFunc.Location = new System.Drawing.Point(555, 110);
             this.maskedTextRgFunc.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextRgFunc.Mask = "00.000.000-0";
             this.maskedTextRgFunc.Name = "maskedTextRgFunc";
@@ -180,7 +182,7 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(718, 220);
+            this.label17.Location = new System.Drawing.Point(529, 221);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(51, 20);
@@ -191,8 +193,9 @@
             // 
             this.textSenhaFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSenhaFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textSenhaFunc.Location = new System.Drawing.Point(718, 243);
+            this.textSenhaFunc.Location = new System.Drawing.Point(529, 244);
             this.textSenhaFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textSenhaFunc.MaxLength = 50;
             this.textSenhaFunc.Name = "textSenhaFunc";
             this.textSenhaFunc.Size = new System.Drawing.Size(166, 20);
             this.textSenhaFunc.TabIndex = 104;
@@ -204,18 +207,19 @@
             this.label16.Location = new System.Drawing.Point(30, 472);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(56, 20);
+            this.label16.Size = new System.Drawing.Size(60, 20);
             this.label16.TabIndex = 103;
-            this.label16.Text = "Cidade";
+            this.label16.Text = "Cidade:";
             // 
             // cmdEstadoCivilFunc
             // 
+            this.cmdEstadoCivilFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmdEstadoCivilFunc.FormattingEnabled = true;
             this.cmdEstadoCivilFunc.Items.AddRange(new object[] {
             "Solteiro",
             "Casado",
             "Viuvo"});
-            this.cmdEstadoCivilFunc.Location = new System.Drawing.Point(745, 181);
+            this.cmdEstadoCivilFunc.Location = new System.Drawing.Point(745, 175);
             this.cmdEstadoCivilFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmdEstadoCivilFunc.Name = "cmdEstadoCivilFunc";
             this.cmdEstadoCivilFunc.Size = new System.Drawing.Size(138, 28);
@@ -223,6 +227,7 @@
             // 
             // cmbEstadoFunc
             // 
+            this.cmbEstadoFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoFunc.FormattingEnabled = true;
             this.cmbEstadoFunc.Items.AddRange(new object[] {
             "",
@@ -260,11 +265,12 @@
             // 
             // cmdSexoFunc
             // 
+            this.cmdSexoFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmdSexoFunc.FormattingEnabled = true;
             this.cmdSexoFunc.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cmdSexoFunc.Location = new System.Drawing.Point(529, 184);
+            this.cmdSexoFunc.Location = new System.Drawing.Point(529, 178);
             this.cmdSexoFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmdSexoFunc.Name = "cmdSexoFunc";
             this.cmdSexoFunc.Size = new System.Drawing.Size(146, 28);
@@ -272,13 +278,14 @@
             // 
             // cmbCargoFunc
             // 
+            this.cmbCargoFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCargoFunc.FormattingEnabled = true;
             this.cmbCargoFunc.Items.AddRange(new object[] {
             "Gerente",
             "Analista",
             "Vendas",
             "Suporte"});
-            this.cmbCargoFunc.Location = new System.Drawing.Point(291, 184);
+            this.cmbCargoFunc.Location = new System.Drawing.Point(291, 178);
             this.cmbCargoFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmbCargoFunc.Name = "cmbCargoFunc";
             this.cmbCargoFunc.Size = new System.Drawing.Size(138, 28);
@@ -290,12 +297,12 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(45, 218);
+            this.label15.Location = new System.Drawing.Point(33, 219);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 20);
+            this.label15.Size = new System.Drawing.Size(50, 20);
             this.label15.TabIndex = 98;
-            this.label15.Text = "Email";
+            this.label15.Text = "Email:";
             // 
             // textEmailFunc
             // 
@@ -304,6 +311,7 @@
             this.textEmailFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textEmailFunc.Location = new System.Drawing.Point(35, 243);
             this.textEmailFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textEmailFunc.MaxLength = 50;
             this.textEmailFunc.Name = "textEmailFunc";
             this.textEmailFunc.Size = new System.Drawing.Size(392, 20);
             this.textEmailFunc.TabIndex = 97;
@@ -314,7 +322,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(812, 349);
+            this.label11.Location = new System.Drawing.Point(809, 364);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 20);
@@ -340,6 +348,7 @@
             this.textBairroFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textBairroFunc.Location = new System.Drawing.Point(33, 439);
             this.textBairroFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textBairroFunc.MaxLength = 50;
             this.textBairroFunc.Name = "textBairroFunc";
             this.textBairroFunc.Size = new System.Drawing.Size(448, 20);
             this.textBairroFunc.TabIndex = 90;
@@ -363,6 +372,7 @@
             this.textMunicipioFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textMunicipioFunc.Location = new System.Drawing.Point(422, 495);
             this.textMunicipioFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textMunicipioFunc.MaxLength = 50;
             this.textMunicipioFunc.Name = "textMunicipioFunc";
             this.textMunicipioFunc.Size = new System.Drawing.Size(232, 20);
             this.textMunicipioFunc.TabIndex = 88;
@@ -386,6 +396,7 @@
             this.textNumeroResidenciaFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textNumeroResidenciaFunc.Location = new System.Drawing.Point(572, 387);
             this.textNumeroResidenciaFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textNumeroResidenciaFunc.MaxLength = 50;
             this.textNumeroResidenciaFunc.Name = "textNumeroResidenciaFunc";
             this.textNumeroResidenciaFunc.Size = new System.Drawing.Size(82, 20);
             this.textNumeroResidenciaFunc.TabIndex = 86;
@@ -396,7 +407,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(745, 157);
+            this.label7.Location = new System.Drawing.Point(745, 151);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 20);
@@ -422,7 +433,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(35, 157);
+            this.label5.Location = new System.Drawing.Point(35, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 20);
@@ -435,7 +446,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(529, 163);
+            this.label4.Location = new System.Drawing.Point(529, 157);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 20);
@@ -448,7 +459,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(784, 95);
+            this.label3.Location = new System.Drawing.Point(555, 81);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 20);
@@ -461,7 +472,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(579, 96);
+            this.label2.Location = new System.Drawing.Point(713, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 20);
@@ -474,7 +485,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(35, 94);
+            this.label1.Location = new System.Drawing.Point(30, 85);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
@@ -487,6 +498,7 @@
             this.textEnderecoFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textEnderecoFunc.Location = new System.Drawing.Point(33, 387);
             this.textEnderecoFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textEnderecoFunc.MaxLength = 50;
             this.textEnderecoFunc.Name = "textEnderecoFunc";
             this.textEnderecoFunc.Size = new System.Drawing.Size(448, 20);
             this.textEnderecoFunc.TabIndex = 95;
@@ -496,11 +508,13 @@
             this.textNomeFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textNomeFunc.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textNomeFunc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textNomeFunc.Location = new System.Drawing.Point(35, 124);
+            this.textNomeFunc.Location = new System.Drawing.Point(30, 115);
             this.textNomeFunc.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.textNomeFunc.MaxLength = 50;
             this.textNomeFunc.Name = "textNomeFunc";
             this.textNomeFunc.Size = new System.Drawing.Size(434, 20);
             this.textNomeFunc.TabIndex = 78;
+            this.textNomeFunc.TextChanged += new System.EventHandler(this.textNomeFunc_TextChanged);
             // 
             // label13
             // 
@@ -508,7 +522,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(291, 160);
+            this.label13.Location = new System.Drawing.Point(291, 154);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(54, 20);
@@ -531,7 +545,7 @@
             // 
             // maskedTelefoneFuncionario
             // 
-            this.maskedTelefoneFuncionario.Location = new System.Drawing.Point(493, 240);
+            this.maskedTelefoneFuncionario.Location = new System.Drawing.Point(810, 244);
             this.maskedTelefoneFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTelefoneFuncionario.Mask = "(00)00000-0000";
             this.maskedTelefoneFuncionario.Name = "maskedTelefoneFuncionario";
@@ -544,7 +558,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(493, 217);
+            this.label12.Location = new System.Drawing.Point(810, 221);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(71, 20);
@@ -553,10 +567,10 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(683, 124);
+            this.btnPesquisar.Location = new System.Drawing.Point(844, 110);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(42, 29);
+            this.btnPesquisar.Size = new System.Drawing.Size(86, 29);
             this.btnPesquisar.TabIndex = 121;
             this.btnPesquisar.Text = "pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -576,12 +590,26 @@
             this.btnAtualizar.UseVisualStyleBackColor = false;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(751, 471);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 20);
+            this.label14.TabIndex = 123;
+            this.label14.Text = "Estado:";
+            // 
             // FormularioCadastroFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(967, 697);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.maskedTelefoneFuncionario);
@@ -675,5 +703,6 @@
         private Label label12;
         private Button btnPesquisar;
         private Button btnAtualizar;
+        private Label label14;
     }
 }

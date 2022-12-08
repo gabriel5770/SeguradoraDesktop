@@ -235,6 +235,11 @@ namespace PIMQUATRO
                 MessageBox.Show("Pesquise o CPF a ser Atualizado");
             }
         }
+
+        private void textNomeFunc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

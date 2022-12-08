@@ -41,7 +41,7 @@
             this.btnExcluir.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(856, 630);
+            this.btnExcluir.Location = new System.Drawing.Point(848, 634);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(108, 41);
@@ -62,7 +62,7 @@
             this.dataGridContato.RowHeadersWidth = 51;
             this.dataGridContato.RowTemplate.Height = 29;
             this.dataGridContato.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridContato.Size = new System.Drawing.Size(952, 598);
+            this.dataGridContato.Size = new System.Drawing.Size(952, 609);
             this.dataGridContato.TabIndex = 59;
             // 
             // seguradoraBindingSource
