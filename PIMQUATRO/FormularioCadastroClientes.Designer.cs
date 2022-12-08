@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,12 +43,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtBairroCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtEmaiCliente = new System.Windows.Forms.TextBox();
             this.cmbBeneficiosCliente = new System.Windows.Forms.ComboBox();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.cmbSexoCliente = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -74,18 +73,18 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.btnRelatorio = new System.Windows.Forms.Button();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbSeguradorasDisponiveis = new System.Windows.Forms.ComboBox();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNomeCliente
             // 
             this.txtNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeCliente.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtNomeCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtNomeCliente.Location = new System.Drawing.Point(21, 78);
             this.txtNomeCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNomeCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtNomeCliente.MaxLength = 50;
             this.txtNomeCliente.Name = "txtNomeCliente";
             this.txtNomeCliente.Size = new System.Drawing.Size(347, 16);
@@ -94,9 +93,9 @@
             // txtEnderecoCliente
             // 
             this.txtEnderecoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEnderecoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtEnderecoCliente.Location = new System.Drawing.Point(21, 289);
             this.txtEnderecoCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEnderecoCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtEnderecoCliente.MaxLength = 50;
             this.txtEnderecoCliente.Name = "txtEnderecoCliente";
             this.txtEnderecoCliente.Size = new System.Drawing.Size(358, 16);
@@ -107,8 +106,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(25, 58);
+            this.label1.Location = new System.Drawing.Point(31, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 15);
@@ -140,7 +139,6 @@
             this.label3.Size = new System.Drawing.Size(25, 15);
             this.label3.TabIndex = 25;
             this.label3.Text = "RG:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -154,13 +152,14 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Sexo:";
             // 
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(18, 112);
+            this.label5.Location = new System.Drawing.Point(22, 140);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 15);
@@ -172,13 +171,13 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(21, 270);
+            this.label6.Location = new System.Drawing.Point(26, 337);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 15);
+            this.label6.Size = new System.Drawing.Size(90, 20);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Logradouro";
+            this.label6.Text = "Logradouro:";
             // 
             // label7
             // 
@@ -246,8 +245,8 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(14, 334);
+            this.label10.Location = new System.Drawing.Point(18, 418);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 15);
@@ -257,9 +256,9 @@
             // txtBairroCliente
             // 
             this.txtBairroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBairroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtBairroCliente.Location = new System.Drawing.Point(18, 351);
             this.txtBairroCliente.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBairroCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtBairroCliente.MaxLength = 50;
             this.txtBairroCliente.Name = "txtBairroCliente";
             this.txtBairroCliente.Size = new System.Drawing.Size(358, 16);
@@ -277,7 +276,6 @@
             this.label11.Size = new System.Drawing.Size(30, 15);
             this.label11.TabIndex = 38;
             this.label11.Text = "Cep:";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -291,13 +289,14 @@
             this.label14.TabIndex = 44;
             this.label14.Text = "Estado:";
             // 
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(15, 167);
+            this.label15.Location = new System.Drawing.Point(19, 209);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 15);
@@ -339,7 +338,6 @@
             this.btnCadastrarCliente.Text = "Cadastrar";
             this.btnCadastrarCliente.UseVisualStyleBackColor = false;
             this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click_1);
-            // 
             // cmbSexoCliente
             // 
             this.cmbSexoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -349,6 +347,46 @@
             this.cmbSexoCliente.Name = "cmbSexoCliente";
             this.cmbSexoCliente.Size = new System.Drawing.Size(118, 23);
             this.cmbSexoCliente.TabIndex = 51;
+            // 
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "",
+            "AP ",
+            "AM ",
+            "PA ",
+            "AC ",
+            "RO ",
+            "TO ",
+            "MA ",
+            "PI ",
+            "CE ",
+            "RN ",
+            "PB ",
+            "PE ",
+            "AL ",
+            "SE ",
+            "BA ",
+            "MT ",
+            "DF ",
+            this.label16.Location = new System.Drawing.Point(23, 382);
+            "MS ",
+            "MG ",
+            "ES ",
+            "RJ ",
+            "SP ",
+            "PR ",
+            "SC ",
+            "RS "});
+            this.cmbEstado.Location = new System.Drawing.Point(535, 441);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(132, 28);
+            this.cmbEstado.TabIndex = 52;
             // 
             // cmbEstadoCivil
             // 
@@ -375,7 +413,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(23, 382);
+            this.label16.Location = new System.Drawing.Point(29, 478);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 15);
@@ -442,8 +480,8 @@
             this.label18.Location = new System.Drawing.Point(12, 221);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(738, 1);
-            this.label18.TabIndex = 61;
+            this.TxtCidade.Location = new System.Drawing.Point(23, 401);
+            this.TxtCidade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             // 
             // label19
             // 
@@ -482,8 +520,8 @@
             // 
             this.TxtCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TxtCidade.Location = new System.Drawing.Point(23, 401);
-            this.TxtCidade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.TxtCidade.Location = new System.Drawing.Point(29, 501);
+            this.TxtCidade.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.TxtCidade.Name = "TxtCidade";
             this.TxtCidade.Size = new System.Drawing.Size(173, 16);
             this.TxtCidade.TabIndex = 50;
@@ -568,7 +606,7 @@
             // 
             // txtDataVigenciaInicial
             // 
-            this.txtDataVigenciaInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.label24.Location = new System.Drawing.Point(617, 274);
             this.txtDataVigenciaInicial.Location = new System.Drawing.Point(602, 351);
             this.txtDataVigenciaInicial.Margin = new System.Windows.Forms.Padding(2);
             this.txtDataVigenciaInicial.Name = "txtDataVigenciaInicial";
@@ -588,46 +626,6 @@
             this.label22.Size = new System.Drawing.Size(119, 15);
             this.label22.TabIndex = 106;
             this.label22.Text = "Data Vigencia Inicial:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(599, 383);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(112, 15);
-            this.label23.TabIndex = 107;
-            this.label23.Text = "Data Vigencia Final:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(617, 274);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(107, 15);
-            this.label24.TabIndex = 109;
-            this.label24.Text = "Nome Seguradora:";
-            // 
-            // btnRelatorio
-            // 
-            this.btnRelatorio.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
-            this.btnRelatorio.Location = new System.Drawing.Point(362, 480);
-            this.btnRelatorio.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnRelatorio.Name = "btnRelatorio";
-            this.btnRelatorio.Size = new System.Drawing.Size(86, 33);
-            this.btnRelatorio.TabIndex = 112;
-            this.btnRelatorio.Text = "Relatorio";
-            this.btnRelatorio.UseVisualStyleBackColor = false;
-            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
             // cmbEstado
             // 
@@ -649,14 +647,54 @@
             this.cmbSeguradorasDisponiveis.Size = new System.Drawing.Size(111, 23);
             this.cmbSeguradorasDisponiveis.TabIndex = 114;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ClientSize = new System.Drawing.Size(774, 558);
+            this.Controls.Add(this.cmbSeguradorasDisponiveis);
+            this.Controls.Add(this.cmbEstado);
+            this.label23.Location = new System.Drawing.Point(599, 383);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(112, 15);
+            this.label23.TabIndex = 107;
+            this.label23.Text = "Data Vigencia Final:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(771, 342);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(107, 15);
+            this.label24.TabIndex = 109;
+            this.label24.Text = "Nome Seguradora:";
+            // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRelatorio.ForeColor = System.Drawing.Color.White;
+            this.btnRelatorio.Location = new System.Drawing.Point(362, 480);
+            this.btnRelatorio.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(86, 33);
+            this.btnRelatorio.TabIndex = 112;
+            this.btnRelatorio.Text = "Relatorio";
+            this.btnRelatorio.UseVisualStyleBackColor = false;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(774, 558);
-            this.Controls.Add(this.cmbSeguradorasDisponiveis);
-            this.Controls.Add(this.cmbEstado);
+            this.ClientSize = new System.Drawing.Size(967, 697);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -687,7 +725,6 @@
             this.Controls.Add(this.cmbBeneficiosCliente);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtEmaiCliente);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtBairroCliente);
@@ -696,7 +733,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNumeroResidenciaCliente);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+        private ComboBox cmbSexoCliente;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -722,10 +759,8 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
         private Label label5;
         private Label label6;
-        private Label label7;
         private Label label8;
         private TextBox txtNumeroResidenciaCliente;
         private Label label9;
@@ -733,12 +768,12 @@
         private Label label10;
         private TextBox txtBairroCliente;
         private Label label11;
-        private Label label14;
         private Label label15;
         private TextBox txtEmaiCliente;
         private ComboBox cmbBeneficiosCliente;
         private Button btnCadastrarCliente;
         private ComboBox cmbSexoCliente;
+        private ComboBox cmbEstado;
         private ComboBox cmbEstadoCivil;
         private Label label13;
         private Label label16;
@@ -766,5 +801,6 @@
         private Button btnRelatorio;
         private ComboBox cmbEstado;
         private ComboBox cmbSeguradorasDisponiveis;
+        private Button btnRelatorio;
     }
 }
