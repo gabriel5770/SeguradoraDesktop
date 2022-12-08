@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,13 +43,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtBairroCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtEmaiCliente = new System.Windows.Forms.TextBox();
             this.cmbBeneficiosCliente = new System.Windows.Forms.ComboBox();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
-            this.cmbSexoCliente = new System.Windows.Forms.ComboBox();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,6 +73,10 @@
             this.label24 = new System.Windows.Forms.Label();
             this.cmbSeguradorasDisponiveis = new System.Windows.Forms.ComboBox();
             this.btnRelatorio = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbSexoCliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -84,7 +84,7 @@
             this.txtNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeCliente.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNomeCliente.Location = new System.Drawing.Point(26, 97);
+            this.txtNomeCliente.Location = new System.Drawing.Point(19, 92);
             this.txtNomeCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtNomeCliente.MaxLength = 50;
             this.txtNomeCliente.Name = "txtNomeCliente";
@@ -95,7 +95,7 @@
             // 
             this.txtEnderecoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEnderecoCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtEnderecoCliente.Location = new System.Drawing.Point(26, 361);
+            this.txtEnderecoCliente.Location = new System.Drawing.Point(17, 363);
             this.txtEnderecoCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtEnderecoCliente.MaxLength = 50;
             this.txtEnderecoCliente.Name = "txtEnderecoCliente";
@@ -108,7 +108,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(31, 73);
+            this.label1.Location = new System.Drawing.Point(19, 68);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
@@ -141,26 +141,13 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "RG:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(278, 143);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Sexo:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(22, 140);
+            this.label5.Location = new System.Drawing.Point(22, 143);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 20);
@@ -173,12 +160,12 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(26, 337);
+            this.label6.Location = new System.Drawing.Point(15, 339);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 20);
+            this.label6.Size = new System.Drawing.Size(94, 20);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Logradouro";
+            this.label6.Text = "Logradouro:";
             // 
             // label7
             // 
@@ -247,7 +234,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(18, 418);
+            this.label10.Location = new System.Drawing.Point(15, 417);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 20);
@@ -258,7 +245,7 @@
             // 
             this.txtBairroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBairroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtBairroCliente.Location = new System.Drawing.Point(22, 439);
+            this.txtBairroCliente.Location = new System.Drawing.Point(15, 439);
             this.txtBairroCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtBairroCliente.MaxLength = 50;
             this.txtBairroCliente.Name = "txtBairroCliente";
@@ -278,26 +265,13 @@
             this.label11.TabIndex = 38;
             this.label11.Text = "Cep:";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(535, 417);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 20);
-            this.label14.TabIndex = 44;
-            this.label14.Text = "Estado:";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(19, 209);
+            this.label15.Location = new System.Drawing.Point(15, 209);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 20);
@@ -340,55 +314,6 @@
             this.btnCadastrarCliente.UseVisualStyleBackColor = false;
             this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click_1);
             // 
-            // cmbSexoCliente
-            // 
-            this.cmbSexoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSexoCliente.FormattingEnabled = true;
-            this.cmbSexoCliente.Location = new System.Drawing.Point(278, 164);
-            this.cmbSexoCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.cmbSexoCliente.Name = "cmbSexoCliente";
-            this.cmbSexoCliente.Size = new System.Drawing.Size(146, 28);
-            this.cmbSexoCliente.TabIndex = 51;
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "",
-            "AP ",
-            "AM ",
-            "PA ",
-            "AC ",
-            "RO ",
-            "TO ",
-            "MA ",
-            "PI ",
-            "CE ",
-            "RN ",
-            "PB ",
-            "PE ",
-            "AL ",
-            "SE ",
-            "BA ",
-            "MT ",
-            "DF ",
-            "GO ",
-            "MS ",
-            "MG ",
-            "ES ",
-            "RJ ",
-            "SP ",
-            "PR ",
-            "SC ",
-            "RS "});
-            this.cmbEstado.Location = new System.Drawing.Point(535, 441);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(132, 28);
-            this.cmbEstado.TabIndex = 52;
-            // 
             // cmbEstadoCivil
             // 
             this.cmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -414,7 +339,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(29, 478);
+            this.label16.Location = new System.Drawing.Point(15, 477);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(60, 20);
@@ -521,7 +446,7 @@
             // 
             this.TxtCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TxtCidade.Location = new System.Drawing.Point(29, 501);
+            this.TxtCidade.Location = new System.Drawing.Point(15, 501);
             this.TxtCidade.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.TxtCidade.Name = "TxtCidade";
             this.TxtCidade.Size = new System.Drawing.Size(216, 20);
@@ -648,7 +573,7 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(771, 342);
+            this.label24.Location = new System.Drawing.Point(771, 340);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(139, 20);
@@ -682,12 +607,88 @@
             this.btnRelatorio.UseVisualStyleBackColor = false;
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(559, 413);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 20);
+            this.label25.TabIndex = 125;
+            this.label25.Text = "Estado:";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "",
+            "AP ",
+            "AM ",
+            "PA ",
+            "AC ",
+            "RO ",
+            "TO ",
+            "MA ",
+            "PI ",
+            "CE ",
+            "RN ",
+            "PB ",
+            "PE ",
+            "AL ",
+            "SE ",
+            "BA ",
+            "MT ",
+            "DF ",
+            "GO ",
+            "MS ",
+            "MG ",
+            "ES ",
+            "RJ ",
+            "SP ",
+            "PR ",
+            "SC ",
+            "RS "});
+            this.cmbEstado.Location = new System.Drawing.Point(559, 436);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(132, 28);
+            this.cmbEstado.TabIndex = 124;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(278, 143);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Sexo:";
+            // 
+            // cmbSexoCliente
+            // 
+            this.cmbSexoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSexoCliente.FormattingEnabled = true;
+            this.cmbSexoCliente.Location = new System.Drawing.Point(278, 164);
+            this.cmbSexoCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.cmbSexoCliente.Name = "cmbSexoCliente";
+            this.cmbSexoCliente.Size = new System.Drawing.Size(146, 28);
+            this.cmbSexoCliente.TabIndex = 51;
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(967, 697);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.cmbSeguradorasDisponiveis);
             this.Controls.Add(this.label24);
@@ -714,13 +715,11 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cmbEstadoCivil);
-            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.cmbSexoCliente);
             this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.cmbBeneficiosCliente);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtEmaiCliente);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtBairroCliente);
@@ -755,7 +754,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
         private Label label5;
         private Label label6;
         private Label label7;
@@ -766,13 +764,10 @@
         private Label label10;
         private TextBox txtBairroCliente;
         private Label label11;
-        private Label label14;
         private Label label15;
         private TextBox txtEmaiCliente;
         private ComboBox cmbBeneficiosCliente;
         private Button btnCadastrarCliente;
-        private ComboBox cmbSexoCliente;
-        private ComboBox cmbEstado;
         private ComboBox cmbEstadoCivil;
         private Label label13;
         private Label label16;
@@ -799,5 +794,9 @@
         private Label label24;
         private ComboBox cmbSeguradorasDisponiveis;
         private Button btnRelatorio;
+        private Label label25;
+        private ComboBox cmbEstado;
+        private Label label4;
+        private ComboBox cmbSexoCliente;
     }
 }
