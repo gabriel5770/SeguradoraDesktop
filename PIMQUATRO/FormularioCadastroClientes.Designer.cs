@@ -84,7 +84,7 @@
             this.txtNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeCliente.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtNomeCliente.Location = new System.Drawing.Point(26, 97);
+            this.txtNomeCliente.Location = new System.Drawing.Point(25, 105);
             this.txtNomeCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtNomeCliente.MaxLength = 50;
             this.txtNomeCliente.Name = "txtNomeCliente";
@@ -108,7 +108,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(31, 73);
+            this.label1.Location = new System.Drawing.Point(25, 81);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
@@ -121,7 +121,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(683, 67);
+            this.label2.Location = new System.Drawing.Point(682, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 20);
@@ -134,7 +134,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(524, 66);
+            this.label3.Location = new System.Drawing.Point(523, 76);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 20);
@@ -160,7 +160,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(22, 140);
+            this.label5.Location = new System.Drawing.Point(26, 143);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 20);
@@ -223,7 +223,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(278, 477);
+            this.label9.Location = new System.Drawing.Point(278, 479);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 20);
@@ -247,7 +247,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(18, 418);
+            this.label10.Location = new System.Drawing.Point(26, 417);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 20);
@@ -258,7 +258,7 @@
             // 
             this.txtBairroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBairroCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtBairroCliente.Location = new System.Drawing.Point(22, 439);
+            this.txtBairroCliente.Location = new System.Drawing.Point(26, 434);
             this.txtBairroCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtBairroCliente.MaxLength = 50;
             this.txtBairroCliente.Name = "txtBairroCliente";
@@ -271,7 +271,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(670, 341);
+            this.label11.Location = new System.Drawing.Point(672, 341);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 20);
@@ -284,7 +284,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(19, 209);
+            this.label15.Location = new System.Drawing.Point(26, 211);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 20);
@@ -296,7 +296,7 @@
             this.txtEmaiCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmaiCliente.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtEmaiCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtEmaiCliente.Location = new System.Drawing.Point(19, 233);
+            this.txtEmaiCliente.Location = new System.Drawing.Point(26, 235);
             this.txtEmaiCliente.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.txtEmaiCliente.MaxLength = 50;
             this.txtEmaiCliente.Name = "txtEmaiCliente";
@@ -351,18 +351,18 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(719, 141);
+            this.label13.Location = new System.Drawing.Point(719, 143);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(114, 20);
+            this.label13.Size = new System.Drawing.Size(118, 20);
             this.label13.TabIndex = 54;
-            this.label13.Text = "Tipo do Seguro";
+            this.label13.Text = "Tipo do Seguro:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(29, 478);
+            this.label16.Location = new System.Drawing.Point(26, 479);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(60, 20);
@@ -396,7 +396,7 @@
             // maskedTextRgCliente
             // 
             this.maskedTextRgCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextRgCliente.Location = new System.Drawing.Point(524, 90);
+            this.maskedTextRgCliente.Location = new System.Drawing.Point(523, 98);
             this.maskedTextRgCliente.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextRgCliente.Mask = "00.000.000-0";
             this.maskedTextRgCliente.Name = "maskedTextRgCliente";
@@ -406,7 +406,7 @@
             // maskedTextClienteCpf
             // 
             this.maskedTextClienteCpf.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextClienteCpf.Location = new System.Drawing.Point(683, 90);
+            this.maskedTextClienteCpf.Location = new System.Drawing.Point(682, 98);
             this.maskedTextClienteCpf.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextClienteCpf.Mask = "000.000.000-00";
             this.maskedTextClienteCpf.Name = "maskedTextClienteCpf";
@@ -417,7 +417,7 @@
             // dateTimePickerCliente
             // 
             this.dateTimePickerCliente.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerCliente.Location = new System.Drawing.Point(22, 165);
+            this.dateTimePickerCliente.Location = new System.Drawing.Point(26, 165);
             this.dateTimePickerCliente.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerCliente.Name = "dateTimePickerCliente";
             this.dateTimePickerCliente.Size = new System.Drawing.Size(158, 27);
@@ -436,7 +436,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(406, 9);
+            this.label19.Location = new System.Drawing.Point(409, 21);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(158, 28);
@@ -457,7 +457,7 @@
             // maskedTextCepCliente
             // 
             this.maskedTextCepCliente.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.maskedTextCepCliente.Location = new System.Drawing.Point(661, 363);
+            this.maskedTextCepCliente.Location = new System.Drawing.Point(663, 363);
             this.maskedTextCepCliente.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextCepCliente.Mask = "00000-000";
             this.maskedTextCepCliente.Name = "maskedTextCepCliente";
@@ -469,7 +469,7 @@
             // 
             this.TxtCidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCidade.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.TxtCidade.Location = new System.Drawing.Point(29, 501);
+            this.TxtCidade.Location = new System.Drawing.Point(26, 502);
             this.TxtCidade.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.TxtCidade.Name = "TxtCidade";
             this.TxtCidade.Size = new System.Drawing.Size(216, 20);
@@ -522,7 +522,7 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(828, 86);
+            this.btnPesquisar.Location = new System.Drawing.Point(827, 94);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(94, 29);
@@ -671,7 +671,7 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(553, 408);
+            this.label25.Location = new System.Drawing.Point(553, 407);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(58, 20);
