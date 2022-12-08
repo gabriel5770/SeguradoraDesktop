@@ -47,6 +47,8 @@ namespace PIMQUATRO
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             PesquisaDadosBeneficiario();
+            txtCpfCliente.Visible = false;
+            lblcpf.Visible = false;
         }
 
         private void btnExcluirBeneficiario_Click(object sender, EventArgs e)
