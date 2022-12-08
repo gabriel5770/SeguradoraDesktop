@@ -44,13 +44,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtBairroCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtEmaiCliente = new System.Windows.Forms.TextBox();
             this.cmbBeneficiosCliente = new System.Windows.Forms.ComboBox();
             this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.cmbSexoCliente = new System.Windows.Forms.ComboBox();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -77,6 +75,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.cmbSeguradorasDisponiveis = new System.Windows.Forms.ComboBox();
             this.btnRelatorio = new System.Windows.Forms.Button();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -278,19 +278,6 @@
             this.label11.TabIndex = 38;
             this.label11.Text = "Cep:";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(535, 417);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 20);
-            this.label14.TabIndex = 44;
-            this.label14.Text = "Estado:";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -349,45 +336,6 @@
             this.cmbSexoCliente.Name = "cmbSexoCliente";
             this.cmbSexoCliente.Size = new System.Drawing.Size(146, 28);
             this.cmbSexoCliente.TabIndex = 51;
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "",
-            "AP ",
-            "AM ",
-            "PA ",
-            "AC ",
-            "RO ",
-            "TO ",
-            "MA ",
-            "PI ",
-            "CE ",
-            "RN ",
-            "PB ",
-            "PE ",
-            "AL ",
-            "SE ",
-            "BA ",
-            "MT ",
-            "DF ",
-            "GO ",
-            "MS ",
-            "MG ",
-            "ES ",
-            "RJ ",
-            "SP ",
-            "PR ",
-            "SC ",
-            "RS "});
-            this.cmbEstado.Location = new System.Drawing.Point(535, 441);
-            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(132, 28);
-            this.cmbEstado.TabIndex = 52;
             // 
             // cmbEstadoCivil
             // 
@@ -659,9 +607,6 @@
             // 
             this.cmbSeguradorasDisponiveis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSeguradorasDisponiveis.FormattingEnabled = true;
-            this.cmbSeguradorasDisponiveis.Items.AddRange(new object[] {
-            "Porto Seguros",
-            "Bradesco Seguros"});
             this.cmbSeguradorasDisponiveis.Location = new System.Drawing.Point(785, 366);
             this.cmbSeguradorasDisponiveis.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSeguradorasDisponiveis.Name = "cmbSeguradorasDisponiveis";
@@ -682,12 +627,65 @@
             this.btnRelatorio.UseVisualStyleBackColor = false;
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
+            // cmbEstado
+            // 
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "",
+            "AP ",
+            "AM ",
+            "PA ",
+            "AC ",
+            "RO ",
+            "TO ",
+            "MA ",
+            "PI ",
+            "CE ",
+            "RN ",
+            "PB ",
+            "PE ",
+            "AL ",
+            "SE ",
+            "BA ",
+            "MT ",
+            "DF ",
+            "GO ",
+            "MS ",
+            "MG ",
+            "ES ",
+            "RJ ",
+            "SP ",
+            "PR ",
+            "SC ",
+            "RS "});
+            this.cmbEstado.Location = new System.Drawing.Point(553, 431);
+            this.cmbEstado.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(132, 28);
+            this.cmbEstado.TabIndex = 114;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(553, 408);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(58, 20);
+            this.label25.TabIndex = 113;
+            this.label25.Text = "Estado:";
+            // 
             // FormularioCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(967, 697);
+            this.Controls.Add(this.cmbEstado);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.cmbSeguradorasDisponiveis);
             this.Controls.Add(this.label24);
@@ -714,13 +712,11 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cmbEstadoCivil);
-            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.cmbSexoCliente);
             this.Controls.Add(this.btnCadastrarCliente);
             this.Controls.Add(this.cmbBeneficiosCliente);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtEmaiCliente);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtBairroCliente);
@@ -799,5 +795,6 @@
         private Label label24;
         private ComboBox cmbSeguradorasDisponiveis;
         private Button btnRelatorio;
+        private Label label25;
     }
 }

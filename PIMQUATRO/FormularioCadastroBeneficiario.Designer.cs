@@ -309,9 +309,6 @@
             // 
             this.cmbSexoBeneficiario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSexoBeneficiario.FormattingEnabled = true;
-            this.cmbSexoBeneficiario.Items.AddRange(new object[] {
-            "Masculino",
-            "Feminino"});
             this.cmbSexoBeneficiario.Location = new System.Drawing.Point(291, 165);
             this.cmbSexoBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmbSexoBeneficiario.Name = "cmbSexoBeneficiario";
@@ -369,10 +366,6 @@
             // 
             this.cmbEstadoCivilBeneficiario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCivilBeneficiario.FormattingEnabled = true;
-            this.cmbEstadoCivilBeneficiario.Items.AddRange(new object[] {
-            "Solteiro",
-            "Casado",
-            "Viuvo"});
             this.cmbEstadoCivilBeneficiario.Location = new System.Drawing.Point(575, 224);
             this.cmbEstadoCivilBeneficiario.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
             this.cmbEstadoCivilBeneficiario.Name = "cmbEstadoCivilBeneficiario";
